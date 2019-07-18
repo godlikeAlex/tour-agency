@@ -1,0 +1,35 @@
+
+.responsive 
+{
+    padding: 0;
+}
+.next-arrow
+{
+    display: inline-block;
+    position: absolute;
+    right: -0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid #b3b3b3;
+}
+
+.prev-arrow
+{
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid #b3b3b3;
+}

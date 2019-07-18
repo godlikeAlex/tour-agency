@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tour-category
+{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.container_of_tours
+{
+    margin-top: 55px;
+    color: #1e252c;
+}
+
+.tour_price_info
+{
+    margin-top: 10px;
+    font-weight: 700;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image_of_tour
+{
+    width: 100%;
+}
+
+.image_of_tour img {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tour_info {
+    background: white;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.tour_info__name {
+    font-weight: 700;
+    font-size: 16px;
+    
+}
+
+.price
+{
+    font-size: 18px;
+    color: #ec0000;
+    padding-left: 5px;
+}

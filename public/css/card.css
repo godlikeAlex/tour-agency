@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;  
+}
+
+.name-sec 
+{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+
+.a_card
+{
+    font-family: 'Roboto', sans-serif;
+    background: #2b2b2b;
+    height: 160px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    font-weight: 700;
+}
+
+.b_card
+{
+    font-family: 'Roboto', sans-serif;
+    background: #2b2b2b;
+    height: 200px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    font-weight: 700;
+}
+
+.b_card_title
+{
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.b_card_sub_title
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.title-item
+{
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-category
+{
+    font-weight: 700;
+}
+
+.category_price
+{
+    padding: 10px 0;
+}
+
+.card_big
+{
+    margin-top: 25px;
+    height: 220px;
+}
+
+.skewed_category
+{
+    transform: skewX(-20deg);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #0095ff;
+    min-width: 120px;
+    text-align: center;
+}
+
+.skewed_category p 
+{
+    color: white;
+    transform: skewX(20deg);
+    font-size: 15px;
+}
