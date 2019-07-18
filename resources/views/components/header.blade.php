@@ -64,7 +64,7 @@
             <div class="main-nav">
                 <!-- Menu desktop -->
                 <nav class="menu-desktop">
-                    <a class="logo-stick" href="/">
+                    <a class="logo-stick" href="/" >
                         UZBEKNOW
                     </a>
                     <ul class="main-menu">
@@ -73,8 +73,8 @@
                             <i class="fas fa-bars"></i>
                         </li>
                         <li>
-                        <div style="margin-left:30px" class="logo">
-                            <a href="/"><img src="/images/icons/logo-01.png" alt="LOGO"></a>
+                        <div style="margin-left: 30px;margin-right: 30px;font-weight: 700;color: #feba00;font-size: 25px;" class="logo" >
+                            UZBEKNOW
                         </div>
                         </li>
                         <li class="main-menu-active">
