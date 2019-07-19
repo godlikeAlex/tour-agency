@@ -33,14 +33,21 @@
     <div class="container">
         <div class="row container_of_tours" >
                 @foreach($tours as $tour)
-                <a class="col-md-4" href="{{route('tour.show', ['id' => $tour->id])}}">
-                    <div class="b_card" style="background: url(/storage/{{$tour->image}}); background-size: cover;"></div>
-                    <div class="b_card_title">{{$tour->name}}</div>
-                    <div class="b_card_sub_title"><i class="fas fa-map-signs"></i> Samarkand - Tashkent</div>
-                    <div class="b_card_sub_title" style="padding-top:0px;"><i class="fas fa-dollar-sign"></i> 500</div>
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                <a class="col-md-4 main_b_card" href="{{route('tour.show', ['id' => $tour->id])}}">
+                    <div class="b_card" style="background: url(/storage/{{$tour->image}}); background-size: cover;">
+                        
+                        <div class="b_card_top">
+                            <i class="fas fa-dollar-sign"></i> {{$tour->price}}
+                        </div>
+                        <div class="b_card_bottom">
+                            <div class="b_card_name">{{$tour->name}}</div>
+                            <div class="b_map-controller"><span><i class="fas fa-map-marker-alt"></i> Tashkent - Samarkand</span> <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="main_info_tour">From {{$tour->starts}} to {{$tour->ends}}, {{$tour->days}} days, {{$tour->days - 1}} nights</div>
                 </a>
                 @endforeach
+                
         </div>
         
     </div>
