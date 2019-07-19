@@ -120,6 +120,7 @@
                         </div>
                     </a> 
                 </div>  
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Вся история</a>
                 <div class="col-md-12 name-sec">Что смотреть</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -158,6 +159,7 @@
                         </div>
                     </a> 
                 </div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все достопримечательности</a>
                 <div class="col-md-12 name-sec">Чем заняться</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -196,6 +198,7 @@
                         </div>
                     </a> 
                 </div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все развлечения</a>
                 <div class="col-md-12 name-sec">Где покупать</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -205,27 +208,27 @@
                     </a>   
                     <a class="col-md-12" href="">
                         <div class="a_card" style="background-size: cover;">
-                        Чем заняться
+                        Где покупать
                         </div>
                     </a> 
                     <a class="col-md-12" href="">
                         <div class="a_card" style="background-size: cover;">
-                        Чем заняться
+                        Где покупать
                         </div>
                     </a> 
                     <a class="col-md-12" href="">
                         <div class="a_card" style="background-size: cover;">
-                        Чем заняться
+                        Где покупать
                         </div>
                     </a> 
                     <a class="col-md-12" href="">
                         <div class="a_card" style="background-size: cover;">
-                        Чем заняться
+                        Где покупать
                         </div>
                     </a> 
                     <a class="col-md-12" href="">
                         <div class="a_card" style="background-size: cover;">
-                        Чем заняться
+                        Где покупать
                         </div>
                     </a> 
                     <a class="col-md-12" href="">
@@ -234,6 +237,7 @@
                         </div>
                     </a> 
                 </div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все маркеты</a>
                 <div class="col-md-12 name-sec">Где поесть</div>
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
@@ -247,7 +251,7 @@
                         </a>
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: 20px auto;" class="btn btn-primary">Все рестораны</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все рестораны</a>
                 <div class="col-md-12 name-sec">Где остановиться</div>
                 <div class="responsive col-md-12">
                     @foreach($hotels as $hotel)
@@ -258,7 +262,7 @@
                         </a>
                     @endforeach
                 </div>
-                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where_to_stay" style="margin: 20px auto;" class="btn btn-primary">Все отели</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все отели</a>
                 <div class="col-md-12 name-sec">Как добраться</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -297,6 +301,7 @@
                         </div>
                     </a> 
                 </div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все пути</a>
                 <div class="col-md-12 name-sec">Полезная информация</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -335,6 +340,7 @@
                         </div>
                     </a> 
                 </div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where_to_eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Вся полезная информация</a>
             </div>
         </div>
  
