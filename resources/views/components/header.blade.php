@@ -65,7 +65,7 @@
                 <!-- Menu desktop -->
                 <nav class="menu-desktop">
                     <a class="logo-stick" href="/" >
-                        UZBEKNOW
+                        UZBEKISTANOW
                     </a>
                     <ul class="main-menu">
                     
@@ -74,11 +74,795 @@
                         </li>
                         <li>
                         <div style="margin-left: 30px;margin-right: 30px;font-weight: 700;color: #feba00;font-size: 25px;" class="logo" >
-                            UZBEKNOW
+                            UZBEKISTANOW
                         </div>
                         </li>
                         <li class="main-menu-active">
                             <a href="/">Главная</a>
+                        </li>
+                        <li class="mega-menu-item">
+                            <a href="/blog">Новости</a>
+
+                            <div class="sub-mega-menu">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a class="nav-link active" data-toggle="pill" href="#all" role="tab">Все</a>
+                                    <a class="nav-link" data-toggle="pill" href="#politic" role="tab">Политика</a>
+                                    <a class="nav-link" data-toggle="pill" href="#buisnes" role="tab">Бизнес</a>
+                                    <a class="nav-link" data-toggle="pill" href="#public" role="tab">Общество</a>
+                                    <a class="nav-link" data-toggle="pill" href="#tehno" role="tab">Наука и техника</a>
+                                    <a class="nav-link" data-toggle="pill" href="#culture" role="tab">Культура</a>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane show active" id="all" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-05.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-10.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Finance
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-14.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Beach
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-36.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Technology
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="politic" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-50.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-08.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-07.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-06.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="buisnes" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-21.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-24.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-22.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-23.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="public" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-25.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-27.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-26.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-34.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tehno" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-35.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-36.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-37.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-38.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="culture" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-39.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 18
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-41.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 20
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-42.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Jan 15
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <!-- Item post -->
+                                                <div>
+                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                        <img src="/images/post-40.jpg" alt="IMG">
+                                                    </a>
+
+                                                    <div class="p-t-10">
+                                                        <h5 class="p-b-5">
+                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                Donec metus orci, malesuada et lectus vitae
+                                                            </a>
+                                                        </h5>
+
+                                                        <span class="cl8">
+																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+																	Music
+																</a>
+
+																<span class="f1-s-3 m-rl-3">
+																	-
+																</span>
+
+																<span class="f1-s-3">
+																	Feb 12
+																</span>
+															</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="mega-menu-item">
                             <a href="/blog">Узбекистан</a>
@@ -1756,276 +2540,6 @@
                                 </div>
                             </div>
                         </li>
-
-                        <li class="mega-menu-item">
-                            <a href="category-01.html">Туры</a>
-
-                            <div class="sub-mega-menu">
-                                <div class="nav flex-column nav-pills" role="tablist">
-                                    <a class="nav-link active" data-toggle="pill" href="#Туры-1" role="tab">All</a>
-                                    <a class="nav-link" data-toggle="pill" href="#Туры-2" role="tab">Economy</a>
-                                </div>
-
-                                <div class="tab-content">
-                                    <div class="tab-pane show active" id="Туры-1" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-10.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-11.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-26.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-34.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="Туры-2" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-35.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-36.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-37.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-38.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
                         <li class="mega-menu-item">
                             <a href="category-02.html">Фото</a>
 
@@ -2295,52 +2809,17 @@
                             </div>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="/blog">Новости</a>
+                            <a href="category-01.html">Туры</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
-                                    <a class="nav-link active" data-toggle="pill" href="#all" role="tab">Все</a>
-                                    <a class="nav-link" data-toggle="pill" href="#politic" role="tab">Политика</a>
-                                    <a class="nav-link" data-toggle="pill" href="#buisnes" role="tab">Бизнес</a>
-                                    <a class="nav-link" data-toggle="pill" href="#public" role="tab">Общество</a>
-                                    <a class="nav-link" data-toggle="pill" href="#tehno" role="tab">Наука и техника</a>
-                                    <a class="nav-link" data-toggle="pill" href="#culture" role="tab">Культура</a>
+                                    <a class="nav-link active" data-toggle="pill" href="#Туры-1" role="tab">All</a>
+                                    <a class="nav-link" data-toggle="pill" href="#Туры-2" role="tab">Economy</a>
                                 </div>
 
                                 <div class="tab-content">
-                                    <div class="tab-pane show active" id="all" role="tabpanel">
+                                    <div class="tab-pane show active" id="Туры-1" role="tabpanel">
                                         <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-05.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <div class="col-3">
                                                 <!-- Item post -->
                                                 <div>
@@ -2357,103 +2836,6 @@
 
                                                         <span class="cl8">
 																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Finance
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-14.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Beach
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-36.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Technology
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="politic" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-50.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
 																	Music
 																</a>
 
@@ -2473,263 +2855,7 @@
                                                 <!-- Item post -->
                                                 <div>
                                                     <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-08.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-07.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-06.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="buisnes" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-21.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-24.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-22.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-23.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="public" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-25.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-27.jpg" alt="IMG">
+                                                        <img src="/images/post-11.jpg" alt="IMG">
                                                     </a>
 
                                                     <div class="p-t-10">
@@ -2820,7 +2946,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane" id="tehno" role="tabpanel">
+                                    <div class="tab-pane" id="Туры-2" role="tabpanel">
                                         <div class="row">
                                             <div class="col-3">
                                                 <!-- Item post -->
@@ -2947,134 +3073,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="tab-pane" id="culture" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-39.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-41.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-42.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <!-- Item post -->
-                                                <div>
-                                                    <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-                                                        <img src="/images/post-40.jpg" alt="IMG">
-                                                    </a>
-
-                                                    <div class="p-t-10">
-                                                        <h5 class="p-b-5">
-                                                            <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-                                                                Donec metus orci, malesuada et lectus vitae
-                                                            </a>
-                                                        </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -3097,10 +3095,6 @@
 
                                 <a href="#">
                                     <span class="fab fa-vimeo-v"></span>
-                                </a>
-
-                                <a href="#">
-                                    <span class="fab fa-youtube"></span>
                                 </a>
                             </div>
                         </li>
