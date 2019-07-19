@@ -41,6 +41,16 @@ body {
     font-weight: 700;
 }
 
+.main_b_card
+{
+    transition: .5s;
+}
+
+.main_b_card:hover
+{
+    transform: scale(1.1);
+}
+
 .b_card:after {
     content: '';
     background: #00000061;
