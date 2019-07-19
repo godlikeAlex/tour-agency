@@ -34,7 +34,7 @@
         <div class="row container_of_tours" >
                 @foreach($tours as $tour)
                 <a class="col-md-4 main_b_card" href="{{route('tour.show', ['id' => $tour->id])}}">
-                    <div class="b_card" style="background: url(/storage/{{$tour->image}}); background-size: cover;">
+                    <div class="b_card" style="background: url(/storage/{{$tour->image}});     background-size: cover;">
                         
                         <div class="b_card_top">
                             <i class="fas fa-dollar-sign"></i> {{$tour->price}}

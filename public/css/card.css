@@ -28,8 +28,16 @@ body {
     font-weight: 700;
 }
 
+.b_card_category
+{
+    margin-top: 25px;
+    -webkit-box-shadow: 3px 5px 10px 3px rgba(0,0,0,0.27);
+    box-shadow: 0px 5px 12px 3px rgba(0, 0, 0, 0.1);
+}
+
 .b_card
 {
+    
     font-family: 'Roboto', sans-serif;
     background: #2b2b2b;
     height: 200px;
@@ -49,6 +57,12 @@ body {
 .main_b_card:hover
 {
     transform: scale(1.1);
+}
+
+
+.main_b_card:hover .b_card
+{
+    background-size: 150%;
 }
 
 .b_card:after {

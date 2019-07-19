@@ -78,56 +78,96 @@
                     <div class="col-md-12 sub-category">Дешевый</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'cheap')
-                            <a class="col-md-12" href="{{Request::url()}}/{{$item->id}}">
-                            <div class="col-md-12 row" style="margin-top:50px; height:200px;"> 
-                                <div class="col-md-4" style="background:url(/storage/{{$item->image}}); background-size: cover; background-position: center;"></div>
-                                <div class="col-md-8" style="background:#f7f7f7; padding:25px;">
-                                    <div class="title-category">{{$item->name}}</div>
-                                    <p>{{$item->preview}}</p>
+                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                                <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
+                                    <div class="b_card_bottom">
+                                        <div class="b_card_name">{{$item->name}}</div>
+                                        <div class="b_map-controller">
+                                            <span><i class="fas fa-dollar-sign"></i>
+                                                @if($item->category_price === 'cheap')
+                                                    Дешевый
+                                                @elseif($item->category_price === 'middle')
+                                                    Средний
+                                                @elseif($item->category_price === 'expensive')
+                                                    Элитный
+                                                @endif
+                                            </span> 
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         @endif
                     @endforeach
                     <div class="col-md-12 sub-category">Средний</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'middle')
-                            <a class="col-md-12" href="{{Request::url()}}/{{$item->id}}">
-                            <div class="col-md-12 row" style="margin-top:50px; height:200px;"> 
-                                <div class="col-md-4" style="background:url(/storage/{{$item->image}}); background-size: cover; background-position: center;"></div>
-                                <div class="col-md-8" style="background:#f7f7f7; padding:25px;">
-                                    <div class="title-category">{{$item->name}}</div>
-                                    <p>{{$item->preview}}</p>
+                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                                <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
+                                    <div class="b_card_bottom">
+                                        <div class="b_card_name">{{$item->name}}</div>
+                                        <div class="b_map-controller">
+                                            <span><i class="fas fa-dollar-sign"></i>
+                                                @if($item->category_price === 'cheap')
+                                                    Дешевый
+                                                @elseif($item->category_price === 'middle')
+                                                    Средний
+                                                @elseif($item->category_price === 'expensive')
+                                                    Элитныый
+                                                @endif
+                                            </span> 
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         @endif
                     @endforeach
                     <div class="col-md-12 sub-category">Дорогой</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'expensive')
-                            <a class="col-md-12" href="{{Request::url()}}/{{$item->id}}">
-                            <div class="col-md-12 row" style="margin-top:50px; height:200px;"> 
-                                <div class="col-md-4" style="background:url(/storage/{{$item->image}}); background-size: cover; background-position: center;"></div>
-                                <div class="col-md-8" style="background:#f7f7f7; padding:25px;">
-                                    <div class="title-category">{{$item->name}}</div>
-                                    <p>{{$item->preview}}</p>
+                        <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                                <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
+                                    <div class="b_card_bottom">
+                                        <div class="b_card_name">{{$item->name}}</div>
+                                        <div class="b_map-controller">
+                                            <span><i class="fas fa-dollar-sign"></i>
+                                                @if($item->category_price === 'cheap')
+                                                    Дешевый
+                                                @elseif($item->category_price === 'middle')
+                                                    Средний
+                                                @elseif($item->category_price === 'expensive')
+                                                    Дорогой
+                                                @endif
+                                            </span> 
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
                         @endif
                     @endforeach
                 @else
                     @foreach($items as $item)
-                                <a class="col-md-12" href="{{Request::url()}}/{{$item->id}}">
-                                <div class="col-md-12 row" style="margin-top:50px; height:200px;"> 
-                                    <div class="col-md-4" style="background:url(/storage/{{$item->image}}); background-size: cover; background-position: center;"></div>
-                                    <div class="col-md-8" style="background:#f7f7f7; padding:25px;">
-                                        <div class="title-category">{{$item->name}}</div>
-                                        <p>{{$item->preview}}</p>
+                        <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                                <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
+                                    <div class="b_card_bottom">
+                                        <div class="b_card_name">{{$item->name}}</div>
+                                        <div class="b_map-controller">
+                                            <span><i class="fas fa-dollar-sign"></i>
+                                                @if($item->category_price === 'cheap')
+                                                    Дешевый
+                                                @elseif($item->category_price === 'middle')
+                                                    Средний
+                                                @elseif($item->category_price === 'expensive')
+                                                    Дорогой
+                                                @endif
+                                            </span> 
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
+                            </a>
                     @endforeach
                 @endif
             </div>
