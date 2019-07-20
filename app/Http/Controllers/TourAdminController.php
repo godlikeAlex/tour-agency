@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Tour;
 use App\TourDates;
@@ -25,7 +26,9 @@ class TourAdminController extends Controller
     }
 
     public function store (Request $request) {
-        $tour           = Tour::create($this->validateTour());
+        $validData = $this->validateTour();
+        $validData['slug'] = Str::slug(request()->name)."-".request()->days."-days";
+        $tour = Tour::create($validData);
         $tourId = $tour->id;
         // Store Images 
         $this->storeTourImage($tour);
@@ -41,7 +44,7 @@ class TourAdminController extends Controller
         $this->setTourId('notincludes', $notIncludes, ['dont_include_title', 'dont_include_desc'], $tourId);
         $this->setTourId('tourdatesabout', $aboutDays, ['day_title', 'day_desc'], $tourId);
         $this->setTourIdFeature($tourId);
-        dd(request() -> all());
+        return back();
 
     }
 
@@ -51,7 +54,6 @@ class TourAdminController extends Controller
             'lang' => 'required',
             'price' => 'required',
             'category' => 'required',
-            'desc' => 'required|min:25',
             'days' => 'required',
             'starts' => 'required',
             'ends' => 'required',

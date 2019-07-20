@@ -55,7 +55,7 @@ Route::prefix('admin/city')->group(function () {
 
 Route::prefix('tours')->group(function () {
     Route::get('/', 'TourController@index');
-    Route::get('/{tour}/show', 'TourController@show')->name('tour.show');
+    Route::get('/{tourname}/show', 'TourController@show')->name('tour.show');
     Route::get('/category/{category}', 'TourController@showCategory')->name('tour.category');
 });
 

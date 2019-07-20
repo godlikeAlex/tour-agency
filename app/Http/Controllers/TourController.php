@@ -15,8 +15,8 @@ class TourController extends Controller
         return view('tours', compact('header'));
     }
 
-    public function show($id) {
-        $tour = Tour::findOrFail($id);
+    public function show($tourname) {
+        $tour = Tour::where('slug', $tourname)->firstOrFail();
         $header = Header::dataHeader();
         return view('tour-place', compact('header', 'tour'));
     }

@@ -33,7 +33,7 @@
     <div class="container">
         <div class="row container_of_tours" >
                 @foreach($tours as $tour)
-                <a class="col-md-4 main_b_card" href="{{route('tour.show', ['id' => $tour->id])}}">
+                <a class="col-md-4 main_b_card" href="{{route('tour.show', ['tourname' => $tour->slug])}}">
                     <div class="b_card" style="background: url(/storage/{{$tour->image}});     background-size: cover;">
                         
                         <div class="b_card_top">
