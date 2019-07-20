@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Blog;
 
@@ -20,9 +21,11 @@ class BlogAdminController extends Controller
 
     public function create()
     {
-        $post = Blog::create($this->validRequest());
+        $validData = $this->validRequest();
+        $validData['slug'] = Str::slug(request()->title);
+        $post = Blog::create($validData);
         $this->storeImage($post);
-        dd(request()->all());
+        return back();
     }
 
     private function validRequest() 

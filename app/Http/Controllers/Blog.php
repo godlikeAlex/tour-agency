@@ -31,8 +31,8 @@ class Blog extends Controller
         return view('blog', compact('header', 'posts', 'lastPosts', 'category'));
     }
 
-    public function showPost($id) {
-        $post = Posts::where('id', $id)->firstOrFail();
+    public function showPost($slug) {
+        $post = Posts::where('slug', $slug)->firstOrFail();
         $header = Header::dataHeader();
         $lastPosts = $this->lastPosts();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();

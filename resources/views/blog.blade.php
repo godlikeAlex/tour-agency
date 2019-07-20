@@ -79,7 +79,7 @@
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
-                                                <a href="/blog/post/{{$post->id}}" class="headline">
+                                                <a href="/blog/post/{{$post->slug}}" class="headline">
                                                     <h5>{{$post -> title}}</h5>
                                                 </a>
                                                 <p>{{str_limit($post->desc, $limit = 350, $end = '...')}}</p>
@@ -113,7 +113,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/blog/post/{{$lp->id}}" class="headline">
+                                        <a href="/blog/post/{{$lp->slug}}" class="headline">
                                             <h5 class="mb-0">{{$lp->title}}</h5>
                                         </a>
                                     </div>

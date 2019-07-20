@@ -67,7 +67,7 @@ Route::prefix('admin/people')->group(function() {
 Route::prefix('blog')->group(function() {
     Route::get('/', 'Blog@indexBlog');
     Route::get('/category/{category}', 'Blog@indexBlogCategory');
-    Route::get('/post/{id}', 'Blog@showPost');
+    Route::get('/post/{slug}', 'Blog@showPost');
 });
 
 Route::prefix('people')->group(function() {
