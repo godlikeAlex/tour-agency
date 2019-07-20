@@ -63,8 +63,8 @@ class Blog extends Controller
     }
 
 
-    public function showPeople($id) {
-        $people = People::where('id', $id)->firstOrFail();
+    public function showPeople($slug) {
+        $people = People::where('slug', $slug)->firstOrFail();
         $header = Header::dataHeader();
         $lastPeople = $this->lastPeople();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();

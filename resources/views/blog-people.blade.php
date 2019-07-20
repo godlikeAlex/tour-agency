@@ -76,7 +76,7 @@
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
-                                                <a href="/people/{{$pb->id}}" class="headline">
+                                                <a href="/people/{{$pb->slug}}" class="headline">
                                                     <h5>{{$pb -> name}}</h5>
                                                 </a>
                                                 <p>{{str_limit($pb->desc, $limit = 350, $end = '...')}}</p>
@@ -110,7 +110,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/people/{{$lp->id}}" class="headline">
+                                        <a href="/people/{{$lp->slug}}" class="headline">
                                             <h5 class="mb-0">{{$lp->name}}</h5>
                                         </a>
                                     </div>

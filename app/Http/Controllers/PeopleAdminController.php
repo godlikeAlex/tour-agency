@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\People;
 
+use Illuminate\Support\Str;
+
 class PeopleAdminController extends Controller
 {
     public function __construct()
@@ -20,7 +22,9 @@ class PeopleAdminController extends Controller
 
     public function create()
     {
-        $people = People::create($this->validRequest());
+        $validData = $this->validRequest();
+        $validData['slug'] = Str::slug(request() -> name);
+        $people = People::create($validData);
         $this->storeImage($people);
         return redirect('/admin/people/create');
     }

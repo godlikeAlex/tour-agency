@@ -73,7 +73,7 @@ Route::prefix('blog')->group(function() {
 Route::prefix('people')->group(function() {
     Route::get('/', 'Blog@indexPeople');
     Route::get('/category/{category}', 'Blog@indexPeopleCategory');
-    Route::get('/{id}', 'Blog@showPeople');
+    Route::get('/{slug}', 'Blog@showPeople');
 });
 
 Route::prefix('city')->group(function() {
