@@ -15,12 +15,12 @@ class CreateCityItemsTable extends Migration
     {
         Schema::create('city_items', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('name');
             $table->string('city_id');
             $table->string('category');
             $table->string('lang');
             $table->string('category_price')->nullable();
-            $table->text('preview');
             $table->longText('about');
             $table->string('image')->nullable();
             $table->timestamps();

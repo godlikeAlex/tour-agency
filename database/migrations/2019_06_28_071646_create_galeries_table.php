@@ -15,6 +15,7 @@ class CreateGaleriesTable extends Migration
     {
         Schema::create('galeries', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('title');
             $table->string('category');
             $table->text('desc');
