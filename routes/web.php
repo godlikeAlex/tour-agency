@@ -55,7 +55,7 @@ Route::prefix('admin/city')->group(function () {
 
 Route::prefix('tours')->group(function () {
     Route::get('/', 'TourController@index');
-    Route::get('/{id}/show', 'TourController@show')->name('tour.show');
+    Route::get('/{tour}/show', 'TourController@show')->name('tour.show');
     Route::get('/category/{category}', 'TourController@showCategory')->name('tour.category');
 });
 
@@ -79,6 +79,6 @@ Route::prefix('people')->group(function() {
 Route::prefix('city')->group(function() {
     Route::get('/', 'CityController@index');
     Route::get('/{city}', 'CityController@showCity');
-    Route::get('/{city}/{category}/{id}', 'CityController@showItem')->name('city.item');
+    Route::get('/{city}/{category}/{slug}', 'CityController@showItem')->name('city.item');
     Route::get('/{city}/{category}', 'CityController@showCategory')->name('city.category');
 });

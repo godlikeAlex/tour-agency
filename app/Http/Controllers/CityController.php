@@ -23,13 +23,13 @@ class CityController extends Controller
         return view('city-show', compact('content', 'header', 'restaurants', 'hotels'));
     }
 
-    public function showItem($city, $category, $id) {
+    public function showItem($city, $category, $slug) {
         $header = Header::dataHeader();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $item = CityItem::where([
             'city_id' => $cityId,
             'category' => $category,
-            'id' => $id,
+            'slug' => $slug,
         ])->firstOrFail();
         // get previous CityItem id
         $previous = CityItem::where([

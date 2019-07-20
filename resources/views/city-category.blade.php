@@ -78,7 +78,7 @@
                     <div class="col-md-12 sub-category">Дешевый</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'cheap')
-                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->slug}}">
                                 <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
                                     <div class="b_card_bottom">
                                         <div class="b_card_name">{{$item->name}}</div>
@@ -102,7 +102,7 @@
                     <div class="col-md-12 sub-category">Средний</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'middle')
-                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                            <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->slug}}">
                                 <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
                                     <div class="b_card_bottom">
                                         <div class="b_card_name">{{$item->name}}</div>
@@ -126,7 +126,7 @@
                     <div class="col-md-12 sub-category">Дорогой</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'expensive')
-                        <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->id}}">
+                        <a class="col-md-4 main_b_card " href="{{Request::url()}}/{{$item->slug}}">
                                 <div class="b_card b_card_category" style="background: url(/storage/{{$item->image}});     background-size: cover;">    
                                     <div class="b_card_bottom">
                                         <div class="b_card_name">{{$item->name}}</div>

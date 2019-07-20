@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Str;
 use App\City;
 
 use App\CityItem;
@@ -36,16 +36,18 @@ class CityAdminController extends Controller
     }
 
     public function cityItemsStore() {
-        $item = CityItem::create(request()->validate([
+        $validDate = request()->validate([
             'name'=>'required',
             'city_id'=>'required',
             'category'=>'required',
-            'preview'=>'required',
             'lang' => 'required',
             'category_price' => 'required',
             'about'=>'required',
             'image'=>'required|image',
-        ]));
+        ]);
+        $validDate['slug'] = Str::slug(request()->name).'-'.request()->lang;
+
+        $item = CityItem::create($validDate);
 
         $this->storeItemImage($item);
 

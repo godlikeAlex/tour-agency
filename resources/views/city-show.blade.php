@@ -241,7 +241,7 @@
                 <div class="col-md-12 name-sec">Где поесть</div>
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
-                        <a class="col-md-12" href="{{Illuminate\Support\Str::lower($content->name)}}/where_to_eat/{{$cafe->id}}">
+                        <a class="col-md-12" href="{{Illuminate\Support\Str::lower($content->name)}}/where_to_eat/{{$cafe->slug}}">
                             <div class="a_card" style="background:url(/storage/{{$cafe->image}});background-size: cover;">
                                 
                                 <div class="skewed_category">
