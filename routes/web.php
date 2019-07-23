@@ -82,3 +82,8 @@ Route::prefix('city')->group(function() {
     Route::get('/{city}/{category}/{slug}', 'CityController@showItem')->name('city.item');
     Route::get('/{city}/{category}', 'CityController@showCategory')->name('city.category');
 });
+
+Route::prefix('admin/uzbekistan')->group(function() {
+    Route::get('/create', 'UzbekistanAdminController@create');
+    Route::post('/create', 'UzbekistanAdminController@store');
+});
