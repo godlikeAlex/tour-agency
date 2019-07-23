@@ -19,6 +19,7 @@ class CreateUzbekistansTable extends Migration
             $table->string('category');
             $table->string('sub-category')->nullable();
             $table->string('image')->nullable();
+            $table->string('lang');
             $table->longText('about');
             $table->timestamps();
         });
