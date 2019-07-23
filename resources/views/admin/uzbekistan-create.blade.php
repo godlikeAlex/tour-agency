@@ -1,0 +1,62 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Создание объекта для города</div>
+
+                <div class="card-body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Название">
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleSelect1">Категория</label>
+                                <select name="category" class="form-control" id="exampleSelect1">
+                                    <option value="test">Example</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleSelect1">Под категория</label>
+                                <select name="sub-category" class="form-control" id="exampleSelect1">
+                                    <option value="sub_category" disabled>-Искувство</option>
+                                    <option value="sub_category">Архитиктура</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleSelect1">Язык контент.</label>
+                                <select name="lang" class="form-control" id="exampleSelect1">
+                                        <option value="ru">Русский язык</option>
+                                        <option value="en">Английский язык</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <p>Изображение объекта</p>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
+                            <textarea name="about" class="form-control" id="summernote"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Создать</button>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
+
+<script>
+      $('#summernote').summernote({
+        placeholder: 'Полное описание объекта',
+        tabsize: 2,
+        height: 400
+      });
+</script>
+
+@endsection

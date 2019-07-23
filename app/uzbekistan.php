@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class uzbekistan extends Model
+class Uzbekistan extends Model
 {
     protected $guarded = [] ;
 }
