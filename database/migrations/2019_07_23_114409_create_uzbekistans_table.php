@@ -15,7 +15,7 @@ class CreateUzbekistansTable extends Migration
     {
         Schema::create('uzbekistans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name') ;
             $table->string('category');
             $table->string('sub-category')->nullable();
             $table->string('image')->nullable();
