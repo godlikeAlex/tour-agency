@@ -13,17 +13,41 @@
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Название">
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                                 <label for="exampleSelect1">Категория</label>
                                 <select name="category" class="form-control" id="exampleSelect1">
-                                    <option value="test">Example</option>
+                                    <option value="uzb">Узбекистан </option>
+                                    <option value="tourism">Туризм</option>
+                                    <option value="arts">Искусства</option>
+                                    <option value="culture">Культура</option>
                                 </select>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                                 <label for="exampleSelect1">Под категория</label>
-                                <select name="sub-category" class="form-control" id="exampleSelect1">
-                                    <option value="sub_category" disabled>-Искувство</option>
-                                    <option value="sub_category">Архитиктура</option>
+                                <select name="category" class="form-control" id="exampleSelect1">
+                                    <option value="" disabled>-Узбекистан </option>
+                                    <option value="geo">География</option>
+                                    <option value="history">История</option>
+                                    <option value="people">Люди</option>
+                                    <option value="" disabled>-Туризм </option>
+                                    <option value="visa">Виза</option>
+                                    <option value="eco">Экология</option>
+                                    <option value="transport">Транспорт</option>
+                                    <option value="" disabled>-Искусства</option>
+                                    <option value="literature">Литература</option>
+                                    <option value="architecture">Архитектура</option>
+                                    <option value="music">Музыка</option>
+                                    <option value="teatr">Театр</option>
+                                    <option value="painting">Живопись</option>
+                                    <option value="poetry">Поэзия</option>
+                                    <option value="" disabled>-Культура</option>
+                                    <option value="kitchen">Кухня </option>
+                                    <option value="clothing">Одежда </option>
+                                    <option value="religion">Религия </option>
+                                    <option value="holidays">Праздники </option>
+                                    <option value="sufism">Суфизм  </option>
+                                    <option value="lang">Язык  </option>
+
                                 </select>
                         </div>
                         <div class="form-group">

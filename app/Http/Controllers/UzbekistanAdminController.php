@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Uzbekistan;
+use Illuminate\Support\Str;
 
 class UzbekistanAdminController extends Controller
 {
@@ -20,7 +21,9 @@ class UzbekistanAdminController extends Controller
 
     public function store()
     {
-        $obj = Uzbekistan::create($this->validData());
+        $validData = $this->validData();
+        $validData['slug'] = Str::slug(request()->name).'-'.request()->lang;
+        $obj = Uzbekistan::create($validData);
         $this->storeImage($obj);
         return back();        
     }
@@ -40,7 +43,6 @@ class UzbekistanAdminController extends Controller
         return request()->validate([
             'name' => 'required',
             'category' => 'required',
-            'sub-category' => 'required',
             'lang' => 'required',
             'image' => 'required',
             'about' => 'required',

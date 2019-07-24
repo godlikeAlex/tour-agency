@@ -87,3 +87,9 @@ Route::prefix('admin/uzbekistan')->group(function() {
     Route::get('/create', 'UzbekistanAdminController@create');
     Route::post('/create', 'UzbekistanAdminController@store');
 });
+
+Route::prefix('uzbekistan')->group(function() {
+    Route::get('/', 'UzbekistanController@index');
+    Route::get('/category/{category}', 'UzbekistanController@category')->name('uzb.category');
+    Route::get('/{uzb}', 'UzbekistanController@show')->name('uzb.show');
+});
