@@ -17,7 +17,7 @@ class CreateUzbekistansTable extends Migration
             $table->bigIncrements('id');
             $table->string('name') ;
             $table->string('category');
-            $table->string('sub-category')->nullable();
+            $table->string('slug');
             $table->string('image')->nullable();
             $table->string('lang');
             $table->longText('about');
