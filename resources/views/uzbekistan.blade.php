@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
-    @include('/components/header')
+@include('/components/header', ['type' => 'uzbekistan'])
     <div class="container">
     
         <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Узбекистан</div>

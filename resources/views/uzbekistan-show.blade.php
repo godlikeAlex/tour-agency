@@ -34,7 +34,7 @@
     <title>Document</title>
 </head>
 <body>
-    @include('/components/header')
+@include('/components/header', ['type' => 'uzbekistan'])
     <div class="container">
     <nav class="category_nav col-md-12" style="margin-top:50px;">
                     <ul class="row" style="    justify-content: space-between;"> 

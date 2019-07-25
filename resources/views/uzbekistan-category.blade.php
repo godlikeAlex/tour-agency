@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
-    @include('/components/header')
+    @include('/components/header', ['type' => 'uzbekistan'])
     <div class="container">
         <div class="row container_of_tours" >
                 @foreach($items as $item)
