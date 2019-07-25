@@ -41,7 +41,7 @@
     <title>Document</title>
 </head>
 <body>
-    @include('/components/header')
+    @include('/components/header', ['type' => 'city'])
     <div class="container">
             
         <nav class="category_nav col-md-12" style="margin-top:50px;">

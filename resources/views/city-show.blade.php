@@ -34,7 +34,7 @@
     <title>Document</title>
 </head>
 <body>
-    @include('/components/header')
+@include('/components/header', ['type' => 'city'])
     <div class="container">
         <div class="col-md-12">
             <div class="row">
