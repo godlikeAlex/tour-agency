@@ -31,7 +31,7 @@
     <title>Document</title>
 </head>
 <body>
-    @include('/components/header', ['type' => 'city'])
+    @include('/components/header')
     <div class="container">
         <div class="row">
             <div class="col-md-12 name-sec">Все города</div>

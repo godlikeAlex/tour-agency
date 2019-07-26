@@ -25,6 +25,7 @@ class CityController extends Controller
 
     public function showItem($city, $category, $slug) {
         $header = Header::dataHeader();
+        $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $item = CityItem::where([
             'city_id' => $cityId,
@@ -42,17 +43,18 @@ class CityController extends Controller
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
 
-        return view('city-item', compact('header', 'item', 'previous', 'next', 'city', 'category'));
+        return view('city-item', compact('header', 'item', 'previous', 'next', 'city', 'category', 'content'));
     }
 
     public function showCategory($city, $category) {
         $header = Header::dataHeader();
+        $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $items = CityItem::where([
             'city_id' => $cityId,
             'category' => $category,
         ])->paginate(10);
-        return view('city-category', compact('header', 'items'));   
+        return view('city-category', compact('header', 'items', 'content'));   
     }
 
     private function getRecordsByCategory($cityId, $category) {

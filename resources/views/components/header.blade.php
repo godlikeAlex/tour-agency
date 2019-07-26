@@ -56,8 +56,8 @@
         </div>
 
         <!--  -->
-        <div class="wrap-logo" style="background: #4f0080; height:200px;">
-
+        <div class="wrap-logo" style="background: #feba00; height:200px;">
+            
         </div>
 
         <!--  -->
@@ -83,7 +83,7 @@
                             <a href="/">Главная</a>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="/blog">Узбекистан</a>
+                            <a href="/uzbekistan">Узбекистан</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
@@ -868,7 +868,7 @@
                         </li>
                         
                         <li class="mega-menu-item">
-                            <a href="/blog">Города</a>
+                            <a href="/city">Города</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
@@ -1653,7 +1653,7 @@
                         </li>
 
                         <li class="mega-menu-item">
-                            <a href="category-02.html">Люди</a>
+                            <a href="/people">Люди</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
@@ -1759,7 +1759,7 @@
                             </div>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="category-02.html">Фото</a>
+                            <a href="/photo">Фото</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
@@ -1783,20 +1783,6 @@
                                                                 Donec metus orci, malesuada et lectus vitae
                                                             </a>
                                                         </h5>
-
-                                                        <span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 18
-																</span>
-															</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2027,7 +2013,7 @@
                             </div>
                         </li>
                         <li class="mega-menu-item">
-                            <a href="category-01.html">Туры</a>
+                            <a href="/tours">Туры</a>
 
                             <div class="sub-mega-menu">
                                 <div class="nav flex-column nav-pills" role="tablist">
@@ -3104,32 +3090,30 @@
         <div style="color:white;background: #007bff;">
             <div class="container">
             <nav class="col-md-12 category_nav" >
-                    <ul class="row" style="justify-content: space-between;"> 
-                        <li>
-                            <a href=""><i class="fas fa-history"></i> История</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-mosque"></i> Что смотреть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-tree"></i> Чем заняться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-shopping-cart"></i> Где покупать</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-utensils"></i> Где поесть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-hotel"></i> Где остановиться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-taxi"></i> Как добраться</a>
-                        </li>
-                        <li>
-                            <a href="">Полезная информация</a>
-                        </li>
-                    </ul>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}"><i class="fas fa-history"></i> История</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}"><i class="fas fa-mosque"></i> Что смотреть</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}"><i class="fas fa-tree"></i> Чем заняться</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}"><i class="fas fa-shopping-cart"></i> Где покупать</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}"><i class="fas fa-utensils"></i> Где поесть</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}"><i class="fas fa-hotel"></i> Где остановиться</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}"><i class="fas fa-taxi"></i> Как добраться</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}">Полезная информация</a>
+                        </div>
                 </nav>
             </div>
         </div>

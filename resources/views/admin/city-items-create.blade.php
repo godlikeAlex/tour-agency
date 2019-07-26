@@ -41,13 +41,13 @@
                                 <label for="exampleSelect1">Тип объекта.</label>
                                 <select name="category" class="form-control" id="exampleSelect1">
                                     <option value="history">История</option>
-                                    <option value="what_to_see">Что посмотреть</option>
-                                    <option value="things_to_do">Чем заняться</option>
-                                    <option value="where_to_buy">Где покупать</option>
-                                    <option value="where_to_eat">Где поесть</option>
-                                    <option value="where_to_stay">Где остановиться</option>
-                                    <option value="how_to_get">Как добраться</option>
-                                    <option value="useful_information">Полезная информация</option>
+                                    <option value="what-to-see">Что посмотреть</option>
+                                    <option value="things-to-do">Чем заняться</option>
+                                    <option value="where-to-buy">Где покупать</option>
+                                    <option value="where-to-eat">Где поесть</option>
+                                    <option value="where-to-stay">Где остановиться</option>
+                                    <option value="how-to-get">Как добраться</option>
+                                    <option value="useful-information">Полезная информация</option>
                                 </select>
                         </div>
                         <div class="form-group">
