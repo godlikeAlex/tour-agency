@@ -1,0 +1,116 @@
+.main-menu
+{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+.ad-banner-header
+{
+    height: 200px;
+    background: #82d218;
+}
+
+.menu-border {
+    border-top: 2px solid #0460D9;
+    border-bottom: 1px solid #7b7b7b;
+}
+
+.main-menu li {
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-menu a {
+    color: #292929;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.main-menu li:hover a
+{
+    color: #0460D9;
+}
+
+.active a{
+    color: #0460D9;
+}
+
+
+.main-menu li:after
+{
+    content: '';
+    position: absolute;
+    transition: .5s;
+    bottom: -1px;
+    width: 0%;
+    background: #0460D9;
+    height: 2px;
+    left: 0;
+}
+
+.main-menu li:hover::after {
+    width: 100%;
+}
+
+.active:after
+{
+    content: '';
+    position: absolute;
+    transition: .5s;
+    bottom: -1px;
+    width: 100% !important;
+    background: #0460D9;
+    height: 2px;
+    left: 0;
+}
+
+.sub-menu-nav
+{
+    list-style: none;
+    font-size: 12px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu-nav li {
+    padding: 10px;
+    transition: .5s;
+    position: relative;
+}
+
+.sub-menu-nav li:after
+{
+    content: '';
+    position: absolute;
+    transition: .5s;
+    bottom: -1px;
+    width: 0%;
+    background: #0460D9;
+    height: 2px;
+    left: 0;
+}
+
+.sub-menu-nav li:hover::after {
+    width: 100%;
+}
+
+.sub-menu-nav li:hover a {
+    color: #0460D9;
+}
+
+.sub-menu-nav div:first-child {
+    padding-left: 0px;
+}
+
+.sub-menu-nav a {
+    color: #292929;
+}
+
+.sub-menu-main
+{
+    background: #e0e0e0;
+}

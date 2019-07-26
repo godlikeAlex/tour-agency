@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/css/tour-all.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
