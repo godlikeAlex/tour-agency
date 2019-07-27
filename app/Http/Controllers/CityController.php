@@ -18,13 +18,15 @@ class CityController extends Controller
     public function showCity($city) {
         $header         = Header::dataHeader();
         $content        = City::where('name',$city)->firstOrFail();
+        $cities         = City::all();
         $restaurants    = $this->getRecordsByCategory($content->id, 'where_to_eat');
         $hotels         = $this->getRecordsByCategory($content->id, 'where_to_stay');
-        return view('city-show', compact('content', 'header', 'restaurants', 'hotels'));
+        return view('city-show', compact('content', 'header', 'restaurants', 'hotels', 'cities'));
     }
 
     public function showItem($city, $category, $slug) {
         $header = Header::dataHeader();
+        $cities = City::all();
         $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $item = CityItem::where([
@@ -43,18 +45,19 @@ class CityController extends Controller
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
 
-        return view('city-item', compact('header', 'item', 'previous', 'next', 'city', 'category', 'content'));
+        return view('city-item', compact('header', 'item', 'cities', 'previous', 'next', 'city', 'category', 'content'));
     }
 
     public function showCategory($city, $category) {
         $header = Header::dataHeader();
+        $cities = City::all();
         $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $items = CityItem::where([
             'city_id' => $cityId,
             'category' => $category,
         ])->paginate(10);
-        return view('city-category', compact('header', 'items', 'content'));   
+        return view('city-category', compact('header', 'cities', 'items', 'content'));   
     }
 
     private function getRecordsByCategory($cityId, $category) {

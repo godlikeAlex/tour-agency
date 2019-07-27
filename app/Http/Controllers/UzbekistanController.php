@@ -21,7 +21,7 @@ class UzbekistanController extends Controller
         return view('uzbekistan-category', compact('header', 'items'));
     }
 
-    public function show($uzb) {
+    public function show($category ,$uzb) {
         $header = Header::dataHeader();
         $item  = Uzbekistan::where('slug', $uzb)->firstOrFail();
         return view('uzbekistan-show', compact('header', 'item'));

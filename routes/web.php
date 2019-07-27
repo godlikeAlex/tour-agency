@@ -90,6 +90,6 @@ Route::prefix('admin/uzbekistan')->group(function() {
 
 Route::prefix('uzbekistan')->group(function() {
     Route::get('/', 'UzbekistanController@index');
-    Route::get('/category/{category}', 'UzbekistanController@category')->name('uzb.category');
-    Route::get('/{uzb}', 'UzbekistanController@show')->name('uzb.show');
+    Route::get('/{category}', 'UzbekistanController@category')->name('uzb.category');
+    Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
 });
