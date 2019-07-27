@@ -1668,7 +1668,7 @@ a.breadcrumb-item:hover {
   padding-left: 15px;
   padding-bottom: 15px;
   padding-right: 55px;
-  z-index: 2;
+  z-index: 9999;
   left: 0%;
   display: none;
 }

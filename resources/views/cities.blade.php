@@ -27,27 +27,36 @@
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="/css/card.css">
+<link rel="stylesheet" type="text/css" href="/css/card.css">    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <title>Document</title>
 </head>
 <body>
-    @include('/components/header')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 name-sec">Все города</div>
-            @foreach($cities as $city)
-                <a style="padding:0;" class="col-md-3" href="/city/{{Illuminate\Support\Str::lower($city->name)}}">
-                    <div class="a_card" style="background: url(/storage/{{$city->image}}); background-size: cover;">
-                        {{$city->name}}
+    @include('/components/header', ['type' => 'city'])
+        <div class="container">
+        @foreach($cities as $city)
+        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;"><a style="    font-size: 35px;
+    font-weight: 700;
+    color: #0460d9;" href="/city/{{Illuminate\Support\Str::lower($city->name)}}">{{$city->name}}</a></div>
+        <div class="row container_uzb" >
+                <a class="col-md-4" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">
+                    <div class="a_card card_big" style="background-size: cover;">
+                            <p>История</p>
                     </div>
                 </a>
-            @endforeach
+                <a class="col-md-4" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">
+                    <div class="a_card card_big" style="background-size: cover;">
+                        <p>Чем занятся</p>
+                    </div>
+                </a> 
+                <a class="col-md-4" href="">
+                        <div class="a_card card_big" style="background-size: cover;">
+                            <p>Что смотреть</p>
+                        </div>
+                </a> 
+                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Подробнее</a>
         </div>
+        @endforeach
     </div>
-
-
-
-
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

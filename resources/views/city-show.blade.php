@@ -29,7 +29,7 @@
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/card.css">    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="/css/slick/custom-theme.css">
+    <link rel="stylesheet" href="/css/slick/custom-theme.css"><link rel="stylesheet" type="text/css" href="/css/main-menu.css">
        
     <title>Document</title>
 </head>
@@ -108,7 +108,7 @@
                         </div>
                     </a> 
                 </div>  
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Вся история</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Что смотреть</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -147,7 +147,7 @@
                         </div>
                     </a> 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все достопримечательности</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Чем заняться</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -186,7 +186,7 @@
                         </div>
                     </a> 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все развлечения</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Где покупать</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -225,7 +225,7 @@
                         </div>
                     </a> 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все маркеты</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Где поесть</div>
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
@@ -239,7 +239,7 @@
                         </a>
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все рестораны</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Где остановиться</div>
                 <div class="responsive col-md-12">
                     @foreach($hotels as $hotel)
@@ -250,7 +250,7 @@
                         </a>
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все отели</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
                 <div class="col-md-12 name-sec">Как добраться</div>
                 <div class="responsive col-md-12">
                     <a class="col-md-12" href="">
@@ -347,15 +347,15 @@
     <script src="/js/active.js"></script>
     <script src="/vendor/bootstrap/js/popper.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js"></script> 
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $('.responsive').slick({
             infinite: true,
             speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
             nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
             responsive: [

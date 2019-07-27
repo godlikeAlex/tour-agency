@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css">    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
-
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <title>Document</title>
 </head>
 <body>

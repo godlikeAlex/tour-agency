@@ -35,7 +35,7 @@
     
         <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Узбекистан</div>
         <div class="row container_uzb" >
-        <a class="col-md-4" href="{{route('uzb.category', ['category' => 'geo'])}}">
+                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'geo'])}}">
                     <div class="a_card card_big" style="background-size: cover;">
                             <p>География</p>
                     </div>
@@ -57,7 +57,7 @@
     <div class="mapouter" style="width:100%; width: 100%; margin-bottom: 70px; margin-top: 70px; ><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=uzbekistan&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div>
         <div class="container">
     
-        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Туризм</div>
+        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Туризм</div>
         <div class="row container_uzb" >
                 <a class="col-md-4" href="{{route('uzb.category', ['category' => 'visa'])}}">
                     <div class="a_card card_big" style="background-size: cover;">
@@ -75,7 +75,7 @@
                         </div>
                 </a> 
         </div>
-        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Искуства</div>
+        <div id='iskustva' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Искуства</div>
         <div class="row container_uzb" >
                 <a class="col-md-4" href="{{route('uzb.category', ['category' => 'literature'])}}">
                     <div class="a_card card_big" style="background-size: cover;">
@@ -108,7 +108,7 @@
                         </div>
                 </a> 
         </div>
-        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Культура</div>
+        <div id='culura' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Культура</div>
         <div class="row container_uzb" >
                 <a class="col-md-4" href="{{route('uzb.category', ['category' => 'kitchen'])}}">
                     <div class="a_card card_big" style="background-size: cover;">

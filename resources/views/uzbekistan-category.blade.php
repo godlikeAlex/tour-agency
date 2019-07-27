@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row container_of_tours" >
                 @foreach($items as $item)
-                <a class="col-md-4 main_b_card" href="{{route('uzb.show', ['uzb' => $item->slug])}}">
+                <a class="col-md-4 main_b_card" href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}">
                     <div class="b_card" style="background: url(/storage/{{$item->image}});     background-size: cover;">
                         <div class="b_card_bottom">
                             <div class="b_card_name">{{$item->name}}</div>

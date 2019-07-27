@@ -38,6 +38,7 @@
     }
     </style>
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <title>Document</title>
 </head>
 <body>

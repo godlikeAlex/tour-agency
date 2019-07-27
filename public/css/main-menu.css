@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 .main-menu
 {
     display: flex;
@@ -15,6 +16,7 @@
 .menu-border {
     border-top: 2px solid #0460D9;
     border-bottom: 1px solid #7b7b7b;
+    background: white;
 }
 
 .main-menu li {
@@ -27,6 +29,7 @@
     font-weight: 700;
     font-size: 14px;
     transition: .5s;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main-menu li:hover a
@@ -36,6 +39,7 @@
 
 .active a{
     color: #0460D9;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -102,15 +106,55 @@
     color: #0460D9;
 }
 
-.sub-menu-nav div:first-child {
+.sub-menu-nav li:first-child {
     padding-left: 0px;
 }
 
 .sub-menu-nav a {
     color: #292929;
+    font-family: 'Roboto', sans-serif;
 }
 
 .sub-menu-main
 {
     background: #e0e0e0;
+}
+
+.sub-menu-item:after {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f107"; padding: 5px;
+}
+
+.sub-menu-active {
+    color: #0460D9 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sub-menu-active:before {
+    content: '';
+    position: absolute;
+    transition: .5s;
+    bottom: -1px;
+    width: 100%;
+    background: #0460D9;
+    height: 2px;
+    left: 0;
+}
+
+.main-menu-fixed
+{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.main-menu-hide
+{
+    position: fixed;
+    top: -25%;
+}
+
+.main-menu-sticky
+{
+    transition: 1s;
 }
