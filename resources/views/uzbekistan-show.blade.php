@@ -38,52 +38,39 @@
 <body>
 @include('/components/header', ['type' => 'uzbekistan'])
     <div class="container">
-    <nav class="category_nav col-md-12" style="margin-top:50px;">
-                    <ul class="row" style="    justify-content: space-between;"> 
-                        <li>
-                            <a href=""><i class="fas fa-history"></i> История</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-mosque"></i> Что смотреть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-tree"></i> Чем заняться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-shopping-cart"></i> Где покупать</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-utensils"></i> Где поесть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-hotel"></i> Где остановиться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-taxi"></i> Как добраться</a>
-                        </li>
-                        <li>
-                            <a href="">Полезная информация</a>
-                        </li>
-                    </ul>
-                </nav>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
-					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
-					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-					<a class="a2a_button_facebook"></a>
-					<a class="a2a_button_email"></a>
-					<a class="a2a_button_telegram"></a>
-					<a class="a2a_button_whatsapp"></a>
-					</div>
-					<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END --></div>
-                <div class="col-md-12" style="margin-top: 35px;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-                <div class="col-md-12" style="margin-top:25px;">{!! $item->about !!}</div>
-            </div>
-        </div>
- 
+    <div style="padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+			<div class="f2-s-1 p-r-30 m-tb-6">
+				<a href="/" class="breadcrumb-item f1-s-3 cl9">
+					Главная 
+				</a>
+
+				<a href="/people" class="breadcrumb-item f1-s-3 cl9">
+					Люди 
+				</a>
+
+				<span class="breadcrumb-item f1-s-3 cl9">
+					 {{$item -> name}}
+				</span>
+			</div>
     </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_telegram"></a>
+                <a class="a2a_button_whatsapp"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></div>
+            <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
+            <div class="col-md-12" style="margin-top:25px; padding-left:0">{!! $item->about !!}</div>
+        </div>
+    </div>
+
+</div>
 
 
 

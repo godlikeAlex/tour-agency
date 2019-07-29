@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700&display=swap');
+
+body 
+{
+    font-family:     'Open Sans', sans-serif;
+}
+
+.nav__menu
+{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+
+.nav__title
+{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.nav__menu li {
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+.content-block__img
+{
+    height: 200px;
+    background-image: linear-gradient(45deg, #d585ff, #0fe);
+}
+
+.content-block__category
+{
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.content-block__title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main-content-block
+{
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 3px solid #0300a3;
+    border-bottom: 3px solid #0300a3;
+}
+
+.content-block_main article
+{
+    margin-top: 35px;
+}
+
+
+.button-show-more
+{
+    text-transform: uppercase;
+    text-align: center;
+    width: 300px    ;
+    padding: 10px;
+    font-weight: 700;
+    border: 1px solid gray;
+    border-radius: 55px;
+    margin: 50px auto;
+    font-size: 13px;
+    transition: .5s;
+}
+
+.show-more-link {
+    color: black;
+    text-decoration: none;
+}
+
+.show-more-link:hover { text-decoration: none; }
+
+.button-show-more:hover {
+    background: rgb(36, 36, 36);
+    color: white;
+}
+
+.tour-item-slide
+{
+    height: 500px;
+    color: white;
+    background-image: linear-gradient(45deg, #662d8c, #ed1e79);
+    text-align: center;
+    padding-top: 50px;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tour-item-slide:nth-child(2) {
+    background-image: linear-gradient(45deg, #ed1c24, #fcee21);
+}
+
+.tour-item-slide:nth-child(3) {
+    background-image: linear-gradient(45deg, #312a6c, #852d91);
+}
+
+.item-slide__tours
+{
+    list-style: none;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.item-slide__tours a 
+{
+    color: white;
+}
+
+.item-slide__tours li
+{
+    color: white;
+    padding: 10px 0px;
+}
+
+.item-slide__tours a:hover { text-decoration: none; }
+
+.tour-item-slide:hover
+{
+    z-index: 19;
+    transform: scale(1.03);
+    box-shadow: 0px 28px 81px -7px rgba(0,0,0, 0.44);
+}
+
+.tours
+{
+    margin-top: 50px;
+}
