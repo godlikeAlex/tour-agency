@@ -66,19 +66,19 @@ Route::prefix('admin/people')->group(function() {
 
 Route::prefix('blog')->group(function() {
     Route::get('/', 'Blog@indexBlog');
-    Route::get('/category/{category}', 'Blog@indexBlogCategory');
-    Route::get('/post/{slug}', 'Blog@showPost');
+    Route::get('/category/{category}', 'Blog@indexBlogCategory')->name('blog.category');
+    Route::get('/post/{slug}', 'Blog@showPost')->name('blog.show');
 });
 
 Route::prefix('people')->group(function() {
     Route::get('/', 'Blog@indexPeople');
-    Route::get('/category/{category}', 'Blog@indexPeopleCategory');
-    Route::get('/{slug}', 'Blog@showPeople');
+    Route::get('/category/{category}', 'Blog@indexPeopleCategory')->name('people.category');
+    Route::get('/{slug}', 'Blog@showPeople')->name('people.show');
 });
 
 Route::prefix('city')->group(function() {
     Route::get('/', 'CityController@index');
-    Route::get('/{city}', 'CityController@showCity');
+    Route::get('/{city}', 'CityController@showCity')->name('city.show');
     Route::get('/{city}/{category}/{slug}', 'CityController@showItem')->name('city.item');
     Route::get('/{city}/{category}', 'CityController@showCategory')->name('city.category');
 });
