@@ -169,6 +169,7 @@
         <img src="/images/ads.png" alt="Ad banner">
     </div>
     <div class="tours">
+            <div class="title-tours">Тур пакеты</div>
             <div class="row">
                 <div class="col-md-3 tour-item-slide">
                     <div class="item-slide__title">Эко туры</div>
