@@ -14,20 +14,13 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/util.min.css">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/tour-all.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 </head>
 <body>
 @include('/components/header', ['type' => 'uzbekistan'])
@@ -35,21 +28,30 @@
     
         <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Узбекистан</div>
         <div class="row container_uzb" >
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'geo'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                            <p>География</p>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'history'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <p>История</p>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Люди</p>
+                <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'geo'])}}"></a>
                         </div>
-                </a> 
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a>
+                        </div>
+                </article>
+                <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'history'])}}"></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'history'])}}">История</a>
+                        </div>
+                </article>
+                <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'history'])}}"></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'history'])}}">Люди</a>
+                        </div>
+                </article>
         </div>
         
     </div>
@@ -59,87 +61,132 @@
     
         <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Туризм</div>
         <div class="row container_uzb" >
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'visa'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                            <p>Виза</p>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'transport'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <p>Транспорт</p>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'eco'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Экология</p>
+            <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
                         </div>
-                </a> 
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Виза</a>
+                        </div>
+            </article>
+            <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Транспорт</a>
+                        </div>
+            </article>
+            <article class="col-md-4 block_main__item" >
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Экология</a>
+                        </div>
+            </article>
         </div>
         <div id='iskustva' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Искуства</div>
         <div class="row container_uzb" >
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'literature'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                            <p>Литература</p>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'architecture'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <p>Архитиктура</p>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'music'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Музыка</p>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'teatr'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Театр</p>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'painting'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Живопись</p>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'poetry'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Поэзия</p>
-                        </div>
-                </a> 
+            <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'literature'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'literature'])}}">Литература</a>
+                </div>
+            </article>
+            <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'architecture'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'architecture'])}}">Архитиктура</a>
+                </div>
+            </article>
+            <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'music'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'music'])}}">Музыка</a>
+                </div>
+            </article>
+            <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'teatr'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'teatr'])}}">Театр</a>
+                </div>
+            </article>
+            <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'painting'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'painting'])}}">Живопись</a>
+                </div>
+            </article>
+            <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'poetry'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'poetry'])}}">Поэзия</a>
+                </div>
+            </article>
         </div>
         <div id='culura' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;">Культура</div>
         <div class="row container_uzb" >
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'kitchen'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                            <p>Кухня</p>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'clothing'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <p>Одежда</p>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'religion'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Религия</p>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'holidays'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                            <p>Праздники</p>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'sufism'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <p>Суфизм</p>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="{{route('uzb.category', ['category' => 'lang'])}}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <p>Язык</p>
-                        </div>
-                </a>
+        <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'kitchen'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
+                </div>
+        </article>
+        <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'clothing'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
+                </div>
+        </article>
+        <article class="col-md-4 block_main__item" >
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'religion'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
+                </div>
+        </article>
+        <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'holidays'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
+                </div>
+        </article>
+        <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'sufism'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
+                </div>
+        </article>
+        <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                <div class="content-block__img">
+                    <a href="{{route('uzb.category', ['category' => 'lang'])}}"></a>
+                </div>
+                <div class="content-block__title">
+                    <a href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                </div>
+        </article>
         </div>
         
     </div>

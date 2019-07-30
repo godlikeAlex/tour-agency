@@ -13,20 +13,11 @@
     <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/util.min.css">
-    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" href="/css/tour-all.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
@@ -34,27 +25,18 @@
     <div class="container">
         <div class="row container_of_tours" >
                 @foreach($items as $item)
-                <a class="col-md-4 main_b_card" href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}">
-                    <div class="b_card" style="background: url(/storage/{{$item->image}});     background-size: cover;">
-                        <div class="b_card_bottom">
-                            <div class="b_card_name">{{$item->name}}</div>
-                            <!-- <div class="b_map-controller"><span><i class="fas fa-map-marker-alt"></i> Tashkent - Samarkand</span> <i class="fas fa-arrow-right"></i></div> -->
+                    <article class="col-md-4 block_main__item" style="margin-top:50px;">
+                        <div class="content-block__img">
+                            <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}"></a>
                         </div>
-                    </div>
-                </a>
+                        <div class="content-block__title">
+                            <a href="{{route('people.show', ['slug' => $item->slug])}}">{{$item->name}}</a>
+                        </div>
+                    </article>
                 @endforeach
                 
         </div>
         
     </div>
-<!--===============================================================================================-->
-<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="/vendor/bootstrap/js/popper.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="/js/main.js"></script>
 </body>
 </html>
