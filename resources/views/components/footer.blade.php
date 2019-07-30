@@ -72,8 +72,8 @@
 </footer> -->
 
 <footer class="footer-nav">
-    <div style="display: flex; justify-content: space-between; width: 95%; margin: auto;">
-            <div>
+    <div class="container footer-flex" style="display: flex; justify-content: space-between; margin: auto; flex-wrap: wrap;">
+            <div class="footer_block">
                 <div class="title-footer">Узбекистан</div>
                 <div class="items-footer">
                     <div>География</div>
@@ -83,7 +83,7 @@
                     <div>Культура</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
                 <div class="title-footer">Города</div>
                 <div class="items-footer">
                     <div>Ташкент</div>
@@ -95,7 +95,7 @@
                     <div>Нукус</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
                 <div class="title-footer">Туры</div>
                 <div class="items-footer">
                         <div>Исторические туры</div>
@@ -109,7 +109,7 @@
                         <div>Центральная Азия</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
                 <div class="title-footer">Люди</div>
                 <div class="items-footer">
                     <div>География</div>
@@ -119,7 +119,7 @@
                     <div>Культура</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
                 <div class="title-footer">Базар</div>
                 <div class="items-footer">
                     <div>География</div>
@@ -129,7 +129,7 @@
                     <div>Культура</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
             <div class="title-footer">Новости</div>
                 <div class="items-footer">
                     <div>География</div>
@@ -139,7 +139,7 @@
                     <div>Культура</div>
                 </div>
             </div>
-            <div>
+            <div class="footer_block">
             <div class="title-footer">Фото</div>
                 <div class="items-footer">
                     <div>География</div>

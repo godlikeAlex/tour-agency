@@ -23,11 +23,12 @@
         <div class="main-content-block__nav row">
             <span class="nav__title col-md-2">Узбекистан</span>
             <ul class="nav__menu col-md-10">
-                <li>География</li>
-                <li>История</li>
-                <li>Люди</li>
-                <li>Туризм</li>
-                <li>Культура</li>
+                <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
+                <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
+                <li><a href="{{route('uzb.category', ['category' => 'people'])}}">Люди</a></li>
+                <li><a href="/uzbekistan/#turizm">Туризм</a></li>
+                <li><a href="/uzbekistan/#iskustva">Искуства</a></li>
+                <li><a href="/uzbekistan/#culura">Культура</a></li>
             </ul>
         </div>
         <div class="row content-block_main">
@@ -67,6 +68,105 @@
                     Показать еще
                 </div>
         </a>
+    </div>
+    <div class="main-content-block">
+        <div class="main-content-block__nav row">
+            <span class="nav__title col-md-2">Города</span>
+            <ul class="nav__menu col-md-10">
+                @foreach($cities as $cityNav)
+                     <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($cityNav->name)])}}">{{$cityNav->name}}</a></li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="row content-block_main">
+            @foreach($cityContent as $city)
+                <?php 
+                    $curentUrlCity;
+                    foreach($cities as $curCity) {
+                        if($curCity->id === $city->id) {
+                            $curentUrlCity = $curCity->name;
+                        }
+                    }
+                ?>
+                <article class="col-md-4 block_main__item">
+                    <div class="content-block__img">
+                    <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><img src="storage/{{$city->image}}" alt="{{$city->name}}"></a>
+                    </div>
+                    <div class="content-block__category">
+                        <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
+                            @if($city->category === 'where-to-eat')
+                                Где поесть
+                            @elseif($city->category === 'where-to-stay')
+                                Где остановиться
+                            @elseif($city->category === 'history')
+                                История
+                            @elseif($city->category === 'where-to-see')
+                                Что посмотреть
+                            @elseif($city->category === 'things-to-do')
+                                Чем заняться
+                            @elseif($city->category === 'where-to-buy')
+                                Где покупать
+                            @elseif($city->category === 'how-to-get')
+                                Как добраться
+                            @elseif($city->category === 'useful-information')
+                                Полезная информация
+                            @endif
+                        </a>
+                    </div>
+                    <div class="content-block__title">
+                        <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+        <a class="show-more-link" href="/city">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+            </a>
+    </div>
+    
+    <div class="main-content-block">
+        <div class="main-content-block__nav row">
+            <span class="nav__title col-md-2">Люди</span>
+            <ul class="nav__menu col-md-10">
+                <li><a href="/people">Все</a></li>
+                <li><a href="/category/drevniy-mir">Древний мир</a></li>
+                <li><a href="/category/srednie-veka">Средние века</a></li>
+                <li><a href="/uzbekistan/novoe-vremy">Новое время</a></li>
+            </ul>
+        </div>  
+        <div class="row content-block_main">
+            @foreach($peoples as $people)
+                <article class="col-md-4 block_main__item">
+                    <div class="content-block__img">
+                    <a href="{{route('people.show', ['slug' => $people->slug])}}"><img src="storage/{{$people->image}}" alt="{{$people->name}}"></a>
+                    </div>
+                    <div class="content-block__category">
+                        <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
+                            @if($people->category === 'drevniy-mir')
+                                Древний мир
+                            @elseif($people->category === 'srednie-veka')
+                                Средние века
+                            @elseif($people->category === 'novoe-vremy')
+                                Новое время
+                            @endif
+                        </a>
+                    </div>
+                    <div class="content-block__title">
+                        <a href="{{route('people.show', ['slug' => $people->slug])}}">{{$people->name}}</a>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+        <a class="show-more-link" href="/people">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+            </a>
+    </div>
+    <div class="ad-block">
+        <img src="/images/ads.png" alt="Ad banner">
     </div>
     <div class="tours">
             <div class="row">
@@ -111,6 +211,51 @@
                     </ul>
                 </div>
             </div>
+    </div>
+    <div class="main-content-block">
+        <div class="main-content-block__nav row">
+            <span class="nav__title col-md-2">Новости</span>
+            <ul class="nav__menu col-md-10">
+                <li><a href="/blog">Все</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">Туризм</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
+            </ul>
+        </div>  
+        <div class="row content-block_main">
+            @foreach($articles as $post)
+                <article class="col-md-4 block_main__item">
+                    <div class="content-block__img">
+                    <a href="{{route('blog.show', ['slug' => $post->slug])}}"><img src="storage/{{$post->image}}" alt="{{$post->name}}"></a>
+                    </div>
+                    <div class="content-block__category">
+                        <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
+                            @if($post->category === 'toursim')
+                                Туризм
+                            @elseif($post->category === 'uzbekistan')
+                                Узбекистан
+                            @elseif($post->category === 'history')
+                                История
+                            @elseif($post->category === 'tourists')
+                                Туристы
+                            @endif
+                        </a>
+                    </div>
+                    <div class="content-block__title">
+                        <a href="{{route('blog.show', ['slug' => $post->slug])}}">{{$post->title}}</a>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+        <a class="show-more-link" href="/blog">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+            </a>
+    </div>
+    <div class="ad-block">
+        <img src="/images/ads.png" alt="Ad banner">
     </div>
 </div>
 

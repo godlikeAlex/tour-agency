@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    padding: 0
+    padding: 0;
+    margin: 0;
 }
 
 .ad-banner-header
@@ -22,6 +23,12 @@
 .main-menu li {
     padding: 5px 0;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu i {
+    font-size: 25px;
 }
 
 .main-menu a {
@@ -35,6 +42,7 @@
 .main-menu li:hover a
 {
     color: #0460D9;
+    text-decoration: none;
 }
 
 .active a{
@@ -176,8 +184,20 @@
 
 .items-footer
 {
-    margin-top: 10px;
+    margin-top: 25px;
+    line-height: 30px;
     font-size: 14px;
+}
+
+.items-footer div 
+{
+    transition: .5s;
+    cursor: pointer;
+}
+
+.items-footer div:hover 
+{
+    color: #097cff;
 }
 
 .footer-blocks__items-item
@@ -260,3 +280,36 @@
     font-weight: 700;
     color: #989898;
 }
+
+/* Media  */
+
+@media only screen and (min-width: 1200px){
+    .wrap {
+      width: 1127px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 1199px) and (min-width: 992px){
+    .wrap {
+      width: 933px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 991px) and (min-width: 768px){
+    .footer_block
+    {
+        width: 26%;
+    }
+  }
+  
+  @media only screen and (max-width: 767px){
+    .footer_block
+    {
+        width: 100%;
+    }
+  }

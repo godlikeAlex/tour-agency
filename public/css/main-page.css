@@ -26,8 +26,13 @@ body
 
 .content-block__img
 {
-    height: 200px;
+    height: 210px;
     background-image: linear-gradient(45deg, #d585ff, #0fe);
+}
+
+.content-block__img img {
+    width: 100%;
+    height: 100%;
 }
 
 .content-block__category
@@ -44,6 +49,12 @@ body
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 18px;
+    
+}
+
+.content-block__title a {
+    transition: .5s;
+    color: #212529;
 }
 
 .main-content-block
@@ -53,6 +64,16 @@ body
     padding-bottom: 50px;
     border-top: 3px solid #0300a3;
     border-bottom: 3px solid #0300a3;
+}
+
+.main-content-block:nth-child(2) {
+    border-top: 0px;
+    margin-top: 0;
+}
+
+.main-content-block:nth-child(3) {
+    border-top: 0px;
+    margin-top: 0;
 }
 
 .content-block_main article
@@ -70,7 +91,8 @@ body
     font-weight: 700;
     border: 1px solid gray;
     border-radius: 55px;
-    margin: 50px auto;
+    margin: auto;
+    margin-top: 50px;
     font-size: 13px;
     transition: .5s;
 }
@@ -91,21 +113,49 @@ body
 {
     height: 500px;
     color: white;
-    background-image: linear-gradient(45deg, #662d8c, #ed1e79);
+    background-image:url(https://lonelyplanetstatic.imgix.net/copilot/images/Um9hZHRyaXBzLmpwZ01vbiBOb3YgMDUgMjAxOCAxMTozMjowNyBHTVQrMDAwMCAoVVRDKQ%3D%3D.jpg?q=40&w=2000&h=1125&fit=crop&fm=pjpg?q=60&sharp=10&fit=crop&w=322&h=520);
     text-align: center;
     padding-top: 50px;
     transition: .5s;
     cursor: pointer;
     font-size: 18px;
+    position: relative;
     font-weight: 600;
 }
 
+.tour-item-slide::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3c3c3c78;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.item-slide__title
+{
+    position: relative;
+    z-index: 2;
+}
+
+.item-slide__tours
+{
+    position: relative;
+    z-index: 2;
+}
+
 .tour-item-slide:nth-child(2) {
-    background-image: linear-gradient(45deg, #ed1c24, #fcee21);
+    background-image:url(https://lonelyplanetstatic.imgix.net/copilot/images/ZmFtaWx5LXRyYXZlbC5qcGdNb24gTm92IDA1IDIwMTggMTI6MTM6NDYgR01UKzAwMDAgKFVUQyk%3D.jpg?q=40&w=2000&h=1125&fit=crop&fm=pjpg?q=60&sharp=10&fit=crop&w=322&h=520);
 }
 
 .tour-item-slide:nth-child(3) {
-    background-image: linear-gradient(45deg, #312a6c, #852d91);
+    background-image:url(https://lonelyplanetstatic.imgix.net/copilot/images/QmFja3BhY2tpbmcuanBnTW9uIE5vdiAwNSAyMDE4IDExOjMwOjQ4IEdNVCswMDAwIChVVEMp.jpg?q=40&w=2000&h=1125&fit=crop&fm=pjpg?q=60&sharp=10&fit=crop&w=322&h=520);
+}
+
+.tour-item-slide:nth-child(4) {
+    background-image:url(https://lonelyplanetstatic.imgix.net/copilot/images/R2Vhci1hbmQtdGVjaC5qcGdNb24gTm92IDA1IDIwMTggMTE6MzI6MTkgR01UKzAwMDAgKFVUQyk%3D.jpg?q=40&w=2000&h=1125&fit=crop&fm=pjpg?q=60&sharp=10&fit=crop&w=322&h=520);
 }
 
 .item-slide__tours
@@ -140,4 +190,28 @@ body
 .tours
 {
     margin-top: 50px;
+}
+
+.category-link
+{
+    color: #212529;
+    transition: .5s;
+}
+
+.category-link:hover 
+{
+    text-decoration: none;
+    color: #0300a3;
+}
+
+.content-block__title:hover a {
+    text-decoration: none;
+    color: #0300a3;
+}
+
+.ad-block
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
