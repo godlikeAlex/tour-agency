@@ -19,9 +19,15 @@ class CityController extends Controller
         $header         = Header::dataHeader();
         $content        = City::where('name',$city)->firstOrFail();
         $cities         = City::all();
-        $restaurants    = $this->getRecordsByCategory($content->id, 'where_to_eat');
-        $hotels         = $this->getRecordsByCategory($content->id, 'where_to_stay');
-        return view('city-show', compact('content', 'header', 'restaurants', 'hotels', 'cities'));
+        $historys       = $this->getRecordsByCategory($content->id, 'history');
+        $whatToSee       = $this->getRecordsByCategory($content->id, 'what-to-see');
+        $whatToDo       = $this->getRecordsByCategory($content->id, 'what-to-do');
+        $whereToBuy       = $this->getRecordsByCategory($content->id, 'where-to-buy');
+        $restaurants    = $this->getRecordsByCategory($content->id, 'where-to-eat');
+        $hotels         = $this->getRecordsByCategory($content->id, 'where-to-stay');
+        $howToGet         = $this->getRecordsByCategory($content->id, 'how-to-get');
+        $usefulInformation         = $this->getRecordsByCategory($content->id, 'useful-information');
+        return view('city-show', compact('content', 'historys', 'restaurants', 'hotels', 'whereToBuy', 'howToGet', 'whatToDo', 'usefulInformation', 'whatToSee', 'cities'));
     }
 
     public function showItem($city, $category, $slug) {

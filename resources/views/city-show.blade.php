@@ -5,32 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--===============================================================================================-->
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/style-blog.css">
    <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="///images/icons/favicon.png"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-<!--==============================================/=================================================-->
-	<link rel="stylesheet" type="text/css" href="/css/util.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/card.css">    
+   
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="/css/slick/custom-theme.css"><link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" href="/css/slick/custom-theme.css">
        
+           <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="/css/tour-all.css">
+    <!--===============================================================================================-->
+    <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/card.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
     <title>Document</title>
 </head>
 <body>
@@ -40,295 +34,167 @@
             <div class="row">
                 <div class="col-md-12 name-sec">{{$content->name}}</div>
                 <div class="col-md-12">{!!$content->about!!}</div>
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        История
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        Что смотреть
-                    </div>
-                </a> 
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do']) }}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            Чем заняться
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}""></a>
                         </div>
-                </a> 
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                                Где покупать
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}"">История</a>
                         </div>
-                </a> 
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            Где поесть
+                </article>
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}""></a>
                         </div>
-                </a> 
-                <a class="col-md-4" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            Где остановиться
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}"">Что смотреть</a>
                         </div>
-                </a>  
+                </article>
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do']) }}""></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do']) }}"">Чем заняться</a>
+                        </div>
+                </article>
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}""></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}"">Где покупать</a>
+                        </div>
+                </article>
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}""></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}"">Где поесть</a>
+                        </div>
+                </article>
+                <article class="col-md-4 block_main__item" style="margin-top:20px">
+                        <div class="content-block__img">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}""></a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}"">Где остановиться</a>
+                        </div>
+                </article>
+ 
                 <div class="col-md-12 name-sec">История</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                            История
-                        </div>
-                    </a> 
+                    @foreach($historys as $history)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/history/{{$history->slug}}"><img src="/storage/{{$history->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/history/{{$history->slug}}">{{$history->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach
                 </div>  
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Что смотреть</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Что смотреть
-                        </div>
-                    </a> 
+                    @foreach($whatToSee as $whatSee)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-see/{{$whatSee->slug}}"><img src="/storage/{{$whatSee->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-see/{{$whatSee->slug}}">{{$whatSee->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Чем заняться</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
+                    @foreach($whatToDo as $toDo)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-do/{{$toDo->slug}}"><img src="/storage/{{$toDo->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-do/{{$toDo->slug}}">{{$toDo->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Где покупать</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Где покупать
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Чем заняться
-                        </div>
-                    </a> 
+                    @foreach($whereToBuy as $buy)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-buy/{{$buy->slug}}"><img src="/storage/{{$buy->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-buy/{{$buy->slug}}">{{$buy->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Где поесть</div>
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
-                        <a class="col-md-12" href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}">
-                            <div class="a_card" style="background:url(/storage/{{$cafe->image}});background-size: cover;">
-                                
-                                <div class="skewed_category">
-                                    <p>{{$cafe -> name}}</p>
-                                </div>
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}"><img src="/storage/{{$cafe->image}}" alt=""></a>
                             </div>
-                        </a>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}">{{$cafe->name}}</a>
+                            </div>
+                        </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Где остановиться</div>
                 <div class="responsive col-md-12">
                     @foreach($hotels as $hotel)
-                        <a class="col-md-12" href="{{Illuminate\Support\Str::lower($content->name)}}/where_to_stay/{{$hotel->id}}">
-                            <div class="a_card" style="background:url(/storage/{{$hotel->image}});background-size: cover;">
-                                {{$hotel -> name}}
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$hotel->slug}}"><img src="/storage/{{$hotel->image}}" alt=""></a>
                             </div>
-                        </a>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$hotel->slug}}">{{$hotel->name}}</a>
+                            </div>
+                        </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать больше</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Как добраться</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Как добраться
-                        </div>
-                    </a> 
+                    @foreach($howToGet as $get)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/how-to-get/{{$get->slug}}"><img src="/storage/{{$get->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/how-to-get/{{$get->slug}}">{{$get->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Все пути</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
                 <div class="col-md-12 name-sec">Полезная информация</div>
                 <div class="responsive col-md-12">
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a>   
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
-                    <a class="col-md-12" href="">
-                        <div class="a_card" style="background-size: cover;">
-                        Полезная информация
-                        </div>
-                    </a> 
+                    @foreach($usefulInformation as $info)
+                        <article class="col-md-12 block_main__item" style="margin-top:20px">
+                            <div class="content-block__img">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/useful-information/{{$info->slug}}"><img src="/storage/{{$info->image}}" alt=""></a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/useful-information/{{$info->slug}}">{{$info->name}}</a>
+                            </div>
+                        </article> 
+                    @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Вся полезная информация</a>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
             </div>
         </div>
  
@@ -338,16 +204,6 @@
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <!-- Plugins js -->
-    <script src="/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/js/active.js"></script>
-    <script src="/vendor/bootstrap/js/popper.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script> 
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
