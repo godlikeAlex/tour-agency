@@ -1,6 +1,24 @@
 <div class="ad-banner-header"></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
+    <div class="left-side-menu">
+        <div class="close-cont">
+            <i class="fas fa-times close-slide-menu"></i>
+        </div>
+        <ul>
+            <li>
+                <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <ul class="dropped-menu">
+                    <li><a href="">География</a></li>
+                    <li><a href="">История</a></li>
+                    <li><a href="">Люди</a></li>
+                    <li><a href="">Туризм</a></li>
+                    <li><a href="">Искуства</a></li>
+                    <li><a href="">Культура</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <div class="menu-border">
         <div class="container">
             <ul class="main-menu col-md-12">
@@ -151,5 +169,19 @@
                 menu.classList.add('main-menu-fixed');
             }
         });
+    </script>
+    <script>
+        const dropDown = document.querySelectorAll('.drop-menu');
+        dropDown.forEach(open => {
+            open.addEventListener('click', e => {
+                const dropingMenu = e.target.parentNode.nextElementSibling;
+                const dropedMenuHeight = dropingMenu.scrollHeight;
+                if(dropingMenu.style.maxHeight) {
+                    dropingMenu.style.maxHeight = null;
+                } else {
+                    dropingMenu.style.maxHeight = `${dropedMenuHeight}px`;
+                }
+            });
+        })
     </script>
 </nav>
