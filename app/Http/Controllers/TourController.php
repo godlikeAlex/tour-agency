@@ -20,12 +20,11 @@ class TourController extends Controller
 
     public function show($tourname) {
         $tour = Tour::where('slug', $tourname)->firstOrFail();
-        return view('tour-place', compact('header', 'tour'));
+        return view('tour-place', compact('tour'));
     }
 
     public function showCategory($category) {
         $tours = Tour::where('category', $category)->get();
-        $header = Header::dataHeader();
-        return view('tour-category', compact('header', 'tours'));
+        return view('tour-category', compact('tours'));
     }
 }

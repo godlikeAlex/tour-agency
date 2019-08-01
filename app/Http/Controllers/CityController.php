@@ -51,7 +51,7 @@ class CityController extends Controller
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
 
-        return view('city-item', compact('header', 'item', 'cities', 'previous', 'next', 'city', 'category', 'content'));
+        return view('city-item', compact('header', 'item', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }
 
     public function showCategory($city, $category) {
