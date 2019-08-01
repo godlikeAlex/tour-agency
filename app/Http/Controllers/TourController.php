@@ -11,13 +11,15 @@ use App\Tour;
 class TourController extends Controller
 {
     public function index() {
-        $header = Header::dataHeader();
-        return view('tours', compact('header'));
+        $ecoTours = Tour::where('category', 'eco_tours')->take(5)->get();
+        $historyTours = Tour::where('category', 'history_tours')->take(5)->get();
+        $buisnesTours = Tour::where('category', 'buisnes_tours')->take(5)->get();
+        $economTours = Tour::where('category', 'econom_tours')->take(5)->get();
+        return view('tours', compact('ecoTours', 'historyTours', 'buisnesTours', 'economTours'));
     }
 
     public function show($tourname) {
         $tour = Tour::where('slug', $tourname)->firstOrFail();
-        $header = Header::dataHeader();
         return view('tour-place', compact('header', 'tour'));
     }
 

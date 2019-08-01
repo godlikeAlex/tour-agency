@@ -9,48 +9,22 @@
         <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/util.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" href="/css/tour-all.css">
+    <link rel="stylesheet" href="/css/main-page.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
     @include('/components/header')
     <div class="container">
-        <div class="row container_of_tours" >
-                @foreach($tours as $tour)
-                <a class="col-md-4 main_b_card" href="{{route('tour.show', ['tourname' => $tour->slug])}}">
-                    <div class="b_card" style="background: url(/storage/{{$tour->image}});     background-size: cover;">
-                        
-                        <div class="b_card_top">
-                            <i class="fas fa-dollar-sign"></i> {{$tour->price}}
-                        </div>
-                        <div class="b_card_bottom">
-                            <div class="b_card_name">{{$tour->name}}</div>
-                            <div class="b_map-controller"><span><i class="fas fa-map-marker-alt"></i> Tashkent - Samarkand</span> <i class="fas fa-arrow-right"></i></div>
-                        </div>
-                    </div>
-                    <div class="main_info_tour">From {{$tour->starts}} to {{$tour->ends}}, {{$tour->days}} days, {{$tour->days - 1}} nights</div>
-                </a>
-                @endforeach
-                
-        </div>
-        
+        @foreach($tours as $tour)
+            <article class="col-md-4 block_main__item" style="margin-top:25px; margin-bottom:25px;">
+                <div class="content-block__img"><a <a href="{{route('tour.show', ['tourname' => $tour->slug])}}"><img src="/storage/{{$tour->image}}" alt="{{$tour->name}}" srcset=""></a></div>
+                <div class="content-block__title"><a href="{{route('tour.show', ['tourname' => $tour->slug])}}">{{$tour->name}}</a></div>
+            </article>
+        @endforeach
     </div>
+    @include('/components/footer')
 <!--===============================================================================================-->
 <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

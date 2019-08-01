@@ -9,74 +9,58 @@
         <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/util.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" href="/css/tour-all.css">
+    <link rel="stylesheet" href="/css/main-page.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/card.css"> 
 </head>
 <body>
     @include('/components/header')
     <div class="container">
-        <div class="row container_of_tours" >
-        <a class="col-md-4" href="{{route('tour.category', ['category' => 'eco_tours'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <div class="skewed_category">
-                            <p>Эко туры</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="col-md-4" href="{{route('tour.category', ['category' => 'history_tours'])}}">
-                    <div class="a_card card_big" style="background-size: cover;">
-                        <div class="skewed_category">
-                                <p>Исторические туры</p>
-                            </div>
-                    </div>
-                </a> 
-                <a class="col-md-4" href="">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <div class="skewed_category">
-                                    <p>Чем заняться</p>
-                            </div>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <div class="skewed_category">
-                                <p>Где покупать</p>
-                            </div>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <div class="skewed_category">
-                                <p>Где поесть</p>
-                            </div>
-                        </div>
-                </a> 
-                <a class="col-md-4" href="">
-                        <div class="a_card card_big" style="background-size: cover;">
-                            <div class="skewed_category">
-                                    <p>Где остановиться</p>
-                            </div>
-                        </div>
-                </a> 
-        </div>
-        
+    <div class="tours">
+            <div class="title-tours">Популярные тур пакеты</div>
+            <div class="row">
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">Эко туры</a></div>
+                    <ul class="item-slide__tours">
+                        @foreach($ecoTours as $eco)
+                            <li><a href="{{route('tour.show', ['tourname' => $eco->slug])}}">{{$eco->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></div>
+                    <ul class="item-slide__tours">
+                        @foreach($historyTours as $history)
+                            <li><a href="{{route('tour.show', ['tourname' => $history->slug])}}">{{$history->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">Бизнес туры</a></div>
+                    <ul class="item-slide__tours">
+                        @foreach($buisnesTours as $buisnes)
+                            <li><a href="{{route('tour.show', ['tourname' => $buisnes->slug])}}">{{$buisnes->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'econom_tours'])}}">Эконом туры</a></div>
+                    <ul class="item-slide__tours">
+                        @foreach($economTours as $econom)
+                            <li><a href="{{route('tour.show', ['tourname' => $economTours->slug])}}">{{$economTours->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
     </div>
+    <a class="show-more-link" href="#">
+        <div class="button-show-more" style="margin-bottom:50px;">
+            Показать еще
+        </div>
+    </a>
+</div>
+    @include('/components/footer')
 <!--===============================================================================================-->
 <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
