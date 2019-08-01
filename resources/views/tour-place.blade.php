@@ -74,6 +74,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="/css/card.css">    
+	<link rel="stylesheet" href="/css/main-menu.css">
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 	</head>
 	<body style="padding:0;">
@@ -81,11 +82,61 @@
 	<div class="colorlib-loader"></div>
 
 	@include('/components/header')
-		<div class="colorlib-wrap" style="background:#f1f1f1">
+		<div class="colorlib-wrap" style="background:#f1f1f1; padding-top:0">
 			<div class="container">
-				
 				<div class="row">
-				<div class="col-md-12" style="font-size:30px; font-weight:700; display:flex; justify-content:space-beetwen;" >
+				<div style="    padding-bottom: 20px;
+    padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
+                    <a href="/" class="breadcrumb-item f1-s-3 cl9">
+                        Главная 
+                    </a>
+
+                    <a href="/tours" class="breadcrumb-item f1-s-3 cl9">
+                        Туры 
+                    </a>
+                    <a href="{{route('tour.category', ['category' => $tour->category])}}" class="breadcrumb-item f1-s-3 cl9">
+                            @if($tour->category === 'history_tours')
+								Бизнес туры
+                            @elseif($tour->category === 'short_tours')
+								Короткие туры
+                            @elseif($tour->category === 'group_tours')
+								Групповые туры
+                            @elseif($tour->category === 'individual_tours')
+								Индивидуальные туры
+                            @elseif($tour->category === 'exclusive_tours')
+								Эксклюзивные туры
+                            @elseif($tour->category === 'classic_tours')
+								Классические туры
+                            @elseif($tour->category === 'eco_tours')
+								Эко туры
+							@elseif($tour->category === 'kombo_asia_tours')
+								Комбинированные туры по Центральной Азии
+							@elseif($tour->category === 'kombo_uz_kz_tours')
+								Комбинированные туры по Узбекистану и Казахстану
+							@elseif($tour->category === 'kombo_uz_kg_tours')
+								Комбинированные туры по Узбекистану и Кыргызстану
+							@elseif($tour->category === 'kombo_uz_tm_tours')
+								Комбинированные туры по Узбекистану и Туркменистану
+							@elseif($tour->category === 'kombo_uz_tj_tours')
+								Комбинированные туры по Узбекистану и Таджикистану
+							@elseif($tour->category === 'excursion_сity')
+								Экскурсии по городам
+							@elseif($tour->category === 'pilgrim_tours')
+								Паломнические туры
+							@elseif($tour->category === 'economy_tours')
+								Эконом туры
+							@elseif($tour->category === 'cycling_tours')
+								Велотуры туры
+							@elseif($tour->category === 'buisnes_tours')
+								Бизнес туры
+
+                            @endif
+                    </a>
+                    <span class="breadcrumb-item f1-s-3 cl9">
+                        {{$tour -> name}}
+					</span>
+</div>
+				<div class="col-md-12" style="margin-top:0;padding-left:0;font-size:30px; font-weight:700; display:flex; justify-content: space-between;" >
 									{{$tour->name}}	<!-- AddToAny BEGIN -->
 					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
 					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
@@ -99,7 +150,7 @@
 							</div>
 					<div class="col-md-8">
 						<div class="row">
-							<div class="col-md-12">
+							<div style="padding-left:0;" class="col-md-12">
 							<div>
 								<div id="myCarousel" class="carousel slide" data-ride="carousel">
 

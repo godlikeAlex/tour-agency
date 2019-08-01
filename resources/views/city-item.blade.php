@@ -36,37 +36,44 @@
 <body>
 @include('/components/header', ['type' => 'city'])
     <div class="container">
-    <nav class="category_nav col-md-12" style="margin-top:50px;">
-                    <ul class="row" style="    justify-content: space-between;"> 
-                        <li>
-                            <a href=""><i class="fas fa-history"></i> История</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-mosque"></i> Что смотреть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-tree"></i> Чем заняться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-shopping-cart"></i> Где покупать</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-utensils"></i> Где поесть</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-hotel"></i> Где остановиться</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-taxi"></i> Как добраться</a>
-                        </li>
-                        <li>
-                            <a href="">Полезная информация</a>
-                        </li>
-                    </ul>
-                </nav>
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
+                <div style="    padding-bottom: 20px;
+    padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
+                    <a href="/" class="breadcrumb-item f1-s-3 cl9">
+                        Главная 
+                    </a>
+
+                    <a href="/city" class="breadcrumb-item f1-s-3 cl9">
+                        Города 
+                    </a>
+                    <a href="/city/{{Illuminate\Support\Str::lower($city)}}" class="breadcrumb-item f1-s-3 cl9">
+                        {{$city}} 
+                    </a>
+                    <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city),'category'=>$item->category])}}" class="breadcrumb-item f1-s-3 cl9">
+                            @if($item->category === 'where-to-eat')
+                                Где поесть
+                            @elseif($item->category === 'where-to-stay')
+                                Где остановиться
+                            @elseif($item->category === 'history')
+                                История
+                            @elseif($item->category === 'where-to-see')
+                                Что посмотреть
+                            @elseif($item->category === 'things-to-do')
+                                Чем заняться
+                            @elseif($item->category === 'where-to-buy')
+                                Где покупать
+                            @elseif($item->category === 'how-to-get')
+                                Как добраться
+                            @elseif($item->category === 'useful-information')
+                                Полезная информация
+                            @endif
+                    </a>
+                    <span class="breadcrumb-item f1-s-3 cl9">
+                        {{$item -> name}}
+                    </span>
+			    </div>
+                <div class="col-md-12 title-item" style="padding-left:0; margin-top:0px;">{{$item->name}}<!-- AddToAny BEGIN -->
 					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
 					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
 					<a class="a2a_button_facebook"></a>
@@ -76,8 +83,8 @@
 					</div>
 					<script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END --></div>
-                <div class="col-md-12" style="margin-top: 35px;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-                <div class="col-md-12" style="margin-top:25px;">{!! $item->about !!}</div>
+                <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
+                <div class="col-md-12" style="margin-top:25px; padding-left:0;">{!! $item->about !!}</div>
                 
                 @if($next && $previous)
                 <div style="display:flex; justify-content: space-between;" class="col-md-12">

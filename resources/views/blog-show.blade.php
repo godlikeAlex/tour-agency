@@ -40,20 +40,13 @@
 <!--==============================================/=================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/util.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
 <!--===============================================================================================-->
 
 </head>
 
 <body>
-    <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="world-load"></div>
-        </div>
-    </div>
-    <!-- Preloader End -->
-
     <!-- ***** Header Area Start ***** -->
 	@include('/components/header')
     <!-- ***** Header Area End ***** -->
@@ -64,10 +57,22 @@
 					Главная 
 				</a>
 
-				<a href="/people" class="breadcrumb-item f1-s-3 cl9">
-					Люди 
-				</a>
-
+				<a href="/blog" class="breadcrumb-item f1-s-3 cl9">
+					Новости 
+                </a>
+                
+				<a href="/blog/category/{{$post->category}}" class="breadcrumb-item f1-s-3 cl9">
+                    @if($post->category === 'tourism')
+                        Туризм
+                    @elseif($post->category === 'uzbekistan')
+                        Узбекистан
+                    @elseif($post->category === 'history')
+                        История
+                    @elseif($post->category === 'tourists')
+                        Туристы
+                    @endif 
+                </a>
+                
 				<span class="breadcrumb-item f1-s-3 cl9">
 					 {{$post -> title}}
 				</span>
@@ -172,43 +177,7 @@
     </div>
 
     <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <a href="#"><img src="img/core-img/logo.png" alt=""></a>
-                        <div class="copywrite-text mt-30">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <ul class="footer-menu d-flex justify-content-between">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gadgets</a></li>
-                            <li><a href="#">Video</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <h5>Subscribe</h5>
-                        <form action="#" method="post">
-                            <input type="email" name="email" id="eemail" placeholder="Enter your mail">
-                            <button type="button"><i class="fa fa-arrow-right"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('/components/footer')
     <!-- ***** Footer Area End ***** -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->

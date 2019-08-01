@@ -44,10 +44,46 @@
 					Главная 
 				</a>
 
-				<a href="/people" class="breadcrumb-item f1-s-3 cl9">
-					Люди 
+				<a href="/uzbekistan" class="breadcrumb-item f1-s-3 cl9">
+					Узбекистан 
 				</a>
-
+				<a href="{{route('uzb.category', ['category' => $item->category])}}" class="breadcrumb-item f1-s-3 cl9">
+                    @if($item->category === 'geo')
+                        География
+                    @elseif($item->category === 'history')
+                        История
+                    @elseif($item->category === 'visa')
+                        Виза
+                    @elseif($item->category === 'transport')
+                        Транспорт
+                    @elseif($item->category === 'eco')
+                        Экология
+                    @elseif($item->category === 'literature')
+                        Литература
+                    @elseif($item->category === 'architecture')
+                        Архитиктура
+                    @elseif($item->category === 'music')
+                        Музыка
+                    @elseif($item->category === 'teatr')
+                        Театр
+                    @elseif($item->category === 'painting')
+                        Живопись
+                    @elseif($item->category === 'poetry')
+                        Поэзия
+                    @elseif($item->category === 'kitchen')
+                        Кухня
+                    @elseif($item->category === 'clothing')
+                        Одежда
+                    @elseif($item->category === 'religion')
+                        Религия
+                    @elseif($item->category === 'holidays')
+                        Праздники
+                    @elseif($item->category === 'sufism')
+                        Суфизм
+                    @elseif($item->category === 'lang')
+                        Язык
+                    @endif 
+				</a>
 				<span class="breadcrumb-item f1-s-3 cl9">
 					 {{$item -> name}}
 				</span>

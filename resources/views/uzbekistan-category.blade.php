@@ -27,10 +27,10 @@
                 @foreach($items as $item)
                     <article class="col-md-4 block_main__item" style="margin-top:50px;">
                         <div class="content-block__img">
-                            <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}"></a>
+                            <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}"><img src="/storage/{{$item->image}}" alt=""></a>
                         </div>
                         <div class="content-block__title">
-                            <a href="{{route('people.show', ['slug' => $item->slug])}}">{{$item->name}}</a>
+                            <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}">{{$item->name}}</a>
                         </div>
                     </article>
                 @endforeach
