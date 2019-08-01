@@ -17,8 +17,60 @@
 
 <!-- Header -->
 @include('/components/header')
-
+<div class="articles-header">
+    <div class="grid">
+        <div class="span-row-2">Example 1</div>
+        <div class="span-row-2">Example 2</div>
+        <div class="span-col-2">Example 3</div>
+        <div class="span-col-2">Example 4</div>
+    </div>
+</div>
 <div class="container">
+    <div class="tours">
+            <div class="title-tours">Тур пакеты</div>
+            <div class="row">
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title">Эко туры</div>
+                    <ul class="item-slide__tours">
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title">Групповые туры</div>
+                    <ul class="item-slide__tours">
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title">Бизнес туры</div>
+                    <ul class="item-slide__tours">
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 tour-item-slide">
+                    <div class="item-slide__title">Эконом туры</div>
+                    <ul class="item-slide__tours">
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                        <li><a href="#">Example Tour #1</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
     <div class="main-content-block">
         <div class="main-content-block__nav row">
             <span class="nav__title col-md-2">Узбекистан</span>
@@ -169,7 +221,7 @@
         <img src="/images/ads.png" alt="Ad banner">
     </div>
     <div class="tours">
-            <div class="title-tours">Тур пакеты</div>
+            <div class="title-tours">Базар</div>
             <div class="row">
                 <div class="col-md-3 tour-item-slide">
                     <div class="item-slide__title">Эко туры</div>

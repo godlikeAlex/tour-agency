@@ -1,11 +1,12 @@
 <div class="ad-banner-header"></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
-    <div class="left-side-menu">
+    <div class="left-side-menu left-menu-hide">
         <div class="close-cont">
             <i class="fas fa-times close-slide-menu"></i>
         </div>
-        <ul>
+        <ul >
+            <li><div  class="left-menu-main-link" ><a href="/">Главная</a></div></li>
             <li>
                 <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a> <i class="fas fa-angle-down drop-menu"></i></div>
                 <ul class="dropped-menu">
@@ -17,12 +18,55 @@
                     <li><a href="">Культура</a></li>
                 </ul>
             </li>
+            <li>
+                <div  class="left-menu-main-link" ><a href="/city">Города</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <ul class="dropped-menu">
+                    <li><a href="/city/самарканд">Самарканд</a></li>
+                </ul>
+            </li>
+            <li>
+                <div  class="left-menu-main-link" ><a href="/people">Люди</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <ul class="dropped-menu">
+                    <li><a href="/people">Все</a></li>
+                    <li><a href="/people/category/drevniy-mir">Древний мир</a></li>
+                    <li><a href="/people/category/srednie-veka">Средние века</a></li>
+                    <li><a href="/people/category/novoe-vremya">Новое время</a></li>
+                </ul>
+            </li>
+            <li>
+                <div  class="left-menu-main-link" ><a href="/tours">Туры</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <ul class="dropped-menu">
+                    <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'group_tours'])}}">Групповые туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'individual_tours'])}}">Индивидуальные туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'exclusive_tours'])}}">Эксклюзивные туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'classic_tours'])}}">Классические туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">Эко туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'kombo_asia_tours'])}}">Туры по Центральной Азии</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'excursion_сity'])}}">Экскурсии по городам</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'pilgrim_tours'])}}">Паломнические туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'economy_tours'])}}">Эконом туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'cycling_tours'])}}">Велотуры туры</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">Бизнес туры</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <div  class="left-menu-main-link" ><a href="/blog">Новости</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <ul class="dropped-menu">
+                    <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">Туризм</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
     <div class="menu-border">
         <div class="container">
             <ul class="main-menu col-md-12">
-                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-bars open-left-bar"></i></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/">Главная</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }}"><a href="/uzbekistan">Узбекистан</a></li>
                 <li class="{{ (request()->is('city*')) ? 'active' : '' }}"><a href="/city">Города</a></li>
@@ -172,16 +216,30 @@
     </script>
     <script>
         const dropDown = document.querySelectorAll('.drop-menu');
+        const open     = document.querySelector('.open-left-bar');
+        const close    = document.querySelector('.close-slide-menu');
+        const leftMenu = document.querySelector('.left-side-menu');
+
         dropDown.forEach(open => {
             open.addEventListener('click', e => {
                 const dropingMenu = e.target.parentNode.nextElementSibling;
                 const dropedMenuHeight = dropingMenu.scrollHeight;
                 if(dropingMenu.style.maxHeight) {
                     dropingMenu.style.maxHeight = null;
+                    e.target.classList.remove('drop-menu-active');
                 } else {
                     dropingMenu.style.maxHeight = `${dropedMenuHeight}px`;
+                    e.target.classList.add('drop-menu-active');
                 }
             });
-        })
+        });
+
+        open.addEventListener('click', () => openMenu(true) );
+        close.addEventListener('click', () => openMenu(false) );
+
+        const openMenu = (open) => {
+            if(open) leftMenu.classList.remove('left-menu-hide');
+            else leftMenu.classList.add('left-menu-hide'); 
+        }
     </script>
 </nav>

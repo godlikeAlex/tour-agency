@@ -34,7 +34,8 @@
 .main-menu a {
     color: #292929;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
     transition: .5s;
     font-family: 'Roboto', sans-serif;
 }
@@ -82,7 +83,7 @@
 .sub-menu-nav
 {
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     margin: 0;
     padding: 0;
@@ -170,7 +171,7 @@
 .footer-nav
 {
     background: #292929;
-    padding-top: 25px;
+    padding-top: 50px;
     color: white;
     padding-bottom: 25px;
 }
@@ -256,6 +257,15 @@
     text-align: center;
 }
 
+.drop-menu
+{
+    transition: .5s;
+}
+
+.drop-menu-active {
+    transform: rotate(180deg);
+}
+
 .about-footer-comapny
 {
     margin-top: 20px;
@@ -287,17 +297,27 @@
     margin: 0;
 }
 
+
 .left-side-menu
 {
     width: 20%;
     padding: 50px 25px 0px 25px;
     color:white;
+    transition: .5s;
     background: black;
     min-height: 100%;
     position: fixed;
     z-index: 9999;
     top: 0%;
-    left: 0;
+    left: 0;    
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.left-menu-hide {
+    left: -25%;
 }
 
 .close-cont 
