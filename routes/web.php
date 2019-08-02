@@ -66,14 +66,14 @@ Route::prefix('admin/people')->group(function() {
 
 Route::prefix('blog')->group(function() {
     Route::get('/', 'Blog@indexBlog');
-    Route::get('/category/{category}', 'Blog@indexBlogCategory')->name('blog.category');
-    Route::get('/post/{slug}', 'Blog@showPost')->name('blog.show');
+    Route::get('/{category}', 'Blog@indexBlogCategory')->name('blog.category');
+    Route::get('/{category}/{slug}', 'Blog@showPost')->name('blog.show');
 });
 
 Route::prefix('people')->group(function() {
     Route::get('/', 'Blog@indexPeople');
-    Route::get('/category/{category}', 'Blog@indexPeopleCategory')->name('people.category');
-    Route::get('/{slug}', 'Blog@showPeople')->name('people.show');
+    Route::get('/{category}', 'Blog@indexPeopleCategory')->name('people.category');
+    Route::get('/{category}/{slug}', 'Blog@showPeople')->name('people.show');
 });
 
 Route::prefix('city')->group(function() {
@@ -92,4 +92,13 @@ Route::prefix('uzbekistan')->group(function() {
     Route::get('/', 'UzbekistanController@index');
     Route::get('/{category}', 'UzbekistanController@category')->name('uzb.category');
     Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
+});
+
+Route::prefix('about')->group(function() {
+    Route::get('faq', function() {
+        return view('faq');
+    });
+    Route::get('team', function() {
+        return view('team');
+    });
 });
