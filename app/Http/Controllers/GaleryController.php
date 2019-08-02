@@ -8,21 +8,24 @@ use App\Galery;
 
 use App\Header;
 
+use App\City;
+
 class GaleryController extends Controller
 {
     public function create() {
+        $cities         = City::all();
         return view('admin.create-galery');
     }
 
     public function home() {
-        $header = Header::dataHeader();
-        return view('galery', compact('header'));
+        $cities         = City::all();
+        return view('galery', compact('cities'));
     }
 
     public function show($century) {
-        $header = Header::dataHeader();
+        $cities         = City::all();
         $images = Galery::where('category', $century)->get();
-        return view('show-galery', compact('header', 'century', 'images'));
+        return view('show-galery', compact('century', 'images', 'cities'));
     }
 
     public function store() {
