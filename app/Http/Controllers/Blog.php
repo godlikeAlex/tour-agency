@@ -8,6 +8,8 @@ use App\People;
 
 use App\Header;
 
+use App\City;
+
 use App\Blog as Posts;
 
 class Blog extends Controller
@@ -17,26 +19,29 @@ class Blog extends Controller
     }
 
     public function indexBlog() {
+        $cities         = City::all();
         $header = Header::dataHeader();
         $posts = Posts::paginate(5);
         $lastPosts = $this->lastPosts();
         $category = "all";
-        return view('blog', compact('header', 'posts', 'lastPosts', 'category'));
+        return view('blog', compact('header', 'posts', 'lastPosts', 'category', 'cities'));
     }
 
     public function indexBlogCategory($category) {
+        $cities         = City::all();
         $header = Header::dataHeader();
         $posts = Posts::where('category', $category)->paginate(5);
         $lastPosts = $this->lastPosts();
-        return view('blog', compact('header', 'posts', 'lastPosts', 'category'));
+        return view('blog', compact('header', 'posts', 'lastPosts', 'category', 'cities'));
     }
 
-    public function showPost($slug) {
+    public function showPost($category, $slug) {
+        $cities         = City::all();
         $post = Posts::where('slug', $slug)->firstOrFail();
         $header = Header::dataHeader();
         $lastPosts = $this->lastPosts();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        return view('blog-show', compact('header', 'post', 'lastPosts', 'recPosts'));
+        return view('blog-show', compact('header', 'post', 'lastPosts', 'recPosts', 'cities'));
     }
 
     public function store() {
@@ -47,28 +52,31 @@ class Blog extends Controller
 
     public function indexPeople() {
         $people = People::paginate(5);
+        $cities         = City::all();
         $lastPeople = $this->lastPeople();
         $header = Header::dataHeader();
         $category = "all";
 
-        return view('blog-people', compact('people', 'lastPeople', 'header', 'category'));
+        return view('blog-people', compact('people', 'lastPeople', 'cities', 'category'));
     }
 
     public function indexPeopleCategory($category) {
         $people = People::where('category', $category)->paginate(5);
+        $cities         = City::all();
         $lastPeople = $this->lastPeople();
         $header = Header::dataHeader();
 
-        return view('blog-people', compact('people', 'lastPeople', 'header', 'category'));
+        return view('blog-people', compact('people', 'lastPeople', 'cities', 'category'));
     }
 
 
-    public function showPeople($slug) {
+    public function showPeople($category, $slug) {
         $people = People::where('slug', $slug)->firstOrFail();
+        $cities         = City::all();
         $header = Header::dataHeader();
         $lastPeople = $this->lastPeople();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        return view('blog-post-people', compact('people', 'header', 'lastPeople', 'recPosts'));
+        return view('blog-post-people', compact('people', 'cities', 'lastPeople', 'recPosts'));
     }
 
     private function lastPeople() 
