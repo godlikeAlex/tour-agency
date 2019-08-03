@@ -11,6 +11,8 @@
 |
 */
 
+use App\City;
+
 Route::get('/', 'MainPage@index');
 
 Auth::routes();
@@ -95,10 +97,10 @@ Route::prefix('uzbekistan')->group(function() {
 });
 
 Route::prefix('about')->group(function() {
-    Route::get('faq', function() {
-        return view('faq');
+    Route::get('faq', function() {    $cities = City::all();
+        return view('faq', compact('cities'));
     });
-    Route::get('team', function() {
-        return view('team');
+    Route::get('team', function() {    $cities = City::all();
+        return view('team', compact('cities'));
     });
 });
