@@ -21,7 +21,9 @@
             <li>
                 <div  class="left-menu-main-link" ><a href="/city">Города</a> <i class="fas fa-angle-down drop-menu"></i></div>
                 <ul class="dropped-menu">
-                    <li><a href="/city/самарканд">Самарканд</a></li>
+                    @foreach($cities as $city)
+                        <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
@@ -71,9 +73,10 @@
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }}"><a href="/uzbekistan">Узбекистан</a></li>
                 <li class="{{ (request()->is('city*')) ? 'active' : '' }}"><a href="/city">Города</a></li>
                 <li class="{{ (request()->is('people*')) ? 'active' : '' }}"><a href="/people">Люди</a></li>
-                <li class="{{ (request()->is('tours*')) ? 'active' : '' }}"><a href="">Туры</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }}"><a href="/tours">Туры</a></li>
+                <li class="{{ (request()->is('galery*')) ? 'active' : '' }}"><a href="/galery">Фото</a></li>
                 <li class="{{ (request()->is('bazar')) ? 'active' : '' }}"><a href="">Базар</a></li>
-                <li class="{{ (request()->is('blog*')) ? 'active' : '' }}"><a href="">Новости</a></li>
+                <li class="{{ (request()->is('blog*')) ? 'active' : '' }}"><a href="/blog">Новости</a></li>
             </ul>
         </div>
     </div>   
@@ -172,6 +175,41 @@
                             </div>   
                         </li>
                     @endforeach
+                </ul>
+            </div>
+        </div>
+        @elseif($type === 'people')
+        <div class="sub-menu-main"> 
+            <div class="container"> 
+                <ul class="sub-menu-nav col-md-12">
+                    <li>    
+                        <a href="{{route('people.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'drevniy-mir') ? 'sub-menu-active' : ''}}">Древний мир</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('people.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'srednie-veka') ? 'sub-menu-active' : ''}}">Средние века</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('people.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'novoe-vremya') ? 'sub-menu-active' : ''}}">Новое время</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @elseif($type === 'news')
+        <div class="sub-menu-main"> 
+            <div class="container"> 
+                <ul class="sub-menu-nav col-md-12">
+                    <li>    
+                        <a href="{{route('blog.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">Туризм</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('blog.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">Узбекистан</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">История</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'tourists') ? 'sub-menu-active' : ''}}">Туристы</a>
+                    </li>
                 </ul>
             </div>
         </div>

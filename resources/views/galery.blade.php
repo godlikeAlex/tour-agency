@@ -44,6 +44,7 @@
     <link rel="stylesheet" type="text/css" href="/css/util.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <!--===============================================================================================-->
     
   </head>
@@ -98,7 +99,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
-
+    </div>
+    @include('/components/footer')
   <script src="/js/galery/jquery-3.3.1.min.js"></script>
   <script src="/js/galery/jquery-migrate-3.0.1.min.js"></script>
   <script src="/js/galery/jquery-ui.js"></script>

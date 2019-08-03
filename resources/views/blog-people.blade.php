@@ -21,6 +21,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style-blog.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
     
 
 </head>
@@ -34,7 +35,7 @@
     </div>
     <!-- Preloader End -->
     <!-- Header -->
-    @include('/components/header')
+    @include('/components/header', ['type' => 'people'])
     <div class="main-content-wrapper section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
@@ -76,7 +77,7 @@
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
-                                                <a href="/people/{{$pb->slug}}" class="headline">
+                                                <a href="{{route('people.show', ['categoy' => $pb->category, 'slug' => $pb->slug])}}" class="headline">
                                                     <h5>{{$pb -> name}}</h5>
                                                 </a>
                                                 <p>{{str_limit($pb->desc, $limit = 350, $end = '...')}}</p>
@@ -110,7 +111,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/people/{{$lp->slug}}" class="headline">
+                                        <a href="{{route('people.show', ['categoy' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
                                             <h5 class="mb-0">{{$lp->name}}</h5>
                                         </a>
                                     </div>

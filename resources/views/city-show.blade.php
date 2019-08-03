@@ -29,7 +29,7 @@
 </head>
 <body>
 @include('/components/header', ['type' => 'city'])
-    <div class="container">
+    <div class="container" style="margin-bottom: 50px;  ">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-12 name-sec">{{$content->name}}</div>
@@ -200,7 +200,7 @@
  
     </div>
 
-
+    @include('/components/footer')
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>

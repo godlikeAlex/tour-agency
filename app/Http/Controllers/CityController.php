@@ -21,7 +21,7 @@ class CityController extends Controller
         $cities         = City::all();
         $historys       = $this->getRecordsByCategory($content->id, 'history');
         $whatToSee       = $this->getRecordsByCategory($content->id, 'what-to-see');
-        $whatToDo       = $this->getRecordsByCategory($content->id, 'what-to-do');
+        $whatToDo       = $this->getRecordsByCategory($content->id, 'things-to-do');
         $whereToBuy       = $this->getRecordsByCategory($content->id, 'where-to-buy');
         $restaurants    = $this->getRecordsByCategory($content->id, 'where-to-eat');
         $hotels         = $this->getRecordsByCategory($content->id, 'where-to-stay');

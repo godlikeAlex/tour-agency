@@ -192,7 +192,7 @@
             @foreach($peoples as $people)
                 <article class="col-md-4 block_main__item">
                     <div class="content-block__img">
-                    <a href="{{route('people.show', ['slug' => $people->slug])}}"><img src="storage/{{$people->image}}" alt="{{$people->name}}"></a>
+                    <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><img src="storage/{{$people->image}}" alt="{{$people->name}}"></a>
                     </div>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
@@ -206,7 +206,7 @@
                         </a>
                     </div>
                     <div class="content-block__title">
-                        <a href="{{route('people.show', ['slug' => $people->slug])}}">{{$people->name}}</a>
+                        <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">{{$people->name}}</a>
                     </div>
                 </article>
             @endforeach
@@ -280,7 +280,7 @@
             @foreach($articles as $post)
                 <article class="col-md-4 block_main__item">
                     <div class="content-block__img">
-                    <a href="{{route('blog.show', ['slug' => $post->slug])}}"><img src="storage/{{$post->image}}" alt="{{$post->name}}"></a>
+                    <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><img src="storage/{{$post->image}}" alt="{{$post->name}}"></a>
                     </div>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
@@ -296,7 +296,7 @@
                         </a>
                     </div>
                     <div class="content-block__title">
-                        <a href="{{route('blog.show', ['slug' => $post->slug])}}">{{$post->title}}</a>
+                        <a href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
                     </div>
                 </article>
             @endforeach

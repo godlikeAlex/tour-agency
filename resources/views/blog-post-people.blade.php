@@ -49,7 +49,7 @@
 <body>
 
     <!-- ***** Header Area Start ***** -->
-	@include('/components/header')
+	@include('/components/header', ['type' => 'people'])
     <!-- ***** Header Area End ***** -->
     <div class="container">
 		<div style="    padding-bottom: 20px;
@@ -115,7 +115,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/blog/post/{{$lp->slug}}" class="headline">
+                                        <a href="{{route('people.show', ['categoy' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
                                             <h5 class="mb-0">{{$lp->name}}</h5>
                                         </a>
                                     </div>

@@ -25,7 +25,7 @@
     @include('/components/header', ['type' => 'city'])
         <div class="container">
         @foreach($cities as $city)
-        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;"><a style="    font-size: 35px;
+        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center; margin-bottom:10px;"><a style="    font-size: 35px;
     font-weight: 700;
     color: #0460d9;" href="/city/{{Illuminate\Support\Str::lower($city->name)}}">{{$city->name}}</a></div>
         <div class="row container_uzb" >
@@ -57,6 +57,7 @@
         </div>
         @endforeach
     </div>
+    @include('/components/footer')
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

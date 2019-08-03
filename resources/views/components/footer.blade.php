@@ -14,7 +14,9 @@
             <div class="footer_block">
                 <div class="title-footer">Города</div>
                 <div class="items-footer">
-                    <div><a href="http://">Самарканд</a></div>
+                    @foreach($cities as $city)
+                        <div><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></div>
+                    @endforeach
                 </div>
             </div>
             <div class="footer_block">

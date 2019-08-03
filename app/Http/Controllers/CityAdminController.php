@@ -39,9 +39,9 @@ class CityAdminController extends Controller
         $validDate = request()->validate([
             'name'=>'required',
             'city_id'=>'required',
-            'category'=>'required',
             'lang' => 'required',
-            'category_price' => 'required',
+            'category_price' => '',
+            'category'=>'required',
             'about'=>'required',
             'image'=>'required|image',
         ]);

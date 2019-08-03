@@ -190,6 +190,7 @@
         </div>
         
     </div>
+    @include('/components/footer')
 <!-- 20% Discount on Elegant Themes Divi Page Builder https://www.embedgooglemap.net/divi-sale/ -->
 <!--===============================================================================================-->
 <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>

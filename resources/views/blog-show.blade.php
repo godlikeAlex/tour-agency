@@ -48,7 +48,7 @@
 
 <body>
     <!-- ***** Header Area Start ***** -->
-	@include('/components/header')
+	@include('/components/header', ['type' => 'news'])
     <!-- ***** Header Area End ***** -->
     <div class="container">
 		<div style="    padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
@@ -116,7 +116,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/blog/post/{{$lp->slug}}" class="headline">
+                                        <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
                                             <h5 class="mb-0">{{$lp->title}}</h5>
                                         </a>
                                     </div>

@@ -30,7 +30,7 @@
 
     <!-- Preloader End -->
     <!-- Header -->
-    @include('/components/header')
+    @include('/components/header', ['type' => 'news'])
     <div class="main-content-wrapper section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
@@ -43,23 +43,23 @@
                                 <li class="title">Блог</li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/" class="nav-link @if($category === 'alld') active @endif">Все</a>
+                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">Все</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/category/tourism/" class="nav-link @if($category === 'tourism') active @endif" >Туризм</a>
+                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >Туризм</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/category/uzbekistan/" class="nav-link @if($category === 'uzbekistan') active @endif">Узбекистан</a>
+                                    <a href="{{route('blog.category', ['category'=>'uzbekistan'])}}" class="nav-link @if($category === 'uzbekistan') active @endif">Узбекистан</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/category/history/" class="nav-link @if($category === 'history') active @endif">История</a>
+                                    <a href="{{route('blog.category', ['category'=>'history'])}}" class="nav-link @if($category === 'history') active @endif">История</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/category/tourists/" class="nav-link @if($category === 'tourists') active @endif">Туристы</a>
+                                    <a href="{{route('blog.category', ['category'=>'tourists'])}}" class="nav-link @if($category === 'tourists') active @endif">Туристы</a>
                                 </li>
                             </ul>
 
@@ -76,7 +76,7 @@
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
-                                                <a href="/blog/post/{{$post->slug}}" class="headline">
+                                                <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}" class="headline">
                                                     <h5>{{$post -> title}}</h5>
                                                 </a>
                                                 <p>{{str_limit($post->desc, $limit = 350, $end = '...')}}</p>
@@ -110,7 +110,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="/blog/post/{{$lp->slug}}" class="headline">
+                                        <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
                                             <h5 class="mb-0">{{$lp->title}}</h5>
                                         </a>
                                     </div>
