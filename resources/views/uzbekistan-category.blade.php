@@ -22,14 +22,14 @@
 </head>
 <body>
     @include('/components/header', ['type' => 'uzbekistan'])
-    <div class="container">
+    <div class="container" style="margin-bottom: 50px;">
         <div class="row container_of_tours" >
                 @foreach($items as $item)
                     <article class="col-md-4 block_main__item" style="margin-top:50px;">
                         <div class="content-block__img">
                             <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}"><img src="/storage/{{$item->image}}" alt=""></a>
                         </div>
-                        <div class="content-block__title">
+                        <div class="content-block__title" style="margin-top:10px;">
                             <a href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}">{{$item->name}}</a>
                         </div>
                     </article>

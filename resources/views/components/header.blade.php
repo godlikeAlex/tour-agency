@@ -5,7 +5,7 @@
         <div class="close-cont">
             <i class="fas fa-times close-slide-menu"></i>
         </div>
-        <ul >
+        <ul>
             <li><div  class="left-menu-main-link" ><a href="/">Главная</a></div></li>
             <li>
                 <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a> <i class="fas fa-angle-down drop-menu"></i></div>
@@ -54,6 +54,7 @@
 
                 </ul>
             </li>
+            <div  class="left-menu-main-link" ><a href="/galery">Фото</a></div>
             <li>
                 <div  class="left-menu-main-link" ><a href="/blog">Новости</a> <i class="fas fa-angle-down drop-menu"></i></div>
                 <ul class="dropped-menu">
@@ -63,20 +64,21 @@
                     <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
                 </ul>
             </li>
+            <div  class="left-menu-main-link" ><a href="/city">Базар</a></div>
         </ul>
     </div>
     <div class="menu-border">
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><i class="fas fa-bars open-left-bar"></i></li>
-                <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="/">Главная</a></li>
-                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }}"><a href="/uzbekistan">Узбекистан</a></li>
-                <li class="{{ (request()->is('city*')) ? 'active' : '' }}"><a href="/city">Города</a></li>
-                <li class="{{ (request()->is('people*')) ? 'active' : '' }}"><a href="/people">Люди</a></li>
-                <li class="{{ (request()->is('tours*')) ? 'active' : '' }}"><a href="/tours">Туры</a></li>
-                <li class="{{ (request()->is('galery*')) ? 'active' : '' }}"><a href="/galery">Фото</a></li>
-                <li class="{{ (request()->is('bazar')) ? 'active' : '' }}"><a href="">Базар</a></li>
-                <li class="{{ (request()->is('blog*')) ? 'active' : '' }}"><a href="/blog">Новости</a></li>
+                <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">Главная</a></li>
+                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>
+                <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">Города</a></li>
+                <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">Люди</a></li>
+                <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">Фото</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">Туры</a></li>
+                <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">Базар</a></li>
+                <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>
             </ul>
         </div>
     </div>   
@@ -121,24 +123,21 @@
                     <li class="dropdown" data-menu-show="toursizm">
                         <a href="/uzbekistan#turizm" data-menu-show="toursizm" class="sub-menu-item {{ (request()->segment(2) == 'visa' || request()->segment(2) == 'transport' || request()->segment(2) == 'eco') ? 'sub-menu-active' : ''}}">Туризм </a>
                         <div data-menu="toursizm" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'visa'])}}">Виза</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'transport'])}}">Транспорт</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'eco'])}}">Экология</a>
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="iskus">
                         <a href="/uzbekistan#iskustva" data-menu-show="iskus" 
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">Искуства</a>
                         <div data-menu="iskus" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'literature'])}}">Литература</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'architecture'])}}">Архитиктура</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'music'])}}">Музыка</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'teatr'])}}">Театр</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'painting'])}}">Живопись</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'poety'])}}">Поэзия</a>
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="cult">

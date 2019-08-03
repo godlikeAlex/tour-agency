@@ -20,6 +20,21 @@
                 </div>
             </div>
             <div class="footer_block">
+                <div class="title-footer">Люди</div>
+                <div class="items-footer">
+                    <div><a href="{{route('people.category', ['category' => 'drevniy-mir'])}}">Древний мир</a></div>
+                    <div><a href="{{route('people.category', ['category' => 'srednie-veka'])}}">Средние века</a></div>
+                    <div><a href="{{route('people.category', ['category' => 'novoe-vremya'])}}">Новое время</a></div>
+                </div>
+            </div>
+            <div class="footer_block">
+            <div class="title-footer">Фото</div>
+                <div class="items-footer">
+                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">19 Век</a></div>
+                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">18 Век</a></div>
+                </div>
+            </div>
+            <div class="footer_block">
                 <div class="title-footer">Туры</div>
                 <div class="items-footer">
                         <div><a href="history_tours">Исторические туры</a></div>
@@ -32,18 +47,7 @@
                         <div><a href="buisnes_tours">Бизнес турыa</a></div>
                         <div><a href="kombo_asia_tours">Центральная Азия</a></div>
                 </div>
-            </div>
-            <div class="footer_block">
-                <div class="title-footer">Люди</div>
-                <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="#">Люди</a></div>
-                    <div><a href="/uzbekistan/#turizm">Туризм</a></div>
-                    <div><a href="/uzbekistan/#iskustva">Искуства</a></div>
-                    <div><a href="/uzbekistan/#culura">Культура</a></div>
-                </div>
-            </div>
+            </div> 
             <div class="footer_block">
                 <div class="title-footer">Базар</div>
                 <div class="items-footer">
@@ -58,23 +62,10 @@
             <div class="footer_block">
             <div class="title-footer">Новости</div>
                 <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="#">Люди</a></div>
-                    <div><a href="/uzbekistan/#turizm">Туризм</a></div>
-                    <div><a href="/uzbekistan/#iskustva">Искуства</a></div>
-                    <div><a href="/uzbekistan/#culura">Культура</a></div>
-                </div>
-            </div>
-            <div class="footer_block">
-            <div class="title-footer">Фото</div>
-                <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="#">Люди</a></div>
-                    <div><a href="/uzbekistan/#turizm">Туризм</a></div>
-                    <div><a href="/uzbekistan/#iskustva">Искуства</a></div>
-                    <div><a href="/uzbekistan/#culura">Культура</a></div>
+                    <div><a href="{{route('blog.category', ['category' => 'tourism'])}}">Туризм</a></div>
+                    <div><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></div>
+                    <div><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></div>
+                    <div><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></div>
                 </div>
             </div>
     </div>

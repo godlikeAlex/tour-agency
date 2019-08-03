@@ -46,6 +46,11 @@
                         FAQ
                     </span>	
                 </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div style="font-size:25px"> F.A.Q</div>
+                    </div>
+                </div>
             </div>
         </div>
         

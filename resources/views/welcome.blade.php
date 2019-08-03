@@ -19,17 +19,17 @@
 @include('/components/header')
 <div class="articles-header">
     <div class="grid">
-        <div class="span-row-2">Example 1</div>
-        <div class="span-row-2">Example 2</div>
-        <div class="span-col-2">Example 3</div>
-        <div class="span-col-2">Example 4</div>
+        <div class="span-row-2 main-news">Example 1</div>
+        <div class="span-row-2 main-news">Example 2</div>
+        <div class="span-col-2 main-news">Example 3</div>
+        <div class="span-col-2 main-news">Example 4</div>
     </div>
 </div>
 <div class="container">
     <div class="tours">
             <div class="title-tours">Тур пакеты</div>
-            <div class="row">
-                <div class="col-md-3 tour-item-slide">
+            <div class="row container" style="padding: 0; margin: 0;">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Эко туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -39,7 +39,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Групповые туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -49,7 +49,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Бизнес туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -59,7 +59,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Эконом туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -73,8 +73,8 @@
     </div>
     <div class="main-content-block">
         <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">Узбекистан</span>
-            <ul class="nav__menu col-md-10">
+            <span class="nav__title col-md-2 col-md-12">Узбекистан</span>
+            <ul class="nav__menu col-md-12">
                 <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
                 <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
                 <li><a href="{{route('uzb.category', ['category' => 'people'])}}">Люди</a></li>
@@ -222,8 +222,8 @@
     </div>
     <div class="tours">
             <div class="title-tours">Базар</div>
-            <div class="row">
-                <div class="col-md-3 tour-item-slide">
+            <div class="row container" style="padding: 0; margin: 0;">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Эко туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -233,7 +233,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Групповые туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -243,7 +243,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Бизнес туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
@@ -253,7 +253,7 @@
                         <li><a href="#">Example Tour #1</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 tour-item-slide">
+                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Эконом туры</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
