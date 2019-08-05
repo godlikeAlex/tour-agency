@@ -32,23 +32,23 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Тип блога</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="history_tours">Исторические туры </option>
-                                <option value="short_tours">Короткие туры </option>
-                                <option value="group_tours">Групповые туры </option>
-                                <option value="individual_tours">Индивидуальные туры</option>
-                                <option value="exclusive_tours">Эксклюзивные туры </option>
-                                <option value="classic_tours">Классические туры</option>
-                                <option value="eco_tours">Эко туры</option>
-                                <option value="kombo_asia_tours">Комбинированные туры по Центральной Азии </option>
-                                <option value="kombo_uz_kz_tours">Комбинированные туры по Узбекистану и Казахстану  </option>
-                                <option value="kombo_uz_kg_tours">Комбинированные туры по Узбекистану и Кыргызстану</option>
-                                <option value="kombo_uz_tm_tours">Комбинированные туры по Узбекистану и Туркменистану</option>
-                                <option value="kombo_uz_tj_tours">Комбинированные туры по Узбекистану и Таджикистану </option>
-                                <option value="excursion_сity">Экскурсии по городам </option>
-                                <option value="pilgrim_tours">Паломнические туры</option>
-                                <option value="economy_tours">Эконом туры </option>
-                                <option value="cycling_tours">Велотуры</option>
-                                <option value="buisnes_tours">Бизнес туры </option>
+                                <option value="history-tours">Исторические туры </option>
+                                <option value="short-tours">Короткие туры </option>
+                                <option value="group-tours">Групповые туры </option>
+                                <option value="individual-tours">Индивидуальные туры</option>
+                                <option value="exclusive-tours">Эксклюзивные туры </option>
+                                <option value="classic-tours">Классические туры</option>
+                                <option value="eco-tours">Эко туры</option>
+                                <option value="kombo-asia-tours">Комбинированные туры по Центральной Азии </option>
+                                <option value="kombo-uz-kz-tours">Комбинированные туры по Узбекистану и Казахстану  </option>
+                                <option value="kombo-uz-kg-tours">Комбинированные туры по Узбекистану и Кыргызстану</option>
+                                <option value="kombo-uz-tm-tours">Комбинированные туры по Узбекистану и Туркменистану</option>
+                                <option value="kombo-uz-tj-tours">Комбинированные туры по Узбекистану и Таджикистану </option>
+                                <option value="excursion-сity">Экскурсии по городам </option>
+                                <option value="pilgrim-tours">Паломнические туры</option>
+                                <option value="economy-tours">Эконом туры </option>
+                                <option value="cycling-tours">Велотуры</option>
+                                <option value="buisnes-tours">Бизнес туры </option>
                             </select>
                         </div>
                         <div class="form-group">
