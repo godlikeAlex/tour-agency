@@ -1,4 +1,4 @@
-<div class="ad-banner-header"></div>
+<div class="ad-banner-header" style="height: 300px; background: url(https://biomedical-informatics.net.technion.ac.il/files/2017/06/haifa-e1497857008490-resized-image-1300x300.jpg); background-size: cover; background-postion:center;"></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
@@ -71,6 +71,7 @@
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><i class="fas fa-bars open-left-bar"></i></li>
+                <li><a href=""><img style="width:100px" src="/images/logo.png" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">Главная</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>
                 <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">Города</a></li>
@@ -78,8 +79,10 @@
                 <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">Фото</a></li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">Туры</a></li>
                 <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">Базар</a></li>
-                <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>
+                <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>    
+                <a href=""><img style="width:50px;" src="images/russia.png" alt=""></a> 
             </ul>
+            
         </div>
     </div>   
     @if(isset($type))

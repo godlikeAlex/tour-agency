@@ -15,7 +15,7 @@
 }
 
 .menu-border {
-    border-top: 2px solid #0460D9;
+    border-top: 2px solid #032adb;
     border-bottom: 1px solid #7b7b7b;
     background: white;
 }
@@ -42,12 +42,12 @@
 
 .main-menu li:hover a
 {
-    color: #0460D9;
+    color: #032adb;
     text-decoration: none;
 }
 
 .active a{
-    color: #0460D9;
+    color: #032adb;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -59,7 +59,7 @@
     transition: .5s;
     bottom: -1px;
     width: 0%;
-    background: #0460D9;
+    background: #032adb;
     height: 2px;
     left: 0;
 }
@@ -75,7 +75,7 @@
     transition: .5s;
     bottom: -1px;
     width: 100% !important;
-    background: #0460D9;
+    background: #032adb;
     height: 2px;
     left: 0;
 }
@@ -102,7 +102,7 @@
     transition: .5s;
     bottom: -1px;
     width: 0%;
-    background: #0460D9;
+    background: #032adb;
     height: 2px;
     left: 0;
 }
@@ -112,7 +112,7 @@
 }
 
 .sub-menu-nav li:hover a {
-    color: #0460D9;
+    color: #032adb;
 }
 
 .sub-menu-nav li:first-child {
@@ -134,7 +134,7 @@
 }
 
 .sub-menu-active {
-    color: #0460D9 !important;
+    color: #032adb !important;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -144,7 +144,7 @@
     transition: .5s;
     bottom: -1px;
     width: 100%;
-    background: #0460D9;
+    background: #032adb;
     height: 2px;
     left: 0;
 }

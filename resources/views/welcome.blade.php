@@ -19,10 +19,10 @@
 @include('/components/header')
 <div class="articles-header">
     <div class="grid">
-        <div class="span-row-2 main-news">Example 1</div>
-        <div class="span-row-2 main-news">Example 2</div>
-        <div class="span-col-2 main-news">Example 3</div>
-        <div class="span-col-2 main-news">Example 4</div>
+        <div class="span-row-2 main-news" style="background: url(https://images.unsplash.com/photo-1564941547204-08100f5db412?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80); background-size:cover;     background-position: center;">WEBSTEAR Hell</div>
+        <div class="span-row-2 main-news" style="background: url(https://images.unsplash.com/photo-1564945626404-5dcdae061c7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); background-size: cover;     background-position: center;">Budism hram</div>
+        <div class="span-col-2 main-news" style="background: url(https://images.unsplash.com/photo-1564769230746-cb02d0ab8c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-size: cover;     background-position: center;">Example 3</div>
+        <div class="span-col-2 main-news" style="background: url(https://images.unsplash.com/photo-1564827077134-3252b917df8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80); background-size: cover;     background-position: center;">Example 4</div>
     </div>
 </div>
 <div class="container">
