@@ -53,7 +53,11 @@
                             <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">Что смотреть<</a>
                         </div>
                 </article>
-                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Подробнее</a>
+                <a class="show-more-link" style="margin:auto" href="/city/{{Illuminate\Support\Str::lower($city->name)}}"">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a>
         </div>
         @endforeach
     </div>

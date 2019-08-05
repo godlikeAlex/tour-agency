@@ -95,8 +95,12 @@
                             </div>
                         </article> 
                     @endforeach
-                </div>  
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                </div> 
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Что смотреть</div>
                 <div class="responsive col-md-12">
                     @foreach($whatToSee as $whatSee)
@@ -110,7 +114,11 @@
                         </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Чем заняться</div>
                 <div class="responsive col-md-12">
                     @foreach($whatToDo as $toDo)
@@ -124,7 +132,11 @@
                         </article> 
                     @endforeach 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Где покупать</div>
                 <div class="responsive col-md-12">
                     @foreach($whereToBuy as $buy)
@@ -138,7 +150,11 @@
                         </article> 
                     @endforeach 
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Где поесть</div>
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
@@ -152,7 +168,11 @@
                         </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-eat']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Где остановиться</div>
                 <div class="responsive col-md-12">
                     @foreach($hotels as $hotel)
@@ -166,7 +186,11 @@
                         </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-stay']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Как добраться</div>
                 <div class="responsive col-md-12">
                     @foreach($howToGet as $get)
@@ -180,7 +204,11 @@
                         </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
                 <div class="col-md-12 name-sec">Полезная информация</div>
                 <div class="responsive col-md-12">
                     @foreach($usefulInformation as $info)
@@ -194,7 +222,11 @@
                         </article> 
                     @endforeach
                 </div>
-                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}" style="margin: auto; margin-top: 20px;" class="btn btn-primary">Показать еще</a>
+                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}">
+                    <div class="button-show-more">
+                        Показать еще
+                    </div>
+                </a> 
             </div>
         </div>
  
