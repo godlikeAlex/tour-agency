@@ -80,7 +80,8 @@
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">Туры</a></li>
                 <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">Базар</a></li>
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>    
-                <a href=""><img style="width:50px;" src="images/russia.png" alt=""></a> 
+                <li><a href="" style="display: flex; align-items: center;"><img style="width:30px;" src="images/ukraine.png" alt=""></a> </li>
+                <li style="font-size:13px;"><i style="padding-right: 5px; font-size:30px" class="fas fa-globe-europe"></i> ES</li>
             </ul>
             
         </div>
@@ -276,10 +277,21 @@
 
         open.addEventListener('click', () => openMenu(true) );
         close.addEventListener('click', () => openMenu(false) );
+        document.body.addEventListener('click', e => {
+            const target = e.target;
+            if(!target.classList.contains('left-side-menu') && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
+                leftMenu.classList.add('left-menu-hide')
+            }
+        })
+
 
         const openMenu = (open) => {
-            if(open) leftMenu.classList.remove('left-menu-hide');
-            else leftMenu.classList.add('left-menu-hide'); 
+            if(open) {
+                leftMenu.classList.remove('left-menu-hide');
+            }
+            else {
+                leftMenu.classList.add('left-menu-hide');
+            }
         }
     </script>
 </nav>
