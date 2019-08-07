@@ -3,12 +3,13 @@
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
         <div class="close-cont">
-            <i class="fas fa-times close-slide-menu"></i>
+            <div><img class="logo-left-menu-main" src="images/logo.jpg" alt=""></div>
+            <img src="images/close.png" class="close-slide-menu" alt="">
         </div>
-        <ul>
+        <ul class="left-menu-main">
             <li><div  class="left-menu-main-link" ><a href="/">Главная</a></div></li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="">География</a></li>
                     <li><a href="">История</a></li>
@@ -19,7 +20,7 @@
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/city">Города</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <div  class="left-menu-main-link" ><a href="/city">Города</a> <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     @foreach($cities as $city)
                         <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></li>
@@ -27,7 +28,7 @@
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/people">Люди</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <div  class="left-menu-main-link" ><a href="/people">Люди</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="/people">Все</a></li>
                     <li><a href="/people/category/drevniy-mir">Древний мир</a></li>
@@ -36,7 +37,7 @@
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/tours">Туры</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <div  class="left-menu-main-link" ><a href="/tours">Туры</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
                     <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
@@ -56,7 +57,7 @@
             </li>
             <div  class="left-menu-main-link" ><a href="/galery">Фото</a></div>
             <li>
-                <div  class="left-menu-main-link" ><a href="/blog">Новости</a> <i class="fas fa-angle-down drop-menu"></i></div>
+                <div  class="left-menu-main-link" ><a href="/blog">Новости</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">Туризм</a></li>
                     <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
@@ -66,12 +67,34 @@
             </li>
             <div  class="left-menu-main-link" ><a href="/city">Базар</a></div>
         </ul>
+        <ul class="left-menu-social"> 
+            <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-vk"></i> </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i> </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> </a>
+            </li>
+        </ul>
+        <ul class="left-menu-network">
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">ABOUT COMPANY</a></li>
+            <li><a href="">PRIVACY POLICY</a></li>
+            <li><a href="">LINK POLICY</a></li>
+            <li><a href="">F.A.Q</a></li>
+        </ul>
+        <p class="terms">
+        © 2019 UZBEKISTAN NOW. All rights reserved.
+        Use of and/or registration on any portion of this site constitutes acceptance of our User Agreement (updated 5/25/19) and Privacy Policy and Cookie Statement (updated 5/25/18).  Your California Privacy Rights   The material on this site may not be reproduced, distributed, transmitted, cached, or otherwise used, except with the prior written permission of Condé Nast.
+        UZBEKISTAN NOW may earn compensation on sales through affiliate programs.
+        </p>
     </div>
     <div class="menu-border">
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><i class="fas fa-bars open-left-bar"></i></li>
-                <li><a href=""><img style="width:100px" src="/images/logo.png" alt=""></a></li>
+                <li><a href=""><img style="width:100px" src="/images/logo.jpg" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">Главная</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>
                 <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">Города</a></li>
@@ -245,7 +268,6 @@
                 menu.classList.add('main-menu-hide');
             } else if(position <= 250) {
                 menu.classList.remove('main-menu-hide');
-                ;
                 menu.classList.remove('main-menu-fixed');
             }
 
@@ -256,6 +278,7 @@
         });
     </script>
     <script>
+        const menu = document.querySelector('.main-menu-sticky');
         const dropDown = document.querySelectorAll('.drop-menu');
         const open     = document.querySelector('.open-left-bar');
         const close    = document.querySelector('.close-slide-menu');

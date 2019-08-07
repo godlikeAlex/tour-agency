@@ -260,6 +260,8 @@
 .drop-menu
 {
     transition: .5s;
+    width:20px;
+    cursor: pointer;
 }
 
 .drop-menu-active {
@@ -302,9 +304,9 @@
 {
     width: 20%;
     padding: 50px 15px 0px 15px;
-    color:white;
+    color:#333;
     transition: .5s;
-    background: black;
+    background: white;
     min-height: 100%;
     position: fixed;
     z-index: 9999;
@@ -323,33 +325,96 @@
 .close-cont 
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left-menu-main-link
 {
     font-size: 16px;
-    height: 40px;
+    height: 55px;
     display: flex;
-    color: white;
+    color: #333;
+    letter-spacing: .15rem;
     text-transform: uppercase;
+    justify-content: space-between;
+    border-bottom: 1px solid #ededed;
+    align-items: center;
+}
+
+.left-menu-social
+{
+    border-bottom: 3px solid #333;
+}
+
+.left-menu-social li {
+    height: 80px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.left-menu-social a {
+    color: #999;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.left-menu-network
+{
+    margin-top: 10px;
+    
+    letter-spacing: .15em;
+}
+
+.left-menu-network a {
+    line-height: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    transition: .5s;
+    color: #999;
+}
+
+.left-menu-network a:hover { 
+    color: #032adb;
+    text-decoration: none;
+}
+
+.left-menu-socinetworkal a:hover { 
+    color: #032adb;
+    text-decoration: none;
+}
+
 .left-menu-main-link a
 {
-    color: white;
+    color: #333;
+    transition: .5s;
+}
+
+.terms {
+    padding-top: 20px;
+    padding-bottom: .75em;
+    line-height: 18px;
+    color: #7f7f7f;
+    font-size: 12px;
 }
 
 
 .left-menu-main-link i {font-size: 28px;}
-.left-menu-main-link a:hover {text-decoration: none; color:white}
+.left-menu-main-link a:hover {text-decoration: none; color:#032adb}
 
 .close-slide-menu {
     text-align: right;
     cursor: pointer;
-    font-size: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 .dropped-menu {
@@ -371,10 +436,22 @@
 
 .dropped-menu a
 {
-    color: white;
+    color: #333;
+    transition: .5s;
+    letter-spacing: .15rem;
 }
 
-.dropped-menu a:hover {text-decoration: none; color:white}
+.left-menu-main
+{
+    border-top: 3px solid #333;
+    border-bottom: 3px solid #333;
+    margin-top: 20px !important;
+}
+.logo-left-menu-main
+{
+    width: 130px;
+}
+.dropped-menu a:hover {text-decoration: none; color:#032adb}
 
 /* Media  */
 
