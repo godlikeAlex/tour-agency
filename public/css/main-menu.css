@@ -32,12 +32,17 @@
 }
 
 .main-menu a {
-    color: #292929;
+    color: #333;
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
     transition: .5s;
     font-family: 'Roboto', sans-serif;
+}
+
+.left-side-menu
+{
+    font-family: 'Roboto', sans-serif;    
 }
 
 .main-menu li:hover a
@@ -120,7 +125,7 @@
 }
 
 .sub-menu-nav a {
-    color: #292929;
+    color: #333;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -170,7 +175,7 @@
 
 .footer-nav
 {
-    background: #292929;
+    background: #333;
     padding-top: 50px;
     color: white;
     padding-bottom: 25px;

@@ -73,8 +73,8 @@
     </div>
     <div class="main-content-block">
         <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2 col-md-12">Узбекистан</span>
-            <ul class="nav__menu col-md-12">
+            <span class="nav__title col-md-2">Узбекистан</span>
+            <ul class="nav__menu col-md-10">
                 <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
                 <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
                 <li><a href="{{route('uzb.category', ['category' => 'people'])}}">Люди</a></li>
@@ -218,7 +218,7 @@
             </a>
     </div>
     <div class="ad-block">
-        <img src="/images/ads.png" alt="Ad banner">
+        <img src="/images/ads2.png" alt="Ad banner">
     </div>
     <div class="tours">
             <div class="title-tours">Базар</div>
