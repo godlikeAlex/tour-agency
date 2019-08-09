@@ -85,34 +85,46 @@
         </div>
         <div class="row content-block_main">
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+            <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+            <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+            <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
             <article class="col-md-4 block_main__item">
-                <div class="content-block__img"></div>
-                <div class="content-block__category">География</div>
-                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+            <div class="col-md-12 block_main__item-content">
+                    <div class="content-block__img"></div>
+                    <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                </div>
             </article>
         </div>
         <a class="show-more-link" href="#">
@@ -141,32 +153,34 @@
                     }
                 ?>
                 <article class="col-md-4 block_main__item">
-                    <div class="content-block__img">
-                    <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><img src="storage/{{$city->image}}" alt="{{$city->name}}"></a>
-                    </div>
-                    <div class="content-block__category">
-                        <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
-                            @if($city->category === 'where-to-eat')
-                                Где поесть
-                            @elseif($city->category === 'where-to-stay')
-                                Где остановиться
-                            @elseif($city->category === 'history')
-                                История
-                            @elseif($city->category === 'where-to-see')
-                                Что посмотреть
-                            @elseif($city->category === 'things-to-do')
-                                Чем заняться
-                            @elseif($city->category === 'where-to-buy')
-                                Где покупать
-                            @elseif($city->category === 'how-to-get')
-                                Как добраться
-                            @elseif($city->category === 'useful-information')
-                                Полезная информация
-                            @endif
-                        </a>
-                    </div>
-                    <div class="content-block__title">
-                        <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
+                    <div class="col-md-12 block_main__item-content">
+                        <div class="content-block__img">
+                        <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><img src="storage/{{$city->image}}" alt="{{$city->name}}"></a>
+                        </div>
+                        <div class="content-block__category">
+                            <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
+                                @if($city->category === 'where-to-eat')
+                                    Где поесть
+                                @elseif($city->category === 'where-to-stay')
+                                    Где остановиться
+                                @elseif($city->category === 'history')
+                                    История
+                                @elseif($city->category === 'where-to-see')
+                                    Что посмотреть
+                                @elseif($city->category === 'things-to-do')
+                                    Чем заняться
+                                @elseif($city->category === 'where-to-buy')
+                                    Где покупать
+                                @elseif($city->category === 'how-to-get')
+                                    Как добраться
+                                @elseif($city->category === 'useful-information')
+                                    Полезная информация
+                                @endif
+                            </a>
+                        </div>
+                        <div class="content-block__title">
+                            <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
+                        </div>
                     </div>
                 </article>
             @endforeach
@@ -191,6 +205,7 @@
         <div class="row content-block_main">
             @foreach($peoples as $people)
                 <article class="col-md-4 block_main__item">
+                <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img">
                     <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><img src="storage/{{$people->image}}" alt="{{$people->name}}"></a>
                     </div>
@@ -208,6 +223,7 @@
                     <div class="content-block__title">
                         <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">{{$people->name}}</a>
                     </div>
+                </div>
                 </article>
             @endforeach
         </div>
@@ -279,6 +295,7 @@
         <div class="row content-block_main">
             @foreach($articles as $post)
                 <article class="col-md-4 block_main__item">
+                <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img">
                     <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><img src="storage/{{$post->image}}" alt="{{$post->name}}"></a>
                     </div>
@@ -298,6 +315,7 @@
                     <div class="content-block__title">
                         <a href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
                     </div>
+                </div>
                 </article>
             @endforeach
         </div>
