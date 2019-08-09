@@ -1,4 +1,4 @@
-<div class="ad-banner-header" style="height: 300px; background: url(https://biomedical-informatics.net.technion.ac.il/files/2017/06/haifa-e1497857008490-resized-image-1300x300.jpg); background-size: cover; background-postion:center;"></div>
+<div class="ad-banner-header" style="{{ (request()->is('/')) ? '' : 'display:none' }}; height: 300px; background: url(https://biomedical-informatics.net.technion.ac.il/files/2017/06/haifa-e1497857008490-resized-image-1300x300.jpg); background-size: cover; background-postion:center;"></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
