@@ -31,7 +31,7 @@ Route::prefix('admin/galery')->group(function() {
 
 Route::prefix('galery')->group(function () {
     Route::get('/', 'GaleryController@home');
-    Route::get('/{century}', 'GaleryController@show');
+    Route::get('/{century}', 'GaleryController@show')->name('show.galery');
 });
 
 Route::prefix('admin/tour')->group(function () {

@@ -13,7 +13,6 @@ use App\City;
 class GaleryController extends Controller
 {
     public function create() {
-        $cities         = City::all();
         return view('admin.create-galery');
     }
 
@@ -24,12 +23,14 @@ class GaleryController extends Controller
 
     public function show($century) {
         $cities         = City::all();
-        $images = Galery::where('category', $century)->get();
+        $images = Galery::where('category', $century)->paginate(20  );
         return view('show-galery', compact('century', 'images', 'cities'));
     }
 
     public function store() {
-        $img = Galery::create($this->validRquest());
+        $validData = $this->validRquest();
+        $validData['slug'] = request()->title;
+        $img = Galery::create($validData);
         $this->storeImage($img);
         dd(request() -> all());
     }

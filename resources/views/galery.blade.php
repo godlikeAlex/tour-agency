@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/magnific-popup.css">
     <link rel="stylesheet" href="/css/jquery-ui.css">
@@ -44,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="/css/util.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" href="/css/main-menu.css" >
     <!--===============================================================================================-->
     
   </head>
@@ -60,46 +57,51 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
-  @include('/components/header')
-  <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-    <div class="swiper-container images-carousel">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="image-wrap">
-                <div class="image-info">
-                  <h2 class="mb-3">20 Век</h2>
-                  <a href="/galery/20" class="btn btn-outline-white py-2 px-4">Все фотографии</a>
-                </div>
-                <img src="https://static.kulturologia.ru/files/u19829/198295970.jpg" alt="Image">
-              </div>
-            </div>  
-            <div class="swiper-slide">
-              <div class="image-wrap">
-                <div class="image-info">
-                  <h2 class="mb-3">19 Век</h2>
-                  <a href="/galery/19" class="btn btn-outline-white py-2 px-4">Все фотографии</a>
-                </div>
-                <img src="http://alsamarkand.com/wp-content/uploads/2017/06/132544534_6124548_ludiDrevnegoSamarkanda.jpg" alt="Image">
-              </div>
-            </div> 
-            <div class="swiper-slide">
-              <div class="image-wrap">
-                <div class="image-info">
-                  <h2 class="mb-3">18 Век</h2>
-                  <a href="/galery/18" class="btn btn-outline-white py-2 px-4">Все фотографии</a>
-                </div>
-                <img src="https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png" alt="Image">
-              </div>
-            </div> 
+    @include('/components/header')
+  <div class="site-section"  data-aos="fade">
+    <div class="container-fluid">
+      
+      <div class="row justify-content-center">
+        
+        <div class="col-md-7">
+          <div class="row mb-5">
+            <div class="col-12 ">
+              <h2 class="site-section-heading text-center">Галлерея</h2>
+            </div>
+          </div>
         </div>
-
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
+    
+      </div>
+      <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3 item">
+            <a href="{{route('show.galery', ['centuary' => '20'])}}">
+              <div style="background: url(https://static.kulturologia.ru/files/u19829/198295970.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">20 Век</div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 item">
+            <a href="{{route('show.galery', ['centuary' => '19'])}}">
+            <div style="background: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRDWmpb8EkV3-NiMk0bTe_4w); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">19 Век</div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 item">
+            <a href="{{route('show.galery', ['centuary' => '18'])}}">
+            <div style="background: url(http://alsamarkand.com/wp-content/uploads/2017/06/132544534_6124548_ludiDrevnegoSamarkanda.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">18 Век</div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 item">
+           <a href="{{route('show.galery', ['centuary' => '17'])}}">
+            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">17 Век</div>
+            </a>
+          </div>
+      </div>
     </div>
-    </div>
+  </div>
+  </div>
+  @include('/components/footer')
   <script src="/js/galery/jquery-3.3.1.min.js"></script>
   <script src="/js/galery/jquery-migrate-3.0.1.min.js"></script>
   <script src="/js/galery/jquery-ui.js"></script>
@@ -118,16 +120,6 @@
   <script src="/js/galery/jquery.mousewheel.min.js"></script>
 
   <script src="/js/galery/main.js"></script>
-
-  <!--===============================================================================================-->
-<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="/vendor/bootstrap/js/popper.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="/js/main.js"></script>
   
   <script>
     $(document).ready(function(){

@@ -25,7 +25,7 @@
                         <div class="form-group">
                         
                             <div for="coverex">Фото</div>
-                            <input type="file" name="image" id="coverex">
+                            <input type="file" name="image">
                         </div>
                         <div>Описание</div>
                         <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
