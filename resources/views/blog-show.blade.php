@@ -43,7 +43,14 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/main-menu.css">
 <!--===============================================================================================-->
-
+    <style>
+    body{
+        color: #333;
+    }
+        ul li, ol li {
+    list-style: unset;
+}
+    </style>
 </head>
 
 <body>
@@ -91,7 +98,7 @@
     font-weight: 700;">{!! $post->title !!}</h1>
                         <img src="/storage/{{$post->image}}" style="width:100%" alt="">
                         <!-- Post Content -->
-                        <div class="post-content">
+                        <div style="padding: 0; box-shadow:none;" class="post-content">
 							{!! $post->post !!}
                             <div class="post-meta second-part">
                                 <p>{{$post -> author}} {{ $post->created_at->format('d/m/y') }}</p>

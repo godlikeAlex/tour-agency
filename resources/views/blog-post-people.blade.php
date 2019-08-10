@@ -90,7 +90,7 @@
     font-weight: 700;">{!! $people->name !!}</h1>
                         <img src="/storage/{{$people->image}}" style="width:100%" alt="">
                         <!-- Post Content -->
-                        <div class="post-content">
+                        <div style="padding:0; box-shadow: none;" class="post-content">
 							{!! $people->body !!}
                             <div class="post-meta second-part">
                                 <p>{{ $people->created_at->format('d/m/y') }}</p>
