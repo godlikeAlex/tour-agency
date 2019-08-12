@@ -145,6 +145,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="stickyContainer" style="padding-top:25px;">
+                            <img style="position: sticky;top: 17%;" src="/images/banner-02.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,6 +202,12 @@
     <script src="/vendor/bootstrap/js/popper.js"></script>
 	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
+
+    <script>
+        const post = document.querySelector('.post-content');
+        const stickyContainer = document.querySelector('.stickyContainer');
+        stickyContainer.style.height = post.offsetHeight / 100 * 80 +'px';
+    </script>
 
 </body>
 
