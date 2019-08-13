@@ -235,7 +235,7 @@
 											</div>
 										</div>	
 								</div>
-							<div class="col-md-12"><iframe width="100%" height="450" src="https://www.youtube.com/embed/_9AcFE1ijmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+							<div class="col-md-12"><iframe width="100%" height="450" src="https://www.youtube.com/embed/{{$tour->video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 							<div class="col-md-12">
 								<div class="block-item">
 								<div id="Itinerary" style="display:flex; justify-content: space-between; align-items:center">

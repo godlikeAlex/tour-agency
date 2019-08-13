@@ -56,6 +56,7 @@ class TourAdminController extends Controller
             'category' => 'required',
             'days' => 'required',
             'starts' => 'required',
+            'video' => 'required',
             'ends' => 'required',
             'age_from' => 'required',
             'age_to' => 'required',

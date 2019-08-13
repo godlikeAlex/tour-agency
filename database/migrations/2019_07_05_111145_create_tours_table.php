@@ -20,6 +20,7 @@ class CreateToursTable extends Migration
             $table->string('lang');
             $table->string('price');
             $table->string('category');
+            $table->string('video');
             $table->string('days');
             $table->string('starts');
             $table->string('ends');

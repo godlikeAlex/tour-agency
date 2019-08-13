@@ -23,6 +23,9 @@
                             <input type="text" name="price" class="form-control" placeholder="Цена">
                         </div>  
                         <div class="form-group">
+                            <input type="text" name="video" class="form-control" placeholder="ID Видео на ютубе">
+                        </div> 
+                        <div class="form-group">
                             <label for="exampleSelect1">Язык</label>
                             <select name="lang" class="form-control" id="exampleSelect1">
                                 <option value="ru">ru</option>
