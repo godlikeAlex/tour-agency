@@ -87,43 +87,43 @@
             <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
             <article class="col-md-4 block_main__item">
             <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
             <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
             <article class="col-md-4 block_main__item">
             <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
             <article class="col-md-4 block_main__item">
             <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
             <article class="col-md-4 block_main__item">
             <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                     <div class="content-block__category">География</div>
+                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
             </article>
         </div>

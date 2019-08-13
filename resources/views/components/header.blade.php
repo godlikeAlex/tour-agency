@@ -1,4 +1,4 @@
-<div class="ad-banner-header" style="{{ (request()->is('/')) ? '' : 'display:none' }}; height: 200px; background: white; display:flex; align-items: center; justify-content: center;"><img src="images/logo.jpg" style="width:500px; height: 150px;" alt="" srcset=""></div>
+<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/logo.jpg" style="width:500px; height: 150px;" alt="" srcset=""></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
@@ -93,7 +93,7 @@
     <div class="menu-border">
         <div class="container">
             <ul class="main-menu col-md-12">
-                <li><i class="fas fa-bars open-left-bar"></i></li>
+                <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
                 <li><a href=""><img style="width:150px" src="/images/logo.jpg" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">Главная</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>

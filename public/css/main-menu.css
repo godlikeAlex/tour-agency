@@ -15,13 +15,11 @@
 }
 
 .menu-border {
-    border-top: 2px solid #032adb;
-    border-bottom: 1px solid #7b7b7b;
+    border-bottom: 1px solid #f5f5f5;
     background: white;
 }
 
 .main-menu li {
-    padding: 5px 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -33,10 +31,11 @@
 
 .main-menu a {
     color: #333;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
     transition: .5s;
+        text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: .125em;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -47,12 +46,12 @@
 
 .main-menu li:hover a
 {
-    color: #032adb;
+    color: #00529f;
     text-decoration: none;
 }
 
 .active a{
-    color: #032adb;
+    color: #00529f;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -64,7 +63,7 @@
     transition: .5s;
     bottom: -1px;
     width: 0%;
-    background: #032adb;
+    background: #00529f;
     height: 2px;
     left: 0;
 }
@@ -80,7 +79,7 @@
     transition: .5s;
     bottom: -1px;
     width: 100% !important;
-    background: #032adb;
+    background: #00529f;
     height: 2px;
     left: 0;
 }
@@ -107,7 +106,7 @@
     transition: .5s;
     bottom: -1px;
     width: 0%;
-    background: #032adb;
+    background: #00529f;
     height: 2px;
     left: 0;
 }
@@ -117,7 +116,7 @@
 }
 
 .sub-menu-nav li:hover a {
-    color: #032adb;
+    color: #00529f;
 }
 
 .sub-menu-nav li:first-child {
@@ -131,7 +130,7 @@
 
 .sub-menu-main
 {
-    background: #e0e0e0;
+    background: #f9f9f9;
 }
 
 .sub-menu-item:after {
@@ -139,7 +138,7 @@
 }
 
 .sub-menu-active {
-    color: #032adb !important;
+    color: #00529f !important;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -149,7 +148,7 @@
     transition: .5s;
     bottom: -1px;
     width: 100%;
-    background: #032adb;
+    background: #00529f;
     height: 2px;
     left: 0;
 }
@@ -388,12 +387,12 @@
 }
 
 .left-menu-network a:hover { 
-    color: #032adb;
+    color: #00529f;
     text-decoration: none;
 }
 
 .left-menu-social a:hover { 
-    color: #032adb;
+    color: #00529f;
     text-decoration: none;
 }
 
@@ -413,7 +412,7 @@
 
 
 .left-menu-main-link i {font-size: 28px;}
-.left-menu-main-link a:hover {text-decoration: none; color:#032adb}
+.left-menu-main-link a:hover {text-decoration: none; color:#00529f}
 
 .close-slide-menu {
     text-align: right;
@@ -456,7 +455,7 @@
 {
     width: 130px;
 }
-.dropped-menu a:hover {text-decoration: none; color:#032adb}
+.dropped-menu a:hover {text-decoration: none; color:#00529f}
 
 /* Media  */
 
