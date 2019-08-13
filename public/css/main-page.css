@@ -55,7 +55,7 @@ body
     box-shadow:0px 15px 25px -7px rgba(56, 56, 56, 0.2);
 }
 
-.content-block__img:hover ~ .content-block__title{
+.content-block__img:hover ~ .content-block__title-link {
     color: #00529f;
 }
 
@@ -93,9 +93,9 @@ body
     transition: .5s;
 }
 
-.content-block__title a {
+.content-block__title-link {
     transition: .5s;
-    color: #212529;
+    color: #333;
 }
 
 .main-content-block
@@ -255,14 +255,14 @@ body
 
 .category-link
 {
-    color: #212529;
+    color: #fdb913;
     transition: .5s;
 }
 
 .category-link:hover 
 {
     text-decoration: none;
-    color: #0300a3;
+    color: #fd7113;
 }
 
 .content-block__title:hover a {

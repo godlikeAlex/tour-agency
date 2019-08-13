@@ -155,9 +155,6 @@
                 <article class="col-md-4 block_main__item">
                     <div class="col-md-12 block_main__item-content">
                     <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><div class="content-block__img" style="background: url(storage/{{$city->image}})"></div></a>
-                        <div class="content-block__title">
-                            <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
-                        </div>
                         <div class="content-block__category">
                             <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
                                 @if($city->category === 'where-to-eat')
@@ -178,6 +175,9 @@
                                     Полезная информация
                                 @endif
                             </a>
+                        </div>
+                        <div class="content-block__title">
+                            <a class="content-block__title-link" href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
                         </div>
                     </div>
                 </article>
@@ -205,9 +205,6 @@
                 <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
                 <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><div class="content-block__img" style="background: url(storage/{{$people->image}})"></div></a>
-                    <div class="content-block__title">
-                        <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">{{$people->name}}</a>
-                    </div>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
                             @if($people->category === 'drevniy-mir')
@@ -218,6 +215,9 @@
                                 Новое время
                             @endif
                         </a>
+                    </div>
+                    <div class="content-block__title">
+                        <a  class="content-block__title-link" href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">{{$people->name}}</a>
                     </div>
                 </div>
                 </article>
@@ -293,9 +293,6 @@
                 <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
                     <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><div class="content-block__img" style="background:url(storage/{{$post->image}})"></div></a>
-                    <div class="content-block__title">
-                        <a href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
-                    </div>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
                             @if($post->category === 'toursim')
@@ -308,6 +305,9 @@
                                 Туристы
                             @endif
                         </a>
+                    </div>
+                    <div class="content-block__title">
+                        <a class="content-block__title-link" href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
                     </div>
                 </div>
                 </article>
