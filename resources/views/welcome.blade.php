@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <title>Home 01</title>
     <meta charset="UTF-8">
@@ -118,7 +118,7 @@
                     <div class="content-block__category">География</div>
                     <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
                 </div>
-            </article>
+            </article>*
             <article class="col-md-4 block_main__item">
             <div class="col-md-12 block_main__item-content">
                     <div class="content-block__img"></div>
@@ -147,7 +147,7 @@
                 <?php 
                     $curentUrlCity;
                     foreach($cities as $curCity) {
-                        if($curCity->id === $city->id) {
+                        if($curCity->id == $city['city_id']) {
                             $curentUrlCity = $curCity->name;
                         }
                     }
