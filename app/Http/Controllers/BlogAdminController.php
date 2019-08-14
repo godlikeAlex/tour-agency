@@ -33,6 +33,7 @@ class BlogAdminController extends Controller
         $validateData = request() -> validate([
             'title' => 'required|min:6',
             'author' => 'required',
+            'lang' => 'required',
             'category' => 'required',
             'desc' => 'required|min:25',
             'post' => 'required|min:25',

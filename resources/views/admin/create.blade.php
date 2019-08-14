@@ -15,7 +15,14 @@
                         </div>
                         <div class="form-group">
                             <input type="text" name="author" class="form-control" placeholder="Автор">
-                        </div>      
+                        </div>   
+                        <div class="form-group">
+                            <label for="exampleSelect1">Язык</label>
+                            <select name="lang" class="form-control" id="exampleSelect1">
+                                <option value="en">en</option>
+                                <option value="ru">ru</option>
+                            </select>
+                        </div>   
                         <div class="form-group">
                             <label for="exampleSelect1">Тип блога</label>
                             <select name="category" class="form-control" id="exampleSelect1">
@@ -50,7 +57,9 @@
       $('#summernote').summernote({
         placeholder: 'Статья',
         tabsize: 2,
-        height: 100
+        height: 100,  codemirror: { // codemirror options
+    theme: 'monokai'
+  }
       });
 </script>
 

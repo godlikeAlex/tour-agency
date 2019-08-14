@@ -429,6 +429,15 @@
     transition: max-height 0.2s ease-out;
 }
 
+blockquote {
+    border-left: 4px solid;
+    border-color: #00529f;
+    padding-left: 30px;
+    margin-left: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .dropped-menu
 {
     padding-left: 15px !important;
