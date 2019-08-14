@@ -1,9 +1,9 @@
-<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/logo.jpg" style="width:500px; height: 150px;" alt="" srcset=""></div>
+<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/head.svg" style="width:500px; height: 150px;" alt="" srcset=""></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
         <div class="close-cont">
-            <div><img class="logo-left-menu-main" style="width:150px;" src="images/logo.jpg" alt=""></div>
+            <div><img class="logo-left-menu-main" style="width:150px;" src="images/head.svg" alt=""></div>
             <img src="images/close.png" class="close-slide-menu" alt="">
         </div>
         <ul class="left-menu-main">
@@ -37,7 +37,7 @@
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/tours">Туры</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/tours">Туры</a>  <img src="images/head.svg" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
                     <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
@@ -94,8 +94,8 @@
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
-                <li><a href=""><img style="width:150px" src="/images/logo.jpg" alt=""></a></li>
-                <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">Главная</a></li>
+                <li><a href=""><img style="width:150px" src="/images/head.svg" alt=""></a></li>
+                <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">{{ __('menu.main') }}</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>
                 <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">Города</a></li>
                 <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">Люди</a></li>
@@ -103,7 +103,11 @@
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">Туры</a></li>
                 <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">Базар</a></li>
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>    
-                <li><a href="" style="display: flex; align-items: center;"><img style="width:30px;" src="images/ukraine.png" alt=""></a> </li>
+                @if(app()->getLocale()=='ru' )
+                    <li><a  href="{{ url('locale/en') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/en.svg" alt=""></a> </li>
+                @else
+                    <li><a href="{{ url('locale/ru') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/ru.svg" alt=""></a> </li>
+                @endif
                 <li style="font-size:13px;"><i style="padding-right: 5px; font-size:30px" class="fas fa-globe-europe"></i> ES</li>
             </ul>
             

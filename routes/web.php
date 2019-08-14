@@ -104,3 +104,8 @@ Route::prefix('about')->group(function() {
         return view('team', compact('cities'));
     });
 });
+
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
