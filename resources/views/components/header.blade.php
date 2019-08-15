@@ -1,4 +1,4 @@
-<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/head.svg" style="width:500px; height: 150px;" alt="" srcset=""></div>
+<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/head.svg" alt="" srcset=""></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
@@ -7,20 +7,20 @@
             <img src="images/close.png" class="close-slide-menu" alt="">
         </div>
         <ul class="left-menu-main">
-            <li><div  class="left-menu-main-link" ><a href="/">Главная</a></div></li>
+            <li><div  class="left-menu-main-link" ><a href="/">{{ __('menu.main') }}</a></div></li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/uzbekistan">Узбекистан</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/uzbekistan">{{ __('menu.uzbekistan') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
-                    <li><a href="">География</a></li>
-                    <li><a href="">История</a></li>
-                    <li><a href="">Люди</a></li>
-                    <li><a href="">Туризм</a></li>
-                    <li><a href="">Искуства</a></li>
-                    <li><a href="">Культура</a></li>
+                    <li><a href="">{{ __('menu.geo') }}</a></li>
+                    <li><a href="">{{ __('menu.history') }}</a></li>
+                    <li><a href="">{{ __('menu.peoples') }}</a></li>
+                    <li><a href="">{{ __('menu.tourism') }}</a></li>
+                    <li><a href="">{{ __('menu.art') }}</a></li>
+                    <li><a href="">{{ __('menu.culture') }}</a></li>
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/city">Города</a> <img src="images/down.png" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/city">{{ __('menu.cities') }}</a> <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     @foreach($cities as $city)
                         <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></li>
@@ -28,16 +28,16 @@
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/people">Люди</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/people">{{ __('menu.peoples') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
-                    <li><a href="/people">Все</a></li>
-                    <li><a href="/people/category/drevniy-mir">Древний мир</a></li>
-                    <li><a href="/people/category/srednie-veka">Средние века</a></li>
-                    <li><a href="/people/category/novoe-vremya">Новое время</a></li>
+                    <li><a href="/people">{{ __('menu.all') }}</a></li>
+                    <li><a href="/people/category/drevniy-mir">{{ __('menu.drevniy_mir') }}</a></li>
+                    <li><a href="/people/category/srednie-veka">{{ __('menu.srednie_veka') }}</a></li>
+                    <li><a href="/people/category/novoe-vremya">{{ __('menu.novoe_vremya') }}</a></li>
                 </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/tours">Туры</a>  <img src="images/head.svg" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/tours">{{ __('menu.tours') }}</a>  <img src="images/down.svg" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
                     <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
@@ -55,9 +55,9 @@
 
                 </ul>
             </li>
-            <div  class="left-menu-main-link" ><a href="/galery">Фото</a></div>
+            <div  class="left-menu-main-link" ><a href="/galery">{{ __('menu.photo') }}</a></div>
             <li>
-                <div  class="left-menu-main-link" ><a href="/blog">Новости</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/blog">{{ __('menu.news') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">Туризм</a></li>
                     <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
@@ -96,13 +96,13 @@
                 <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
                 <li><a href=""><img style="width:150px" src="/images/head.svg" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">{{ __('menu.main') }}</a></li>
-                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">Узбекистан</a></li>
-                <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">Города</a></li>
-                <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">Люди</a></li>
-                <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">Фото</a></li>
-                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">Туры</a></li>
-                <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">Базар</a></li>
-                <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">Новости</a></li>    
+                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">{{ __('menu.uzbekistan') }}</a></li>
+                <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">{{ __('menu.cities') }}</a></li>
+                <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">{{ __('menu.peoples') }}</a></li>
+                <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">{{ __('menu.photo') }}</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">{{ __('menu.tours') }}</a></li>
+                <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li>
+                <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">{{ __('menu.news') }}</a></li>    
                 @if(app()->getLocale()=='ru' )
                     <li><a  href="{{ url('locale/en') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/en.svg" alt=""></a> </li>
                 @else
@@ -119,7 +119,7 @@
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12">
                     <li class="dropdown" data-menu-show="geo">
-                        <a href="" data-menu-show="geo" class="sub-menu-item {{ (request()->segment(2) == 'geo') ? 'sub-menu-active' : ''}}">География</a>
+                        <a href="" data-menu-show="geo" class="sub-menu-item {{ (request()->segment(2) == 'geo') ? 'sub-menu-active' : ''}}">{{ __('menu.geo') }}</a>
                         <div data-menu="geo" class="sub-menu-header">
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
@@ -130,7 +130,7 @@
                         </div>   
                     </li>
                     <li class="dropdown" data-menu-show="history">
-                        <a href="" data-menu-show="history" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">История</a>
+                        <a href="" data-menu-show="history" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
                         <div data-menu="history" class="sub-menu-header">
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
@@ -141,7 +141,7 @@
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="people">
-                        <a href="" data-menu-show="people" class="sub-menu-item">Люди</a>
+                        <a href="" data-menu-show="people" class="sub-menu-item">{{ __('menu.peoples') }}</a>
                         <div data-menu="people" class="sub-menu-header">
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
                             <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
@@ -152,35 +152,35 @@
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="toursizm">
-                        <a href="/uzbekistan#turizm" data-menu-show="toursizm" class="sub-menu-item {{ (request()->segment(2) == 'visa' || request()->segment(2) == 'transport' || request()->segment(2) == 'eco') ? 'sub-menu-active' : ''}}">Туризм </a>
+                        <a href="/uzbekistan#turizm" data-menu-show="toursizm" class="sub-menu-item {{ (request()->segment(2) == 'visa' || request()->segment(2) == 'transport' || request()->segment(2) == 'eco') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }} </a>
                         <div data-menu="toursizm" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'visa'])}}">Виза</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'transport'])}}">Транспорт</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'eco'])}}">Экология</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'visa'])}}">{{ __('menu.visa') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'transport'])}}">{{ __('menu.transport') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'eco'])}}">{{ __('menu.ecology') }}</a>
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="iskus">
                         <a href="/uzbekistan#iskustva" data-menu-show="iskus" 
-                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">Искуства</a>
+                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.art') }}</a>
                         <div data-menu="iskus" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'literature'])}}">Литература</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'architecture'])}}">Архитиктура</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'music'])}}">Музыка</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'teatr'])}}">Театр</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'painting'])}}">Живопись</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'poety'])}}">Поэзия</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'literature'])}}">{{ __('menu.literature') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'architecture'])}}">{{ __('menu.architecture') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'music'])}}">{{ __('menu.music') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'teatr'])}}">{{ __('menu.teatr') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'painting'])}}">{{ __('menu.painting') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'poety'])}}">{{ __('menu.poetry') }}</a>
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="cult">
                         <a data-menu-show="cult" href="/uzbekistan#cultura" 
-                        class="sub-menu-item {{ (request()->segment(2) == 'kitchen' || request()->segment(2) == 'clothing' || request()->segment(2) == 'religion' || request()->segment(2) == 'holidays' || request()->segment(2) == 'sufism' || request()->segment(2) == 'lang') ? 'sub-menu-active' : ''}}">Культура</a>
+                        class="sub-menu-item {{ (request()->segment(2) == 'kitchen' || request()->segment(2) == 'clothing' || request()->segment(2) == 'religion' || request()->segment(2) == 'holidays' || request()->segment(2) == 'sufism' || request()->segment(2) == 'lang') ? 'sub-menu-active' : ''}}">{{ __('menu.culture') }}</a>
                         <div data-menu="cult" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">{{ __('menu.kitchen') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">{{ __('menu.clothing') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">{{ __('menu.religion') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">{{ __('menu.holidays') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">{{ __('menu.sufism') }}</a>
+                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">{{ __('menu.language') }}</a>
                         </div>  
                     </li>
                 </ul>
@@ -194,14 +194,14 @@
                         <li class="dropdown" data-menu-show="{{$city->name}}">
                             <a href="" data-menu-show="{{$city->name}}" class="sub-menu-item {{ (request()->segment(2) == Illuminate\Support\Str::lower($city->name)) ? 'sub-menu-active' : ''}}">{{$city->name}}</a>
                             <div style="width:220px; padding-right:30px;" data-menu="{{$city->name}}" class="sub-menu-header">
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">История</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Что смотреть</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Чем заняться</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Где покупать</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Где поесть</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Где остановиться</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Как добраться</a>
-                                <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Полезная информация</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">{{ __('menu.history') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat'])}}">{{ __('mainpage.where_to_eat') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-stay'])}}">{{ __('mainpage.where_to_stay') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-see'])}}">{{ __('mainpage.where_to_see') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">{{ __('mainpage.things_to_do') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-buy'])}}">{{ __('mainpage.where_to_buy') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'how-to-get'])}}">{{ __('mainpage.how_to_get') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'useful-information'])}}">{{ __('mainpage.useful_information') }}</a>
                             </div>   
                         </li>
                     @endforeach
@@ -213,13 +213,16 @@
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12">
                     <li>    
-                        <a href="{{route('people.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'drevniy-mir') ? 'sub-menu-active' : ''}}">Древний мир</a>
+                        <a href="{{route('people.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'drevniy-mir') ? 'sub-menu-active' : ''}}">{{ __('menu.drevniy_mir') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('people.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'srednie-veka') ? 'sub-menu-active' : ''}}">Средние века</a>
+                        <a href="{{route('people.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'srednie-veka') ? 'sub-menu-active' : ''}}">{{ __('menu.srednie_veka') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('people.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'novoe-vremya') ? 'sub-menu-active' : ''}}">Новое время</a>
+                        <a href="{{route('people.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'novoe-vremya') ? 'sub-menu-active' : ''}}">{{ __('menu.novoe_vremya') }}</a>
+                    </li>
+                    <li>    
+                        <a href="{{route('people.category', ['category' => 'sovremenost'])}}" class="sub-menu-item {{ (request()->segment(2) == 'sovremenost') ? 'sub-menu-active' : ''}}">{{ __('menu.sovremenost  ') }}</a>
                     </li>
                 </ul>
             </div>
@@ -229,16 +232,26 @@
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12">
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">Туризм</a>
+                        <a href="{{route('blog.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">Узбекистан</a>
+                        <a href="{{route('blog.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">{{ __('menu.uzbekistan') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">История</a>
+                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'tourists') ? 'sub-menu-active' : ''}}">Туристы</a>
+                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'tourists') ? 'sub-menu-active' : ''}}">{{ __('menu.tourists') }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @elseif($type === 'tours')
+        <div class="sub-menu-main"> 
+            <div class="container"> 
+                <ul class="sub-menu-nav col-md-12">
+                    <li>    
+                        <a href="{{route('tour.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
                     </li>
                 </ul>
             </div>

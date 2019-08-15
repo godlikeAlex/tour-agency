@@ -45,22 +45,25 @@
                         <!-- Catagory Area -->
                         <div class="world-catagory-area">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Люди</li>
+                                <li class="title">{{ __('menu.peoples') }}</li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">Все</a>
+                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">{{ __('menu.all') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/people/category/drevniy-mir" class="nav-link @if($category === 'drevniy-mir') active @endif" >Древний Мир</a>
+                                    <a href="/people/category/drevniy-mir" class="nav-link @if($category === 'drevniy-mir') active @endif" >{{ __('menu.drevniy_mir') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/people/category/srednie-veka" class="nav-link @if($category === 'srednie-veka') active @endif">Средние века</a>
+                                    <a href="/people/category/srednie-veka" class="nav-link @if($category === 'srednie-veka') active @endif">{{ __('menu.srednie_veka') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/people/category/novoe-vremya" class="nav-link @if($category === 'novoe-vremya') active @endif">Новое время</a>
+                                    <a href="/people/category/novoe-vremya" class="nav-link @if($category === 'novoe-vremya') active @endif">{{ __('menu.novoe_vremya') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/people/category/sovremenost" class="nav-link @if($category === 'sovremenost') active @endif">{{ __('menu.sovremenost') }}</a>
                                 </li>
                             </ul>
 
@@ -89,6 +92,7 @@
                                     </div>
                                     
                                     @endforeach
+                                    {{$people -> links()}}
                                 </div>
                             </div>
                         </div>
@@ -100,7 +104,7 @@
                     <div class="post-sidebar-area">
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Последние люди</h5>
+                            <h5 class="title">{{ __('menu.last_people') }}</h5>
                             <div class="widget-content">
 								@foreach($lastPeople as $lp)
 								<!-- Single Blog Post -->
@@ -117,20 +121,6 @@
                                     </div>
                                 </div>
 								@endforeach
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Stay Connected</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-google"></i></a>
-                                </div>
                             </div>
                         </div>
                     </div>

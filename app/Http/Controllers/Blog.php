@@ -19,29 +19,30 @@ class Blog extends Controller
     }
 
     public function indexBlog() {
-        $cities         = City::all();
-        $header = Header::dataHeader();
-        $posts = Posts::paginate(5);
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        $posts = Posts::where('lang', $lang)->paginate(5);
         $lastPosts = $this->lastPosts();
         $category = "all";
-        return view('blog', compact('header', 'posts', 'lastPosts', 'category', 'cities'));
+        return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
     }
 
     public function indexBlogCategory($category) {
-        $cities         = City::all();
-        $header = Header::dataHeader();
-        $posts = Posts::where('category', $category)->paginate(5);
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        $posts = Posts::where(['category' => $category, 'lang' => $lang])->paginate(5);
         $lastPosts = $this->lastPosts();
-        return view('blog', compact('header', 'posts', 'lastPosts', 'category', 'cities'));
+        return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
     }
 
     public function showPost($category, $slug) {
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $post = Posts::where('slug', $slug)->firstOrFail();
         $header = Header::dataHeader();
         $lastPosts = $this->lastPosts();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        return view('blog-show', compact('header', 'post', 'lastPosts', 'recPosts', 'cities'));
+        return view('blog-show', compact('post', 'lastPosts', 'recPosts', 'cities'));
     }
 
     public function store() {
@@ -51,8 +52,9 @@ class Blog extends Controller
     // Peoples blog
 
     public function indexPeople() {
-        $people = People::paginate(5);
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        $people = People::where('lang', $lang)->paginate(5);
         $lastPeople = $this->lastPeople();
         $header = Header::dataHeader();
         $category = "all";
@@ -61,10 +63,10 @@ class Blog extends Controller
     }
 
     public function indexPeopleCategory($category) {
-        $people = People::where('category', $category)->paginate(5);
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        $people = People::where(['category' => $category, 'lang' => $lang])->paginate(5);
         $lastPeople = $this->lastPeople();
-        $header = Header::dataHeader();
 
         return view('blog-people', compact('people', 'lastPeople', 'cities', 'category'));
     }
@@ -72,8 +74,8 @@ class Blog extends Controller
 
     public function showPeople($category, $slug) {
         $people = People::where('slug', $slug)->firstOrFail();
-        $cities         = City::all();
-        $header = Header::dataHeader();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $lastPeople = $this->lastPeople();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
         return view('blog-post-people', compact('people', 'cities', 'lastPeople', 'recPosts'));
@@ -81,13 +83,15 @@ class Blog extends Controller
 
     private function lastPeople() 
     {
-        $lastPeople = People::orderBy('created_at','desc')->take(5)->get();
+        $lang = app()->getLocale();
+        $lastPeople = People::where('lang', $lang)->orderBy('created_at','desc')->take(5)->get();
         return $lastPeople;
     }
 
     private function lastPosts() 
     {
-        $lastPosts = Posts::orderBy('created_at','desc')->take(5)->get();
+        $lang = app()->getLocale();
+        $lastPosts = Posts::where('lang', $lang)->orderBy('created_at','desc')->take(5)->get();
         return $lastPosts;
     }
 }

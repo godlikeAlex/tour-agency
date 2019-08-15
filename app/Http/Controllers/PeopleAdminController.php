@@ -34,6 +34,7 @@ class PeopleAdminController extends Controller
         $validateData = request() -> validate([
             'name' => 'required|min:6',
             'body' => 'required|min:25',
+            'lang' => 'required',
             'desc' => 'required|min:25',
             'category' => 'required',
             'image' => 'required|image'

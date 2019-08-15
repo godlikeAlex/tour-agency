@@ -94,6 +94,10 @@ body
     transition: .5s;
 }
 
+.content-block__title a {
+    color: #333;
+}
+
 .content-block__title-link {
     transition: .5s;
     color: #333;
@@ -260,14 +264,14 @@ body
 
 .category-link
 {
-    color: #fdb913;
+    color: #00529f;
     transition: .5s;
 }
 
 .category-link:hover 
 {
     text-decoration: none;
-    color: #fd7113;
+    color: #2d9aff;
 }
 
 .content-block__title:hover a {

@@ -42,6 +42,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/main-menu.css" >
+    <link rel="stylesheet" href="/css/main-page.css" >
     <!--===============================================================================================-->
     
   </head>
@@ -66,7 +67,7 @@
         <div class="col-md-7">
           <div class="row mb-5">
             <div class="col-12 ">
-              <h2 class="site-section-heading text-center">{{$century}} Век</h2>
+              <h2 class="site-section-heading text-center">{{$century}} {{ __('mainpage.century') }}</h2>
             </div>
           </div>
         </div>
@@ -78,6 +79,7 @@
             <a href="#"><img src="/storage/{{$img->image}}" alt="IMage" class="img-fluid"></a>
           </div> 
         @endforeach
+        {{$images -> links()}}
       </div>
     </div>
   </div>

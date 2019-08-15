@@ -21,6 +21,7 @@ class CreatePeopleTable extends Migration
             $table->text('desc');
             $table->text('body');
             $table->string('category');
+            $table->string('lang');
             $table->string('image')->nullable();    
             $table->timestamps();
         });

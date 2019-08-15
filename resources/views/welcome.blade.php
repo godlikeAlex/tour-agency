@@ -27,10 +27,10 @@
 </div>
 <div class="container">
     <div class="tours">
-            <div class="title-tours">Тур пакеты</div>
+            <div class="title-tours">{{ __('mainpage.tour_pacekts') }}</div>
             <div class="row container" style="padding: 0; margin: 0;">
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">Эко туры</div>
+                    <div class="item-slide__title">{{ __('mainpage.eco_tours') }}</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
                         <li><a href="#">Example Tour #1</a></li>
@@ -40,7 +40,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">Групповые туры</div>
+                    <div class="item-slide__title">{{ __('mainpage.group_tours') }}</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
                         <li><a href="#">Example Tour #1</a></li>
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">Бизнес туры</div>
+                    <div class="item-slide__title">{{ __('mainpage.buissnes_tours') }}</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
                         <li><a href="#">Example Tour #1</a></li>
@@ -60,7 +60,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">Эконом туры</div>
+                    <div class="item-slide__title">{{ __('mainpage.econom_tours') }}</div>
                     <ul class="item-slide__tours">
                         <li><a href="#">Example Tour #1</a></li>
                         <li><a href="#">Example Tour #1</a></li>
@@ -73,14 +73,14 @@
     </div>
     <div class="main-content-block">
         <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">Узбекистан</span>
+            <span class="nav__title col-md-2">{{ __('menu.uzbekistan') }}</span>
             <ul class="nav__menu col-md-10">
-                <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
-                <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
-                <li><a href="{{route('uzb.category', ['category' => 'people'])}}">Люди</a></li>
-                <li><a href="/uzbekistan/#turizm">Туризм</a></li>
-                <li><a href="/uzbekistan/#iskustva">Искуства</a></li>
-                <li><a href="/uzbekistan/#culura">Культура</a></li>
+                <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">{{ __('menu.geo') }}</a></li>
+                <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
+                <li><a href="{{route('uzb.category', ['category' => 'people'])}}">{{ __('menu.peoples') }}</a></li>
+                <li><a href="/uzbekistan/#turizm">{{ __('menu.toursim') }}</a></li>
+                <li><a href="/uzbekistan/#iskustva">{{ __('menu.art') }}</a></li>
+                <li><a href="/uzbekistan/#culura">{{ __('menu.culture') }}</a></li>
             </ul>
         </div>
         <div class="row content-block_main">
@@ -129,7 +129,7 @@
         </div>
         <a class="show-more-link" href="#">
                 <div class="button-show-more">
-                    Показать еще
+                    {{ __('mainpage.more') }}
                 </div>
         </a>
     </div>
@@ -158,21 +158,21 @@
                         <div class="content-block__category">
                             <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
                                 @if($city->category === 'where-to-eat')
-                                    Где поесть
+                                    {{ __('mainpage.where_to_eat') }}
                                 @elseif($city->category === 'where-to-stay')
-                                    Где остановиться
+                                    {{ __('mainpage.where_to_stay') }}
                                 @elseif($city->category === 'history')
-                                    История
+                                    {{ __('menu.history') }}
                                 @elseif($city->category === 'where-to-see')
-                                    Что посмотреть
+                                    {{ __('mainpage.where_to_see') }}
                                 @elseif($city->category === 'things-to-do')
-                                    Чем заняться
+                                    {{ __('mainpage.things_to_do') }}
                                 @elseif($city->category === 'where-to-buy')
-                                    Где покупать
+                                    {{ __('mainpage.where_to_buy') }}
                                 @elseif($city->category === 'how-to-get')
-                                    Как добраться
+                                    {{ __('mainpage.how_to_get') }}
                                 @elseif($city->category === 'useful-information')
-                                    Полезная информация
+                                    {{ __('mainpage.useful_information') }}
                                 @endif
                             </a>
                         </div>
@@ -185,19 +185,20 @@
         </div>
         <a class="show-more-link" href="/city">
                     <div class="button-show-more">
-                        Показать еще
+                    {{ __('mainpage.more') }}
                     </div>
             </a>
     </div>
     
     <div class="main-content-block">
         <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">Люди</span>
+            <span class="nav__title col-md-2">{{ __('menu.peoples') }}</span>
             <ul class="nav__menu col-md-10">
-                <li><a href="/people">Все</a></li>
-                <li><a href="/category/drevniy-mir">Древний мир</a></li>
-                <li><a href="/category/srednie-veka">Средние века</a></li>
-                <li><a href="/uzbekistan/novoe-vremy">Новое время</a></li>
+                <li><a href="/people">{{ __('menu.all') }}</a></li>
+                <li><a href="{{route('people.category', ['category' => 'drevniy_mir'])}}">{{ __('menu.drevniy_mir') }}</a></li>
+                <li><a href="{{route('people.category', ['category' => 'srednie_veka'])}}">{{ __('menu.srednie_veka') }}</a></li>
+                <li><a href="{{route('people.category', ['category' => 'novoe_vremya'])}}">{{ __('menu.novoe_vremya') }}</a></li>
+                <li><a href="{{route('people.category', ['category' => 'sovremenost'])}}">{{ __('menu.sovremenost') }}</a></li>
             </ul>
         </div>  
         <div class="row content-block_main">
@@ -206,13 +207,15 @@
                 <div class="col-md-12 block_main__item-content">
                 <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><div class="content-block__img" style="background: url(storage/{{$people->image}})"></div></a>
                     <div class="content-block__category">
-                        <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
+                        <a class="category-link" href="{{ route('people.category',  ['category' => $people->category]) }}">
                             @if($people->category === 'drevniy-mir')
-                                Древний мир
+                                {{ __('menu.drevniy_mir') }}
                             @elseif($people->category === 'srednie-veka')
-                                Средние века
+                                {{ __('menu.srednie_veka') }}
                             @elseif($people->category === 'novoe-vremy')
-                                Новое время
+                                {{ __('menu.novoe_vremya') }}
+                            @elseif($people->category === 'sovremenost')
+                                {{ __('menu.sovremenost') }}
                             @endif
                         </a>
                     </div>
@@ -225,7 +228,7 @@
         </div>
         <a class="show-more-link" href="/people">
                     <div class="button-show-more">
-                        Показать еще
+                    {{ __('mainpage.more') }}
                     </div>
             </a>
     </div>
@@ -233,7 +236,7 @@
         <img src="/images/ads2.png" alt="Ad banner">
     </div>
     <div class="tours">
-            <div class="title-tours">Базар</div>
+            <div class="title-tours">{{ __('menu.shop') }}</div>
             <div class="row container" style="padding: 0; margin: 0;">
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
                     <div class="item-slide__title">Эко туры</div>
@@ -279,13 +282,13 @@
     </div>
     <div class="main-content-block">
         <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">Новости</span>
+            <span class="nav__title col-md-2">{{ __('menu.news') }}</span>
             <ul class="nav__menu col-md-10">
-                <li><a href="/blog">Все</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">Туризм</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
+                <li><a href="/blog">{{ __('menu.all') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">{{ __('menu.tourism') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">{{ __('menu.tourists') }}</a></li>
             </ul>
         </div>  
         <div class="row content-block_main">
@@ -296,13 +299,13 @@
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
                             @if($post->category === 'toursim')
-                                Туризм
+                                {{ __('menu.tourism') }}
                             @elseif($post->category === 'uzbekistan')
-                                Узбекистан
+                                {{ __('menu.uzbekistan') }}
                             @elseif($post->category === 'history')
-                                История
+                                {{ __('menu.history') }}
                             @elseif($post->category === 'tourists')
-                                Туристы
+                                {{ __('menu.tourists') }}
                             @endif
                         </a>
                     </div>
@@ -315,7 +318,7 @@
         </div>
         <a class="show-more-link" href="/blog">
                     <div class="button-show-more">
-                        Показать еще
+                    {{ __('mainpage.more') }}
                     </div>
             </a>
     </div>

@@ -17,13 +17,15 @@ class GaleryController extends Controller
     }
 
     public function home() {
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         return view('galery', compact('cities'));
     }
 
     public function show($century) {
-        $cities         = City::all();
-        $images = Galery::where('category', $century)->paginate(20  );
+        $lang = app()->getLocale();
+        $cities = City::where('lang', $lang)->get();
+        $images = Galery::where(['lang' => $lang,'category' => $century])->paginate(20);
         return view('show-galery', compact('century', 'images', 'cities'));
     }
 
@@ -39,6 +41,7 @@ class GaleryController extends Controller
         $validateData = request() -> validate([
             'title' => 'required|min:4',
             'category' => 'required',
+            'lang' => 'required',
             'desc' => 'required|min:10',
             'image' => 'required|image'
         ]);

@@ -40,26 +40,26 @@
                         <!-- Catagory Area -->
                         <div class="world-catagory-area">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Блог</li>
+                                <li class="title">{{ __('menu.news') }}</li>
 
                                 <li class="nav-item">
-                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">Все</a>
+                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">{{ __('menu.all') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >Туризм</a>
+                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >{{ __('menu.tourism') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'uzbekistan'])}}" class="nav-link @if($category === 'uzbekistan') active @endif">Узбекистан</a>
+                                    <a href="{{route('blog.category', ['category'=>'uzbekistan'])}}" class="nav-link @if($category === 'uzbekistan') active @endif">{{ __('menu.uzbekistan') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'history'])}}" class="nav-link @if($category === 'history') active @endif">История</a>
+                                    <a href="{{route('blog.category', ['category'=>'history'])}}" class="nav-link @if($category === 'history') active @endif">{{ __('menu.history') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'tourists'])}}" class="nav-link @if($category === 'tourists') active @endif">Туристы</a>
+                                    <a href="{{route('blog.category', ['category'=>'tourists'])}}" class="nav-link @if($category === 'tourists') active @endif">{{ __('menu.tourists') }}</a>
                                 </li>
                             </ul>
 
@@ -88,6 +88,7 @@
                                     </div>
                                     
                                     @endforeach
+                                    {{$posts -> links()}}
                                 </div>
                             </div>
                         </div>
@@ -99,7 +100,7 @@
                     <div class="post-sidebar-area">
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Последние посты</h5>
+                            <h5 class="title">{{ __('menu.last_posts') }}</h5>
                             <div class="widget-content">
 								@foreach($lastPosts as $lp)
 								<!-- Single Blog Post -->
@@ -116,20 +117,6 @@
                                     </div>
                                 </div>
 								@endforeach
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Stay Connected</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-google"></i></a>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,13 @@
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Название города">
-                        </div>
+                        </div>                        <div class="form-group">
+                            <label for="exampleSelect1">Язык контента</label>
+                            <select name="lang" class="form-control" id="exampleSelect1">
+                                <option>en</option>
+                                <option>ru</option>
+                            </select>
+                        </div> 
                         <div class="form-group">
                             Изображение города.
                             <input type="file" name="image" class="form-control">

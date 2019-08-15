@@ -12,7 +12,14 @@
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Имя человека">
-                        </div>     
+                        </div>    
+                        <div class="form-group">
+                            <label for="exampleSelect1">Язык контента</label>
+                            <select name="lang" class="form-control" id="exampleSelect1">
+                                <option>en</option>
+                                <option>ru</option>
+                            </select>
+                        </div> 
                         <div class="form-group">
                             <label for="exampleSelect1">Класс человека</label>
                             <select name="category" class="form-control" id="exampleSelect1">

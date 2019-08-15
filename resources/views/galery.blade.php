@@ -42,6 +42,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/main-menu.css" >
+    <link rel="stylesheet" href="/css/main-page.css" >
     <!--===============================================================================================-->
     
   </head>
@@ -66,7 +67,7 @@
         <div class="col-md-7">
           <div class="row mb-5">
             <div class="col-12 ">
-              <h2 class="site-section-heading text-center">Галлерея</h2>
+              <h2 class="site-section-heading text-center">{{ __('mainpage.gallery') }}</h2>
             </div>
           </div>
         </div>
@@ -76,25 +77,25 @@
           <div class="col-sm-6 col-md-4 col-lg-3 item">
             <a href="{{route('show.galery', ['centuary' => '20'])}}">
               <div style="background: url(https://static.kulturologia.ru/files/u19829/198295970.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">20 Век</div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">20 {{ __('mainpage.century') }}</div>
             </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 item">
             <a href="{{route('show.galery', ['centuary' => '19'])}}">
             <div style="background: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRDWmpb8EkV3-NiMk0bTe_4w); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">19 Век</div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">19 {{ __('mainpage.century') }}</div>
             </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 item">
             <a href="{{route('show.galery', ['centuary' => '18'])}}">
             <div style="background: url(http://alsamarkand.com/wp-content/uploads/2017/06/132544534_6124548_ludiDrevnegoSamarkanda.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">18 Век</div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">18 {{ __('mainpage.century') }}</div>
             </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 item">
            <a href="{{route('show.galery', ['centuary' => '17'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">17 Век</div>
+              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">17 {{ __('mainpage.century') }}</div>
             </a>
           </div>
       </div>

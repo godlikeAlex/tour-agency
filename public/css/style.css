@@ -6,11 +6,11 @@ body {
   font-size: 1rem; }
 
 ::-moz-selection {
-  background: #000;
+  background: #333;
   color: #fff; }
 
 ::selection {
-  background: #000;
+  background: #333;
   color: #fff; }
 
 a {
@@ -21,10 +21,10 @@ a {
     text-decoration: none; }
 
 .text-black {
-  color: #000 !important; }
+  color: #333 !important; }
 
 .bg-black {
-  background: #000 !important; }
+  background: #333 !important; }
 
 .site-wrap:before {
   -webkit-transition: .3s all ease-in-out;
@@ -59,16 +59,16 @@ a {
     box-shadow: none; }
   .btn.btn-black {
     color: #fff;
-    background-color: #000; }
+    background-color: #333; }
     .btn.btn-black:hover {
-      color: #000;
+      color: #333;
       background-color: #fff; }
 
 .line-height-1 {
   line-height: 1 !important; }
 
 .bg-black {
-  background: #000; }
+  background: #333; }
 
 .form-control {
   height: 43px;
@@ -88,32 +88,16 @@ a {
     padding: 4em 0; }
 
 .site-section-heading {
-  color: #000;
+  color: #333;
   position: relative;
   font-size: 2.5rem; }
   @media (min-width: 768px) {
     .site-section-heading {
-      font-size: 4rem; } }
-  .site-section-heading:after {
-    content: "";
-    left: 0%;
-    bottom: 0;
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    background: #000; }
-  .site-section-heading.text-center:after {
-    content: "";
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    content: "";
-    left: 50%;
-    bottom: 0;
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    background: #000; }
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: 700;  
+    } }
+
 
 .border-top {
   border-top: 1px solid #edf0f5 !important; }
@@ -140,9 +124,9 @@ a {
 
 .bg-text-line {
   display: inline;
-  background: #000;
-  -webkit-box-shadow: 20px 0 0 #000, -20px 0 0 #000;
-  box-shadow: 20px 0 0 #000, -20px 0 0 #000; }
+  background: #333;
+  -webkit-box-shadow: 20px 0 0 #333, -20px 0 0 #333;
+  box-shadow: 20px 0 0 #333, -20px 0 0 #333; }
 
 .text-white-opacity-05 {
   color: rgba(255, 255, 255, 0.5); }
@@ -244,7 +228,7 @@ a {
         padding: 10px 10px;
         text-transform: uppercase;
         letter-spacing: .1em;
-        color: #000;
+        color: #333;
         font-size: 12px;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
@@ -344,7 +328,7 @@ a {
           opacity: 1; }
 
 .site-menu[data-class="social"] a {
-  color: #000; }
+  color: #333; }
   .site-menu[data-class="social"] a:hover {
     color: #20c997; }
 
@@ -812,7 +796,7 @@ a {
     color: #cccccc; }
     .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
       border-bottom: 2px solid #20c997;
-      color: #000; }
+      color: #333; }
 
 .block-13, .slide-one-item {
   position: relative;
@@ -830,7 +814,7 @@ a {
       display: inline-block;
       padding: 20px;
       font-size: 30px;
-      color: #000; }
+      color: #333; }
       .block-13 .owl-nav .owl-prev.disabled, .block-13 .owl-nav .owl-next.disabled, .slide-one-item .owl-nav .owl-prev.disabled, .slide-one-item .owl-nav .owl-next.disabled {
         opacity: .2; }
 
@@ -898,7 +882,7 @@ a {
       background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(18%, transparent), color-stop(99%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
       background: -o-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
       background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); }
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#cc000000',GradientType=0 ); }
   .block-12 .text-overlay {
     position: absolute;
     bottom: 20px;
@@ -1009,7 +993,7 @@ a {
 
 #date-countdown .label {
   font-size: 40px;
-  color: #000; }
+  color: #333; }
 
 .next-match .image {
   width: 50px;
@@ -1129,7 +1113,7 @@ a {
     letter-spacing: .1em; }
     .swiper-container .btn-outline-white:hover {
       background: #fff;
-      color: #000; }
+      color: #333; }
 
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {

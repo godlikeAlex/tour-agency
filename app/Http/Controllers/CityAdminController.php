@@ -66,6 +66,7 @@ class CityAdminController extends Controller
     private function validateCity() {
         return request()->validate([
             'name' => 'required',
+            'lang' => 'required',
             'about' => 'required',
             'image' => 'required'
         ]);

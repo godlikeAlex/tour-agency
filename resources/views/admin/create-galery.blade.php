@@ -14,6 +14,13 @@
                             <input type="text" name="title" class="form-control" placeholder="Название фотографии">
                         </div>     
                         <div class="form-group">
+                            <label for="exampleSelect1">Язык контента</label>
+                            <select name="lang" class="form-control" id="exampleSelect1">
+                                <option>en</option>
+                                <option>ru</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="exampleSelect1">Категория</label>
                             <select name="category" class="form-control" id="exampleSelect1">
                                 <option value="20">20 Век</option>

@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
             $table->string('category');
             $table->text('desc');
             $table->longText('post');
+            $table->string('lang');
             $table->string('image')->nullable();
             $table->timestamps();
         });

@@ -96,7 +96,7 @@
                     <div class="post-sidebar-area mb-100">
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Последние посты</h5>
+                            <h5 class="title">{{ __('menu.last_posts') }}</h5>
                             <div class="widget-content">
 								@foreach($lastPosts as $lp)
 								<!-- Single Blog Post -->
@@ -113,20 +113,6 @@
                                     </div>
                                 </div>
 								@endforeach
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Stay Connected</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-google"></i></a>
-                                </div>
                             </div>
                         </div>
                         <div class="stickyContainer" style="padding-top:25px;">

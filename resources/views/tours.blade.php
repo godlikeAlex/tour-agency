@@ -21,7 +21,7 @@
             <div class="title-tours">Популярные тур пакеты</div>
             <div class="row">
                 <div class="col-md-3 tour-item-slide">
-                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">Эко туры</a></div>
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">{{ __('menu.eco_tours') }}</a></div>
                     <ul class="item-slide__tours">
                         @foreach($ecoTours as $eco)
                             <li><a href="{{route('tour.show', ['tourname' => $eco->slug])}}">{{$eco->name}}</a></li>
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 tour-item-slide">
-                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></div>
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'history_tours'])}}">{{ __('menu.history_tours') }}</a></div>
                     <ul class="item-slide__tours">
                         @foreach($historyTours as $history)
                             <li><a href="{{route('tour.show', ['tourname' => $history->slug])}}">{{$history->name}}</a></li>
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 tour-item-slide">
-                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">Бизнес туры</a></div>
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">{{ __('menu.buisnes_tours') }}</a></div>
                     <ul class="item-slide__tours">
                         @foreach($buisnesTours as $buisnes)
                             <li><a href="{{route('tour.show', ['tourname' => $buisnes->slug])}}">{{$buisnes->name}}</a></li>
@@ -45,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 tour-item-slide">
-                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'econom_tours'])}}">Эконом туры</a></div>
+                    <div class="item-slide__title"><a href="{{route('tour.category', ['category' => 'econom_tours'])}}">{{ __('menu.econom_tours') }}</a></div>
                     <ul class="item-slide__tours">
                         @foreach($economTours as $econom)
                             <li><a href="{{route('tour.show', ['tourname' => $economTours->slug])}}">{{$economTours->name}}</a></li>
@@ -56,7 +56,7 @@
 
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Исторические туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.history_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($historyTours as $history)
@@ -66,24 +66,24 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'history'])}}">
-                                        Исторические туры
+                                    {{ __('menu.history_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
-                                    <a href="{{route('tour.show', ['tourname' => $history->slug])}}">Example</a>
+                                    <a href="{{route('tour.show', ['tourname' => $history->slug])}}">{{$history -> name}}</a>
                                 </div>
                             </article>
                         @endforeach
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'history'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Короткие туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.short_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($shortTours as $shortTour)
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'short-tour'])}}">
-                                        Короткие туры
+                                    {{ __('menu.short_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -104,13 +104,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'short-tour'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Групповые туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.group_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($groupTours as $groupTour)
@@ -120,7 +120,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'group-tours'])}}">
-                                        Исторические туры
+                                    {{ __('menu.group_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -131,13 +131,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'group-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Индивидуальные туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.individual_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($individualTours as $indTour)
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'individual-tours'])}}">
-                                        Индивидуальные туры
+                                    {{ __('menu.individual_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -158,13 +158,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'individual-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Эксклюзивные туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.exclusive_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($exclusiveTours as $exTour)
@@ -174,7 +174,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'individual-tours'])}}">
-                                    Эксклюзивные туры
+                                    {{ __('menu.exclusive_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -185,13 +185,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'exclusive-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Классические туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.classic_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($classicTours as $classicTour)
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'individual-tours'])}}">
-                                        Классические туры
+                                    {{ __('menu.classic_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -212,13 +212,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'classic-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Комбинирование туры по центральной Азии</span>
+                        <span class="nav__title col-md-12">{{ __('menu.kombo_asia_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($komboAsiaTours as $kombAsiaTour)
@@ -228,7 +228,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'individual-tours'])}}">
-                                        Комбинирование туры по центральной Азии
+                                    {{ __('menu.kombo_asia_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -239,13 +239,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Комбинирование туры по Узбекистану и Казахстану</span>
+                        <span class="nav__title col-md-12">{{ __('menu.kombo_uz_kz_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($komboUzKzTours as $komboUzKzTour)
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'kombo-uz-kz-tours'])}}">
-                                    Комбинирование туры по Узбекистану и Казахстану
+                                        {{ __('menu.kombo_uz_kz_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -266,13 +266,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'kombo-uz-kz-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Комбинирование туры по Узбекистану и Кыргызстану</span>
+                        <span class="nav__title col-md-12">{{ __('menu.kombo_uz_kg_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($komboUzKgTours as $komboUzKgTour)
@@ -282,7 +282,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'kombo-uz-kg-tours'])}}">
-                                    Комбинирование туры по Узбекистану и Кыргызстану
+                                    {{ __('menu.kombo_uz_kg_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -293,13 +293,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'kombo-uz-kg-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Комбинирование туры по Узбекистану и Туркминистану</span>
+                        <span class="nav__title col-md-12">{{ __('menu.kombo_uz_tk_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($komboUzTmTours as $komboUzTmTour)
@@ -309,7 +309,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'kombo-uz-tm-tours'])}}">
-                                    Комбинирование туры по Узбекистану и Туркминистану
+                                    {{ __('menu.kombo_uz_tk_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -320,13 +320,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'kombo-uz-tm-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Комбинирование туры по Узбекистану и Таджикистану</span>
+                        <span class="nav__title col-md-12">{{ __('menu.kombo_uz_tj_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($komboUzTjTours as $komboUzTjTour)
@@ -336,7 +336,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'kombo-uz-tj-tours'])}}">
-                                    Комбинирование туры по Узбекистану и Таджикистану
+                                    {{ __('menu.kombo_uz_tj_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -347,13 +347,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'kombo-uz-tj-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Экскурсии по городам</span>
+                        <span class="nav__title col-md-12">{{ __('menu.excursion') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($excursionCity as $excursionCityItem)
@@ -363,7 +363,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'excursion-сity'])}}">
-                                    Экскурсии по городам
+                                    {{ __('menu.excursion') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -374,13 +374,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'excursion-сity'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Паломнические туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.palomn_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($pilgrimTours as $palTour)
@@ -390,7 +390,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}">
-                                    Паломнические туры
+                                    {{ __('menu.palomn_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -401,13 +401,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Экономные туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.econom_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($economTours as $economTour)
@@ -417,7 +417,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'econom-tours'])}}">
-                                    Экономные туры
+                                    {{ __('menu.econom_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -428,13 +428,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'econom-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Вело туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.velo_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($cyclingTours as $cyclingTour)
@@ -444,7 +444,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'cycling-tours'])}}">
-                                    Вело туры
+                                    {{ __('menu.velo_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -455,13 +455,13 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'cycling-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>
                 <div class="main-content-block col-md-12">
                     <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-12">Бизнес туры</span>
+                        <span class="nav__title col-md-12">{{ __('menu.buisnes_tours') }}</span>
                     </div>  
                     <div class="row content-block_main">
                         @foreach($buisnesTours as $buisnesTour)
@@ -471,7 +471,7 @@
                                 </div>
                                 <div class="content-block__category">
                                     <a class="category-link" href="{{route('tour.category', ['category' => 'buisnes-tours'])}}">
-                                    Бизнес туры
+                                    {{ __('menu.buisnes_tours') }}
                                     </a>
                                 </div>
                                 <div class="content-block__title">
@@ -482,7 +482,7 @@
                     </div>
                     <a class="show-more-link" href="{{route('tour.category', ['category' => 'buisnes-tours'])}}">
                         <div class="button-show-more">
-                            Показать еще
+                            {{ __('mainpage.more') }}
                         </div>
                     </a>
                 </div>

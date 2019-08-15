@@ -10,15 +10,15 @@ use App\CityItem;
 class CityController extends Controller
 {
     public function index() {
-        $header = Header::dataHeader();
-        $cities = City::all();
-        return view('cities', compact('header', 'cities'));
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        return view('cities', compact('cities'));
     }
 
     public function showCity($city) {
-        $header         = Header::dataHeader();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
-        $cities         = City::all();
         $historys       = $this->getRecordsByCategory($content->id, 'history');
         $whatToSee       = $this->getRecordsByCategory($content->id, 'what-to-see');
         $whatToDo       = $this->getRecordsByCategory($content->id, 'things-to-do');
@@ -31,8 +31,8 @@ class CityController extends Controller
     }
 
     public function showItem($city, $category, $slug) {
-        $header = Header::dataHeader();
-        $cities = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $item = CityItem::where([
@@ -51,25 +51,28 @@ class CityController extends Controller
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
 
-        return view('city-item', compact('header', 'item', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
+        return view('city-item', compact('item', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }
 
     public function showCategory($city, $category) {
-        $header = Header::dataHeader();
-        $cities = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $items = CityItem::where([
             'city_id' => $cityId,
             'category' => $category,
+            'lang' => $lang,
         ])->paginate(10);
-        return view('city-category', compact('header', 'cities', 'items', 'content'));   
+        return view('city-category', compact('cities', 'items', 'content'));   
     }
 
     private function getRecordsByCategory($cityId, $category) {
+        $lang = app()->getLocale();
         return CityItem::where([
             'city_id' => $cityId,
             'category' => $category,
+            'lang' => $lang,
         ])->take(8)->get();
     }
 }

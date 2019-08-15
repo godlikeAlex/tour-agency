@@ -12,21 +12,24 @@ use App\Uzbekistan;
 class UzbekistanController extends Controller
 {
     public function index() {
-        $header = Header::dataHeader();
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         return view('uzbekistan', compact('cities'));
     }
 
     public function category($category) {
-        $header = Header::dataHeader();
-        $cities         = City::all();
-        $items  = Uzbekistan::where('category', $category)->get();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
+        $items  = Uzbekistan::where([
+            'category' => $category,
+            'lang' => $lang
+        ])->get();
         return view('uzbekistan-category', compact('cities', 'items'));
     }
 
     public function show($category ,$uzb) {
-        $header = Header::dataHeader();
-        $cities         = City::all();
+        $lang = app()->getLocale();
+        $cities         = City::where('lang', $lang)->get();
         $item  = Uzbekistan::where('slug', $uzb)->firstOrFail();
         return view('uzbekistan-show', compact('cities', 'item'));
     }

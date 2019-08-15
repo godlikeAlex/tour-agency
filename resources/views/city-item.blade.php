@@ -41,11 +41,11 @@
                 <div style="    padding-bottom: 20px;
     padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
                     <a href="/" class="breadcrumb-item f1-s-3 cl9">
-                        Главная 
+                        {{ __('menu.main') }} 
                     </a>
 
                     <a href="/city" class="breadcrumb-item f1-s-3 cl9">
-                        Города 
+                    {{ __('menu.cities') }} 
                     </a>
                     <a href="/city/{{Illuminate\Support\Str::lower($city)}}" class="breadcrumb-item f1-s-3 cl9">
                         {{$city}} 
@@ -101,6 +101,7 @@
                 @endif
                 </div>
             </div>
+            {{$item->links()}}
         </div>
  
     </div>

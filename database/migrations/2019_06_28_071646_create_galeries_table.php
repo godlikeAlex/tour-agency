@@ -17,6 +17,7 @@ class CreateGaleriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug');
             $table->string('title');
+            $table->string('lang');
             $table->string('category');
             $table->text('desc');
             $table->string('image')->nullable();

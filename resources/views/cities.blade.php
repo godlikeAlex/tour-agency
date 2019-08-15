@@ -34,7 +34,7 @@
                             <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}"></a>
                         </div>
                         <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">История</a>
+                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">{{ __('menu.history') }}</a>
                         </div>
                 </article>
                 <article class="col-md-4 block_main__item" style="margin-top:50px;">
@@ -42,20 +42,20 @@
                             <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}"></a>
                         </div>
                         <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">Чем занятся</a>
+                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">{{ __('mainpage.things_to_do') }}</a>
                         </div>
                 </article>
                 <article class="col-md-4 block_main__item" style="margin-top:50px;">
                         <div class="content-block__img">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}"></a>
+                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-do'])}}"></a>
                         </div>
                         <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">Что смотреть<</a>
+                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-see'])}}">{{ __('mainpage.where_to_see') }}<</a>
                         </div>
                 </article>
                 <a class="show-more-link" style="margin:auto" href="/city/{{Illuminate\Support\Str::lower($city->name)}}"">
                     <div class="button-show-more">
-                        Показать еще
+                        {{ __('mainpage.more') }}
                     </div>
                 </a>
         </div>
