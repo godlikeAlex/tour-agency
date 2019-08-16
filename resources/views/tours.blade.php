@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="/css/main-menu.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
+    <style>
+        .main-content-block {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
     @include('/components/header')
@@ -75,7 +80,7 @@
                             </article>
                         @endforeach
                     </div>
-                    <a class="show-more-link" href="{{route('tour.category', ['category' => 'history'])}}">
+                    <a class="show-more-link" href="{{route('tour.category', ['category' => 'history-tours'])}}">
                         <div class="button-show-more">
                             {{ __('mainpage.more') }}
                         </div>
