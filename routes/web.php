@@ -105,6 +105,11 @@ Route::prefix('about')->group(function() {
     });
 });
 
+Route::get('/tourism', 'ToursimController@index');
+Route::get('/tourism/{slug}', 'ToursimController@view');
+Route::get('/admin/tourism/create', 'ToursimController@create');
+Route::post('/admin/tourism/create', 'ToursimController@store');
+
 Route::get('locale/{locale}', function ($locale){
     Session::put('locale', $locale);
     return redirect()->back();

@@ -52,4 +52,5 @@
         'velo_tours' => 'ВЕЛО ТУРЫ',
         'buisnes_tours' => 'БИЗНЕС ТУРЫ',
         'eco_tours' => 'БИЗНЕС ТУРЫ',
+        'fortoursit' => 'Туристам'
     ];

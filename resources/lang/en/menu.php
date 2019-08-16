@@ -53,4 +53,5 @@
         'velo_tours' => 'Cycling tours',
         'buisnes_tours' => 'Buissnes tours',
         'eco_tours' => 'Eco tours',
+        'fortoursit' => 'Tourists'
     ];

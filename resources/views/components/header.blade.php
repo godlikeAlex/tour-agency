@@ -101,6 +101,7 @@
                 <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">{{ __('menu.peoples') }}</a></li>
                 <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">{{ __('menu.photo') }}</a></li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">{{ __('menu.tours') }}</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tourism">{{ __('menu.fortoursit') }}</a></li>
                 <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li>
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item"><a href="/blog">{{ __('menu.news') }}</a></li>    
                 @if(app()->getLocale()=='ru' )
