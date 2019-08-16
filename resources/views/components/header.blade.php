@@ -249,20 +249,20 @@
         @elseif($type === 'tours')
         <div class="sub-menu-main"> 
             <div class="container"> 
-                <ul class="sub-menu-nav col-md-12" style="flex-wrap: wrap;">
-                    <li> <a href="{{route('tour.category', ['category' => ''])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>  </li>
-                    <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'individual-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'classic-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'excursion-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'economy-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'eco-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'buisnes-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a></li>
+                <ul class="sub-menu-nav col-md-12" style="flex-wrap: wrap; justify-content:center;">
+                    <li> <a href="{{route('tour.category', ['category' => ''])}}" class="{{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>  </li>
+                    <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'individual-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'classic-tours'])}}" class="{{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'excursion-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'economy-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'eco-tours'])}}" class="{{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'buisnes-tours'])}}" class="          {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a></li>
                 </ul>
             </div>
         </div>
