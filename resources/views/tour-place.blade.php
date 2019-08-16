@@ -81,7 +81,7 @@
 		
 	<div class="colorlib-loader"></div>
 
-	@include('/components/header')
+	@include('/components/header', ['type' => 'tours'])
 		<div class="colorlib-wrap" style="background:#f1f1f1; padding-top:0">
 			<div class="container">
 				<div class="row">

@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 </head>
 <body>
-    @include('/components/header')
+    @include('/components/header', ['type' => 'tours'])
     <div class="container">
         @foreach($tours as $tour)
             <article class="col-md-4 block_main__item" style="margin-top:25px; margin-bottom:25px;">
