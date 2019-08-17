@@ -25,8 +25,7 @@
         <div class="span-col-2 main-news" style="background: url(https://images.unsplash.com/photo-1564827077134-3252b917df8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80); background-size: cover;     background-position: center;">Example 4</div>
     </div>
 </div>
-<div class="container">
-    <div class="tours">
+    <div class="tours container">
             <div class="title-tours">{{ __('mainpage.tour_pacekts') }}</div>
             <div class="row container" style="padding: 0; margin: 0;">
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
@@ -71,61 +70,63 @@
                 </div>
             </div>
     </div>
-    <div class="main-content-block">
-        <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">{{ __('menu.uzbekistan') }}</span>
-            <ul class="nav__menu col-md-10">
-                <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">{{ __('menu.geo') }}</a></li>
-                <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
-                <li><a href="{{route('uzb.category', ['category' => 'people'])}}">{{ __('menu.peoples') }}</a></li>
-                <li><a href="/uzbekistan/#turizm">{{ __('menu.toursim') }}</a></li>
-                <li><a href="/uzbekistan/#iskustva">{{ __('menu.art') }}</a></li>
-                <li><a href="/uzbekistan/#culura">{{ __('menu.culture') }}</a></li>
-            </ul>
-        </div>
-        <div class="row content-block_main">
-            <article class="col-md-4 block_main__item">
+    <div class="main-content-block">        
+        <div class="container">
+            <div class="main-content-block__nav row">
+                <span class="nav__title col-md-2">{{ __('menu.uzbekistan') }}</span>
+                <ul class="nav__menu col-md-10">
+                    <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">{{ __('menu.geo') }}</a></li>
+                    <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
+                    <li><a href="{{route('uzb.category', ['category' => 'people'])}}">{{ __('menu.peoples') }}</a></li>
+                    <li><a href="/uzbekistan/#turizm">{{ __('menu.toursim') }}</a></li>
+                    <li><a href="/uzbekistan/#iskustva">{{ __('menu.art') }}</a></li>
+                    <li><a href="/uzbekistan/#culura">{{ __('menu.culture') }}</a></li>
+                </ul>
+            </div>
+            <div class="row content-block_main">
+                <article class="col-md-4 block_main__item">
+                    <div class="col-md-12 block_main__item-content">
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+                <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>
-            <article class="col-md-4 block_main__item">
-            <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>
-            <article class="col-md-4 block_main__item">
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+                <article class="col-md-4 block_main__item">
+                    <div class="col-md-12 block_main__item-content">
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+                <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>
-            <article class="col-md-4 block_main__item">
-            <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>
-            <article class="col-md-4 block_main__item">
-            <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>*
-            <article class="col-md-4 block_main__item">
-            <div class="col-md-12 block_main__item-content">
-                    <div class="content-block__img"></div>
-                    <div class="content-block__category">География</div>
-                    <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                </div>
-            </article>
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+                <article class="col-md-4 block_main__item">
+                <div class="col-md-12 block_main__item-content">
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+                <article class="col-md-4 block_main__item">
+                <div class="col-md-12 block_main__item-content">
+                        <div class="content-block__img"></div>
+                        <div class="content-block__category">География</div>
+                        <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
+                    </div>
+                </article>
+            </div>
         </div>
         <a class="show-more-link" href="#">
                 <div class="button-show-more">
@@ -134,63 +135,66 @@
         </a>
     </div>
     <div class="main-content-block">
-        <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">Города</span>
-            <ul class="nav__menu col-md-10">
-                @foreach($cities as $cityNav)
-                     <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($cityNav->name)])}}">{{$cityNav->name}}</a></li>
-                @endforeach
-            </ul>
-        </div>
-        <div class="row content-block_main">
-            @foreach($cityContent as $city)
-                <?php 
-                    $curentUrlCity;
-                    foreach($cities as $curCity) {
-                        if($curCity->id == $city['city_id']) {
-                            $curentUrlCity = $curCity->name;
+        <div class="container">
+            <div class="main-content-block__nav row">
+                <span class="nav__title col-md-2">Города</span>
+                <ul class="nav__menu col-md-10">
+                    @foreach($cities as $cityNav)
+                        <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($cityNav->name)])}}">{{$cityNav->name}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="row content-block_main">
+                @foreach($cityContent as $city)
+                    <?php 
+                        $curentUrlCity;
+                        foreach($cities as $curCity) {
+                            if($curCity->id == $city['city_id']) {
+                                $curentUrlCity = $curCity->name;
+                            }
                         }
-                    }
-                ?>
-                <article class="col-md-4 block_main__item">
-                    <div class="col-md-12 block_main__item-content">
-                    <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><div class="content-block__img" style="background: url(storage/{{$city->image}})"></div></a>
-                        <div class="content-block__category">
-                            <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
-                                @if($city->category === 'where-to-eat')
-                                    {{ __('mainpage.where_to_eat') }}
-                                @elseif($city->category === 'where-to-stay')
-                                    {{ __('mainpage.where_to_stay') }}
-                                @elseif($city->category === 'history')
-                                    {{ __('menu.history') }}
-                                @elseif($city->category === 'where-to-see')
-                                    {{ __('mainpage.where_to_see') }}
-                                @elseif($city->category === 'things-to-do')
-                                    {{ __('mainpage.things_to_do') }}
-                                @elseif($city->category === 'where-to-buy')
-                                    {{ __('mainpage.where_to_buy') }}
-                                @elseif($city->category === 'how-to-get')
-                                    {{ __('mainpage.how_to_get') }}
-                                @elseif($city->category === 'useful-information')
-                                    {{ __('mainpage.useful_information') }}
-                                @endif
-                            </a>
+                    ?>
+                    <article class="col-md-4 block_main__item">
+                        <div class="col-md-12 block_main__item-content">
+                        <a class="hov-effect-block" href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}"><div class="content-block__img" style="background: url(storage/{{$city->image}})"></div></a>
+                            <div class="content-block__category">
+                                <a class="category-link" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
+                                    @if($city->category === 'where-to-eat')
+                                        {{ __('mainpage.where_to_eat') }}
+                                    @elseif($city->category === 'where-to-stay')
+                                        {{ __('mainpage.where_to_stay') }}
+                                    @elseif($city->category === 'history')
+                                        {{ __('menu.history') }}
+                                    @elseif($city->category === 'what-to-see')
+                                        {{ __('mainpage.where_to_see') }}
+                                    @elseif($city->category === 'things-to-do')
+                                        {{ __('mainpage.things_to_do') }}
+                                    @elseif($city->category === 'where-to-buy')
+                                        {{ __('mainpage.where_to_buy') }}
+                                    @elseif($city->category === 'how-to-get')
+                                        {{ __('mainpage.how_to_get') }}
+                                    @elseif($city->category === 'useful-information')
+                                        {{ __('mainpage.useful_information') }}
+                                    @endif
+                                </a>
+                            </div>
+                            <div class="content-block__title">
+                                <a href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
+                            </div>
                         </div>
-                        <div class="content-block__title">
-                            <a class="content-block__title-link" href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
-                        </div>
-                    </div>
-                </article>
-            @endforeach
-        </div>
-        <a class="show-more-link" href="/city">
+                    </article>
+                @endforeach
+            </div>
+            <a class="show-more-link" href="/city">
                     <div class="button-show-more">
                     {{ __('mainpage.more') }}
                     </div>
             </a>
+        </div>
     </div>
     
     <div class="main-content-block">
+        <div class="container">
         <div class="main-content-block__nav row">
             <span class="nav__title col-md-2">{{ __('menu.peoples') }}</span>
             <ul class="nav__menu col-md-10">
@@ -205,7 +209,7 @@
             @foreach($peoples as $people)
                 <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
-                <a href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><div class="content-block__img" style="background: url(storage/{{$people->image}})"></div></a>
+                <a class="hov-effect-block" href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}"><div class="content-block__img" style="background: url(storage/{{$people->image}})"></div></a>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('people.category',  ['category' => $people->category]) }}">
                             @if($people->category === 'drevniy-mir')
@@ -230,12 +234,13 @@
                     <div class="button-show-more">
                     {{ __('mainpage.more') }}
                     </div>
-            </a>
+        </a>
+        </div>
     </div>
     <div class="ad-block">
         <img src="/images/ads2.png" alt="Ad banner">
     </div>
-    <div class="tours">
+    <div class="tours container">
             <div class="title-tours">{{ __('menu.shop') }}</div>
             <div class="row container" style="padding: 0; margin: 0;">
                 <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
@@ -281,31 +286,32 @@
             </div>
     </div>
     <div class="main-content-block">
+        <div class="container">
         <div class="main-content-block__nav row">
             <span class="nav__title col-md-2">{{ __('menu.news') }}</span>
             <ul class="nav__menu col-md-10">
                 <li><a href="/blog">{{ __('menu.all') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'toursim'])}}">{{ __('menu.tourism') }}</a></li>
                 <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">{{ __('menu.tourists') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a></li>
+                <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a></li>
             </ul>
         </div>  
         <div class="row content-block_main">
             @foreach($articles as $post)
                 <article class="col-md-4 block_main__item">
                 <div class="col-md-12 block_main__item-content">
-                    <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><div class="content-block__img" style="background:url(storage/{{$post->image}})"></div></a>
+                    <a class="hov-effect-block" href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><div class="content-block__img" style="background:url(storage/{{$post->image}})"></div></a>
                     <div class="content-block__category">
                         <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
-                            @if($post->category === 'toursim')
+                            @if($post->category === 'tourism')
                                 {{ __('menu.tourism') }}
                             @elseif($post->category === 'uzbekistan')
                                 {{ __('menu.uzbekistan') }}
-                            @elseif($post->category === 'history')
-                                {{ __('menu.history') }}
-                            @elseif($post->category === 'tourists')
-                                {{ __('menu.tourists') }}
+                            @elseif($post->category === 'archeology')
+                                {{ __('menu.archeology') }}
+                            @elseif($post->category === 'notes')
+                                {{ __('menu.notes') }}
                             @endif
                         </a>
                     </div>
@@ -320,8 +326,9 @@
                     <div class="button-show-more">
                     {{ __('mainpage.more') }}
                     </div>
-            </a>
-    </div>
+        </a>
+        </div>
+        </div>
     <div class="ad-block">
         <img src="/images/ads.png" alt="Ad banner">
     </div>

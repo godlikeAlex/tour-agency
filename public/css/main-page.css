@@ -60,6 +60,14 @@ body
     color: #00529f !important;
 }
 
+.content-block__title a {
+    transition: .5s;
+}
+
+.hov-effect-block:hover ~ .content-block__title a {
+    color: #00529f !important;
+}
+
 .content-block__title:hover{
     color: #00529f;
 }
@@ -112,8 +120,7 @@ body
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
-    border-top: 3px solid #0300a3;
-    border-bottom: 3px solid #0300a3;
+    border-top: 3px solid #00529f;
 }
 
 .main-content-block:nth-child(2) {

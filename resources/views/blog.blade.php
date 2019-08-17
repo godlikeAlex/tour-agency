@@ -45,21 +45,17 @@
                                 <li class="nav-item">
                                     <a href="/blog/" class="nav-link @if($category === 'all') active @endif">{{ __('menu.all') }}</a>
                                 </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >{{ __('menu.tourism') }}</a>
-                                </li>
-
                                 <li class="nav-item">
                                     <a href="{{route('blog.category', ['category'=>'uzbekistan'])}}" class="nav-link @if($category === 'uzbekistan') active @endif">{{ __('menu.uzbekistan') }}</a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'history'])}}" class="nav-link @if($category === 'history') active @endif">{{ __('menu.history') }}</a>
+                                    <a href="{{route('blog.category', ['category'=>'archeology'])}}" class="nav-link @if($category === 'archeology') active @endif">{{ __('menu.archeology') }}</a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'tourists'])}}" class="nav-link @if($category === 'tourists') active @endif">{{ __('menu.tourists') }}</a>
+                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >{{ __('menu.tourism') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('blog.category', ['category'=>'notes'])}}" class="nav-link @if($category === 'notes') active @endif">{{ __('menu.notes') }}</a>
                                 </li>
                             </ul>
 
@@ -88,9 +84,13 @@
                                     </div>
                                     
                                     @endforeach
-                                    {{$posts -> links()}}
+                                    <div style="display:flex;justify-content: center; margin-top: 25px;">
+                                        {{$posts -> links()}}
+                                    </div>
                                 </div>
+                                
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -123,14 +123,6 @@
                 </div>
             </div>
 
-            <!-- Load More btn -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="load-more-btn mt-50 text-center">
-                        <a href="#" class="btn world-btn">Load More</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

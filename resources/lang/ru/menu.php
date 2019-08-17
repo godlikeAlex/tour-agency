@@ -52,5 +52,17 @@
         'velo_tours' => 'ВЕЛО ТУРЫ',
         'buisnes_tours' => 'БИЗНЕС ТУРЫ',
         'eco_tours' => 'БИЗНЕС ТУРЫ',
-        'fortoursit' => 'Туристам'
+        'fortoursit' => 'Туристам',
+        'notes' => 'Заметки',
+        'archeology' => 'Архиология',
+        'khiva-khanate' => 'Хивинское ханство',
+        'kokand-khanate' => 'Кокансое хаванство',
+        'bukhara-emirate' => 'Бухарский эмират',
+        'turkestan-assr' => 'Туркменистанская АССР',
+        'stalin-period' => 'Сталинский Период',
+        'khrushchevsky-period' => 'Хрущевский Период',
+        'brezhnevsky-period' => 'Брежневский Период',
+        'restructuring' => 'Перестройка',
+        'republic-of-uzbekistan' => 'Республика Узбекистан',
+        'present' => 'Настоящее',
     ];

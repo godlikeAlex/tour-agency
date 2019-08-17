@@ -30,22 +30,56 @@
             <div class="footer_block">
             <div class="title-footer">Фото</div>
                 <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">19 Век</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">18 Век</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">{{ __('menu.khiva-khanate') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'khanate-khanate'])}}">{{ __('menu.kokand-khanate') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">{{ __('menu.bukhara-emirate') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">{{ __('menu.turkestan-assr') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">{{ __('menu.jadidism') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">{{ __('menu.stalin-period') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">{{ __('menu.khrushchevsky-period') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">{{ __('menu.brezhnevsky-period') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a></div>
+                    <div><a href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a></div>
                 </div>
             </div>
             <div class="footer_block">
                 <div class="title-footer">Туры</div>
                 <div class="items-footer">
-                        <div><a href="history_tours">Исторические туры</a></div>
-                        <div><a href="short_tours">Короткие туры</a></div>
-                        <div><a href="group_tours">Групповые туры</a></div>
-                        <div><a href="individual_tours">Индивидуальные туры</a></div>
-                        <div><a href="exclusive_tours">Эксклюзивные туры</a></div>
-                        <div><a href="eco_tours">Эко туры</a></div>
-                        <div><a href="cycling_tours">Велотуры</a></div>
-                        <div><a href="buisnes_tours">Бизнес турыa</a></div>
-                        <div><a href="kombo_asia_tours">Центральная Азия</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'short-tours'])}}">Короткие туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'group-tours'])}}">Групповые туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'individual-tours'])}}">Индивидуальные туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}">Эксклюзивные туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'eco-tours'])}}">Эко туры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}">Велотуры</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'buissens-tours'])}}">Бизнес турыa</a></div>
+                        <div><a href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}">Центральная Азия</a></div>
+                </div>
+            </div> 
+            <div class="footer_block">
+                <div class="title-footer">Туры</div>
+                <div class="items-footer">
+                        <div><a href="history_tours">Общая информация</a></div>
+                        <div><a href="short_tours">Туризм в Узбекистане</a></div>
+                        <div><a href="group_tours">Курорты и санатории </a></div>
+                        <div><a href="individual_tours">Виза </a></div>
+                        <div><a href="exclusive_tours">Посольства  </a></div>
+                        <div><a href="eco_tours">Консульства </a></div>
+                        <div><a href="cycling_tours">Airlines of Uzbekistan‎ </a></div>
+                        <div><a href="buisnes_tours">Uzbek Railways</a></div>
+                        <div><a href="kombo_asia_tours">Цены </a></div>
+                        <div><a href="kombo_asia_tours">Валюта и обмен</a></div>
+                        <div><a href="kombo_asia_tours">Банки </a></div>
+                        <div><a href="kombo_asia_tours">Почта </a></div>
+                        <div><a href="kombo_asia_tours">Интернет</a></div>
+                        <div><a href="kombo_asia_tours">Мобильный связь </a></div>
+                        <div><a href="kombo_asia_tours">Фестивали </a></div>
+                        <div><a href="kombo_asia_tours">Выставки </a></div>
+                        <div><a href="kombo_asia_tours">Праздники </a></div>
+                        <div><a href="kombo_asia_tours">Сувениры </a></div>
+                        <div><a href="kombo_asia_tours">Прописка </a></div>
+                        <div><a href="kombo_asia_tours">Полезный номера</a></div>
                 </div>
             </div> 
             <div class="footer_block">

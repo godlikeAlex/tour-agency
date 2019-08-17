@@ -35,9 +35,26 @@
                     <li><a href="/people/category/srednie-veka">{{ __('menu.srednie_veka') }}</a></li>
                     <li><a href="/people/category/novoe-vremya">{{ __('menu.novoe_vremya') }}</a></li>
                 </ul>
+            </li>    
+            <li>
+                <div  class="left-menu-main-link" ><a href="/tours">{{ __('menu.photo') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
+                <ul class="dropped-menu">
+                    <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">{{ __('menu.khiva-khanate') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate'])}}">{{ __('menu.kokand-khanate') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">{{ __('menu.bukhara-emirate') }}</a><</li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">{{ __('menu.turkestan-assr') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">{{ __('menu.jadidism') }}</a></li>
+                    <li>><a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">{{ __('menu.stalin-period') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
+                    <li><a href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a></li>
+
+                </ul>
             </li>
             <li>
-                <div  class="left-menu-main-link" ><a href="/tours">{{ __('menu.tours') }}</a>  <img src="images/down.svg" class="drop-menu" alt=""></div>
+                <div  class="left-menu-main-link" ><a href="/tours">{{ __('menu.tours') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
                     <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
                     <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
@@ -55,7 +72,8 @@
 
                 </ul>
             </li>
-            <div  class="left-menu-main-link" ><a href="/galery">{{ __('menu.photo') }}</a></div>
+            <li><div  class="left-menu-main-link" ><a href="/">{{ __('menu.fortoursit') }}</a></div></li>
+            <div  class="left-menu-main-link" ><a href="/city">Базар</a></div>
             <li>
                 <div  class="left-menu-main-link" ><a href="/blog">{{ __('menu.news') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
@@ -65,7 +83,7 @@
                     <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
                 </ul>
             </li>
-            <div  class="left-menu-main-link" ><a href="/city">Базар</a></div>
+            
         </ul>
         <ul class="left-menu-social"> 
             <li>
@@ -233,16 +251,16 @@
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12">
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'drevniy-mir'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
+                        <a href="{{route('blog.category', ['category' => 'uzbekistan'])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">{{ __('menu.uzbekistan') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'srednie-veka'])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">{{ __('menu.uzbekistan') }}</a>
+                        <a href="{{route('blog.category', ['category' => 'archeology'])}}" class="sub-menu-item {{ (request()->segment(2) == 'archeology') ? 'sub-menu-active' : ''}}">{{ __('menu.archeology') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
+                        <a href="{{route('blog.category', ['category' => 'tourism'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
                     </li>
                     <li>    
-                        <a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}" class="sub-menu-item {{ (request()->segment(2) == 'tourists') ? 'sub-menu-active' : ''}}">{{ __('menu.tourists') }}</a>
+                        <a href="{{route('blog.category', ['category' => 'notes'])}}" class="sub-menu-item {{ (request()->segment(2) == 'notes') ? 'sub-menu-active' : ''}}">{{ __('menu.notes') }}</a>
                     </li>
                 </ul>
             </div>

@@ -23,10 +23,17 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Категория</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="20">20 Век</option>
-                                <option value="19">19 Век</option>
-                                <option value="18">18 Век</option>
-                                <option value="17">17 Век</option>
+                                <option value="khiva-khanate">Хивинское ханство </option>
+                                <option value="kokand-khanate">Кокандское  ханство</option>
+                                <option value="bukhara-emirate">Бухарский эмират</option>
+                                <option value="turkestan-assr">Туркестанское АССР</option>
+                                <option value="jadidism">Джадидизм </option>
+                                <option value="stalin-period">Сталинский период</option>
+                                <option value="khrushchevsky-period">Хрущевский период</option>
+                                <option value="brezhnevsky-period">Брежневский период</option>
+                                <option value="restructuring">Перестройка</option>
+                                <option value="republic-of-uzbekistan">Республика Узбекистан </option>
+                                <option value="present">Настоящее</option>
                             </select>
                         </div>
                         <div class="form-group">

@@ -26,10 +26,10 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Тип блога</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="tourism">Туризм</option>
                                 <option value="uzbekistan">Узбекистан</option>
-                                <option value="history">История</option>
-                                <option value="tourists">Туристы</option>
+                                <option value="archeology">Археология</option>
+                                <option value="tourism">Туризм</option>
+                                <option value="notes">Заметки</option>
                             </select>
                         </div>
                         <div class="form-group">

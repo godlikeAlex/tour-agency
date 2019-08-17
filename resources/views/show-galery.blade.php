@@ -67,7 +67,32 @@
         <div class="col-md-7">
           <div class="row mb-5">
             <div class="col-12 ">
-              <h2 class="site-section-heading text-center">{{$century}} {{ __('mainpage.century') }}</h2>
+              <h2 class="site-section-heading text-center">
+                @if($century === 'khiva-khanate')
+                  {{ __('menu.khiva-khanate') }}
+                @elseif($century === 'kokand-khanate')
+                  {{ __('menu.kokand-khanate') }}
+                @elseif($century === 'bukhara-emirate')
+                  {{ __('menu.bukhara-emirate') }}
+                @elseif($century === 'turkestan-assr')
+                  {{ __('menu.turkestan-assr') }}
+                @elseif($century === 'jadidism')
+                  {{ __('menu.jadidism') }}
+                @elseif($century === 'stalin-period')
+                  {{ __('menu.stalin-period') }}
+                @elseif($century === 'khrushchevsky-period')
+                 {{ __('menu.khrushchevsky-period') }}
+                @elseif($century === 'brezhnevsky-period')
+                  {{ __('menu.brezhnevsky-period') }}
+                @elseif($century === 'restructuring')
+                 {{ __('menu.restructuring') }}
+                @elseif($century === 'republic-of-uzbekistan')
+                  {{ __('menu.republic-of-uzbekistan') }}
+                @elseif($century === 'present')
+                {{ __('menu.present') }}
+
+                @endif
+              </h2>
             </div>
           </div>
         </div>

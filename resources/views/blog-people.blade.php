@@ -92,7 +92,9 @@
                                     </div>
                                     
                                     @endforeach
-                                    {{$people -> links()}}
+                                    <div style="display:flex;justify-content: center; margin-top: 25px;">
+                                        {{$people -> links()}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
