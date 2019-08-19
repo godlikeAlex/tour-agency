@@ -287,48 +287,108 @@
     </div>
     <div class="main-content-block">
         <div class="container">
-        <div class="main-content-block__nav row">
-            <span class="nav__title col-md-2">{{ __('menu.news') }}</span>
-            <ul class="nav__menu col-md-10">
-                <li><a href="/blog">{{ __('menu.all') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a></li>
-                <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a></li>
-            </ul>
-        </div>  
-        <div class="row content-block_main">
-            @foreach($articles as $post)
-                <article class="col-md-4 block_main__item">
-                <div class="col-md-12 block_main__item-content">
-                    <a class="hov-effect-block" href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><div class="content-block__img" style="background:url(storage/{{$post->image}})"></div></a>
-                    <div class="content-block__category">
-                        <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
-                            @if($post->category === 'tourism')
-                                {{ __('menu.tourism') }}
-                            @elseif($post->category === 'uzbekistan')
-                                {{ __('menu.uzbekistan') }}
-                            @elseif($post->category === 'archeology')
-                                {{ __('menu.archeology') }}
-                            @elseif($post->category === 'notes')
-                                {{ __('menu.notes') }}
-                            @endif
-                        </a>
-                    </div>
-                    <div class="content-block__title">
-                        <a class="content-block__title-link" href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
-                    </div>
-                </div>
-                </article>
-            @endforeach
+            <div class="main-content-block__nav row">
+                <span class="nav__title col-md-2">{{ __('menu.fortoursit') }}</span>
+                <!-- <ul class="nav__menu col-md-10">
+                    <li><a href="/blog">{{ __('menu.all') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a></li>
+                </ul> -->
+            </div>  
+            <div class="row content-block_main">
+                    <article class="col-md-4 block_main__item">
+                        <div class="col-md-12 block_main__item-content">
+                            <a class="hov-effect-block" href=""><div class="content-block__img" style=""></div></a>
+                            <div class="content-block__category">
+                                <a class="category-link" href="/tourists">
+                                    {{ __('menu.fortoursit') }}
+                                </a>
+                            </div>
+                            <div class="content-block__title">
+                                <a class="content-block__title-link" href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">{{ __('menu.visa') }}</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 block_main__item">
+                        <div class="col-md-12 block_main__item-content">
+                            <a class="hov-effect-block" href=""><div class="content-block__img" style=""></div></a>
+                            <div class="content-block__category">
+                                <a class="category-link" href="/tourists">
+                                    {{ __('menu.fortoursit') }}
+                                </a>
+                            </div>
+                            <div class="content-block__title">
+                                <a class="content-block__title-link" href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">Цены</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 block_main__item">
+                        <div class="col-md-12 block_main__item-content">
+                            <a class="hov-effect-block" href=""><div class="content-block__img" style=""></div></a>
+                            <div class="content-block__category">
+                                <a class="category-link" href="/tourists">
+                                    {{ __('menu.fortoursit') }}
+                                </a>
+                            </div>
+                            <div class="content-block__title">
+                                <a class="content-block__title-link" href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">Интернет</a>
+                            </div>
+                        </div>
+                    </article>
+            </div>
+            <a class="show-more-link" href="/blog">
+                <div class="button-show-more">
+                {{ __('mainpage.more') }}
+            </div>
+            </a>
         </div>
-        <a class="show-more-link" href="/blog">
-                    <div class="button-show-more">
-                    {{ __('mainpage.more') }}
+    </div>
+    <div class="main-content-block">
+        <div class="container">
+            <div class="main-content-block__nav row">
+                <span class="nav__title col-md-2">{{ __('menu.news') }}</span>
+                <ul class="nav__menu col-md-10">
+                    <li><a href="/blog">{{ __('menu.all') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a></li>
+                    <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a></li>
+                </ul>
+            </div>  
+            <div class="row content-block_main">
+                @foreach($articles as $post)
+                    <article class="col-md-4 block_main__item">
+                    <div class="col-md-12 block_main__item-content">
+                        <a class="hov-effect-block" href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}"><div class="content-block__img" style="background:url(storage/{{$post->image}})"></div></a>
+                        <div class="content-block__category">
+                            <a class="category-link" href="{{ route('blog.category', ['category'=>$post->category]) }}">
+                                @if($post->category === 'tourism')
+                                    {{ __('menu.tourism') }}
+                                @elseif($post->category === 'uzbekistan')
+                                    {{ __('menu.uzbekistan') }}
+                                @elseif($post->category === 'archeology')
+                                    {{ __('menu.archeology') }}
+                                @elseif($post->category === 'notes')
+                                    {{ __('menu.notes') }}
+                                @endif
+                            </a>
+                        </div>
+                        <div class="content-block__title">
+                            <a class="content-block__title-link" href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
+                        </div>
                     </div>
-        </a>
+                    </article>
+                @endforeach
+            </div>
+            <a class="show-more-link" href="/blog">
+                <div class="button-show-more">
+                {{ __('mainpage.more') }}
+            </div>
+            </a>
         </div>
-        </div>
+    </div>
     <div class="ad-block">
         <img src="/images/ads.png" alt="Ad banner">
     </div>

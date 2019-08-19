@@ -74,67 +74,67 @@
     
       </div>
       <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
             <a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">
               <div style="background: url(https://static.kulturologia.ru/files/u19829/198295970.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">{{ __('menu.khiva-khanate') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
             <a href="{{route('show.galery', ['centuary' => 'kokand-khanate'])}}">
             <div style="background: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRDWmpb8EkV3-NiMk0bTe_4w); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">{{ __('menu.kokand-khanate') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
             <a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">
             <div style="background: url(http://alsamarkand.com/wp-content/uploads/20/06/132544534_6124548_ludiDrevnegoSamarkanda.jpg); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;">{{ __('menu.bukhara-emirate') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.turkestan-assr') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.turkestan-assr') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.stalin-period') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.khrushchevsky-period') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.brezhnevsky-period') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.restructuring') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.republic-of-uzbekistan') }}</div>
             </a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 item">
+          <div class="col-sm-6 col-md-4 item">
            <a href="{{route('show.galery', ['centuary' => 'present'])}}">
             <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 250px; background-size: cover; background-position: center;" alt="IMage" class="img-fluid"></div>
               <div style="text-align:center; font-size: 20px; margin-top: 10px; color:black; font-weight:700;"> {{ __('menu.present') }}</div>

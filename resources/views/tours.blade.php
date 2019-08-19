@@ -11,8 +11,6 @@
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main-page.css">
     <link rel="stylesheet" href="/css/main-menu.css">
-    <!--===============================================================================================-->
-    <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <style>
         .main-content-block {
             border-bottom: none;
@@ -20,7 +18,7 @@
     </style>
 </head>
 <body>
-    @include('/components/header')
+    @include('/components/header', ['type' => 'tours'])
     <div class="container">
     <div class="tours">
             <div class="title-tours">Популярные тур пакеты</div>
