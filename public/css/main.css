@@ -1671,6 +1671,7 @@ a.breadcrumb-item:hover {
   z-index: 9999;
   left: 0%;
   display: none;
+  top: 90%;
 }
 
 .sub-menu-header a {

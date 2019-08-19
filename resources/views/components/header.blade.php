@@ -114,9 +114,32 @@
                 <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
                 <li><a href=""><img style="width:150px" src="/images/head.svg" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">{{ __('menu.main') }}</a></li>
-                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item"><a href="/uzbekistan">{{ __('menu.uzbekistan') }}</a></li>
-                <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item"><a href="/city">{{ __('menu.cities') }}</a></li>
-                <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item"><a href="/people">{{ __('menu.peoples') }}</a></li>
+                <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item">
+                    <a data-menu-show="uzb" href="/uzbekistan">{{ __('menu.uzbekistan') }}</a>
+                    <div data-menu="uzb" class="sub-menu-header">
+                        <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'geography'])}}">{{ __('menu.geo') }}</a>
+                        <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a>
+                        <a class="droped-menu-item" href="/uzbekistan#iskustva">{{ __('menu.art') }}</a>
+                        <a class="droped-menu-item" href="/uzbekistan#culura">{{ __('menu.culture') }}</a>
+                    </div>
+                </li>
+                <li class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item">
+                    <a data-menu-show="citys" href="/city">{{ __('menu.cities') }}</a>
+                    <div data-menu="citys" class="sub-menu-header">
+                        @foreach($cities as $city)
+                            <a class="droped-menu-item" href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a>
+                        @endforeach
+                    </div>
+                </li>
+                <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item">
+                    <a data-menu-show="peoples-menu" href="/people">{{ __('menu.peoples') }}</a>
+                    <div data-menu="peoples-menu" class="sub-menu-header">
+                        <a class="droped-menu-item" href="{{route('people.category', ['category' => 'drevniy_mir'])}}">{{ __('menu.drevniy_mir') }}</a>
+                        <a class="droped-menu-item" href="{{route('people.category', ['category' => 'srednie_veka'])}}">{{ __('menu.srednie_veka') }}</a>
+                        <a class="droped-menu-item" href="{{route('people.category', ['category' => 'novoe_vremya'])}}">{{ __('menu.novoe_vremya') }}</a>
+                        <a class="droped-menu-item" href="{{route('people.category', ['category' => 'sovremenost'])}}">{{ __('menu.sovremenost') }}</a>
+                    </div>
+                </li>
                 <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item"><a href="/galery">{{ __('menu.photo') }}</a></li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tours">{{ __('menu.tours') }}</a></li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tourism">{{ __('menu.fortoursit') }}</a></li>
@@ -286,26 +309,26 @@
             </div>
         </div>
         @endif
-        <script>
-        document.addEventListener('mouseover', e => {
-            const target = e.target;
-            const attr = target.getAttribute('data-menu-show');
-            const menus = document.querySelectorAll('div[data-menu]');
-            if(!target.classList.contains('sub-menu-header') && !target.classList.contains("droped-menu-item")) {
-                menus.forEach(droped => {
-                    droped.style.display = 'none';
-                }); 
-            }
-            if(attr) {
-                menus.forEach(droped => {
-                    droped.style.display = 'none';
-                    const dropedAttr = droped.getAttribute('data-menu');
-                    if(attr === dropedAttr) droped.style.display = 'block';
-                });
-            }
-        });
-    </script>
     @endif
+    <script>
+            document.addEventListener('mouseover', e => {
+                const target = e.target;
+                const attr = target.getAttribute('data-menu-show');
+                const menus = document.querySelectorAll('div[data-menu]');
+                if(!target.classList.contains('sub-menu-header') && !target.classList.contains("droped-menu-item")) {
+                    menus.forEach(droped => {
+                        droped.style.display = 'none';
+                    }); 
+                }
+                if(attr) {
+                    menus.forEach(droped => {
+                        droped.style.display = 'none';
+                        const dropedAttr = droped.getAttribute('data-menu');
+                        if(attr === dropedAttr) droped.style.display = 'block';
+                    });
+                }
+            });
+        </script>
     <script>
             window.addEventListener('scroll', e => {
             const position = window.scrollY;
