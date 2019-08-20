@@ -1664,11 +1664,8 @@ a.breadcrumb-item:hover {
   position: absolute;
   border: 1px solid #d4d4d4;
   background: white;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  padding-right: 55px;
-  z-index: 9999;
+  padding: 24px;
+  z-index: 999999;
   left: 0%;
   display: none;
   top: 90%;
@@ -1686,4 +1683,12 @@ a.breadcrumb-item:hover {
 .main-nav-show {
   top: 0%;
   position: fixed;
+}
+
+.droped-menu-item
+{
+  line-height: unset !important;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width:max-content; 
 }
