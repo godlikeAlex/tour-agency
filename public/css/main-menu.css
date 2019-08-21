@@ -320,6 +320,7 @@
     bottom: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-top: 20px;
 }
 
 
