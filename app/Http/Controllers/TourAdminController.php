@@ -107,9 +107,6 @@ class TourAdminController extends Controller
             $tour->update([
                 'image' => request()->image->store('tour', 'public'),
             ]);
-            $tour->update([
-                'map' => request()->map->store('tour', 'public'),
-            ]);
         }
     }
 

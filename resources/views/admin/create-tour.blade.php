@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-group">
                         <p>Карта</p>
-                        <input type="file" name="map" id="">
+                        <input class="form-control" placeholder="ссылка на iframe" type="text" name="map" id="">
                     </div>
                     
                     <h4>Возраст</h4>

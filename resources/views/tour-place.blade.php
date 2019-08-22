@@ -271,6 +271,9 @@
 								</div>
 							</div>
 							<div class="col-md-12">
+							<iframe src="{{$tour->map}}" width="100%" height="480"></iframe>
+							</div>
+							<div class="col-md-12">
 								<div class="block-item">
 								<div id="includes" style="display:flex; justify-content: space-between; align-items:center">
 												<h2>Что входит</h2>
