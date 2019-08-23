@@ -60,7 +60,7 @@
 	<!-- Flaticons  -->
 	<link rel="stylesheet" href="/font/tours/flaticon/font/flaticon.css">
 
-
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 
 	<!-- Modernizr JS -->
 	<script src="/js/tours/modernizr-2.6.2.min.js"></script>

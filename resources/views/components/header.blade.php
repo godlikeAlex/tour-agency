@@ -56,19 +56,19 @@
             <li>
                 <div  class="left-menu-main-link" ><a href="/tours">{{ __('menu.tours') }}</a>  <img src="images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
-                    <li><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'group_tours'])}}">Групповые туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'individual_tours'])}}">Индивидуальные туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'exclusive_tours'])}}">Эксклюзивные туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'classic_tours'])}}">Классические туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">Эко туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'kombo_asia_tours'])}}">Туры по Центральной Азии</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'excursion_сity'])}}">Экскурсии по городам</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'pilgrim_tours'])}}">Паломнические туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'economy_tours'])}}">Эконом туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'cycling_tours'])}}">Велотуры туры</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">Бизнес туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'history_tours'])}}">Исторические туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'short_tours'])}}">Короткие туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'group_tours'])}}">Групповые туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'individual_tours'])}}">Индивидуальные туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'exclusive_tours'])}}">Эксклюзивные туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'classic_tours'])}}">Классические туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'eco_tours'])}}">Эко туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'kombo_asia_tours'])}}">Туры по Центральной Азии</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'excursion_сity'])}}">Экскурсии по городам</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'pilgrim_tours'])}}">Паломнические туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'economy_tours'])}}">Эконом туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'cycling_tours'])}}">Велотуры туры</a></li>
+                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'buisnes_tours'])}}">Бизнес туры</a></li>
 
                 </ul>
             </li>
@@ -388,43 +388,51 @@
         });
     </script>
     <script>
-        const menu = document.querySelector('.main-menu-sticky');
-        const dropDown = document.querySelectorAll('.drop-menu');
-        const open     = document.querySelector('.open-left-bar');
-        const close    = document.querySelector('.close-slide-menu');
-        const leftMenu = document.querySelector('.left-side-menu');
+        document.addEventListener("DOMContentLoaded", () => {
+            const menu = document.querySelector('.main-menu-sticky');
+            const dropDown = document.querySelectorAll('.drop-menu');
+            const open     = document.querySelector('.open-left-bar');
+            const close    = document.querySelector('.close-slide-menu');
+            const leftMenu = document.querySelector('.left-side-menu');
+            const site = document.querySelector('#main-content-web');
 
-        dropDown.forEach(open => {
-            open.addEventListener('click', e => {
-                const dropingMenu = e.target.parentNode.nextElementSibling;
-                const dropedMenuHeight = dropingMenu.scrollHeight;
-                if(dropingMenu.style.maxHeight) {
-                    dropingMenu.style.maxHeight = null;
-                    e.target.classList.remove('drop-menu-active');
-                } else {
-                    dropingMenu.style.maxHeight = `${dropedMenuHeight}px`;
-                    e.target.classList.add('drop-menu-active');
-                }
+            dropDown.forEach(open => {
+                open.addEventListener('click', e => {
+                    const dropingMenu = e.target.parentNode.nextElementSibling;
+                    const dropedMenuHeight = dropingMenu.scrollHeight;
+                    if(dropingMenu.style.maxHeight) {
+                        dropingMenu.style.maxHeight = null;
+                        e.target.classList.remove('drop-menu-active');
+                    } else {
+                        dropingMenu.style.maxHeight = `${dropedMenuHeight}px`;
+                        e.target.classList.add('drop-menu-active');
+                    }
+                });
             });
-        });
 
-        open.addEventListener('click', () => openMenu(true) );
-        close.addEventListener('click', () => openMenu(false) );
-        document.body.addEventListener('click', e => {
-            const target = e.target;
-            if(!target.classList.contains('left-side-menu') && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
-                leftMenu.classList.add('left-menu-hide')
+            open.addEventListener('click', () => openMenu(true) );
+            close.addEventListener('click', () => openMenu(false) );
+            document.body.addEventListener('click', e => {
+                const target = e.target;
+                if(!target.classList.contains('left-side-menu') && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
+                    leftMenu.classList.add('left-menu-hide')
+                }
+            })
+
+
+            const openMenu = (isOpen) => {
+                if(isOpen) {
+                    leftMenu.classList.remove('left-menu-hide');
+                    open.style.visibility = 'hidden';
+                    document.body.style.overflowX  = 'hidden';
+                    document.body.style.left = '15%';
+                }
+                else {
+                    leftMenu.classList.add('left-menu-hide');
+                    open.style.visibility = 'visible';
+                    document.body.style.left = '0%';
+                }
             }
         })
-
-
-        const openMenu = (open) => {
-            if(open) {
-                leftMenu.classList.remove('left-menu-hide');
-            }
-            else {
-                leftMenu.classList.add('left-menu-hide');
-            }
-        }
     </script>
 </nav>

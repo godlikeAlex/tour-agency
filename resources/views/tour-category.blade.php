@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main-page.css">
     <link rel="stylesheet" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 </head>

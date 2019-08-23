@@ -323,6 +323,12 @@
     padding-top: 20px;
 }
 
+body {
+    position: relative;
+    transition: .5s;
+    left:0;
+}
+
 
 .left-menu-hide {
     left: -25%;
