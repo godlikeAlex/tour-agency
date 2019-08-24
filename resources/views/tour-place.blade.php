@@ -85,8 +85,7 @@
 		<div class="colorlib-wrap" style="background:#f1f1f1; padding-top:0">
 			<div class="container">
 				<div class="row">
-				<div style="    padding-bottom: 20px;
-    padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
+				<div style="    padding-bottom: 20px;padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
                     <a href="/" class="breadcrumb-item f1-s-3 cl9">
                         Главная 
                     </a>

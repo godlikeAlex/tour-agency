@@ -9,459 +9,129 @@
     <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 </head>
 
 <body>
-
     <!-- Header -->
     @include('/components/header')
-        <div class="main-events">
-            <div class="articles-header">
-                <div class="grid">
-                    <div class="span-row-2 main-news"
-                        style="background: url(https://images.unsplash.com/photo-1564941547204-08100f5db412?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80); background-size:cover;     background-position: center;">
-                        <span>WEBSTEAR Hell</span></div>
-                    <div class="span-row-2 main-news"
-                        style="background: url(https://images.unsplash.com/photo-1564945626404-5dcdae061c7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); background-size: cover;     background-position: center;">
-                        <span>Budism hram</span></div>
-                    <div class="span-col-2 main-news"
-                        style="background: url(https://images.unsplash.com/photo-1564769230746-cb02d0ab8c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-size: cover;     background-position: center;">
-                        <span>Example 3</span></div>
-                    <div class="span-col-2 main-news"
-                        style="background: url(https://images.unsplash.com/photo-1564827077134-3252b917df8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80); background-size: cover;     background-position: center;">
-                        <span>Example 4</span></div>
-                </div>
-            </div>
+    <div class="main-tours-slider">
+        <div style="background: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=562&q=80)" class="main-tous-slide">
+            <div class="tours-slider__title">Tour 1</div>
+            <div class="tours-slider__sub">Sub info</div>
         </div>
-        <div class="tours container">
-            <div class="title-tours">{{ __('mainpage.tour_pacekts') }}</div>
-            <div class="row container" style="padding: 0; margin: 0;">
-                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">{{ __('mainpage.eco_tours') }}</div>
-                    <ul class="item-slide__tours">
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">{{ __('mainpage.group_tours') }}</div>
-                    <ul class="item-slide__tours">
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">{{ __('mainpage.buissnes_tours') }}</div>
-                    <ul class="item-slide__tours">
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                    <div class="item-slide__title">{{ __('mainpage.econom_tours') }}</div>
-                    <ul class="item-slide__tours">
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                        <li><a href="#">Example Tour #1</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div style="background: url(https://images.unsplash.com/photo-1566434109082-772727eba32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
+            <div class="tours-slider__title">Tour 2</div>
+            <div class="tours-slider__sub">Sub info</div>
         </div>
-        <div class="all-content">
-            <div class="main-content-block">
-                <div class="container">
-                    <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-2">{{ __('menu.uzbekistan') }}</span>
-                        <ul class="nav__menu col-md-10">
-                            <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">{{ __('menu.geo') }}</a></li>
-                            <li><a
-                                    href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('uzb.category', ['category' => 'people'])}}">{{ __('menu.peoples') }}</a>
-                            </li>
-                            <li><a href="/uzbekistan/#turizm">{{ __('menu.toursim') }}</a></li>
-                            <li><a href="/uzbekistan/#iskustva">{{ __('menu.art') }}</a></li>
-                            <li><a href="/uzbekistan/#culura">{{ __('menu.culture') }}</a></li>
-                        </ul>
-                    </div>
-                    <div class="row content-block_main">
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <div class="content-block__img"></div>
-                                <div class="content-block__category">География</div>
-                                <div class="content-block__title">«Я потерял глаз и даже рад, что это случилось»</div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <a class="show-more-link" href="#">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a>
-            </div>
-            <div class="main-content-block">
-                <div class="container">
-                    <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-2">Города</span>
-                        <ul class="nav__menu col-md-10">
-                            @foreach($cities as $cityNav)
-                            <li><a
-                                    href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($cityNav->name)])}}">{{$cityNav->name}}</a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="row content-block_main">
-                        @foreach($cityContent as $city)
-                        <?php 
-                        $curentUrlCity;
-                        foreach($cities as $curCity) {
-                            if($curCity->id == $city['city_id']) {
-                                $curentUrlCity = $curCity->name;
-                            }
-                        }
-                    ?>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block"
-                                    href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">
-                                    <div class="content-block__img" style="background: url(storage/{{$city->image}})">
-                                    </div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link"
-                                        href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($curentUrlCity),'category'=>$city->category]) }}">
-                                        @if($city->category === 'where-to-eat')
-                                        {{ __('mainpage.where_to_eat') }}
-                                        @elseif($city->category === 'where-to-stay')
-                                        {{ __('mainpage.where_to_stay') }}
-                                        @elseif($city->category === 'history')
-                                        {{ __('menu.history') }}
-                                        @elseif($city->category === 'what-to-see')
-                                        {{ __('mainpage.where_to_see') }}
-                                        @elseif($city->category === 'things-to-do')
-                                        {{ __('mainpage.things_to_do') }}
-                                        @elseif($city->category === 'where-to-buy')
-                                        {{ __('mainpage.where_to_buy') }}
-                                        @elseif($city->category === 'how-to-get')
-                                        {{ __('mainpage.how_to_get') }}
-                                        @elseif($city->category === 'useful-information')
-                                        {{ __('mainpage.useful_information') }}
-                                        @endif
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a
-                                        href="{{route('city.item', ['city' => Illuminate\Support\Str::lower($curentUrlCity), 'category'=>$city->category, 'slug' => $city->slug])}}">{{$city->name}}</a>
-                                </div>
-                            </div>
-                        </article>
-                        @endforeach
-                    </div>
-                    <a class="show-more-link" href="/city">
-                        <div class="button-show-more">
-                            {{ __('mainpage.more') }}
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="main-content-block">
-                <div class="container">
-                    <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-2">{{ __('menu.peoples') }}</span>
-                        <ul class="nav__menu col-md-10">
-                            <li><a href="/people">{{ __('menu.all') }}</a></li>
-                            <li><a
-                                    href="{{route('people.category', ['category' => 'drevniy_mir'])}}">{{ __('menu.drevniy_mir') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('people.category', ['category' => 'srednie_veka'])}}">{{ __('menu.srednie_veka') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('people.category', ['category' => 'novoe_vremya'])}}">{{ __('menu.novoe_vremya') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('people.category', ['category' => 'sovremenost'])}}">{{ __('menu.sovremenost') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row content-block_main">
-                        @foreach($peoples as $people)
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block"
-                                    href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">
-                                    <div class="content-block__img" style="background: url(storage/{{$people->image}})">
-                                    </div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link"
-                                        href="{{ route('people.category',  ['category' => $people->category]) }}">
-                                        @if($people->category === 'drevniy-mir')
-                                        {{ __('menu.drevniy_mir') }}
-                                        @elseif($people->category === 'srednie-veka')
-                                        {{ __('menu.srednie_veka') }}
-                                        @elseif($people->category === 'novoe-vremy')
-                                        {{ __('menu.novoe_vremya') }}
-                                        @elseif($people->category === 'sovremenost')
-                                        {{ __('menu.sovremenost') }}
-                                        @endif
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a class="content-block__title-link"
-                                        href="{{route('people.show', ['categoy' => $people->category, 'slug' => $people->slug])}}">{{$people->name}}</a>
-                                </div>
-                            </div>
-                        </article>
-                        @endforeach
-                    </div>
-                    <a class="show-more-link" href="/people">
-                        <div class="button-show-more">
-                            {{ __('mainpage.more') }}
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <div class="ad-block">
-                    <img src="/images/ads2.png" alt="Ad banner">
-                </div>
-                <div class="tours container">
-                    <div class="title-tours">{{ __('menu.shop') }}</div>
-                    <div class="row container" style="padding: 0; margin: 0;">
-                        <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                            <div class="item-slide__title">Эко туры</div>
-                            <ul class="item-slide__tours">
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                            <div class="item-slide__title">Групповые туры</div>
-                            <ul class="item-slide__tours">
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                            <div class="item-slide__title">Бизнес туры</div>
-                            <ul class="item-slide__tours">
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 tour-item-slide">
-                            <div class="item-slide__title">Эконом туры</div>
-                            <ul class="item-slide__tours">
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                                <li><a href="#">Example Tour #1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-content-block">
-                <div class="container">
-                    <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-2">{{ __('menu.fortoursit') }}</span>
-                        <!-- <ul class="nav__menu col-md-10">
-                    <li><a href="/blog">{{ __('menu.all') }}</a></li>
-                    <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a></li>
-                    <li><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a></li>
-                    <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a></li>
-                    <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a></li>
-                </ul> -->
-                    </div>
-                    <div class="row content-block_main">
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block" href="">
-                                    <div class="content-block__img" style=""></div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link" href="/tourists">
-                                        {{ __('menu.fortoursit') }}
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a class="content-block__title-link"
-                                        href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">{{ __('menu.visa') }}</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block" href="">
-                                    <div class="content-block__img" style=""></div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link" href="/tourists">
-                                        {{ __('menu.fortoursit') }}
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a class="content-block__title-link"
-                                        href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">Цены</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block" href="">
-                                    <div class="content-block__img" style=""></div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link" href="/tourists">
-                                        {{ __('menu.fortoursit') }}
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a class="content-block__title-link"
-                                        href="{{route('blog.show', ['category' => 'h','slug' => 'm'])}}">Интернет</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <a class="show-more-link" href="/blog">
-                        <div class="button-show-more">
-                            {{ __('mainpage.more') }}
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="main-content-block">
-                <div class="container">
-                    <div class="main-content-block__nav row">
-                        <span class="nav__title col-md-2">{{ __('menu.news') }}</span>
-                        <ul class="nav__menu col-md-10">
-                            <li><a href="/blog">{{ __('menu.all') }}</a></li>
-                            <li><a
-                                    href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{ __('menu.uzbekistan') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('blog.category', ['category' => 'archeology'])}}">{{ __('menu.archeology') }}</a>
-                            </li>
-                            <li><a
-                                    href="{{route('blog.category', ['category' => 'tourism'])}}">{{ __('menu.tourism') }}</a>
-                            </li>
-                            <li><a href="{{route('blog.category', ['category' => 'notes'])}}">{{ __('menu.notes') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row content-block_main">
-                        @foreach($articles as $post)
-                        <article class="col-md-4 block_main__item">
-                            <div class="col-md-12 block_main__item-content">
-                                <a class="hov-effect-block"
-                                    href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}">
-                                    <div class="content-block__img" style="background:url(storage/{{$post->image}})">
-                                    </div>
-                                </a>
-                                <div class="content-block__category">
-                                    <a class="category-link"
-                                        href="{{ route('blog.category', ['category'=>$post->category]) }}">
-                                        @if($post->category === 'tourism')
-                                        {{ __('menu.tourism') }}
-                                        @elseif($post->category === 'uzbekistan')
-                                        {{ __('menu.uzbekistan') }}
-                                        @elseif($post->category === 'archeology')
-                                        {{ __('menu.archeology') }}
-                                        @elseif($post->category === 'notes')
-                                        {{ __('menu.notes') }}
-                                        @endif
-                                    </a>
-                                </div>
-                                <div class="content-block__title">
-                                    <a class="content-block__title-link"
-                                        href="{{route('blog.show', ['category' => $post->category,'slug' => $post->slug])}}">{{$post->title}}</a>
-                                </div>
-                            </div>
-                        </article>
-                        @endforeach
-                    </div>
-                    <a class="show-more-link" href="/blog">
-                        <div class="button-show-more">
-                            {{ __('mainpage.more') }}
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="ad-block">
-                <img src="/images/ads.png" alt="Ad banner">
-            </div>
+        <div style="background: url(https://images.unsplash.com/photo-1566612088151-a477d6c17708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
+            <div class="tours-slider__title">Tour 3</div>
+            <div class="tours-slider__sub">Sub info</div>
         </div>
+        <div style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80)" class="main-tous-slide">
+            <div class="tours-slider__title">Tour 4</div>
+            <div class="tours-slider__sub">Sub info</div>
+        </div>
+        <div style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
+            <div class="tours-slider__title">Tour 5</div>
+            <div class="tours-slider__sub">Sub info</div>
+        </div>
+    </div>
+    <div class="container main-content">
+        <section style="overflow:hidden;margin-bottom: 50px; ">
+            <div class="section-name">Узбекистан</div>
+            <div class="row" >
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Godlike</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block" href="http://google.com">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">География</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block" href="http://google.com">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1562023829-42be3bc1cc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">История</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566578068205-12544813d53c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Народ</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566550190057-347ce06a9006?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Культура</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big-blocks">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Искуство</div>
+                            <div class="block-desc">Some sub title la-la-bla</div>
+                            <a class="show__more show__more-block">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a style="margin:auto; margin-top: 50px;" class="show__more">Show More</a>
+        </section>
         
+    </div>
     <!-- Footer -->
     @include('/components/footer')
-
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log(true);
+            $('.main-tours-slider').slick({
+                infinite: true,
+                speed: 300,
+                dots: false,
+                prevArrow: false,
+                nextArrow: false,
+                slidesToShow: 4,
+                slidesToScroll: 4
+            });
+        });
+    </script>
 </body>
 
 </html>

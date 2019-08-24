@@ -5,6 +5,148 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
+.main-tous-slide {
+    height: 500px;
+    color: white;
+    cursor: ew-resize;
+    position: relative;
+    padding-left: 60px;
+    background-size: 120% !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.main-tous-slide:after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 100%);
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 200px;
+}
+
+.main-tous-slide:hover {
+    background-size: 130% !important;
+}
+
+.tours-slider__title
+{
+    position: absolute;
+    bottom: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    z-index: 999;
+}
+
+.tours-slider__sub {
+    position: absolute;
+    bottom: 25px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.658);
+    z-index: 999;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.section-name
+{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-name:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: black;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-left: 10px;
+}
+
+.big-blocks {
+    box-shadow: 0 2px 4px 0 rgba(26,26,26,0.2) !important;
+    height: 375px;
+    position: relative;
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: transform .1s;
+}
+
+.big-blocks:hover {
+    border-color: black;
+    transform: translate3d(0, -0.5rem, 0);
+    transition: transform .1s;
+}
+
+.block-img
+{
+    background-position: center !important;
+    background-size:cover !important;
+    width: 95%;
+    position: absolute;
+    top: -5%;
+    height: 190px;
+}
+
+.block-content {
+    margin-top: 100px;
+}
+
+.block-title
+{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.block-desc {
+    padding-top: 10px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.show__more
+{
+    border: 1px solid #00529E;
+    min-width: 100px;
+    max-width : 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #00529f !important;
+    background: white;
+}
+
+.show__more-block
+{
+    position: absolute;
+    bottom: -3%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.show__more:hover {
+    text-decoration: none !important;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+/* New page */
+
 .nav__menu
 {
     list-style: none;
