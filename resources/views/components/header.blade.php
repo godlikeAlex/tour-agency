@@ -416,6 +416,8 @@
                 const target = e.target;
                 if(!target.classList.contains('left-side-menu') && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
                     leftMenu.classList.add('left-menu-hide')
+                    document.body.style.left = '0%';
+                    open.style.visibility = 'visible';
                 }
             })
 
