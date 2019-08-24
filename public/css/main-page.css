@@ -63,7 +63,7 @@ section {
 .section-name:after {
     position: absolute;
     content: '';
-    width: 100%;
+    width: calc(100% - 224px);
     height: 3px;
     background: black;
     top: 50%;

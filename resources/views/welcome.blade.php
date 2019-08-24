@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="container main-content">
-        <section style="overflow:hidden;margin-bottom: 50px; ">
+        <section style="margin-bottom: 50px; ">
             <div class="section-name">Узбекистан</div>
             <div class="row" >
                 <div class="col-md-4">
