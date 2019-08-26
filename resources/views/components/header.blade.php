@@ -1,3 +1,16 @@
+<div class="top-black-menu">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-3 main-links-nav-top"><a href="">About</a> <a href="">Tours</a> <a href="">Policy</a></div>
+        <div class="social-top col-md-9" style="text-align:right;"><a href="#"><i class="ion-social-facebook"></i></a>
+            <a href="#"><i class="ion-social-twitter"></i></a>
+            <a href="#"><i class="ion-social-pinterest"></i></a>
+            <a href="#"><i class="ion-social-google"></i></a>
+            <a href="#"><i class="ion-social-rss"></i></a>
+        </div>  
+        </div>
+    </div>
+</div>
 <div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="images/head.svg" alt="" srcset=""></div>
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 <nav class="main-menu-sticky">

@@ -1661,6 +1661,7 @@ a.breadcrumb-item:hover {
 }
 .sub-menu-header
 {
+  width: 210px;
   position: absolute;
   border: 1px solid #d4d4d4;
   background: white;
@@ -1669,6 +1670,8 @@ a.breadcrumb-item:hover {
   display: none;
   top: 90%;
 }
+
+
 
 .sub-menu-header a {
   display: block;

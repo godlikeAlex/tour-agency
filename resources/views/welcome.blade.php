@@ -46,7 +46,7 @@
     </style>
 </head>
 
-<body><ion-icon name="arrow-dropdown"></ion-icon>
+<body>
     <!-- Header -->
     @include('/components/header')
     <div class="main-tours-slider">
@@ -295,8 +295,8 @@
     <section>
             <div class="container">
                 <div class="section-name">Базар</div>
-                <div class="row" >
-                    <div class="col-md-4 ">
+                <div class="row bazar" >
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
                         <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
@@ -308,7 +308,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
                         <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);" ></div>
@@ -320,7 +320,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
                         <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1562023829-42be3bc1cc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
@@ -332,6 +332,43 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">Чапаны</div>
+                                    <div class="block-desc">Кни́га — один из видов печатной продукции: непериодическое издание, состоящее из сброшюрованных или отдельных бумажных листов</div>
+                                    <div class="show__more show__more-block" href="http://google.com">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">Курапачи</div>
+                                    <div class="block-desc">Ткань — текстильное полотно, изготовленное на ткацком станке переплетением взаимно перпендикулярных систем нитей. Ткань состоит из двух переплетающихся систем нитей</div>
+                                    <div class="show__more show__more-block" href="http://google.com">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1562023829-42be3bc1cc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">Подушки</div>
+                                    <div class="block-desc">Исто́рия — область знаний, а также гуманитарная наука, занимающаяся изучением человека (его деятельности, состояния, мировоззрения, социальных связей, организаций и так далее) в прошлом</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
@@ -412,6 +449,14 @@
                 infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 4,
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
+            });
+
+            $('.bazar').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
             });

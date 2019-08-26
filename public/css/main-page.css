@@ -56,6 +56,25 @@ section {
     padding-bottom: 50px;       
 }
 
+.top-black-menu
+{
+    height: 40px;
+    background: #050658;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.top-black-menu a:hover {
+    color: #00529E;
+}
+
+.social-top 
+{
+  font-size: 17px;
+}
+
 .section-name
 {
     overflow: hidden;
