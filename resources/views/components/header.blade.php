@@ -204,7 +204,7 @@
                 @else
                     <li><a href="{{ url('locale/ru') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/ru.svg" alt=""></a> </li>
                 @endif
-                <li style="font-size:13px;"><i style="padding-right: 5px; font-size:30px" class="fas fa-globe-europe"></i> ES</li>
+                <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:30px" class="fas fa-globe-europe"></i> ES</li> -->
             </ul>
             
         </div>

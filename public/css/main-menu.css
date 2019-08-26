@@ -11,10 +11,11 @@
 .main-links-nav-top
 {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    letter-spacing: .125em;
 }
 .social-top a {
     padding-left: 10px;
@@ -27,9 +28,8 @@
 }
 
 .menu-border {
-    border-bottom: 1px solid #f5f5f5;
     box-shadow: 0 15px 13px 0 rgba(0, 0, 0, 0.05);
-    background: white;
+    background: #050658;
 }
 
 .main-menu li {
@@ -43,7 +43,7 @@
 }
 
 .main-menu a {
-    color: #333;
+    color: white;
     transition: .5s;
     text-transform: uppercase;
     line-height: 40px;
@@ -82,12 +82,12 @@
 
 .main-menu li:hover a
 {
-    color: #00529f;
+    color: white;
     text-decoration: none;
 }
 
 .active a{
-    color: #00529f;
+    color: white;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -99,7 +99,7 @@
     transition: .5s;
     bottom: -1px;
     width: 0%;
-    background: #00529f;
+    background: white;
     height: 2px;
     left: 0;
 }
@@ -115,7 +115,7 @@
     transition: .5s;
     bottom: -1px;
     width: 100% !important;
-    background: #00529f;
+    background: white;
     height: 2px;
     left: 0;
 }
