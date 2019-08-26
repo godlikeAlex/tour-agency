@@ -33,12 +33,35 @@
 .main-menu a {
     color: #333;
     transition: .5s;
-        text-transform: uppercase;
+    text-transform: uppercase;
     line-height: 40px;
     letter-spacing: .125em;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+    
 }
+
+.main-menu-link-drop:after {
+    font-family: "Ionicons";
+    content: "\f3d1";
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.droped-menu-item {
+    border-top: 1px solid rgba(0,0,0,.1);
+    font-size: 12px !important;
+    letter-spacing: unset !important;
+    padding: 12px 20px;
+    color: #333 !important;
+    width: 100%;
+    transition: .2s;
+}
+
+.droped-menu-item:hover {
+    background: rgba(0,0,0,.1);
+}
+
 
 .left-side-menu
 {

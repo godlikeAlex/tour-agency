@@ -1,123 +1,149 @@
-<footer class="footer-nav">
-    <div class="container footer-flex" style="display: flex; justify-content: space-between; margin: auto; flex-wrap: wrap;">
-            <div class="footer_block">
-                <div class="title-footer">Узбекистан</div>
-                <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="#">Люди</a></div>
-                    <div><a href="/uzbekistan/#turizm">Туризм</a></div>
-                    <div><a href="/uzbekistan/#iskustva">Искуства</a></div>
-                    <div><a href="/uzbekistan/#culura">Культура</a></div>
-                </div>
-            </div>
-            <div class="footer_block">
-                <div class="title-footer">Города</div>
-                <div class="items-footer">
-                    @foreach($cities as $city)
-                        <div><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="footer_block">
-                <div class="title-footer">Люди</div>
-                <div class="items-footer">
-                    <div><a href="{{route('people.category', ['category' => 'drevniy-mir'])}}">Древний мир</a></div>
-                    <div><a href="{{route('people.category', ['category' => 'srednie-veka'])}}">Средние века</a></div>
-                    <div><a href="{{route('people.category', ['category' => 'novoe-vremya'])}}">Новое время</a></div>
-                </div>
-            </div>  
-            <div class="footer_block">
-            <div class="title-footer">Фото</div>
-                <div class="items-footer">
-                    <div><a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">{{ __('menu.khiva-khanate') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'khanate-khanate'])}}">{{ __('menu.kokand-khanate') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">{{ __('menu.bukhara-emirate') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">{{ __('menu.turkestan-assr') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">{{ __('menu.jadidism') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">{{ __('menu.stalin-period') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">{{ __('menu.khrushchevsky-period') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">{{ __('menu.brezhnevsky-period') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a></div>
-                    <div><a href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a></div>
-                </div>
-            </div>
-            <div class="footer_block">
-                <div class="title-footer">Туры</div>
-                <div class="items-footer">
-                        <div><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'short-tours'])}}">Короткие туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'group-tours'])}}">Групповые туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'individual-tours'])}}">Индивидуальные туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}">Эксклюзивные туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'eco-tours'])}}">Эко туры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}">Велотуры</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'buissens-tours'])}}">Бизнес турыa</a></div>
-                        <div><a href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}">Центральная Азия</a></div>
-                </div>
-            </div> 
-            <div class="footer_block">
-                <div class="title-footer">Туристам</div>
-                <div class="items-footer">
-                        <div><a href="history_tours">Общая информация</a></div>
-                        <div><a href="short_tours">Туризм в Узбекистане</a></div>
-                        <div><a href="group_tours">Курорты и санатории </a></div>
-                        <div><a href="individual_tours">Виза </a></div>
-                        <div><a href="exclusive_tours">Посольства  </a></div>
-                        <div><a href="kombo_asia_tours">Цены </a></div>
-                        <div><a href="kombo_asia_tours">Валюта и обмен</a></div>
-                        <div><a href="kombo_asia_tours">Интернет</a></div>
-                        <div><a href="kombo_asia_tours">Мобильный связь </a></div>
-                        <div><a href="kombo_asia_tours">Фестивали </a></div>
-                        <div><a href="kombo_asia_tours">Выставки </a></div>
-                        <div><a href="kombo_asia_tours">Праздники </a></div>
-                        <div><a href="kombo_asia_tours">Прописка </a></div>
-                        <div><a href="kombo_asia_tours">Полезный номера</a></div>
-                </div>
-            </div> 
-            <div class="footer_block">
-                <div class="title-footer">Базар</div>
-                <div class="items-footer">
-                    <div><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></div>
-                    <div><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="#">Люди</a></div>
-                    <div><a href="/uzbekistan/#turizm">Туризм</a></div>
-                    <div><a href="/uzbekistan/#iskustva">Искуства</a></div>
-                    <div><a href="/uzbekistan/#culura">Культура</a></div>
-                </div>
-            </div>
-            <div class="footer_block">
-            <div class="title-footer">Новости</div>
-                <div class="items-footer">
-                    <div><a href="{{route('blog.category', ['category' => 'tourism'])}}">Туризм</a></div>
-                    <div><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></div>
-                    <div><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></div>
-                    <div><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></div>
-                </div>
-            </div>
-    </div>
-    <div class="social-network">
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-vk"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-messenger"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i> </a>
-    </div>
-    <div class="about-footer-comapny">
-        <div class="about-footer-title">About Company</div>
-        <div class="about-footer-company-links">
-            <a href="http://" target="_blank" rel="noopener noreferrer">ABOUT US</a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">CONTACT US</a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">PRIVACY POLICY</a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">LINK POLICY</a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">FAQ</a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">SITE MAP</a>
-        </div>
-        <div class="righs-reserver">
-            Copyright © 2019-2020 uzbeknow Inc. All Rights Reserved
-        </div>
-    </div>
-</footer>
+<footer class="bg-191 pos-relative color-ccc bg-primary pt-50">
+		<div class="abs-tblr pt-50 z--1 text-center">
+			<div class="h-80 pos-relative"><div class="bg-map abs-tblr opacty-1"></div></div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>УЗБЕКИСТАН</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
+                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
+                        <li><a href="#">Люди</a></li>
+                        <li><a href="/uzbekistan/#turizm">Туризм</a></li>
+                        <li><a href="/uzbekistan/#iskustva">Искуства</a></li>
+                        <li><a href="/uzbekistan/#culura">Культура</a></li>
+					</ul>
+				</div><!-- col-sm-2 -->
+				
+				
+				<div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>ГОРОДА</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        @foreach($cities as $city)
+                            <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></li>
+                        @endforeach
+					</ul>
+				</div><!-- col-sm-2 -->
+				
+				<div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>ФОТО</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">{{ __('menu.khiva-khanate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate'])}}">{{ __('menu.kokand-khanate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">{{ __('menu.bukhara-emirate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">{{ __('menu.turkestan-assr') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">{{ __('menu.jadidism') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">{{ __('menu.stalin-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a></li>
+					</ul>
+                </div><!-- col-sm-2 -->
+                
+                <div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>ТУРЫ</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}">Короткие туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}">Групповые туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'inliidual-tours'])}}">Индивидуальные туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}">Эксклюзивные туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'eco-tours'])}}">Эко туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}">Велотуры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'buissens-tours'])}}">Бизнес турыa</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}">Центральная Азия</a></li>
+					</ul>
+                </div><!-- col-sm-2 -->
+                
+                <div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>ТУРИСТАМ</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        <li><a href="history_tours">Общая информация</a></li>
+                        <li><a href="short_tours">Туризм в Узбекистане</a></li>
+                        <li><a href="group_tours">Курорты и санатории </a></li>
+                        <li><a href="inliidual_tours">Виза </a></li>
+                        <li><a href="exclusive_tours">Посольства  </a></li>
+                        <li><a href="kombo_asia_tours">Цены </a></li>
+                        <li><a href="kombo_asia_tours">Валюта и обмен</a></li>
+                        <li><a href="kombo_asia_tours">Интернет</a></li>
+                        <li><a href="kombo_asia_tours">Мобильный связь </a></li>
+                        <li><a href="kombo_asia_tours">Фестивали </a></li>
+                        <li><a href="kombo_asia_tours">Выставки </a></li>
+                        <li><a href="kombo_asia_tours">Праздники </a></li>
+                        <li><a href="kombo_asia_tours">Прописка </a></li>
+                        <li><a href="kombo_asia_tours">Полезный номера</a></li>
+					</ul>
+                </div><!-- col-sm-2 -->
+                
+                <div class="col-lg-2 col-md-4 col-sm-4">	
+					<h5 class="f-title"><b>НОВОСТИ</b></h5>
+					<ul class="mb-30 list-hover list-block list-a-ptb-5">
+                        <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">Туризм</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
+					</ul>
+                </div><!-- col-sm-2 -->
+                
+                
+				
+			</div><!-- row -->
+			
+			<div class="mt-20 brdr-ash-1 opacty-4"></div>
+			
+			<div class="text-center ptb-30">
+				<div class="row">
+					<div class="col-sm-3">
+						<a class="mtb-10" href="#"><img src="images/logo-white.png" alt=""></a>
+					</div><!-- col-sm-3 -->
+					
+					<div class="col-sm-5">
+						<p class="mtb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat 
+							tincidunt mauris semper lorem</p>
+					</div><!-- col-sm-3 -->
+					
+					<div class="col-sm-4">
+						<ul class="mtb-10 font-12 list-radial-35 list-li-mlr-3">
+							<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+							<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+							<li><a href="#"><i class="ion-social-google"></i></a></li>
+							<li><a href="#"><i class="ion-social-rss"></i></a></li>
+						</ul>
+					</div><!-- col-sm-3 -->
+				</div><!-- row -->
+			</div><!-- text-center -->
+		</div><!-- container -->
+		
+		<div class="bg-dark-primary ptb-15 text-left">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12 col-md-6">
+						<p class="text-md-center font-9 pt-5 mtb-5"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div><!-- col-sm-3 -->
+					
+					<div class="col-sm-12 col-md-6">
+						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">Sport</a></li>
+							<li><a href="#">Politics</a></li>
+							<li><a href="#">Travel</a></li>
+							<li><a href="#">Lifestyle</a></li>
+							<li><a href="#">Culture</a></li>
+							<li><a href="#">Tech</a></li>
+							<li><a href="#">Video</a></li>
+						</ul>
+					</div><!-- col-sm-3 -->
+				</div><!-- row -->
+				
+			</div><!-- container -->
+		</div><!-- container -->
+	</footer>
