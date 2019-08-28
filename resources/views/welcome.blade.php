@@ -202,7 +202,7 @@
                                 <div class="block-mini-img" style="background: url(/storage/{{$city -> image}});" ></div>
                                 <div class="block-content" style="margin-top:25px;">
                                     <div class="block-title">{{$city->name}}</div>
-                                    <div class="block-desc">Some sub title la-la-bla</div>
+                                    <div class="block-desc">{{str_limit($city ->desc, $limit = 120, $end = '...')}}</div>
                                     <div class="show__more show__more-block" >More</div>
                                 </div>
                             </div>

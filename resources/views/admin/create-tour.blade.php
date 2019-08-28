@@ -59,7 +59,7 @@
                         <div for="coverex">Превью фото</div>
                         <input type="file" name="image" id="coverex">
                     </div>
-                    <div>Превью описание</div>
+                    <div>Превью Карточки</div>
                     <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
                         <textarea class="form-control" name="desc" rows="5"></textarea>
                     </div>

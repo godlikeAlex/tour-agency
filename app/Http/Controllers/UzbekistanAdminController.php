@@ -43,6 +43,7 @@ class UzbekistanAdminController extends Controller
         return request()->validate([
             'name' => 'required',
             'category' => 'required',
+            'desc' => 'required',
             'lang' => 'required',
             'image' => 'required',
             'about' => 'required',

@@ -40,7 +40,10 @@
 <!--==============================================/=================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/util.min.css">
 <!--===============================================================================================-->	
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main-menu.css">
 <!--===============================================================================================-->
 

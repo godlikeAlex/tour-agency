@@ -23,7 +23,10 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style-blog.css">
 	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="fonts/ionicons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
     <link rel="stylesheet" href="/css/main-menu.css">
 <!--===============================================================================================-->

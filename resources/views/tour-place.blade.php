@@ -61,7 +61,10 @@
 	<link rel="stylesheet" href="/font/tours/flaticon/font/flaticon.css">
 
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
 
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="fonts/ionicons.css" rel="stylesheet">
 	<!-- Modernizr JS -->
 	<script src="/js/tours/modernizr-2.6.2.min.js"></script>
 	<link rel="stylesheet" href="/css/tours/bootstrap-extend.min.css">

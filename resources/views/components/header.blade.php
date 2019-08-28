@@ -134,6 +134,7 @@
                         <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a>
                         <a class="droped-menu-item" href="/uzbekistan#iskustva">{{ __('menu.art') }}</a>
                         <a class="droped-menu-item" href="/uzbekistan#culura">{{ __('menu.culture') }}</a>
+                        <a class="droped-menu-item" href="=/people" class="sub-menu-item">{{ __('menu.alluzbekistan') }}</a>
                     </div>
                 </li>
                 <li  class="{{ (request()->is('city*')) ? 'active' : '' }} dektop-item">
@@ -142,6 +143,7 @@
                         @foreach($cities as $city)
                             <a class="droped-menu-item" href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}} </a>
                         @endforeach
+                        <a class="droped-menu-item" href="/city" class="sub-menu-item">{{ __('menu.allcity') }}</a>
                     </div>
                 </li>
                 <li class="{{ (request()->is('people*')) ? 'active' : '' }} dektop-item">
@@ -151,6 +153,7 @@
                         <a class="droped-menu-item" href="{{route('people.category', ['category' => 'srednie_veka'])}}">{{ __('menu.srednie_veka') }}</a>
                         <a class="droped-menu-item" href="{{route('people.category', ['category' => 'novoe_vremya'])}}">{{ __('menu.novoe_vremya') }}</a>
                         <a class="droped-menu-item" href="{{route('people.category', ['category' => 'sovremenost'])}}">{{ __('menu.sovremenost') }}</a>
+                        <a class="droped-menu-item" href="=/people" class="sub-menu-item">{{ __('menu.allpeople') }}</a>
                     </div>
                 </li>
                 <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item">
@@ -167,6 +170,7 @@
                         <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a>
                         <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a>
                         <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a>
+                        <a class="droped-menu-item" href="{{route('blog.category', ['category' => 'notes'])}}" class="sub-menu-item">{{ __('menu.allphoto') }}</a>
                     </div>
                 </li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item">
@@ -185,6 +189,8 @@
                         <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'eco-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a>
                         <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'cycling-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a>
                         <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'buisnes-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a>
+                        <a class="droped-menu-item" href="/tours" class="sub-menu-item">{{ __('menu.alltours') }}</a>
+                        
 
                     </div>
                 </li>
@@ -197,6 +203,7 @@
                         <a class="droped-menu-item" href="{{route('blog.category', ['category' => 'archeology'])}}" class="sub-menu-item {{ (request()->segment(2) == 'archeology') ? 'sub-menu-active' : ''}}">{{ __('menu.archeology') }}</a> 
                         <a class="droped-menu-item" href="{{route('blog.category', ['category' => 'tourism'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>  
                         <a class="droped-menu-item" href="{{route('blog.category', ['category' => 'notes'])}}" class="sub-menu-item {{ (request()->segment(2) == 'notes') ? 'sub-menu-active' : ''}}">{{ __('menu.notes') }}</a>
+                        <a class="droped-menu-item" href="/blog" class="sub-menu-item">{{ __('menu.allnews') }}</a>
                     </div>
                 </li>    
                 @if(app()->getLocale()=='ru' )
@@ -289,7 +296,7 @@
                     @foreach($cities as $city)
                         <li class="dropdown" data-menu-show="{{$city->name}}">
                             <a href="" data-menu-show="{{$city->name}}" class="sub-menu-item {{ (request()->segment(2) == Illuminate\Support\Str::lower($city->name)) ? 'sub-menu-active' : ''}}">{{$city->name}}</a>
-                            <div style="width:220px; padding-right:30px;" data-menu="{{$city->name}}" class="sub-menu-header">
+                            <div  data-menu="{{$city->name}}" class="sub-menu-header">
                                 <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">{{ __('menu.history') }}</a>
                                 <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat'])}}">{{ __('mainpage.where_to_eat') }}</a>
                                 <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-stay'])}}">{{ __('mainpage.where_to_stay') }}</a>

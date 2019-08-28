@@ -52,8 +52,8 @@ a:hover {
 }
 
 section {
-    padding-top: 50px;
-    padding-bottom: 50px;       
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;       
 }
 
 .top-black-menu
@@ -199,8 +199,12 @@ padding-left: 20px;
     
 }
 
+section {
+    background: white;
+}
+
 .second-sec {
-    background: #f8f8f8;
+    background: #f8f8f8 !important;
 }
 
 .block-desc {
@@ -225,6 +229,12 @@ padding-left: 20px;
     color: #00529f !important;
     background: white;
     font-size: 16px;
+    transition: .2s;
+}
+
+.show__more:hover {
+    background: #00529f;
+    color: white !important;
 }
 
 .show__more-block
@@ -640,6 +650,11 @@ padding-left: 20px;
 {
     height: calc(100vh - 192px);
     margin-top: 50px;
+}
+
+.gallery-item-prev a {
+    width: 100%;
+    height: 100%;
 }
 
 .img-fluid {

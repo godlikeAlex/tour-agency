@@ -30,8 +30,14 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css">    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+
+<!--Footer-->
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <title>Document</title>
 </head>

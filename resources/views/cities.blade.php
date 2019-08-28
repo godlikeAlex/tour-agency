@@ -20,44 +20,55 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="fonts/ionicons.css" rel="stylesheet">
 </head>
 <body>
     @include('/components/header', ['type' => 'city'])
         <div class="container">
         @foreach($cities as $city)
-        <div style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center; margin-bottom:10px;"><a style="    font-size: 35px;
-    font-weight: 700;
-    color: #0460d9;" href="/city/{{Illuminate\Support\Str::lower($city->name)}}">{{$city->name}}</a></div>
+
+        <div style="margin-top: 50px;" class="section-name">{{ $city->name }}</div>
         <div class="row container_uzb" >
-                <article class="col-md-4 block_main__item" style="margin-top:50px;">
-                        <div class="content-block__img">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">{{ __('menu.history') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:50px;">
-                        <div class="content-block__img">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">{{ __('mainpage.things_to_do') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:50px;">
-                        <div class="content-block__img">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-do'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-see'])}}">{{ __('mainpage.where_to_see') }}<</a>
-                        </div>
-                </article>
-                <a class="show-more-link" style="margin:auto" href="/city/{{Illuminate\Support\Str::lower($city->name)}}"">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('menu.history') }}</div>
+                                    <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$city->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1563053457-d9d7ae11546d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.things_to_do') }}</div>
+                                    <div class="block-desc">Здесь вы можете найти для себя лучшие развлечения в {{$city->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-do'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1559682289-d9cb5858235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.where_to_see') }}</div>
+                                    <div class="block-desc">Здесь вы можете найти для себя лучшие и красивые места в {{$city->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
         @endforeach
     </div>

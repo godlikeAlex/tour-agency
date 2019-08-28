@@ -20,7 +20,10 @@
 	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style-blog.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="fonts/ionicons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main-menu.css">
     
 

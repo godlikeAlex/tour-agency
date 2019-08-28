@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>

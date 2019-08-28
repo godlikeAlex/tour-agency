@@ -21,6 +21,7 @@ class CreateCityItemsTable extends Migration
             $table->string('category');
             $table->string('lang');
             $table->string('category_price')->nullable();
+            $table->text('s');
             $table->longText('about');
             $table->string('image')->nullable();
             $table->timestamps();

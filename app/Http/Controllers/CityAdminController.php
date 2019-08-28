@@ -41,6 +41,7 @@ class CityAdminController extends Controller
             'city_id'=>'required',
             'lang' => 'required',
             'category_price' => '',
+            'desc' => 'required',
             'category'=>'required',
             'about'=>'required',
             'image'=>'required|image',
@@ -67,6 +68,7 @@ class CityAdminController extends Controller
         return request()->validate([
             'name' => 'required',
             'lang' => 'required',
+            'desc' => 'required',
             'about' => 'required',
             'image' => 'required'
         ]);

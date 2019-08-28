@@ -50,6 +50,10 @@
                                     <option value="useful-information">Полезная информация</option>
                                 </select>
                         </div>
+                        <div>Превью Карточки</div>
+                    <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
+                        <textarea class="form-control" name="desc" rows="5"></textarea>
+                    </div>
                         <div class="form-group">
                             <p>Изображение объекта(Ресторана, парка тд тп).</p>
                             <input type="file" name="image">

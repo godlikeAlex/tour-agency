@@ -66,4 +66,10 @@
         'restructuring' => 'restructuring',
         'republic-of-uzbekistan' => 'Republic of Uzbekistan',
         'present' => 'Present',
+        'alluzbekistan' => 'All about Uzbekistn',
+        'allcity' => 'All cities',
+        'allphoto' => 'All photos',
+        'allpeople' => 'All peoples',
+        'alltours' => 'All tours',
+        'allnews' => 'All news',
     ];

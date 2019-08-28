@@ -44,7 +44,10 @@
     <link rel="stylesheet" href="/css/main-menu.css" >
     <link rel="stylesheet" href="/css/main-page.css" >
     <!--===============================================================================================-->
-    
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
   </head>
   <body>
   
@@ -60,44 +63,35 @@
     </div>
     @include('/components/header')
   <div class="site-section"  data-aos="fade">
+  <div style="width:100%"><div class="section-name">
+  @if($century === 'khiva-khanate')
+    {{ __('menu.khiva-khanate') }}
+  @elseif($century === 'kokand-khanate')
+    {{ __('menu.kokand-khanate') }}
+  @elseif($century === 'bukhara-emirate')
+    {{ __('menu.bukhara-emirate') }}
+  @elseif($century === 'turkestan-assr')
+    {{ __('menu.turkestan-assr') }}
+  @elseif($century === 'jadidism')
+    {{ __('menu.jadidism') }}
+  @elseif($century === 'stalin-period')
+    {{ __('menu.stalin-period') }}
+  @elseif($century === 'khrushchevsky-period')
+    {{ __('menu.khrushchevsky-period') }}
+  @elseif($century === 'brezhnevsky-period')
+    {{ __('menu.brezhnevsky-period') }}
+  @elseif($century === 'restructuring')
+    {{ __('menu.restructuring') }}
+  @elseif($century === 'republic-of-uzbekistan')
+    {{ __('menu.republic-of-uzbekistan') }}
+  @elseif($century === 'present')
+  {{ __('menu.present') }}
+
+  @endif
+  </div></div>
+
     <div class="container-fluid">
       
-      <div class="row justify-content-center">
-        
-        <div class="col-md-7">
-          <div class="row mb-5">
-            <div class="col-12 ">
-              <h2 class="site-section-heading text-center">
-                @if($century === 'khiva-khanate')
-                  {{ __('menu.khiva-khanate') }}
-                @elseif($century === 'kokand-khanate')
-                  {{ __('menu.kokand-khanate') }}
-                @elseif($century === 'bukhara-emirate')
-                  {{ __('menu.bukhara-emirate') }}
-                @elseif($century === 'turkestan-assr')
-                  {{ __('menu.turkestan-assr') }}
-                @elseif($century === 'jadidism')
-                  {{ __('menu.jadidism') }}
-                @elseif($century === 'stalin-period')
-                  {{ __('menu.stalin-period') }}
-                @elseif($century === 'khrushchevsky-period')
-                 {{ __('menu.khrushchevsky-period') }}
-                @elseif($century === 'brezhnevsky-period')
-                  {{ __('menu.brezhnevsky-period') }}
-                @elseif($century === 'restructuring')
-                 {{ __('menu.restructuring') }}
-                @elseif($century === 'republic-of-uzbekistan')
-                  {{ __('menu.republic-of-uzbekistan') }}
-                @elseif($century === 'present')
-                {{ __('menu.present') }}
-
-                @endif
-              </h2>
-            </div>
-          </div>
-        </div>
-    
-      </div>
       <div class="row" id="lightgallery">
         @foreach($images as $img)
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="/storage/{{$img->image}}" data-sub-html="<h4>{{$img->title}}</h4><p>{{$img->desc}}</p>">

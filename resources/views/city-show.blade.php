@@ -9,7 +9,6 @@
 	<link rel="icon" type="image/png" href="///images/icons/favicon.png"/>
    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="/css/slick/custom-theme.css">
        
            <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -25,6 +24,31 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <style>
+
+    .slide-arrow{
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        border: none;
+        width: 52px;
+        height: 52px;
+        color: white;
+        background: #4c4c4c82;
+    }
+
+    .next-arrow {
+        right: 0;
+    }
+
+    .prev-arrow {
+        left: 0%;
+        z-index: 9999;        
+    }
+    </style>
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">   
     <title>Document</title>
 </head>
 <body>
@@ -32,201 +56,229 @@
     <div class="container" style="margin-bottom: 50px;  ">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-12 name-sec">{{$content->name}}</div>
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{$content->name}}</div></div>
                 <div class="col-md-12">{!!$content->about!!}</div>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}"">{{ __('menu.history') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}"">{{ __('mainpage.where_to_see') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do']) }}"">{{ __('mainpage.things_to_do') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}"">{{ __('mainpage.where_to_buy') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat']) }}"">{{ __('mainpage.where_to_eat') }}</a>
-                        </div>
-                </article>
-                <article class="col-md-4 block_main__item" style="margin-top:20px">
-                        <div class="content-block__img">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}""></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay']) }}"">{{ __('mainpage.where_to_stay') }}</a>
-                        </div>
-                </article>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('menu.history') }}</div>
+                                    <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1559682289-d9cb5858235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.where_to_see') }}</div>
+                                    <div class="block-desc">Здесь вы можете найти для себя лучшие и красивые места в {{$content->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1563053457-d9d7ae11546d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.things_to_do') }}</div>
+                                    <div class="block-desc">Здесь вы можете найти для себя лучшие развлечения в {{$content->name}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.where_to_buy') }}</div>
+                                    <div class="block-desc">В этом разделе находятся все рынки, ТЦ и маркеты</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.where_to_eat') }}</div>
+                                    <div class="block-desc">Отсортированные по цене заведения, где можно хорошо покушать и провести время</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('mainpage.where_to_stay') }}</div>
+                                    <div class="block-desc">Отсортированные по цене заведения, где можно хорошо провести время</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
  
-                <div class="col-md-12 name-sec">{{ __('menu.history') }}</div>
+
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.history')}}</div></div>
+
                 <div class="responsive col-md-12">
                     @foreach($historys as $history)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/history/{{$history->slug}}"><img src="/storage/{{$history->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/history/{{$history->slug}}">{{$history->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/history/{{$history->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$history->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$history->name}}</div>
+                                        <div class="block-desc">{{str_limit($history ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> 
                     @endforeach
                 </div> 
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}">
-                    <div class="button-show-more">
-                    {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.where_to_see') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>  
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.where_to_see') }}</div></div>
                 <div class="responsive col-md-12">
                     @foreach($whatToSee as $whatSee)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-see/{{$whatSee->slug}}"><img src="/storage/{{$whatSee->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-see/{{$whatSee->slug}}">{{$whatSee->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-see/{{$whatSee->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$whatSee->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$whatSee->name}}</div>
+                                        <div class="block-desc">{{str_limit($whatSee ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.things_to_do') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>  
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.things_to_do') }}</div></div>
+
                 <div class="responsive col-md-12">
                     @foreach($whatToDo as $toDo)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-do/{{$toDo->slug}}"><img src="/storage/{{$toDo->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-do/{{$toDo->slug}}">{{$toDo->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/what-to-do/{{$toDo->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$toDo->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$toDo->name}}</div>
+                                        <div class="block-desc">{{str_limit($toDo ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach 
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.where_to_buy') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a> 
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.where_to_buy') }}</div></div>
                 <div class="responsive col-md-12">
                     @foreach($whereToBuy as $buy)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-buy/{{$buy->slug}}"><img src="/storage/{{$buy->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-buy/{{$buy->slug}}">{{$buy->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-buy/{{$buy->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$buy->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$buy->name}}</div>
+                                        <div class="block-desc">{{str_limit($buy ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach 
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.where_to_eat') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-buy']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a> 
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.where_to_eat') }}</div></div>
+
                 <div class="responsive col-md-12">
                     @foreach($restaurants as $cafe)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}"><img src="/storage/{{$cafe->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}">{{$cafe->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$cafe->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$cafe->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$cafe->name}}</div>
+                                        <div class="block-desc">{{str_limit($cafe ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-eat']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.where_to_stay') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-eat']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a> 
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.where_to_stay') }}</div></div>
                 <div class="responsive col-md-12">
                     @foreach($hotels as $hotel)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$hotel->slug}}"><img src="/storage/{{$hotel->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$hotel->slug}}">{{$hotel->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/where-to-eat/{{$hotel->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$hotel->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$hotel->name}}</div>
+                                        <div class="block-desc">{{str_limit($hotel ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-stay']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.how_to_get') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-stay']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a> 
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.how_to_get') }}</div></div>
                 <div class="responsive col-md-12">
                     @foreach($howToGet as $get)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/how-to-get/{{$get->slug}}"><img src="/storage/{{$get->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/how-to-get/{{$get->slug}}">{{$get->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/how-to-get/{{$get->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$get->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$get->name}}</div>
+                                        <div class="block-desc">{{str_limit($get ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
-                <div class="col-md-12 name-sec">{{ __('mainpage.useful_information') }}</div>
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a> 
+                <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('mainpage.useful_information') }}</div></div>
                 <div class="responsive col-md-12">
                     @foreach($usefulInformation as $info)
-                        <article class="col-md-12 block_main__item" style="margin-top:20px">
-                            <div class="content-block__img">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/useful-information/{{$info->slug}}"><img src="/storage/{{$info->image}}" alt=""></a>
-                            </div>
-                            <div class="content-block__title">
-                                <a href="{{Illuminate\Support\Str::lower($content->name)}}/useful-information/{{$info->slug}}">{{$info->name}}</a>
-                            </div>
-                        </article> 
+                        <div class="col-md-12" style="margin-bottom: 25px;">
+                            <a class="link-block" href="{{Illuminate\Support\Str::lower($content->name)}}/useful-information/{{$info->slug}}">
+                                <div class="big-blocks" style="height: 390px; display: block;">
+                                    <div class="block-mini-img" style="background: url(/storage/{{$info->image}});" ></div>
+                                    <div class="block-content" style="margin-top:25px;">
+                                        <div class="block-title">{{$info->name}}</div>
+                                        <div class="block-desc">{{str_limit($info ->desc, $limit = 120, $end = '...')}}</div>
+                                        <div class="show__more show__more-block" >More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
-                <a class="show-more-link" style="margin:auto" href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}">
-                    <div class="button-show-more">
-                        {{ __('mainpage.more') }}
-                    </div>
-                </a> 
+                <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
         </div>
  
@@ -242,8 +294,8 @@
         $('.responsive').slick({
             infinite: true,
             speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
             nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
             responsive: [
@@ -253,14 +305,13 @@
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 3
                 }
                 },
                 {

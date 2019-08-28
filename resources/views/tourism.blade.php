@@ -18,223 +18,325 @@
     <link rel="stylesheet" href="/css/tour-all.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
 </head>
 <body>
 @include('/components/header')
     <div class="container">
-    <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Общая информация</div>
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Общая информация</div></div>
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Общая информация</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Общая информация</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Безопасность</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Прописка</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"> Безопасность</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Прописка</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Виза</div>
+        <div style="width:100%; margin-top: 100px;"><div class="section-name">Виза</div></div>
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Виза</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Виза</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Посольства</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Консульства</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"> Посольства</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Консульства</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Как добраться  
-</div>
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Как добраться</div></div>
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Консульства</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Как добраться  </a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Как добраться</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Границы</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"> Границы</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Airlines of Uzbekistan‎ & Airports in Uzbekistan</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Uzbek Railways & Rail infrastructure</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Airlines of Uzbekistan‎ & Airports in Uzbekistan‎ </a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Дороги Узбекистана </div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"> Uzbek Railways & Rail infrastructure </a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Дороги Узбекистана </a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">  Аренда транспорта </a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Деньги</div>
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Деньги</div></div>
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Цены </div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Цены</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Валюта и обмен</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Банки</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Валюта и обмен</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Банки</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Связь</div>
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Связь</div></div>
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Почта</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Почта</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Связь</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Интернет</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Связь</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Интернет</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Мероприятия </div>
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Мероприятия</div></div>        
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Фестивали</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Фестивали</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Выставки</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Праздники</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Выставки</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Праздники</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div id='turizm' style="font-size: 25px;font-weight: 700;margin-top: 55px;text-align: center;padding-bottom: 55px;">Полезно </div>
+
         <div class="row container_uzb" >
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}"></a>
+            
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Сувениры</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'visa'])}}">Сувениры</a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Прописка</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}"></a>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                    <div class="big-blocks big-padding">
+                        <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
+                        <div class="block-content">
+                            <div class="block-title">Полезные номера</div>
+                            <div class="block-desc">Хорошо развиты холм Венеры и холм Аполлона. Линия Ума тянется к Луне. Безымянный палец</div>
+                            <div class="show__more show__more-block">More</div>
                         </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'transport'])}}">Прописка</a>
-                        </div>
-            </article>
-            <article class="col-md-4 block_main__item" >
-                        <div class="content-block__img">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}"></a>
-                        </div>
-                        <div class="content-block__title">
-                            <a href="{{route('uzb.category', ['category' => 'eco'])}}">Полезные номера</a>
-                        </div>
-            </article>
+                    </div>
+                </a>
+            </div>
         </div>
 
     </div>

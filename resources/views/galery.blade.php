@@ -43,6 +43,10 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/main-menu.css" >
     <link rel="stylesheet" href="/css/main-page.css" >
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
     
   </head>
@@ -61,17 +65,8 @@
     @include('/components/header')
   <div class="site-section"  data-aos="fade">
     <div class="container-fluid">
-      
+      <div style="width:100%"><div class="section-name">{{ __('mainpage.gallery') }}</div></div>
       <div class="row justify-content-center">
-        
-        <div class="col-md-7">
-          <div class="row mb-5">
-            <div class="col-12 ">
-              <h2 class="site-section-heading text-center">{{ __('mainpage.gallery') }}</h2>
-            </div>
-          </div>
-        </div>
-    
       </div>
       <div class="row">
           <div class="col-sm-6 col-md-4 item gallery-item-prev">

@@ -11,7 +11,10 @@
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main-page.css">
     <link rel="stylesheet" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 </head>
@@ -19,15 +22,18 @@
     @include('/components/header', ['type' => 'tours'])
     <div class="container">
         @foreach($tours as $tour)
-            <article class="col-md-4 block_main__item" style="margin-top:25px; margin-bottom:25px;">
-                <div class="content-block__img"><a <a href="{{route('tour.show', ['tourname' => $tour->slug])}}"><img src="/storage/{{$tour->image}}" alt="{{$tour->name}}" srcset=""></a></div>
-                <div class="content-block__category">
-                    <a class="category-link" href="/tourists">
-                        754 $
-                    </a>
+                <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('tour.show', ['tourname' => $tour->slug])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img" style="background: url(storage/${{tour->image}});" ></div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ $tour->name }}</div>
+                                    <div class="block-desc">{{str_limit($tour ->desc, $limit = 120, $end = '...')}}</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
                 </div>
-                <div class="content-block__title"><a href="{{route('tour.show', ['tourname' => $tour->slug])}}">{{$tour->name}}</a></div>
-            </article>
         @endforeach
     </div>
     @include('/components/footer')

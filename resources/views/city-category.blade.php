@@ -18,6 +18,10 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css"> 
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<link href="fonts/ionicons.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -29,63 +33,95 @@
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'cheap')
-                        <article class="col-md-4 block_main__item">
-                            <div class="content-block__img"><img src="/storage/{{$item->image}}" alt=""></div>
-                            <div class="content-block__category">
-                                @if($item->category_price === 'cheap')
-                                    Дешевый
-                                @elseif($item->category_price === 'middle')
-                                    Средний
-                                @elseif($item->category_price === 'expensive')
-                                    Элитный
-                                @endif
-                            </div>
-                            <div class="content-block__title"><a  href="{{Request::url()}}/{{$item->slug}}">{{$item->name}}</a></div>
-                        </article>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                                <a class="link-block" href="{{Request::url()}}/{{$item->slug}}">
+                                    <div class="big-blocks big-padding">
+                                        <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
+                                        <div class="block-content">
+                                            <div>                                
+                                            @if($item->category_price === 'cheap')
+                                                Дешевый
+                                            @elseif($item->category_price === 'middle')
+                                                Средний
+                                            @elseif($item->category_price === 'expensive')
+                                                Элитный
+                                            @endif
+                                            </div>
+                                            <div class="block-title">{{$item->name}}</div>
+                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="show__more show__more-block">More</div>
+                                        </div>
+                                    </div>
+                                </a>
+                        </div>
                         @endif
                     @endforeach
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Средний</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'middle')
-                        <article class="col-md-4 block_main__item">
-                            <div class="content-block__img"><img src="/storage/{{$item->image}}" alt=""></div>
-                            <div class="content-block__category">
-                                @if($item->category_price === 'cheap')
-                                    Дешевый
-                                @elseif($item->category_price === 'middle')
-                                    Средний
-                                @elseif($item->category_price === 'expensive')
-                                    Элитный
-                                @endif
-                            </div>
-                            <div class="content-block__title"><a  href="{{Request::url()}}/{{$item->slug}}">{{$item->name}}</a></div>
-                        </article>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                                <a class="link-block" href="{{Request::url()}}/{{$item->slug}}">
+                                    <div class="big-blocks big-padding">
+                                        <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
+                                        <div class="block-content">
+                                            <div>                                
+                                            @if($item->category_price === 'cheap')
+                                                Дешевый
+                                            @elseif($item->category_price === 'middle')
+                                                Средний
+                                            @elseif($item->category_price === 'expensive')
+                                                Элитный
+                                            @endif
+                                            </div>
+                                            <div class="block-title">{{$item->name}}</div>
+                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="show__more show__more-block">More</div>
+                                        </div>
+                                    </div>
+                                </a>
+                        </div>
                         @endif
                     @endforeach
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дорогой</div>
                     @foreach($items as $item)
                         @if($item->category_price === 'expensive')
-                        <article class="col-md-4 block_main__item">
-                            <div class="content-block__img"><img src="/storage/{{$item->image}}" alt=""></div>
-                            <div class="content-block__category">
-                                @if($item->category_price === 'cheap')
-                                    Дешевый
-                                @elseif($item->category_price === 'middle')
-                                    Средний
-                                @elseif($item->category_price === 'expensive')
-                                    Элитный
-                                @endif
-                            </div>
-                            <div class="content-block__title"><a  href="{{Request::url()}}/{{$item->slug}}">{{$item->name}}</a></div>
-                        </article>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                                <a class="link-block" href="{{Request::url()}}/{{$item->slug}}">
+                                    <div class="big-blocks big-padding">
+                                        <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
+                                        <div class="block-content">
+                                            <div>                                
+                                            @if($item->category_price === 'cheap')
+                                                Дешевый
+                                            @elseif($item->category_price === 'middle')
+                                                Средний
+                                            @elseif($item->category_price === 'expensive')
+                                                Элитный
+                                            @endif
+                                            </div>
+                                            <div class="block-title">{{$item->name}}</div>
+                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="show__more show__more-block">More</div>
+                                        </div>
+                                    </div>
+                                </a>
+                        </div>
                         @endif
                     @endforeach
                 @else
                     @foreach($items as $item)
-                        <article class="col-md-4 block_main__item">
-                            <div class="content-block__img"><img src="/storage/{{$item->image}}" alt=""></div>
-                            <div class="content-block__title"><a  href="{{Request::url()}}/{{$item->slug}}">{{$item->name}}</a></div>
-                        </article>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                                <a class="link-block" href="{{Request::url()}}/{{$item->slug}}">
+                                    <div class="big-blocks big-padding">
+                                        <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
+                                        <div class="block-content">
+                                            <div class="block-title">{{$item->name}}</div>
+                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="show__more show__more-block">More</div>
+                                        </div>
+                                    </div>
+                                </a>
+                        </div>
                     @endforeach
                 @endif
             </div>
