@@ -158,8 +158,6 @@ section {
     height: 80px;
 }
 .block-content-tourists {
-display: flex;
-align-items: center;
 height: 100%;
 padding-left: 20px;
 }
@@ -196,7 +194,18 @@ padding-left: 20px;
     color: black;
     font-weight: 700;
     font-size: 18px;
-    
+    margin-left: 90px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.block-category-tourists {
+    padding-top: 19px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: #00529e;
+    margin-left: 90px;
 }
 
 section {

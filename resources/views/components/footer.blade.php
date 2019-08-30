@@ -8,12 +8,14 @@
 				<div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>УЗБЕКИСТАН</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('uzb.category', ['category' => 'geo'])}}">География</a></li>
-                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">История</a></li>
-                        <li><a href="#">Люди</a></li>
-                        <li><a href="/uzbekistan/#turizm">Туризм</a></li>
-                        <li><a href="/uzbekistan/#iskustva">Искуства</a></li>
-                        <li><a href="/uzbekistan/#culura">Культура</a></li>
+						<li><a href="{{route('uzb.category', ['category' => 'geography'])}}">{{ __('menu.geo') }}</a></li>
+                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
+                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.peoples') }}</a></li>
+                        <li><a href="/uzbekistan#iskustva">{{ __('menu.art') }}</a></li>
+                        <li><a href="/uzbekistan#iskustva">{{ __('menu.moda') }}</a></li>
+                        <li><a href="/uzbekistan#culura">{{ __('menu.culture') }}</a></li>
+                        <li><a href="/uzbekistan#culura">{{ __('menu.kitchen') }}</a></li>
+                        <li><a href="/uzbekistan#culura">Традиции</a></li>
 					</ul>
 				</div><!-- col-sm-2 -->
 				

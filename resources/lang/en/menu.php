@@ -71,5 +71,7 @@
         'allphoto' => 'All photos',
         'allpeople' => 'All peoples',
         'alltours' => 'All tours',
+        'tradicii' => 'Tradition',
+        'moda' => 'Moda',
         'allnews' => 'All news',
     ];

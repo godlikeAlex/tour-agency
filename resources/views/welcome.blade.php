@@ -149,7 +149,7 @@
                         </a>
                     </div>
                 </div>
-                <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
+                <a style="margin:auto; margin-top: 100px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
 
@@ -162,7 +162,8 @@
                             <div class="tourists-blocks">
                                 <div class="toursists-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxLV9A0TxeQb6ZNpl3Mwo3mj6vXOoLd7hxQhVvHopjupxblOK" alt=""></div>
                                 <div class="block-content-tourists">
-                                    <div class="block-title-tourists">Праздники</div>
+                                    <div class="block-category-tourists">Праздники</div>
+                                    <div class="block-title-tourists">Праздники Узбекистана</div>
                                 </div>
                             </div>
                         </a>
@@ -172,7 +173,8 @@
                             <div class="tourists-blocks">
                                 <div class="toursists-img"><img src="https://uznews.uz/upload/cache/ab/6f/ab6f9336f2856759fafbcbe29c19638a.jpg" alt=""></div>
                                 <div class="block-content-tourists">
-                                    <div class="block-title-tourists">Виза</div>
+                                    <div class="block-category-tourists">Виза</div>
+                                    <div class="block-title-tourists">Как получить визу быстро?</div>
                                 </div>
                             </div>
                         </a>
@@ -182,7 +184,8 @@
                             <div class="tourists-blocks">
                                 <div class="toursists-img"><img src="http://aif.md/wp-content/uploads/2017/11/%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B0.jpg" alt=""></div>
                                 <div class="block-content-tourists">
-                                    <div class="block-title-tourists">Вальюта и обмен</div>
+                                    <div class="block-category-tourists">Вальюта</div>
+                                    <div class="block-title-tourists">Безопасный валютный обмен</div>
                                 </div>
                             </div>
                         </a>
@@ -210,7 +213,7 @@
                     </div>
                     @endforeach
                 </div>
-                <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
+                <a style="margin:auto; margin-top: 100px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
         <section class="second-sec">
@@ -266,7 +269,7 @@
                         </a>
                     </div>
                 </div>
-                <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
+                <a style="margin:auto; margin-top: 100px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
         <div class="main-tours-slider">
@@ -369,7 +372,7 @@
                         </a>
                     </div>
                 </div>
-                <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
+                <a style="margin:auto; margin-top: 100px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
         <section class="second-sec">
@@ -425,7 +428,7 @@
                         </a>
                     </div>
                 </div>
-                <a style="margin:auto; margin-top: 50px; width:150px;" class="show__more">Show More</a>
+                <a style="margin:auto; margin-top: 100px; width:150px;" class="show__more">Show More</a>
             </div>
         </section>
     <!-- Footer -->
