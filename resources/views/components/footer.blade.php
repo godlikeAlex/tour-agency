@@ -49,7 +49,7 @@
                 <div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>ТУРЫ</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры </a></li>
                         <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}">Короткие туры</a></li>
                         <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}">Групповые туры</a></li>
                         <li><a href="{{route('tour.category', ['category' => 'inliidual-tours'])}}">Индивидуальные туры</a></li>
@@ -99,24 +99,27 @@
 			
 			<div class="text-center ptb-30">
 				<div class="row">
-					<div class="col-sm-3">
-						<a class="mtb-10" href="#"><img src="images/logo-white.png" alt=""></a>
-					</div><!-- col-sm-3 -->
-					
-					<div class="col-sm-5">
-						<p class="mtb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat 
-							tincidunt mauris semper lorem</p>
-					</div><!-- col-sm-3 -->
-					
-					<div class="col-sm-4">
+									
+					<div class="col-sm-12">
 						<ul class="mtb-10 font-12 list-radial-35 list-li-mlr-3">
+						<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+							<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+							<li><a href="#"><i class="ion-social-google"></i></a></li>
+							<li><a href="#"><i class="ion-social-rss"></i></a></li>
+							<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+							<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+							<li><a href="#"><i class="ion-social-google"></i></a></li>
+							<li><a href="#"><i class="ion-social-rss"></i></a></li>
 							<li><a href="#"><i class="ion-social-facebook"></i></a></li>
 							<li><a href="#"><i class="ion-social-twitter"></i></a></li>
 							<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
 							<li><a href="#"><i class="ion-social-google"></i></a></li>
 							<li><a href="#"><i class="ion-social-rss"></i></a></li>
 						</ul>
-					</div><!-- col-sm-3 -->
+					</div><!-- col-sm-12 -->
+					<div class="col-sm-12">Если вы спиздите контент, я найду вас и сломаю вам ебальник <i class="ion-heart" aria-hidden="true"></i> <br /> Все права защищены 2019.</div>
 				</div><!-- row -->
 			</div><!-- text-center -->
 		</div><!-- container -->
@@ -138,10 +141,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<li><a href="#">Sport</a></li>
 							<li><a href="#">Politics</a></li>
 							<li><a href="#">Travel</a></li>
-							<li><a href="#">Lifestyle</a></li>
-							<li><a href="#">Culture</a></li>
-							<li><a href="#">Tech</a></li>
-							<li><a href="#">Video</a></li>
 						</ul>
 					</div><!-- col-sm-3 -->
 				</div><!-- row -->

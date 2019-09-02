@@ -16,7 +16,7 @@ class MainPage extends Controller
         $cities         = City::where('lang', $lang)->get();
         // $cityContent   =  CityItem::where(['lang' => $lang])->orderBy('created_at','desc')->take(6)->get();
         // $peoples       = People::where(['lang' => $lang])->orderBy('created_at','desc')->take(6)->get();
-        // $articles      = Blog::where(['lang' => $lang])->orderBy('created_at','desc')->take(6)->get();
-        return view('welcome', compact('cities'));
+        $articles      = Blog::where(['lang' => $lang])->orderBy('created_at','desc')->take(4)->get();
+        return view('welcome', compact('cities', 'articles'));
     }
 }

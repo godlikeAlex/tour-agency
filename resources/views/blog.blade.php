@@ -70,15 +70,14 @@
                                     @foreach($posts as $post)
                                     <div class="single-blog-post post-style-4 d-flex align-items-center">
                                         <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="/storage/{{$post -> image}}" alt="">
+                                        <div class="post-thumbnail" style="height:200px; background: url(/storage/{{$post->image}}); background-size: cover; background-position: cneter;">
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
                                                 <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}" class="headline">
                                                     <h5>{{$post -> title}}</h5>
                                                 </a>
-                                                <p>{{str_limit($post->desc, $limit = 350, $end = '...')}}</p>
+                                                <p>{{str_limit($post->desc, $limit = 80, $end = '...')}}</p>
                                                 <!-- Post Meta -->
                                                 <div class="post-meta">
                                                     <p>{{$post -> author}} {{ $post->created_at->format('d/m/y') }}</p>
@@ -115,7 +114,7 @@
                                     <!-- Post Content -->
                                     <div class="post-content">
                                         <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
-                                            <h5 class="mb-0">{{$lp->title}}</h5>
+                                            <h5 class="mb-0">{{str_limit($lp->title, $limit = 20, $end = '...')}}</h5>
                                         </a>
                                     </div>
                                 </div>

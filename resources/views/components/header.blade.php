@@ -128,7 +128,7 @@
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
-                <li><a href=""><img style="width:150px" src="/images/head.svg" alt=""></a></li>
+                <li><a href="/"><img style="width:150px" src="/images/head.svg" alt=""></a></li>
                 <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">{{ __('menu.main') }}</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="uzb" href="/uzbekistan">{{ __('menu.uzbekistan') }}</a>
@@ -236,68 +236,81 @@
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12">
                     <li class="dropdown" data-menu-show="geo">
-                        <a href="" data-menu-show="geo" class="sub-menu-item {{ (request()->segment(2) == 'geo') ? 'sub-menu-active' : ''}}">{{ __('menu.geo') }}</a>
+                        <a href="{{route('uzb.category', ['category' => 'geo'])}}" data-menu-show="geo" class="sub-menu-item {{ (request()->segment(2) == 'geo') ? 'sub-menu-active' : ''}}">{{ __('menu.geo') }}</a>
                         <div data-menu="geo" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                            @foreach($geo as $g) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'geo', 'uzb' => $g->slug])}}">{{$g->name}}</a>
+                            @endforeach
                         </div>   
                     </li>
                     <li class="dropdown" data-menu-show="history">
-                        <a href="" data-menu-show="history" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
+                        <a href="{{route('uzb.category', ['category' => 'history'])}}" data-menu-show="history" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
                         <div data-menu="history" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
+                            @foreach($history as $h) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'history', 'uzb' => $h->slug])}}">{{$h->name}}</a>
+                            @endforeach
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="people">
-                        <a href="" data-menu-show="people" class="sub-menu-item">{{ __('menu.peoples') }}</a>
+                        <a href="{{route('uzb.category', ['category' => 'peoples'])}}" data-menu-show="people" class="sub-menu-item">{{ __('menu.peoples') }}</a>
                         <div data-menu="people" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">Кухня</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">Одежда</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">Религия</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">Праздники</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">Суфизм</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">Язык</a>
-                        </div>  
-                    </li>
-                    <li class="dropdown" data-menu-show="toursizm">
-                        <a href="/uzbekistan#turizm" data-menu-show="toursizm" class="sub-menu-item {{ (request()->segment(2) == 'visa' || request()->segment(2) == 'transport' || request()->segment(2) == 'eco') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }} </a>
-                        <div data-menu="toursizm" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'visa'])}}">{{ __('menu.visa') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'transport'])}}">{{ __('menu.transport') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'eco'])}}">{{ __('menu.ecology') }}</a>
+                            @foreach($peoplesm as $p) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'peoples', 'uzb' => $p->slug])}}">{{$p->name}}</a>
+                            @endforeach
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="iskus">
-                        <a href="/uzbekistan#iskustva" data-menu-show="iskus" 
+                        <a href="{{route('uzb.category', ['category' => 'art'])}}" data-menu-show="iskus" 
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.art') }}</a>
                         <div data-menu="iskus" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'literature'])}}">{{ __('menu.literature') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'architecture'])}}">{{ __('menu.architecture') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'music'])}}">{{ __('menu.music') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'teatr'])}}">{{ __('menu.teatr') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'painting'])}}">{{ __('menu.painting') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'poety'])}}">{{ __('menu.poetry') }}</a>
+                            @foreach($art as $a) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'art', 'uzb' => $a->slug])}}">{{$a->name}}</a>
+                            @endforeach
+                        </div>  
+                    </li>
+                    <li class="dropdown" data-menu-show="moda">
+                        <a href="{{route('uzb.category', ['category' => 'fashion'])}}" data-menu-show="moda" 
+                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.moda') }}</a>
+                        <div data-menu="moda" class="sub-menu-header">
+                            @foreach($fashion as $f) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'fashion', 'uzb' => $f->slug])}}">{{$f->name}}</a>
+                            @endforeach
+                        </div>  
+                    </li>
+                    <li class="dropdown" data-menu-show="kartini">
+                        <a href="{{route('uzb.category', ['category' => 'painting'])}}" data-menu-show="kartini" 
+                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.painting') }}</a>
+                        <div data-menu="kartini" class="sub-menu-header">
+                            @foreach($painting as $pg) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'painting', 'uzb' => $pg->slug])}}">{{$pg->name}}</a>
+                            @endforeach
                         </div>  
                     </li>
                     <li class="dropdown" data-menu-show="cult">
-                        <a data-menu-show="cult" href="/uzbekistan#cultura" 
+                        <a data-menu-show="cult" href="{{route('uzb.category', ['category' => 'culture'])}}" 
                         class="sub-menu-item {{ (request()->segment(2) == 'kitchen' || request()->segment(2) == 'clothing' || request()->segment(2) == 'religion' || request()->segment(2) == 'holidays' || request()->segment(2) == 'sufism' || request()->segment(2) == 'lang') ? 'sub-menu-active' : ''}}">{{ __('menu.culture') }}</a>
                         <div data-menu="cult" class="sub-menu-header">
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'kitchen'])}}">{{ __('menu.kitchen') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'clothing'])}}">{{ __('menu.clothing') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'religion'])}}">{{ __('menu.religion') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'holidays'])}}">{{ __('menu.holidays') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'sufism'])}}">{{ __('menu.sufism') }}</a>
-                            <a class="droped-menu-item" href="{{route('uzb.category', ['category' => 'lang'])}}">{{ __('menu.language') }}</a>
+                            @foreach($culture as $cult) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'culture', 'uzb' => $cult->slug])}}">{{$cult->name}}</a>
+                            @endforeach
+                        </div>  
+                    </li>
+                    <li class="dropdown" data-menu-show="kitchen">
+                        <a href="{{route('uzb.category', ['category' => 'kitchen'])}}" data-menu-show="kitchen" 
+                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.kitchen') }}</a>
+                        <div data-menu="kitchen" class="sub-menu-header">
+                            @foreach($kitchen as $kit) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'kitchen', 'uzb' => $kit->slug])}}">{{$kit->name}}</a>
+                            @endforeach
+                        </div>  
+                    </li>
+                    <li class="dropdown" data-menu-show="tradition">
+                        <a href="{{route('uzb.category', ['category' => 'tradicii'])}}" data-menu-show="tradition" 
+                        class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.tradicii') }}</a>
+                        <div data-menu="tradition" class="sub-menu-header">
+                            @foreach($tradition as $trad) 
+                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'tradition', 'uzb' => $trad->slug])}}">{{$trad->name}}</a>
+                            @endforeach
                         </div>  
                     </li>
                 </ul>

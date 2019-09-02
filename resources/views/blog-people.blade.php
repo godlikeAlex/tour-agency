@@ -78,15 +78,14 @@
                                     @foreach($people as $pb)
                                     <div class="single-blog-post post-style-4 d-flex align-items-center">
                                         <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="/storage/{{$pb -> image}}" alt="">
+                                        <div class="post-thumbnail" style="height:200px; background: url(/storage/{{$pb->image}}); background-size: cover; background-position: cneter;">
                                         </div>
                                         <!-- Post Content -->
                                             <div class="post-content">
                                                 <a href="{{route('people.show', ['categoy' => $pb->category, 'slug' => $pb->slug])}}" class="headline">
                                                     <h5>{{$pb -> name}}</h5>
                                                 </a>
-                                                <p>{{str_limit($pb->desc, $limit = 350, $end = '...')}}</p>
+                                                <p>{{str_limit($pb->desc, $limit = 80, $end = '...')}}</p>
                                                 <!-- Post Meta -->
                                                 <div class="post-meta">
                                                     <p>{{ $pb->created_at->format('d/m/y') }}</p>
@@ -121,7 +120,7 @@
                                     <!-- Post Content -->
                                     <div class="post-content">
                                         <a href="{{route('people.show', ['categoy' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
-                                            <h5 class="mb-0">{{$lp->name}}</h5>
+                                            <h5 class="mb-0">{{str_limit($lp->name, $limit = 20, $end = '...')}}</h5>
                                         </a>
                                     </div>
                                 </div>

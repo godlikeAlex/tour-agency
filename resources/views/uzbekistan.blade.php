@@ -28,6 +28,7 @@
 
 <body>
     @include('/components/header', ['type' => 'uzbekistan'])
+    <section>
     <div class="container">
         <div style="margin-top: 50px;" class="section-name">{{ __('menu.uzbekistan') }}</div>
         <div class="row container_uzb">
@@ -77,8 +78,9 @@
         </div>
 
     </div>
+    </section>
 
-    <div class="mapouter" style="width:100%; width: 100%; margin-bottom: 70px; margin-top: 70px; ><div class="
+    <div class="mapouter" style="width:100%; width: 100%; ><div class="
         gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
             src="https://maps.google.com/maps?q=uzbekistan&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0"
             scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
@@ -99,99 +101,105 @@
 
     </style>
     </div>
-    <div class="container">
-        <div id='iskustva' class="section-name">{{ __('menu.art') }}</div>
-        <div class="row container_uzb">
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'art'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1506780789966-15774276e069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80);">
+        <section class="second-sec">
+            <div class="container">
+            <div id='iskustva' class="section-name">{{ __('menu.art') }}</div>
+                <div class="row container_uzb">
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'art'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img"
+                                    style="background: url(https://images.unsplash.com/photo-1506780789966-15774276e069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80);">
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('menu.art') }}</div>
+                                    <div class="block-desc"> процесс или итог выражения внутреннего мира в (художественном) образе</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'fashion'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img"
+                                    style="background: url(https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('menu.moda') }}</div>
+                                    <div class="block-desc">Мо́да — совокупность привычек, ценностей и вкусов, принятых в определённой среде в определённое время.</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="    padding-bottom: 10px;">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'painting'])}}">
+                            <div class="big-blocks big-padding">
+                                <div class="block-img"
+                                    style="background: url(https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                                </div>
+                                <div class="block-content">
+                                    <div class="block-title">{{ __('menu.painting') }}</div>
+                                    <div class="block-desc">Картина в живописи — произведение искусства, обладающее законченным характером и самостоятельным художественным значением</div>
+                                    <div class="show__more show__more-block">More</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-name" style="margin-top: 50px;">{{ __('menu.culture') }}</div>
+                    <div class="row container_uzb">
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'culture'])}}">
+                                <div class="big-blocks big-padding">
+                                    <div class="block-img"
+                                        style="background: url(https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                    </div>
+                                    <div class="block-content">
+                                        <div class="block-title">{{ __('menu.culture') }}</div>
+                                        <div class="block-desc">Культу́ра — понятие, имеющее огромное количество значений в различных областях человеческой жизнедеятельности. Культура является предметом изучения философии </div>
+                                        <div class="show__more show__more-block">More</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.art') }}</div>
-                            <div class="block-desc"> процесс или итог выражения внутреннего мира в (художественном) образе</div>
-                            <div class="show__more show__more-block">More</div>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'kitchen'])}}">
+                                <div class="big-blocks big-padding">
+                                    <div class="block-img"
+                                        style="background: url(https://images.unsplash.com/photo-1470256699805-a29e1b58598a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                                    </div>
+                                    <div class="block-content">
+                                        <div class="block-title">{{ __('menu.kitchen') }}</div>
+                                        <div class="block-desc">Узбе́кская ку́хня — национальная кухня Узбекистана. Богатая кухня, имеет глубокую историю, тесно связана с узбекской </div>
+                                        <div class="show__more show__more-block">More</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4" style="    padding-bottom: 10px;">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'tradicii'])}}">
+                                <div class="big-blocks big-padding">
+                                    <div class="block-img"
+                                        style="background: url(https://images.unsplash.com/photo-1453412324657-958beaf0ef12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+                                    </div>
+                                    <div class="block-content">
+                                        <div class="block-title">{{ __('menu.tradicii') }}</div>
+                                        <div class="block-desc">Рели́гия (лат. religare — связывать, соединять) — определённая система взглядов</div>
+                                        <div class="show__more show__more-block">More</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
             </div>
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'fashion'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-                        </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.moda') }}</div>
-                            <div class="block-desc">Мо́да — совокупность привычек, ценностей и вкусов, принятых в определённой среде в определённое время.</div>
-                            <div class="show__more show__more-block">More</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'painting'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-                        </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.painting') }}</div>
-                            <div class="block-desc">Картина в живописи — произведение искусства, обладающее законченным характером и самостоятельным художественным значением</div>
-                            <div class="show__more show__more-block">More</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="section-name" style="margin-top: 50px;">{{ __('menu.culture') }}</div>
-        <div class="row container_uzb">
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'culture'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
-                        </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.culture') }}</div>
-                            <div class="block-desc">Культу́ра — понятие, имеющее огромное количество значений в различных областях человеческой жизнедеятельности. Культура является предметом изучения философии </div>
-                            <div class="show__more show__more-block">More</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'kitchen'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1470256699805-a29e1b58598a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-                        </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.kitchen') }}</div>
-                            <div class="block-desc">Узбе́кская ку́хня — национальная кухня Узбекистана. Богатая кухня, имеет глубокую историю, тесно связана с узбекской </div>
-                            <div class="show__more show__more-block">More</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'tradicii'])}}">
-                    <div class="big-blocks big-padding">
-                        <div class="block-img"
-                            style="background: url(https://images.unsplash.com/photo-1453412324657-958beaf0ef12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-                        </div>
-                        <div class="block-content">
-                            <div class="block-title">{{ __('menu.tradicii') }}</div>
-                            <div class="block-desc">Рели́гия (лат. religare — связывать, соединять) — определённая система взглядов</div>
-                            <div class="show__more show__more-block">More</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        </section>
 
-    </div>
     @include('/components/footer')
     <!-- 20% Discount on Elegant Themes Divi Page Builder https://www.embedgooglemap.net/divi-sale/ -->
     <!--===============================================================================================-->
