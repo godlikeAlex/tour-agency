@@ -213,12 +213,19 @@
                         <a class="droped-menu-item" href="/blog" class="sub-menu-item">{{ __('menu.allnews') }}</a>
                     </div>
                 </li>    
-                @if(app()->getLocale()=='ru' )
-                    <li><a  href="{{ url('locale/en') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/en.svg" alt=""></a> </li>
-                @else
-                    <li><a href="{{ url('locale/ru') }}" style="display: flex; align-items: center;"><img style="width:30px;" src="images/ru.svg" alt=""></a> </li>
-                @endif
-                <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:30px" class="fas fa-globe-europe"></i> ES</li> -->
+                <li>
+                    @if(app()->getLocale()=='ru' )
+                        <a data-menu-show="show-lang" class="main-menu-link-drop"  href="{{ url('locale/en') }}" ><img style="width:28px;" class="drop-image" src="images/en.svg" alt=""></a>
+                    @else
+                        <a data-menu-show="show-lang" class="main-menu-link-drop" href="{{ url('locale/ru') }}"><img class="drop-image" style="width:28px;" src="images/ru.svg" alt=""></a> 
+                    @endif
+                    <div style="width:100px;" data-menu="show-lang" class="sub-menu-header">
+                            <a class="droped-menu-item"  href="{{ url('locale/en') }}"><img class="drop-image" style="width:28px;" src="images/en.svg" alt=""> EN</a>
+                            <a class="droped-menu-item" href="{{ url('locale/ru') }}"><img class="drop-image" style="width:28px;" src="images/ru.svg" alt=""> RU</a> 
+                    </div>
+                </li>
+                
+                <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:28px" class="fas fa-globe-europe"></i> ES</li> -->
             </ul>
             
         </div>
@@ -383,7 +390,7 @@
                 const target = e.target;
                 const attr = target.getAttribute('data-menu-show');
                 const menus = document.querySelectorAll('div[data-menu]');
-                if(!target.classList.contains('sub-menu-header') && !target.classList.contains("droped-menu-item")) {
+                if(!target.classList.contains('sub-menu-header') && !target.classList.contains("droped-menu-item") && !target.classList.contains('drop-image')) {
                     menus.forEach(droped => {
                         droped.style.display = 'none';
                     }); 
@@ -441,10 +448,11 @@
             close.addEventListener('click', () => openMenu(false) );
             document.body.addEventListener('click', e => {
                 const target = e.target;
-                if(!target.classList.contains('left-side-menu') && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
+                if(!target.classList.contains('left-side-menu')  && !target.classList.contains('close-cont') && !target.classList.contains('drop-menu') && !target.classList.contains('left-menu-main-link') && !target.classList.contains('open-left-bar')){
                     leftMenu.classList.add('left-menu-hide')
                     document.body.style.left = '0%';
                     open.style.visibility = 'visible';
+                    
                 }
             })
 
