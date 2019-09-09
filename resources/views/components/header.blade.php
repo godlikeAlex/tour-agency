@@ -1,12 +1,17 @@
 <div class="top-black-menu">
     <div class="container">
         <div class="row">
-        <div class="col-md-3 main-links-nav-top"><a href="">About</a> <a href="">Tours</a> <a href="">Policy</a></div>
-        <div class="social-top col-md-9" style="text-align:right;"><a href="#"><i class="ion-social-facebook"></i></a>
-            <a href="#"><i class="ion-social-twitter"></i></a>
-            <a href="#"><i class="ion-social-pinterest"></i></a>
-            <a href="#"><i class="ion-social-google"></i></a>
-            <a href="#"><i class="ion-social-rss"></i></a>
+        <div class="col-md-5 main-links-nav-top"><a href="">About us</a> <a href="">Tours</a> <a href="">For Tourists</a> <a href="">F.A.Q</a></div>
+        <div class="social-top col-md-7" style="text-align:right;">
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >ENG</a>
+            <a class="lang active-lang" data-menu-show="show-lang" href="{{ url('locale/ru') }}">РУС</a> 
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >ESP</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >FRA</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >DEU</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >اللغة العربية</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >漢語</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >한국어</a>
+            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >日本語</a>
         </div>  
         </div>
     </div>
@@ -213,17 +218,7 @@
                         <a class="droped-menu-item" href="/blog" class="sub-menu-item">{{ __('menu.allnews') }}</a>
                     </div>
                 </li>    
-                <li>
-                    @if(app()->getLocale()=='ru' )
-                        <a data-menu-show="show-lang" class="main-menu-link-drop"  href="{{ url('locale/en') }}" ><img style="width:28px;" class="drop-image" src="images/en.svg" alt=""></a>
-                    @else
-                        <a data-menu-show="show-lang" class="main-menu-link-drop" href="{{ url('locale/ru') }}"><img class="drop-image" style="width:28px;" src="images/ru.svg" alt=""></a> 
-                    @endif
-                    <div style="width:100px;" data-menu="show-lang" class="sub-menu-header">
-                            <a class="droped-menu-item"  href="{{ url('locale/en') }}"><img class="drop-image" style="width:28px;" src="images/en.svg" alt=""> EN</a>
-                            <a class="droped-menu-item" href="{{ url('locale/ru') }}"><img class="drop-image" style="width:28px;" src="images/ru.svg" alt=""> RU</a> 
-                    </div>
-                </li>
+
                 
                 <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:28px" class="fas fa-globe-europe"></i> ES</li> -->
             </ul>

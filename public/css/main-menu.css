@@ -8,6 +8,21 @@
     margin: 0;
 }
 
+
+.lang {
+    padding: 5px 10px !important;
+    font-size: 11px;
+    transition: .5s;
+}
+
+.lang:hover {
+    background: rgba(36, 36, 36, 0.61);
+}
+
+.active-lang {
+    background: rgba(36, 36, 36, 0.61);
+}
+
 .main-links-nav-top
 {
     text-transform: uppercase;
@@ -16,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
     letter-spacing: .125em;
+    font-size: 14px;
 }
 .social-top a {
     padding-left: 10px;
