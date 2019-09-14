@@ -39,7 +39,7 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('menu.history') }}</div>
                                     <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$city->name}}</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
@@ -51,7 +51,7 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('mainpage.things_to_do') }}</div>
                                     <div class="block-desc">Здесь вы можете найти для себя лучшие развлечения в {{$city->name}}</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
@@ -63,12 +63,12 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('mainpage.where_to_see') }}</div>
                                     <div class="block-desc">Здесь вы можете найти для себя лучшие и красивые места в {{$city->name}}</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
                 </div>
-                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin:auto; margin-top: 50px; width:180px; margin-bottom: 50px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
         @endforeach
     </div>

@@ -30,84 +30,72 @@
     <link rel="stylesheet" type="text/css" href="/css/card.css">    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+
+<!--Footer-->
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
 <link href="fonts/ionicons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body style="background: white;">
 @include('/components/header', ['type' => 'city'])
     <div class="container">
-        <div class="col-md-12">
-            <div class="row">
-                <div style="    padding-bottom: 20px;
-    padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
-                    <a href="/" class="breadcrumb-item f1-s-3 cl9">
-                        {{ __('menu.main') }} 
-                    </a>
+    <div style="padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+			<div class="f2-s-1 p-r-30 m-tb-6">
+				<a href="/" class="breadcrumb-item f1-s-3 cl9">
+					{{__('menu.main')}} 
+				</a>
 
-                    <a href="/city" class="breadcrumb-item f1-s-3 cl9">
-                    {{ __('menu.cities') }} 
-                    </a>
-                    <a href="/city/{{Illuminate\Support\Str::lower($city)}}" class="breadcrumb-item f1-s-3 cl9">
-                        {{$city}} 
-                    </a>
-                    <a href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city),'category'=>$item->category])}}" class="breadcrumb-item f1-s-3 cl9">
-                            @if($item->category === 'where-to-eat')
-                                Где поесть
-                            @elseif($item->category === 'where-to-stay')
-                                Где остановиться
-                            @elseif($item->category === 'history')
-                                История
-                            @elseif($item->category === 'where-to-see')
-                                Что посмотреть
-                            @elseif($item->category === 'things-to-do')
-                                Чем заняться
-                            @elseif($item->category === 'where-to-buy')
-                                Где покупать
-                            @elseif($item->category === 'how-to-get')
-                                Как добраться
-                            @elseif($item->category === 'useful-information')
-                                Полезная информация
-                            @endif
-                    </a>
-                    <span class="breadcrumb-item f1-s-3 cl9">
-                        {{$item -> name}}
-                    </span>
-			    </div>
-                <div class="col-md-12 title-item" style="padding-left:0; margin-top:0px;">{{$item->name}}<!-- AddToAny BEGIN -->
-					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
-					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-					<a class="a2a_button_facebook"></a>
-					<a class="a2a_button_email"></a>
-					<a class="a2a_button_telegram"></a>
-					<a class="a2a_button_whatsapp"></a>
-					</div>
-					<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END --></div>
-                <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-                <div class="col-md-12" style="margin-top:25px; padding-left:0;">{!! $item->about !!}</div>
-                
-                @if($next && $previous)
-                <div style="display:flex; justify-content: space-between;" class="col-md-12">
-                @elseif($next)
-                    <div style="display:flex; justify-content: flex-end;" class="col-md-12">
-                @elseif($previous)
-                    <div style="display:flex; justify-content: flex-start;" class="col-md-12">
-                @endif
-                @if($previous)
-                    <a href="{{ route('city.item', ['city'=>$city ,'category'=>$category, 'id' => $previous]) }}">Преведущие</a>
-                @endif
-                @if($next)
-                    <a href="{{ route('city.item', ['city'=>$city ,'category'=>$category, 'id' => $next]) }}">Следующие</a>
-                @endif
-                </div>
-            </div>
-        </div>
- 
+				<a href="/uzbekistan" class="breadcrumb-item f1-s-3 cl9">
+                    {{$city}} 
+				</a>
+				<a href="{{route('city.category', ['city' => $city,'category' => $item->category])}}" class="breadcrumb-item f1-s-3 cl9">
+                    @if($item->category === 'what-to-see')
+                        {{__('menu.where-to-see')}}
+                    @elseif($item->category === 'history')
+                        {{__('menu.history')}}
+                    @elseif($item->category === 'things-to-do')
+                        {{__('menu.things_to_do')}}
+                    @elseif($item->category === 'where-to-buy')
+                        {{__('menu.where_to_buy')}}
+                    @elseif($item->category === 'where-to-eat')
+                        {{__('menu.where_to_eat')}}
+                    @elseif($item->category === 'where-to-stay')
+                        {{__('menu.where_to_stay')}}
+                    @elseif($item->category === 'how-to-get')
+                        {{__('menu.how_to_get')}}
+                    @elseif($item->category === 'useful-information')
+                        {{__('menu.useful_information')}}
+                    @endif
+				</a>
+				<span class="breadcrumb-item f1-s-3 cl9">
+					 {{$item -> name}}
+				</span>
+			</div>
     </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_telegram"></a>
+                <a class="a2a_button_whatsapp"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></div>
+            <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
+            <div class="col-md-12" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
+        </div>
+    </div>
+
+</div>
+@include('/components/footer')
 
 
 

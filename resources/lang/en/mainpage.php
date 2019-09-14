@@ -8,6 +8,7 @@
         'how_to_get' => 'How to get',
         'useful_information' => 'Useful information',
         'more' => 'Show more',
+        'moreblock' => 'More',
         'tour_pacekts' => 'Tour Pacekts',
         'eco_tours' => 'Eco Tours',
         'group_tours' => 'Group Tours',

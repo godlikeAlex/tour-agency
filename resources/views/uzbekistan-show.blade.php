@@ -41,54 +41,38 @@
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body style="background: white;">
 @include('/components/header', ['type' => 'uzbekistan'])
     <div class="container">
     <div style="padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
 				<a href="/" class="breadcrumb-item f1-s-3 cl9">
-					Главная 
+					{{__('menu.main')}} 
 				</a>
 
 				<a href="/uzbekistan" class="breadcrumb-item f1-s-3 cl9">
-					Узбекистан 
+                {{__('menu.uzbekistan')}} 
 				</a>
 				<a href="{{route('uzb.category', ['category' => $item->category])}}" class="breadcrumb-item f1-s-3 cl9">
                     @if($item->category === 'geo')
-                        География
+                        {{__('menu.geo')}}
                     @elseif($item->category === 'history')
-                        История
-                    @elseif($item->category === 'visa')
-                        Виза
-                    @elseif($item->category === 'transport')
-                        Транспорт
-                    @elseif($item->category === 'eco')
-                        Экология
-                    @elseif($item->category === 'literature')
-                        Литература
-                    @elseif($item->category === 'architecture')
-                        Архитиктура
-                    @elseif($item->category === 'music')
-                        Музыка
-                    @elseif($item->category === 'teatr')
-                        Театр
+                        {{__('menu.history')}}
+                    @elseif($item->category === 'peoples')
+                        {{__('menu.peoples')}}
+                    @elseif($item->category === 'art')
+                        {{__('menu.art')}}
+                    @elseif($item->category === 'fashion')
+                        {{__('menu.moda')}}
                     @elseif($item->category === 'painting')
-                        Живопись
-                    @elseif($item->category === 'poetry')
-                        Поэзия
+                        {{__('menu.painting')}}
+                    @elseif($item->category === 'culture')
+                        {{__('menu.culture')}}
                     @elseif($item->category === 'kitchen')
-                        Кухня
-                    @elseif($item->category === 'clothing')
-                        Одежда
-                    @elseif($item->category === 'religion')
-                        Религия
-                    @elseif($item->category === 'holidays')
-                        Праздники
-                    @elseif($item->category === 'sufism')
-                        Суфизм
-                    @elseif($item->category === 'lang')
-                        Язык
-                    @endif 
+                        {{__('menu.kitchen')}}
+                    @elseif($item->category === 'tradition')
+                        {{__('menu.tradition')}}
+                    @endif
 				</a>
 				<span class="breadcrumb-item f1-s-3 cl9">
 					 {{$item -> name}}
@@ -108,7 +92,7 @@
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END --></div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-            <div class="col-md-12" style="margin-top:25px; padding-left:0">{!! $item->about !!}</div>
+            <div class="col-md-12" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
         </div>
     </div>
 

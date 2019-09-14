@@ -13,6 +13,7 @@
         'group_tours' => 'Групповые туры',
         'buissnes_tours' => 'Бизнес туры',
         'econom_tours' => 'Эконом туры',
+        'moreblock' => 'Подробнее',
         'century' => 'век',
         'gallery' => 'Галлерея'
     ];

@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!--===============================================================================================-->
+ <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
     <!--===============================================================================================-->
-           <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" href="/css/tour-all.css">
-    <!--===============================================================================================-->
-    <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/card.css"> 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
 
-<link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+    <!--Footer-->
+    
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="fonts/ionicons.css" rel="stylesheet">
+    <!--===============================================================================================-->
+        
     <title>Document</title>
 </head>
 <body>
     @include('/components/header', ['type' => 'city'])
     <div class="container">
-        <div class="col-md-10" style="padding:0;">
+        <div class="col-md-12" style="padding:0;">
             <div class="row">
                 @if($items[0]->category_price)
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
@@ -74,7 +72,7 @@
                                             @endif
                                             </div>
                                             <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="block-desc">{{$item->desc}}</div>
                                             <div class="show__more show__more-block">More</div>
                                         </div>
                                     </div>
@@ -100,7 +98,7 @@
                                             @endif
                                             </div>
                                             <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="block-desc">{{$item->desc}}</div>
                                             <div class="show__more show__more-block">More</div>
                                         </div>
                                     </div>
@@ -116,7 +114,7 @@
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
                                             <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
+                                            <div class="block-desc">{{$item->desc}}</div>
                                             <div class="show__more show__more-block">More</div>
                                         </div>
                                     </div>
@@ -125,9 +123,9 @@
                     @endforeach
                 @endif
             </div>
+         {{$items->links()}}
         </div>
     
-        {{$items->links()}}
     </div>
 
     @include('/components/footer')

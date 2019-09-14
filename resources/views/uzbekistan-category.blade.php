@@ -32,39 +32,23 @@
     <div class="container" style="margin-bottom: 50px;">
     <div style="margin-top: 50px;" class="section-name">
                     @if(request()->segment(2) === 'geo')
-                        География
+                        {{__('menu.geo')}}
                     @elseif(request()->segment(2) === 'history')
-                        История
-                    @elseif(request()->segment(2) === 'visa')
-                        Виза
-                    @elseif(request()->segment(2) === 'transport')
-                        Транспорт
-                    @elseif(request()->segment(2) === 'eco')
-                        Экология
-                    @elseif(request()->segment(2) === 'literature')
-                        Литература
-                    @elseif(request()->segment(2) === 'architecture')
-                        Архитиктура
-                    @elseif(request()->segment(2) === 'music')
-                        Музыка
-                    @elseif(request()->segment(2) === 'teatr')
-                        Театр
+                        {{__('menu.history')}}
+                    @elseif(request()->segment(2) === 'peoples')
+                        {{__('menu.peoples')}}
+                    @elseif(request()->segment(2) === 'art')
+                        {{__('menu.art')}}
+                    @elseif(request()->segment(2) === 'fashion')
+                        {{__('menu.moda')}}
                     @elseif(request()->segment(2) === 'painting')
-                        Живопись
-                    @elseif(request()->segment(2) === 'poetry')
-                        Поэзия
+                        {{__('menu.painting')}}
+                    @elseif(request()->segment(2) === 'culture')
+                        {{__('menu.culture')}}
                     @elseif(request()->segment(2) === 'kitchen')
-                        Кухня
-                    @elseif(request()->segment(2) === 'clothing')
-                        Одежда
-                    @elseif(request()->segment(2) === 'religion')
-                        Религия
-                    @elseif(request()->segment(2) === 'holidays')
-                        Праздники
-                    @elseif(request()->segment(2) === 'sufism')
-                        Суфизм
-                    @elseif(request()->segment(2) === 'lang')
-                        Язык
+                        {{__('menu.kitchen')}}
+                    @elseif(request()->segment(2) === 'tradition')
+                        {{__('menu.tradition')}}
                     @endif
     </div>
         <div class="row container_of_tours" >
@@ -76,7 +60,7 @@
                                 <div class="block-content" style="margin-top:25px;">
                                     <div class="block-title">{{$item->name}}</div>
                                     <div class="block-desc">{{str_limit($item ->desc, $limit = 120, $end = '...')}}</div>
-                                    <div class="show__more show__more-block" >More</div>
+                                    <div class="show__more show__more-block" >{{ __('mainpage.moreblock') }}</div>
                                 </div>
                             </div>
                         </a>
