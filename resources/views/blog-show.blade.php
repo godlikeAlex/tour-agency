@@ -1,187 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>DarEn BLOG || BLOG</title>
+   <link rel="icon" href="img/favicon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/css/blog/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/css/blog/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/css/blog/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="/css/blog/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/css/blog/liner_icon.css">
+    <link rel="stylesheet" href="/css/blog/search.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/css/blog/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/css/blog/style.css">
 
-    <!-- Title  -->
-    <title>World - Blog &amp; Magazine Template</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Style CSS -->
+    <!--Footer-->
+    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
     <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/style-blog.css">
-	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="fonts/ionicons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-    <link rel="stylesheet" href="/css/main-menu.css">
-<!--===============================================================================================-->
-    <style>
-    body{
-        color: #333;
-    }
-        ul li, ol li {
-    list-style: unset;
-}
-    </style>
+    <link href="/fonts/ionicons.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- ***** Header Area Start ***** -->
-	@include('/components/header', ['type' => 'news'])
-    <!-- ***** Header Area End ***** -->
-    <div class="container">
-		<div style="    padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
-			<div class="f2-s-1 p-r-30 m-tb-6">
-				<a href="/" class="breadcrumb-item f1-s-3 cl9">
-					Главная 
-				</a>
+   <!--::header part start::-->
+    @include('components.header', ['type' => 'news'])
+   <!-- Header part end-->
 
-				<a href="/blog" class="breadcrumb-item f1-s-3 cl9">
-					Новости 
-                </a>
-                
-				<a href="/blog/category/{{$post->category}}" class="breadcrumb-item f1-s-3 cl9">
-                    @if($post->category === 'tourism')
-                        Туризм
-                    @elseif($post->category === 'uzbekistan')
-                        Узбекистан
-                    @elseif($post->category === 'history')
-                        История
-                    @elseif($post->category === 'tourists')
-                        Туристы
-                    @endif 
-                </a>
-                
-				<span class="breadcrumb-item f1-s-3 cl9">
-					 {{$post -> title}}
-				</span>
-			</div>
-		</div>
-	</div>
-    <div style="    padding-top: 0px;" class="main-content-wrapper section-padding-100">
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- ============= Post Content Area ============= -->
-                <div class="col-12 col-lg-8">
-                    <div class="single-blog-content mb-100">
-                        <h1 style="    padding-bottom: 30px;
-    font-size: 30px;
-    font-weight: 700;">{!! $post->title !!}</h1>
-                        <img src="/storage/{{$post->image}}" style="width:100%" alt="">
-                        <!-- Post Content -->
-                        <div style="padding: 0; box-shadow:none;" class="post-content">
-							{!! $post->post !!}
-                            <div class="post-meta second-part">
-                                <p>{{$post -> author}} {{ $post->created_at->format('d/m/y') }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========== Sidebar Area ========== -->
-                <div class="col-12 col-md-8 col-lg-4">
-                    <div class="post-sidebar-area mb-100">
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">{{ __('menu.last_posts') }}</h5>
-                            <div class="widget-content">
-								@foreach($lastPosts as $lp)
-								<!-- Single Blog Post -->
-								<div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="/storage/{{$lp->image}}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
-                                            <h5 class="mb-0">{{$lp->title}}</h5>
-                                        </a>
-                                    </div>
-                                </div>
-								@endforeach
-                            </div>
-                        </div>
-                        <div class="stickyContainer" style="padding-top:25px;">
-                            <img style="position: sticky;top: 17%;" src="/images/banner-02.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area all_post section_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 posts-list">
+               <div class="single-post">
+                  <div class="feature-img">
+                     <img class="img-fluid" src="img/blog/single_blog_1.png" alt="">
+                  </div>
+                  <div class="blog_details">
+                     <h2>{{$post->title}}</h2>
+                     <ul class="blog-info-link mt-3 mb-4">
+                        <li style="text-transform: uppercase"><a href="{{route('blog.category', ['category' => $post->category])}}"><i class="far fa-user"></i> {{$post-> author}} | {{$post->category}}</a></li>
+                     </ul>
+                    <div style="padding-top: 25px; padding-bottom: 25px;"><img src="/storage/{{$post->image}}" alt=""></div>
+                    <p>
+                        {!! $post->post !!}
+                    </p>
+                  </div>
+               </div>
             </div>
-
-            <!-- ============== Related Post ============== -->
-            
-            <div class="row">
-                <div class="col-lg-12" style="font-size:25px; font-weight:700; padding-bottom:25px;">
-                    Другие постыпше 
-                </div>
-                @foreach($recPosts as $rPost)
-                <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Single Blog Post -->
-                    <div class="single-blog-post">
-                        <!-- Post Thumbnail -->
-                        <div class="post-thumbnail">
-                            <img src="/storage/{{$rPost->image}}" alt="">
-                            <!-- Catagory -->
-                            <div class="post-cta"><a href="/blog/category/{{$rPost -> category}}">{{$rPost -> category}}</a></div>
+            <div class="col-lg-4">
+                    <div class="sidebar_widget">
+                        <div class="sidebar_tittle">
+                            <h3>{{__('menu.last_posts')}}</h3>
                         </div>
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <a href="/blog/post/{{$rPost->slug}}" class="headline" >
-                                <h5 style="min-height:60px">{{$rPost->title}}</h5>
-                            </a>
-                            <p style="    min-height: 90px;">{{str_limit($rPost->desc, $limit = 100, $end = '...')}}</p>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <p><a class="post-author">{{$post->author}}</a> <a class="post-date">{{ $post->created_at->format('d/m/y') }}</a></p>
+                        @foreach($lastPosts as $lp)
+                        <div class="single_catagory_post post_2 single_border_bottom">
+                            <div class="category_post_img" style="height: 200px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
+                            </div>
+                            <div class="post_text_1 pr_30">
+                                <p><span> By {{$lp->author}}</span> / {{ $lp->created_at->format('d M Y') }}</p>
+                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}">
+                                    <h3>{{str_limit($lp->title, $limit = 35, $end = '...')}}</h3>
+                                </a>
                             </div>
                         </div>
+                        @endforeach
+                        <div class="sidebar_tittle">
+                            <h3>{{__('menu.category')}}</h3>                            
+                        </div>
+                        <div class="single_catagory_item category">
+                            <ul class="list-unstyled">
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{__('menu.uzbekistan')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{__('menu.archeology')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{__('menu.tourism')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes'])}}">{{__('menu.notes')}}</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                @endforeach
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </section>
+   <!--================Blog Area end =================-->
 
-    <!-- ***** Footer Area Start ***** -->
-    @include('/components/footer')
-    <!-- ***** Footer Area End ***** -->
+   <!-- footer part start-->
+    @include('components.footer')
+   <!-- footer part end-->
 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <!-- Plugins js -->
-    <script src="/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/js/active.js"></script>
-    <script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/js/main.js"></script>
-
-    <script>
-        const post = document.querySelector('.post-content');
-        const stickyContainer = document.querySelector('.stickyContainer');
-        stickyContainer.style.height = post.offsetHeight / 100 * 80 +'px';
-    </script>
-
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/blog/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/blog/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/blog/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="js/blog/custom.js"></script>
 </body>
 
 </html>

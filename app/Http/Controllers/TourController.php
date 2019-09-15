@@ -51,7 +51,7 @@ class TourController extends Controller
     public function showCategory($category) {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
-        $tours = Tour::where('category', $category)->get();
+        $tours = Tour::where(['lang' => $lang, 'category' => $category])->paginate(6);
         return view('tour-category', compact('tours', 'cities'));
     }
 }

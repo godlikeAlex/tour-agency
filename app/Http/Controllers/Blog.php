@@ -21,7 +21,7 @@ class Blog extends Controller
     public function indexBlog() {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
-        $posts = Posts::where('lang', $lang)->orderBy('created_at','desc')->paginate(5);
+        $posts = Posts::where('lang', $lang)->orderBy('created_at','desc')->paginate(6);
         $lastPosts = $this->lastPosts();
         $category = "all";
         return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
@@ -30,7 +30,7 @@ class Blog extends Controller
     public function indexBlogCategory($category) {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
-        $posts = Posts::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(5);
+        $posts = Posts::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(6);
         $lastPosts = $this->lastPosts();
         return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
     }
@@ -54,21 +54,21 @@ class Blog extends Controller
     public function indexPeople() {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
-        $people = People::where('lang', $lang)->orderBy('created_at','desc')->paginate(5);
+        $peoples = People::where('lang', $lang)->orderBy('created_at','desc')->paginate(5);
         $lastPeople = $this->lastPeople();
         $header = Header::dataHeader();
         $category = "all";
 
-        return view('blog-people', compact('people', 'lastPeople', 'cities', 'category'));
+        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category'));
     }
 
     public function indexPeopleCategory($category) {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
-        $people = People::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(5);
+        $peoples = People::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(5);
         $lastPeople = $this->lastPeople();
 
-        return view('blog-people', compact('people', 'lastPeople', 'cities', 'category'));
+        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category'));
     }
 
 
@@ -84,14 +84,14 @@ class Blog extends Controller
     private function lastPeople() 
     {
         $lang = app()->getLocale();
-        $lastPeople = People::where('lang', $lang)->orderBy('created_at','desc')->take(5)->get();
+        $lastPeople = People::where('lang', $lang)->orderBy('created_at','desc')->take(3)->get();
         return $lastPeople;
     }
 
     private function lastPosts() 
     {
         $lang = app()->getLocale();
-        $lastPosts = Posts::where('lang', $lang)->orderBy('created_at','desc')->take(5)->get();
+        $lastPosts = Posts::where('lang', $lang)->orderBy('created_at','desc')->take(3)->get();
         return $lastPosts;
     }
 }

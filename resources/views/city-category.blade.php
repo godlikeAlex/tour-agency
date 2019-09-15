@@ -22,10 +22,10 @@
         
     <title>Document</title>
 </head>
-<body>
+<body style="background:white;">
     @include('/components/header', ['type' => 'city'])
     <div class="container">
-        <div class="col-md-12" style="padding:0;">
+        <div class="col-md-12" style="padding:0; padding-bottom: 50px;">
             <div class="row">
                 @if($items[0]->category_price)
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
@@ -45,9 +45,9 @@
                                                 Элитный
                                             @endif
                                             </div>
-                                            <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни {{$content->name}}</div>
-                                            <div class="show__more show__more-block">More</div>
+                                            <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                            <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
+                                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                         </div>
                                     </div>
                                 </a>
@@ -71,9 +71,9 @@
                                                 Элитный
                                             @endif
                                             </div>
-                                            <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">{{$item->desc}}</div>
-                                            <div class="show__more show__more-block">More</div>
+                                            <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                            <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
+                                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                         </div>
                                     </div>
                                 </a>
@@ -97,9 +97,9 @@
                                                 Элитный
                                             @endif
                                             </div>
-                                            <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">{{$item->desc}}</div>
-                                            <div class="show__more show__more-block">More</div>
+                                            <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                            <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
+                                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                         </div>
                                     </div>
                                 </a>
@@ -113,9 +113,9 @@
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
-                                            <div class="block-title">{{$item->name}}</div>
-                                            <div class="block-desc">{{$item->desc}}</div>
-                                            <div class="show__more show__more-block">More</div>
+                                            <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                            <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
+                                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                         </div>
                                     </div>
                                 </a>

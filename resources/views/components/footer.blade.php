@@ -8,9 +8,9 @@
 				<div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>УЗБЕКИСТАН</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-						<li><a href="{{route('uzb.category', ['category' => 'geography'])}}">{{ __('menu.geo') }}</a></li>
-                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.history') }}</a></li>
-                        <li><a href="{{route('uzb.category', ['category' => 'history'])}}">{{ __('menu.peoples') }}</a></li>
+						<li><a href="{{route('uzb.category', ['category' => 'geography', 'language' => app()->getLocale()])}}">{{ __('menu.geo') }}</a></li>
+                        <li><a href="{{route('uzb.category', ['category' => 'history', 'language' => app()->getLocale()])}}">{{ __('menu.history') }}</a></li>
+                        <li><a href="{{route('uzb.category', ['category' => 'history', 'language' => app()->getLocale()])}}">{{ __('menu.peoples') }}</a></li>
                         <li><a href="/uzbekistan#iskustva">{{ __('menu.art') }}</a></li>
                         <li><a href="/uzbekistan#iskustva">{{ __('menu.moda') }}</a></li>
                         <li><a href="/uzbekistan#culura">{{ __('menu.culture') }}</a></li>
@@ -24,7 +24,7 @@
 					<h5 class="f-title"><b>ГОРОДА</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
                         @foreach($cities as $city)
-                            <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name)])}}">{{$city->name}}</a></li>
+                            <li><a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name), 'language' => app()->getLocale()])}}">{{$city->name}}</a></li>
                         @endforeach
 					</ul>
 				</div><!-- col-sm-2 -->
@@ -32,32 +32,32 @@
 				<div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>ФОТО</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate'])}}">{{ __('menu.khiva-khanate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate'])}}">{{ __('menu.kokand-khanate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate'])}}">{{ __('menu.bukhara-emirate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr'])}}">{{ __('menu.turkestan-assr') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'jadidism'])}}">{{ __('menu.jadidism') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'stalin-period'])}}">{{ __('menu.stalin-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period'])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period'])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'restructuring'])}}">{{ __('menu.restructuring') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan'])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'present'])}}">{{ __('menu.present') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.khiva-khanate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.kokand-khanate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate', 'language' => app()->getLocale()])}}">{{ __('menu.bukhara-emirate') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr', 'language' => app()->getLocale()])}}">{{ __('menu.turkestan-assr') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'jadidism', 'language' => app()->getLocale()])}}">{{ __('menu.jadidism') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'stalin-period', 'language' => app()->getLocale()])}}">{{ __('menu.stalin-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'restructuring', 'language' => app()->getLocale()])}}">{{ __('menu.restructuring') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan', 'language' => app()->getLocale()])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
+                        <li><a href="{{route('show.galery', ['centuary' => 'present', 'language' => app()->getLocale()])}}">{{ __('menu.present') }}</a></li>
 					</ul>
                 </div><!-- col-sm-2 -->
                 
                 <div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>ТУРЫ</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}">Исторические туры </a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}">Короткие туры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}">Групповые туры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'inliidual-tours'])}}">Индивидуальные туры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}">Эксклюзивные туры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'eco-tours'])}}">Эко туры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}">Велотуры</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'buissens-tours'])}}">Бизнес турыa</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}">Центральная Азия</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}">Исторические туры </a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}">Короткие туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}">Групповые туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'inliidual-tours', 'language' => app()->getLocale()])}}">Индивидуальные туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}">Эксклюзивные туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'eco-tours', 'language' => app()->getLocale()])}}">Эко туры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}">Велотуры</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'buissens-tours', 'language' => app()->getLocale()])}}">Бизнес турыa</a></li>
+                        <li><a href="{{route('tour.category', ['category' => 'kombo-asia-tours', 'language' => app()->getLocale()])}}">Центральная Азия</a></li>
 					</ul>
                 </div><!-- col-sm-2 -->
                 
@@ -84,10 +84,10 @@
                 <div class="col-lg-2 col-md-4 col-sm-4">	
 					<h5 class="f-title"><b>НОВОСТИ</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('blog.category', ['category' => 'tourism'])}}">Туризм</a></li>
-                        <li><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">Узбекистан</a></li>
-                        <li><a href="{{route('blog.category', ['category' => 'history'])}}">История</a></li>
-                        <li><a href="{{route('blog.category', ['category' => 'tourists'])}}">Туристы</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}">Туризм</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}">Узбекистан</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'history', 'language' => app()->getLocale()])}}">История</a></li>
+                        <li><a href="{{route('blog.category', ['category' => 'tourists', 'language' => app()->getLocale()])}}">Туристы</a></li>
 					</ul>
                 </div><!-- col-sm-2 -->
                 

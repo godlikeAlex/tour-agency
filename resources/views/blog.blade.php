@@ -1,149 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DarEn BLOG || ARCHIVE</title>
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/blog/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/css/blog/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/css/blog/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="/css/blog/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/css/blog/liner_icon.css">
+    <link rel="stylesheet" href="/css/blog/search.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/css/blog/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/css/blog/style.css">
 
-    <!-- Title  -->
-    <title>World - Blog &amp; Magazine Template</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="/img/favicon.ico">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/style-blog.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--Footer-->
+    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
 
-<link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
-    
-
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
 </head>
 
 <body>
+    <!--::header part start::-->
+    @include('components.header', ['type' => 'news'])
+    <!-- Header part end-->
 
-    <!-- Preloader End -->
-    <!-- Header -->
-    @include('/components/header', ['type' => 'news'])
-    <div class="main-content-wrapper section-padding-100">
+    <!-- feature_post start-->
+    
+    <section class="all_post archive_post">
         <div class="container">
-            <div class="row justify-content-center">
-                <!-- ============= Post Content Area Start ============= -->
-                <div class="col-12 col-lg-8">
-                    <div class="post-content-area mb-100">
-                        <!-- Catagory Area -->
-                        <div class="world-catagory-area">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">{{ __('menu.news') }}</li>
-
-                                <li class="nav-item">
-                                    <a href="/blog/" class="nav-link @if($category === 'all') active @endif">{{ __('menu.all') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'uzbekistan'])}}" class="nav-link @if($category === 'uzbekistan') active @endif">{{ __('menu.uzbekistan') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'archeology'])}}" class="nav-link @if($category === 'archeology') active @endif">{{ __('menu.archeology') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'tourism'])}}" class="nav-link @if($category === 'tourism') active @endif" >{{ __('menu.tourism') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('blog.category', ['category'=>'notes'])}}" class="nav-link @if($category === 'notes') active @endif">{{ __('menu.notes') }}</a>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content" id="myTabContent">
-
-                                <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="tab1">
-                                    <!-- Single Blog Post -->
-                                    
-                                    @foreach($posts as $post)
-                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail" style="height:200px; background: url(/storage/{{$post->image}}); background-size: cover; background-position: cneter;">
-                                        </div>
-                                        <!-- Post Content -->
-                                            <div class="post-content">
-                                                <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}" class="headline">
-                                                    <h5>{{$post -> title}}</h5>
-                                                </a>
-                                                <p>{{str_limit($post->desc, $limit = 80, $end = '...')}}</p>
-                                                <!-- Post Meta -->
-                                                <div class="post-meta">
-                                                    <p>{{$post -> author}} {{ $post->created_at->format('d/m/y') }}</p>
-                                                </div>
-                                            </div>
+            <div style="margin-bottom: 100px; padding: 0;" class="section-name col-md-12">{{ __('menu.news') }}</div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        @foreach($posts as $post)
+                            <div class="col-lg-6">
+                                <div class="single_catagory_post post_2">
+                                    <div class="category_post_img" style="height: 200px; background: url(/storage/{{$post -> image}}); background-size: cover; background-position: center;">
                                     </div>
-                                    
-                                    @endforeach
-                                    <div style="display:flex;justify-content: center; margin-top: 25px;">
-                                        {{$posts -> links()}}
-                                    </div>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========== Sidebar Area ========== -->
-                <div class="col-12 col-md-8 col-lg-4">
-                    <div class="post-sidebar-area">
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">{{ __('menu.last_posts') }}</h5>
-                            <div class="widget-content">
-								@foreach($lastPosts as $lp)
-								<!-- Single Blog Post -->
-								<div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="/storage/{{$lp->image}}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}" class="headline">
-                                            <h5 class="mb-0">{{str_limit($lp->title, $limit = 20, $end = '...')}}</h5>
+                                    <div class="post_text_1 pr_30">
+                                        <p><span> By {{$post->author}}</span> / {{ $post->created_at->format('d M Y') }}</p>
+                                        <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}">
+                                            <h3>{{str_limit($post->title, $limit = 35, $end = '...')}}</h3>
                                         </a>
                                     </div>
                                 </div>
-								@endforeach
                             </div>
+                        @endforeach
+                    </div>
+                    {{$posts->links()}}
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar_widget">
+                        <div class="sidebar_tittle">
+                            <h3>{{__('menu.last_posts')}}</h3>
+                        </div>
+                        @foreach($lastPosts as $lp)
+                        <div class="single_catagory_post post_2 single_border_bottom">
+                            <div class="category_post_img" style="height: 200px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
+                            </div>
+                            <div class="post_text_1 pr_30">
+                                <p><span> By {{$lp->author}}</span> / {{ $lp->created_at->format('d M Y') }}</p>
+                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}">
+                                    <h3>{{str_limit($lp->title, $limit = 35, $end = '...')}}</h3>
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
+                        <div class="sidebar_tittle">
+                            <h3>{{__('menu.category')}}</h3>                            
+                        </div>
+                        <div class="single_catagory_item category">
+                            <ul class="list-unstyled">
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{__('menu.uzbekistan')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{__('menu.archeology')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{__('menu.tourism')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes'])}}">{{__('menu.notes')}}</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+    </section>
+    @include('components.footer')
+    <!-- feature_post end-->
 
-    <!-- ***** Footer Area Start ***** -->
-    @include('/components/footer')
-    <!-- ***** Footer Area End ***** -->
 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <!-- Plugins js -->
-    <script src="/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/js/active.js"></script>
-    <script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/js/main.js"></script>
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/blog/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/blog/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/blog/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="js/blog/custom.js"></script>
 </body>
 
 </html>

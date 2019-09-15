@@ -12,11 +12,6 @@ use App\City;
 class ToursimController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index() {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();

@@ -404,11 +404,6 @@ section {
     margin-top: 50px;
 }
 
-.main-content-block:nth-child(3) {
-    border-bottom: 3px solid #00529f;
-    background: #f9f9f9;
-}
-
 .main-content-block:nth-child(5) {
     background: #f9f9f9;
 }

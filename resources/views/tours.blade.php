@@ -65,7 +65,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$history->name}}</div>
                                         <div class="block-desc">{{str_limit($history ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -86,7 +86,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$shortTour->name}}</div>
                                         <div class="block-desc">{{str_limit($shortTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -107,7 +107,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$groupTour->name}}</div>
                                         <div class="block-desc">{{str_limit($groupTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -128,7 +128,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$indTour->name}}</div>
                                         <div class="block-desc">{{str_limit($indTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -149,7 +149,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$exTour->name}}</div>
                                         <div class="block-desc">{{str_limit($exTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -170,7 +170,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$classicTour->name}}</div>
                                         <div class="block-desc">{{str_limit($classicTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -191,7 +191,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$kombAsiaTour->name}}</div>
                                         <div class="block-desc">{{str_limit($kombAsiaTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -212,7 +212,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzKzTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzKzTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -233,7 +233,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzKgTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzKgTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -254,7 +254,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzTmTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzTmTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -275,7 +275,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzTjTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzTjTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -296,7 +296,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$excursionCityItem->name}}</div>
                                         <div class="block-desc">{{str_limit($excursionCityItem ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -317,7 +317,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$palTour->name}}</div>
                                         <div class="block-desc">{{str_limit($palTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -338,7 +338,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$palTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($economTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -359,7 +359,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$cyclingTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($cyclingTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -380,7 +380,7 @@
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$buisnesTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($buisnesTour ->desc, $limit = 120, $end = '...')}}</div>
-                                        <div class="show__more show__more-block" >More</div>
+                                        <div class="show__more show__more-block" >{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>

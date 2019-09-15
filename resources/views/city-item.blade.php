@@ -91,6 +91,7 @@
 <!-- AddToAny END --></div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
             <div class="col-md-12" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
+            <img src="/images/banner01.jpg" alt="">
         </div>
     </div>
 

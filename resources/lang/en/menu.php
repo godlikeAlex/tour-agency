@@ -74,4 +74,5 @@
         'tradicii' => 'Tradition',
         'moda' => 'Moda',
         'allnews' => 'All news',
+        'category' => 'Category',
     ];
