@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,7 @@
         <div class="row container_of_tours" >
                 @foreach($items as $item)
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                                <a class="link-block" href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug])}}">
+                                <a class="link-block" href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">

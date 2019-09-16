@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>DarEn BLOG || ARCHIVE</title>
+    <title>DarEn BLOG | ARCHIVE</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/blog/bootstrap.min.css">
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="post_text_1 pr_30">
                                         <p><span> By {{$post->author}}</span> / {{ $post->created_at->format('d M Y') }}</p>
-                                        <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug])}}">
+                                        <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug, 'language' => app()->getLocale()])}}">
                                             <h3>{{str_limit($post->title, $limit = 35, $end = '...')}}</h3>
                                         </a>
                                     </div>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="post_text_1 pr_30">
                                 <p><span> By {{$lp->author}}</span> / {{ $lp->created_at->format('d M Y') }}</p>
-                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}">
+                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug, 'language' => app()->getLocale()])}}">
                                     <h3>{{str_limit($lp->title, $limit = 35, $end = '...')}}</h3>
                                 </a>
                             </div>
@@ -88,10 +88,10 @@
                         </div>
                         <div class="single_catagory_item category">
                             <ul class="list-unstyled">
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{__('menu.uzbekistan')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{__('menu.archeology')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{__('menu.tourism')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes'])}}">{{__('menu.notes')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}">{{__('menu.uzbekistan')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}">{{__('menu.archeology')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}">{{__('menu.tourism')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}">{{__('menu.notes')}}</a></li>
                             </ul>
                         </div>
                     </div>

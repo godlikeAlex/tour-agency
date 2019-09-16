@@ -53,8 +53,7 @@ class UzbekistanController extends Controller
         return view('uzbekistan', compact('cities', 'geo', 'history', 'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
     }
 
-    public function category($category) {
-        $lang = app()->getLocale();
+    public function category($lang, $category) {
         $cities         = City::where('lang', $lang)->get();
         $items  = Uzbekistan::where([
             'category' => $category,
@@ -99,8 +98,7 @@ class UzbekistanController extends Controller
         return view('uzbekistan-category', compact('cities', 'items', 'geo', 'history', 'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
     }
 
-    public function show($category ,$uzb) {
-        $lang = app()->getLocale();
+    public function show($lang, $category ,$uzb) {
         $cities         = City::where('lang', $lang)->get();
         $item  = Uzbekistan::where('slug', $uzb)->firstOrFail();
         $geo  = Uzbekistan::where([

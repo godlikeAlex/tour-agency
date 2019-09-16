@@ -19,40 +19,40 @@ Auth::routes();
 Route::redirect('/', '/en');
 
 Route::group(['prefix' => '{language}'], function () {
-    Route::get('/', 'MainPage@index');
+    Route::get('/', 'MainPage@index')->name('index');
 
     Route::prefix('galery')->group(function () {
-        Route::get('/', 'GaleryController@home');
+        Route::get('/', 'GaleryController@home')->name('index.galery');
         Route::get('/{century}', 'GaleryController@show')->name('show.galery');
     });
     
     Route::prefix('tours')->group(function () {
-        Route::get('/', 'TourController@index');
+        Route::get('/', 'TourController@index')->name('index.tour');
         Route::get('/{tourname}/show', 'TourController@show')->name('tour.show');
         Route::get('/category/{category}', 'TourController@showCategory')->name('tour.category');
     });
     
     Route::prefix('blog')->group(function() {
-        Route::get('/', 'Blog@indexBlog');
+        Route::get('/', 'Blog@indexBlog')->name('index.blog');
         Route::get('/{category}', 'Blog@indexBlogCategory')->name('blog.category');
         Route::get('/{category}/{slug}', 'Blog@showPost')->name('blog.show');
     });
     
     Route::prefix('people')->group(function() {
-        Route::get('/', 'Blog@indexPeople');
+        Route::get('/', 'Blog@indexPeople')->name('index.people');
         Route::get('/{category}', 'Blog@indexPeopleCategory')->name('people.category');
         Route::get('/{category}/{slug}', 'Blog@showPeople')->name('people.show');
     });
     
     Route::prefix('city')->group(function() {
-        Route::get('/', 'CityController@index');
+        Route::get('/', 'CityController@index')->name('index.city');
         Route::get('/{city}', 'CityController@showCity')->name('city.show');
         Route::get('/{city}/{category}/{slug}', 'CityController@showItem')->name('city.item');
         Route::get('/{city}/{category}', 'CityController@showCategory')->name('city.category');
     });
     
     Route::prefix('uzbekistan')->group(function() {
-        Route::get('/', 'UzbekistanController@index');
+        Route::get('/', 'UzbekistanController@index')->name('index.uzbekistan');
         Route::get('/{category}', 'UzbekistanController@category')->name('uzb.category');
         Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
     });

@@ -151,7 +151,7 @@
                             </a>
                 </div>
                 </div>
-                <a style="margin:auto; margin-top: 100px; width:200px;" href="/uzbekistan" class="show__more">{{__('mainpage.more')}}</a>
+                <a style="margin:auto; margin-top: 100px; width:200px;" href="{{route('index.uzbekistan', app()->getLocale())}}" class="show__more">{{__('mainpage.more')}}</a>
             </div>
         </section>
 
@@ -215,7 +215,7 @@
                     </div>
                     @endforeach
                 </div>
-                <a style="margin:auto; margin-top: 100px; width:200px;" href="/city" class="show__more">{{__('mainpage.more')}}</a>
+                <a style="margin:auto; margin-top: 100px; width:200px;" href="{{route('index.city', app()->getLocale())}}" class="show__more">{{__('mainpage.more')}}</a>
             </div>
         </section>
         <section class="second-sec">
@@ -271,7 +271,7 @@
                         </a>
                     </div>
                 </div>
-                <a style="margin:auto; margin-top: 100px; width:200px;" href="/people" class="show__more">{{__('mainpage.more')}}</a>
+                <a style="margin:auto; margin-top: 100px; width:200px;" href="{{route('index.people', app()->getLocale())}}" class="show__more">{{__('mainpage.more')}}</a>
             </div>
         </section>
         <div class="main-tours-slider">
@@ -396,7 +396,7 @@
                     </div>
                     @endforeach
                 </div>
-                <a style="margin:auto; margin-top: 100px; width:200px;" class="show__more">{{__('mainpage.more')}}</a>
+                <a href="{{route('index.blog', app()->getLocale())}}" style="margin:auto; margin-top: 100px; width:200px;" class="show__more">{{__('mainpage.more')}}</a>
             </div>
         </section>
     <!-- Footer -->

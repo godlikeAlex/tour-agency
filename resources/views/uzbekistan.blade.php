@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
         <div style="margin-top: 50px;" class="section-name">{{ __('menu.uzbekistan') }}</div>
         <div class="row container_uzb">
             <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geo'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1460134846237-51c777df6111?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -47,7 +47,7 @@
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'history'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'history', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);">
@@ -62,7 +62,7 @@
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'peoples'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'peoples', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1558185730-e5b096912bbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -106,7 +106,7 @@
             <div id='iskustva' class="section-name">{{ __('menu.art') }}</div>
                 <div class="row container_uzb">
                     <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('uzb.category', ['category' => 'art'])}}">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'art', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img"
                                     style="background: url(https://images.unsplash.com/photo-1506780789966-15774276e069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80);">
@@ -120,7 +120,7 @@
                         </a>
                     </div>
                     <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('uzb.category', ['category' => 'fashion'])}}">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'fashion', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img"
                                     style="background: url(https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -134,7 +134,7 @@
                         </a>
                     </div>
                     <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('uzb.category', ['category' => 'painting'])}}">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'painting', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img"
                                     style="background: url(https://images.unsplash.com/photo-1476763752342-d5cf7e5eb6cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -155,7 +155,7 @@
                 <div class="section-name" style="margin-top: 50px;">{{ __('menu.culture') }}</div>
                     <div class="row container_uzb">
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                            <a class="link-block" href="{{route('uzb.category', ['category' => 'culture'])}}">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'culture', 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks big-padding">
                                     <div class="block-img"
                                         style="background: url(https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
@@ -169,7 +169,7 @@
                             </a>
                         </div>
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                            <a class="link-block" href="{{route('uzb.category', ['category' => 'kitchen'])}}">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'kitchen', 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks big-padding">
                                     <div class="block-img"
                                         style="background: url(https://images.unsplash.com/photo-1470256699805-a29e1b58598a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -183,7 +183,7 @@
                             </a>
                         </div>
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                            <a class="link-block" href="{{route('uzb.category', ['category' => 'tradicii'])}}">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'tradicii', 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks big-padding">
                                     <div class="block-img"
                                         style="background: url(https://images.unsplash.com/photo-1453412324657-958beaf0ef12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">

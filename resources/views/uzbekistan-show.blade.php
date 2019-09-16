@@ -50,10 +50,10 @@
 					{{__('menu.main')}} 
 				</a>
 
-				<a href="/uzbekistan" class="breadcrumb-item f1-s-3 cl9">
+				<a href="{{route('index.uzbekistan', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
                 {{__('menu.uzbekistan')}} 
 				</a>
-				<a href="{{route('uzb.category', ['category' => $item->category])}}" class="breadcrumb-item f1-s-3 cl9">
+				<a href="{{route('uzb.category', ['category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
                     @if($item->category === 'geo')
                         {{__('menu.geo')}}
                     @elseif($item->category === 'history')

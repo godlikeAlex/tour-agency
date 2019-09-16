@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
    <!-- Required meta tags -->
@@ -53,7 +53,7 @@
                   <div class="blog_details">
                      <h2>{{$post->title}}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li style="text-transform: uppercase"><a href="{{route('blog.category', ['category' => $post->category])}}"><i class="far fa-user"></i> {{$post-> author}} | {{$post->category}}</a></li>
+                        <li style="text-transform: uppercase"><a href="{{route('blog.category', ['category' => $post->category, 'language' => app()->getLocale() ])}}"><i class="far fa-user"></i> {{$post-> author}} | {{$post->category}}</a></li>
                      </ul>
                     <div style="padding-top: 25px; padding-bottom: 25px;"><img src="/storage/{{$post->image}}" alt=""></div>
                     <p>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="post_text_1 pr_30">
                                 <p><span> By {{$lp->author}}</span> / {{ $lp->created_at->format('d M Y') }}</p>
-                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug])}}">
+                                <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug, 'language' => app()->getLocale()])}}">
                                     <h3>{{str_limit($lp->title, $limit = 35, $end = '...')}}</h3>
                                 </a>
                             </div>
@@ -84,10 +84,10 @@
                         </div>
                         <div class="single_catagory_item category">
                             <ul class="list-unstyled">
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan'])}}">{{__('menu.uzbekistan')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology'])}}">{{__('menu.archeology')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism'])}}">{{__('menu.tourism')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes'])}}">{{__('menu.notes')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}">{{__('menu.uzbekistan')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}">{{__('menu.archeology')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}">{{__('menu.tourism')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}">{{__('menu.notes')}}</a></li>
                             </ul>
                         </div>
                     </div>

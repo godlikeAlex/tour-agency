@@ -35,7 +35,7 @@ class Blog extends Controller
         return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
     }
 
-    public function showPost($category, $slug) {
+    public function showPost($lang, $category, $slug) {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
         $post = Posts::where('slug', $slug)->firstOrFail();
@@ -72,7 +72,7 @@ class Blog extends Controller
     }
 
 
-    public function showPeople($category, $slug) {
+    public function showPeople($lang, $category, $slug) {
         $people = People::where('slug', $slug)->firstOrFail();
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();

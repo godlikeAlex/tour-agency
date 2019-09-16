@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
     <!-- Required meta tags -->
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="post_text_1 pr_30">
                                         <p>{{ $people->created_at->format('d M Y') }}</p>
-                                        <a href="{{route('people.show', ['category' => $people->category, 'slug' => $people->slug])}}">
+                                        <a href="{{route('people.show', ['category' => $people->category, 'slug' => $people->slug, 'language' => app()->getLocale()])}}">
                                             <h3>{{str_limit($people->name, $limit = 35, $end = '...')}}</h3>
                                         </a>
                                     </div>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="post_text_1 pr_30">
                                 <p>{{ $lp->created_at->format('d M Y') }}</p>
-                                <a href="{{route('people.show', ['category' => $lp->category, 'slug' => $lp->slug])}}">
+                                <a href="{{route('people.show', ['category' => $lp->category, 'slug' => $lp->slug, 'language' => app()->getLocale()])}}">
                                     <h3>{{str_limit($lp->name, $limit = 35, $end = '...')}}</h3>
                                 </a>
                             </div>
@@ -88,10 +88,10 @@
                         </div>
                         <div class="single_catagory_item category">
                             <ul class="list-unstyled">
-                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'drevniy-mir'])}}">{{__('menu.drevniy_mir')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'srednie-veka'])}}">{{__('menu.srednie_veka')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'novoe-vremya'])}}">{{__('menu.novoe_vremya')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'sovremenost'])}}">{{__('menu.sovremenost')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}">{{__('menu.drevniy_mir')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'srednie-veka', 'language' => app()->getLocale()])}}">{{__('menu.srednie_veka')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'novoe-vremya', 'language' => app()->getLocale()])}}">{{__('menu.novoe_vremya')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'sovremenost', 'language' => app()->getLocale()])}}">{{__('menu.sovremenost')}}</a></li>
                             </ul>
                         </div>
                     </div>
