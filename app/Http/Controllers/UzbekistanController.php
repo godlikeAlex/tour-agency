@@ -95,12 +95,19 @@ class UzbekistanController extends Controller
             'category' => 'art',
             'lang' => $lang
         ])->take(5)->get();
-        return view('uzbekistan-category', compact('cities', 'items', 'geo', 'history', 'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
+        return view('uzbekistan-category', compact('cities', 'category', 'items', 'geo', 'history', 'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
     }
 
     public function show($lang, $category ,$uzb) {
         $cities         = City::where('lang', $lang)->get();
         $item  = Uzbekistan::where('slug', $uzb)->firstOrFail();
+        $count = Uzbekistan::where('lang', $lang)->get()->count() - 1;
+        if($count >= 4) {
+            $randomFromCategory = Uzbekistan::where('slug', '!=', $uzb)->where('lang', $lang)->get()->random(3);
+        } else {
+            $randomFromCategory = Uzbekistan::where('slug', '!=', $uzb)->where('lang', $lang)->get()->random($count);
+        }
+  
         $geo  = Uzbekistan::where([
             'category' => 'geo',
             'lang' => $lang
@@ -137,6 +144,6 @@ class UzbekistanController extends Controller
             'category' => 'art',
             'lang' => $lang
         ])->take(5)->get();
-        return view('uzbekistan-show', compact('cities', 'item', 'geo', 'history',  'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
+        return view('uzbekistan-show', compact('randomFromCategory', 'category', 'cities', 'item', 'geo', 'history',  'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
     }
 }

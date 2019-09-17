@@ -13,11 +13,12 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
     <!--Footer-->
     
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="fonts/ionicons.css" rel="stylesheet">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
         
     <title>Document</title>
@@ -27,6 +28,26 @@
     <div class="container">
         <div class="col-md-12" style="padding:0; padding-bottom: 50px;">
             <div class="row">
+            <div style="margin-top: 50px;" class="col-md-12 section-name">
+                    @if($category === 'what-to-see')
+                        {{__('menu.where-to-see')}}
+                    @elseif($category === 'history')
+                        {{__('menu.history')}}
+                    @elseif($category === 'things-to-do')
+                        {{__('menu.things_to_do')}}
+                    @elseif($category === 'where-to-buy')
+                        {{__('menu.where_to_buy')}}
+                    @elseif($category === 'where-to-eat')
+                        {{__('menu.where_to_eat')}}
+                    @elseif($category === 'where-to-stay')
+                        {{__('menu.where_to_stay')}}
+                    @elseif($category === 'how-to-get')
+                        {{__('menu.how_to_get')}}
+                    @elseif($category === 'useful-information')
+                        {{__('menu.useful_information')}}
+                @endif
+            </div>
+                    
                 @if($items[0]->category_price)
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
                     @foreach($items as $item)
@@ -109,7 +130,7 @@
                 @else
                     @foreach($items as $item)
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                                <a class="link-block" href="{{Request::url()}}/{{$item->slug}}">
+                                <a class="link-block" href="{{route('city.item', ['city'=> $city, 'category' => $category, 'slug' => $item->slug, 'language' => app()->getLocale()] )}}">
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">

@@ -52,7 +52,7 @@
                         @foreach($peoples as $people)
                             <div class="col-lg-6">
                                 <div class="single_catagory_post post_2">
-                                    <div class="category_post_img" style="height: 200px; background: url(/storage/{{$people -> image}}); background-size: cover; background-position: center; ">
+                                    <div class="category_post_img" style="height: 325px; background: url(/storage/{{$people -> image}}); background-size: cover; background-position: center; ">
                                     </div>
                                     <div class="post_text_1 pr_30">
                                         <p>{{ $people->created_at->format('d M Y') }}</p>
@@ -73,7 +73,7 @@
                         </div>
                         @foreach($lastPeople as $lp)
                         <div class="single_catagory_post post_2 single_border_bottom">
-                            <div class="category_post_img" style="height: 200px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
+                            <div class="category_post_img" style="height: 175px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
                             </div>
                             <div class="post_text_1 pr_30">
                                 <p>{{ $lp->created_at->format('d M Y') }}</p>
@@ -97,6 +97,9 @@
                     </div>
                 </div>
             </div>
+            <p>
+                        <img src="/images/ads.png" alt="">
+    </p>
         </div>
     </section>
     @include('components.footer')

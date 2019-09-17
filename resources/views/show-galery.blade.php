@@ -47,7 +47,7 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css"> 
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+<link href="/fonts/ionicons.css" rel="stylesheet">
   </head>
   <body>
   

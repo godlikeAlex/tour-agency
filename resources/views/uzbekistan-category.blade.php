@@ -29,30 +29,30 @@
     @include('/components/header', ['type' => 'uzbekistan'])
     <div class="container" style="margin-bottom: 50px;">
     <div style="margin-top: 50px;" class="section-name">
-                    @if(request()->segment(2) === 'geo')
+                    @if($category === 'geo')
                         {{__('menu.geo')}}
-                    @elseif(request()->segment(2) === 'history')
+                    @elseif($category === 'history')
                         {{__('menu.history')}}
-                    @elseif(request()->segment(2) === 'peoples')
+                    @elseif($category === 'peoples')
                         {{__('menu.peoples')}}
-                    @elseif(request()->segment(2) === 'art')
+                    @elseif($category === 'art')
                         {{__('menu.art')}}
-                    @elseif(request()->segment(2) === 'fashion')
+                    @elseif($category === 'fashion')
                         {{__('menu.moda')}}
-                    @elseif(request()->segment(2) === 'painting')
+                    @elseif($category === 'painting')
                         {{__('menu.painting')}}
-                    @elseif(request()->segment(2) === 'culture')
+                    @elseif($category === 'culture')
                         {{__('menu.culture')}}
-                    @elseif(request()->segment(2) === 'kitchen')
+                    @elseif($category === 'kitchen')
                         {{__('menu.kitchen')}}
-                    @elseif(request()->segment(2) === 'tradition')
+                    @elseif($category === 'tradition')
                         {{__('menu.tradition')}}
                     @endif
     </div>
         <div class="row container_of_tours" >
                 @foreach($items as $item)
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                                <a class="link-block" href="{{route('uzb.show', ['category'=>request()->segment(2) ,'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
+                                <a class="link-block" href="{{route('uzb.show', ['category'=>$category ,'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                        </div>
                 @endforeach
                 
         </div>

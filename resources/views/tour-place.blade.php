@@ -20,7 +20,15 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-
+   <!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
@@ -85,7 +93,13 @@
     <link rel="stylesheet" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="/fonts/ionicons.css" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/card.css">    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/slick/custom-theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 </head>
 
 <body style="padding:0;">
@@ -96,56 +110,19 @@
     <div class="colorlib-wrap" style="background:#f1f1f1; padding-top:0; padding: 0;">
         <div class="container">
             <div class="row">
-                <div style="    padding-bottom: 20px;padding-top: 20px;" class="f2-s-1 p-r-30 m-tb-6">
-                    <a href="/" class="breadcrumb-item f1-s-3 cl9">
-                        Главная
-                    </a>
+                <div style="background: transparent; padding-bottom: 20px; padding-top: 20px;" class="col-md-12 headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+			        <div class="f2-s-1 p-r-30 m-tb-6">
+                            <a href="/" class="breadcrumb-item f1-s-3 cl9">
+                                {{__('menu.main')}} 
+                            </a>
 
-                    <a href="/tours" class="breadcrumb-item f1-s-3 cl9">
-                        Туры
-                    </a>
-                    <a href="{{route('tour.category', ['category' => $tour->category, 'language' => app() -> getLocale()])}}"
-                        class="breadcrumb-item f1-s-3 cl9">
-                        @if($tour->category === 'history_tours')
-                        Бизнес туры
-                        @elseif($tour->category === 'short_tours')
-                        Короткие туры
-                        @elseif($tour->category === 'group_tours')
-                        Групповые туры
-                        @elseif($tour->category === 'individual_tours')
-                        Индивидуальные туры
-                        @elseif($tour->category === 'exclusive_tours')
-                        Эксклюзивные туры
-                        @elseif($tour->category === 'classic_tours')
-                        Классические туры
-                        @elseif($tour->category === 'eco_tours')
-                        Эко туры
-                        @elseif($tour->category === 'kombo_asia_tours')
-                        Комбинированные туры по Центральной Азии
-                        @elseif($tour->category === 'kombo_uz_kz_tours')
-                        Комбинированные туры по Узбекистану и Казахстану
-                        @elseif($tour->category === 'kombo_uz_kg_tours')
-                        Комбинированные туры по Узбекистану и Кыргызстану
-                        @elseif($tour->category === 'kombo_uz_tm_tours')
-                        Комбинированные туры по Узбекистану и Туркменистану
-                        @elseif($tour->category === 'kombo_uz_tj_tours')
-                        Комбинированные туры по Узбекистану и Таджикистану
-                        @elseif($tour->category === 'excursion_сity')
-                        Экскурсии по городам
-                        @elseif($tour->category === 'pilgrim_tours')
-                        Паломнические туры
-                        @elseif($tour->category === 'economy_tours')
-                        Эконом туры
-                        @elseif($tour->category === 'cycling_tours')
-                        Велотуры туры
-                        @elseif($tour->category === 'buisnes_tours')
-                        Бизнес туры
-
-                        @endif
-                    </a>
-                    <span class="breadcrumb-item f1-s-3 cl9">
-                        {{$tour -> name}}
-                    </span>
+                            <a href="{{route('index.uzbekistan', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
+                                {{__('menu.tours')}} 
+                            </a>
+                            <span class="breadcrumb-item f1-s-3 cl9">
+                                {{$tour -> name}}
+                            </span>
+                        </div>
                 </div>
                 <div class="col-md-12"
                     style="margin-top:0;font-size:30px; font-weight:700; display:flex; justify-content: space-between;">
@@ -493,8 +470,23 @@
                     </div>
 
                 </div>
+                <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
+            @foreach($randomFromCategory as $rec)
+                    <div class="col-md-4" style="    padding-bottom: 50px;">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $rec->slug, 'language' => app()->getLocale()])}}">
+                                <div class="big-blocks big-padding">
+                                    <div class="block-img" style="background: url(/storage/{{$rec->image}});" ></div>
+                                    <div class="block-content">
+                                        <div class="block-title">{{str_limit($rec ->name, $limit = 30, $end = '...')}}</div>
+                                        <div class="block-desc">{{str_limit($rec ->desc, $limit = 130, $end = '...')}}</div>
+                                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+            @endforeach
             </div>
-
+            
 
         </div>
         @include('/components/footer')

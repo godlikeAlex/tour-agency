@@ -7,6 +7,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <title>DarEn BLOG || BLOG</title>
    <link rel="icon" href="img/favicon.png">
+   <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="/css/blog/bootstrap.min.css">
     <!-- animate CSS -->
@@ -42,8 +51,33 @@
    <!-- Header part end-->
 
    <!--================Blog Area =================-->
-   <section class="blog_area single-post-area all_post section_padding">
+   <section class="blog_area single-post-area all_post section_padding" style="padding-top: 25px !important;">
       <div class="container">
+      <div style="background: transparent; padding-bottom: 20px; padding-top: 20px; padding-left: 0;" class="col-md-12 headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+			        <div class="f2-s-1 p-r-30 m-tb-6">
+                            <a href="/" class="breadcrumb-item f1-s-3 cl9">
+                                {{__('menu.main')}} 
+                            </a>
+
+                            <a href="{{route('index.blog', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
+                                {{__('menu.news')}} 
+                            </a>
+                            <a href="{{route('people.category', ['language' => app()->getLocale(), 'category' => $people->category])}}" class="breadcrumb-item f1-s-3 cl9">
+                                @if($people->category === 'drevniy-mir')
+                                    {{__('menu.drevniy_mir')}}
+                                @elseif($people->category === 'srednie-veka')
+                                    {{__('menu.srednie-veka')}}
+                                @elseif($people->category === 'novoe-vremya')
+                                    {{__('menu.novoe_vremya')}}
+                                @elseif($people->category === 'sovremenost')
+                                    {{__('menu.sovremenost')}}
+                                @endif
+                            </a>
+                            <span class="breadcrumb-item f1-s-3 cl9">
+                                {{$people -> name}}
+                            </span>
+                        </div>
+            </div>
          <div class="row">
             <div class="col-lg-8 posts-list">
                <div class="single-post">
@@ -53,11 +87,24 @@
                   <div class="blog_details">
                      <h2>{{$people->name}}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li style="text-transform: uppercase"><a href="{{route('people.category', ['category' => $people->category, 'language' => app()->getLocale()])}}">{{$people->category}}</a></li>
+                        <li style="text-transform: uppercase"><a href="{{route('people.category', ['category' => $people->category, 'language' => app()->getLocale()])}}">
+                        @if($people->category === 'drevniy-mir')
+                                    {{__('menu.drevniy_mir')}}
+                                @elseif($people->category === 'srednie-veka')
+                                    {{__('menu.srednie-veka')}}
+                                @elseif($people->category === 'novoe-vremya')
+                                    {{__('menu.novoe_vremya')}}
+                                @elseif($people->category === 'sovremenost')
+                                    {{__('menu.sovremenost')}}
+                            @endif
+                        </a></li>
                      </ul>
                     <div style="padding-top: 25px; padding-bottom: 25px;"><img src="/storage/{{$people->image}}" alt=""></div>
                     <p>
                         {!! $people->body !!}
+                    </p>
+                    <p>
+                        <img src="/images/ads.png" alt="">
                     </p>
                   </div>
                </div>
@@ -69,7 +116,7 @@
                         </div>
                         @foreach($lastPeople as $lp)
                         <div class="single_catagory_post post_2 single_border_bottom">
-                            <div class="category_post_img" style="height: 200px;  background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center;">
+                            <div class="category_post_img" style="height: 175px;  background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center;">
                             </div>
                             <div class="post_text_1 pr_30">
                                 <p>{{ $lp->created_at->format('d M Y') }}</p>

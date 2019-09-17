@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/css/lightgallery.min.css">    
     
     <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
-
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
     
     <link rel="stylesheet" href="/css/swiper.css">
@@ -46,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css"> 
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+<link href="/fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
     
   </head>

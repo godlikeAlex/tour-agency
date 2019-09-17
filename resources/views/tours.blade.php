@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="fonts/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
     <style>
         .main-content-block {
             border: none;

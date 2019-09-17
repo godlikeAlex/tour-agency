@@ -37,7 +37,7 @@
 <!--Footer-->
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+<link href="/fonts/ionicons.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <title>Document</title>
 </head>
@@ -51,7 +51,7 @@
 				</a>
 
 				<a href="{{route('index.uzbekistan', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
-                {{__('menu.uzbekistan')}} 
+                    {{__('menu.uzbekistan')}} 
 				</a>
 				<a href="{{route('uzb.category', ['category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
                     @if($item->category === 'geo')
@@ -93,6 +93,23 @@
 <!-- AddToAny END --></div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
             <div class="col-md-12" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
+            <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
+            @foreach($randomFromCategory as $rec)
+                    <div class="col-md-4" style="    padding-bottom: 50px;">
+                            <a class="link-block" href="{{route('uzb.show', ['category'=>$category ,'uzb' => $rec->slug, 'language' => app()->getLocale()])}}">
+                                <div class="big-blocks big-padding">
+                                    <div class="block-img" style="background: url(/storage/{{$rec->image}});" ></div>
+                                    <div class="block-content">
+                                        <div class="block-title">{{str_limit($rec ->name, $limit = 30, $end = '...')}}</div>
+                                        <div class="block-desc">{{str_limit($rec ->desc, $limit = 130, $end = '...')}}</div>
+                                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+            @endforeach
+            <p style="text-align:center; width: 100%;">
+                        <img src="/images/ads.png" alt="">
         </div>
     </div>
 

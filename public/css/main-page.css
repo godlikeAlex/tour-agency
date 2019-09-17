@@ -12,7 +12,7 @@ a:hover {
 .main-tous-slide {
     height: 500px;
     color: white;
-    cursor: ew-resize;
+    cursor: pointer;
     position: relative;
     padding-left: 60px;
     background-size: 120% !important;

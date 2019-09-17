@@ -141,8 +141,8 @@
         <div class="container">
             <ul class="main-menu col-md-12">
                 <li><img style="width:25px" class="open-left-bar" src="/images/menu.png" alt=""></li>
-                <li><a href="/"><img style="width:150px" src="/images/head.svg" alt=""></a></li>
-                <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="/">{{ __('menu.main') }}</a></li>
+                <li><a href="{{route('index', app()->getLocale())}}"><img style="width:150px" src="/images/head.svg" alt=""></a></li>
+                <li class="{{ (request()->is('/')) ? 'active' : '' }} dektop-item"><a href="{{route('index', app()->getLocale())}}">{{ __('menu.main') }}</a></li>
                 <li class="{{ (request()->is('uzbekistan*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="uzb" href="{{route('index.uzbekistan', app()->getLocale())}}">{{ __('menu.uzbekistan') }}</a>
                     <div data-menu="uzb" class="sub-menu-header">

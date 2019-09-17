@@ -1,5 +1,6 @@
 <?php
     return [
+        'blogmore' => 'Interesting',
         'main' => 'Home',
         'uzbekistan' => 'Uzbekistan',
         'cities' => 'Cities',

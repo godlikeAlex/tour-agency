@@ -1,5 +1,6 @@
 <?php
     return [
+        'blogmore' => 'Интересное',
         'main' => 'Главная',
         'uzbekistan' => 'Узбекистан',
         'cities' => 'Города',

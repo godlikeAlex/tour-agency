@@ -32,6 +32,12 @@ class CityController extends Controller
     public function showItem($lang, $city, $category, $slug) {
         $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
+        $count = CityItem::where('lang', $lang)->get()->count() - 1;
+        if($count >= 4) {
+            $randomFromCategory = CityItem::where('slug', '!=', $slug)->where('lang', $lang)->get()->random(3);
+        } else {
+            $randomFromCategory = CityItem::where('slug', '!=', $slug)->where('lang', $lang)->get()->random($count);
+        }
         $cityId = City::where('name',$city)->firstOrFail()->id;
         $item = CityItem::where([
             'city_id' => $cityId,
@@ -49,7 +55,7 @@ class CityController extends Controller
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
 
-        return view('city-item', compact('item', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
+        return view('city-item', compact('item', 'randomFromCategory', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }
 
     public function showCategory($lang, $city, $category) {
@@ -62,7 +68,7 @@ class CityController extends Controller
             'category' => $category,
             'lang' => $lang,
         ])->paginate(10);
-        return view('city-category', compact('cities', 'items', 'content'));   
+        return view('city-category', compact('cities', 'items', 'content', 'category', 'city'));   
     }
 
     private function getRecordsByCategory($cityId, $category) {
