@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,7 @@
             <div class="col-md-12">{!!$content->about!!}</div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);">
@@ -72,14 +72,14 @@
                             <div class="block-title">{{ __('menu.history') }}</div>
                             <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни
                                 {{$content->name}}</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1559682289-d9cb5858235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);">
@@ -88,14 +88,14 @@
                             <div class="block-title">{{ __('mainpage.where_to_see') }}</div>
                             <div class="block-desc">Здесь вы можете найти для себя лучшие и красивые места в
                                 {{$content->name}}</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-do', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1563053457-d9d7ae11546d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -104,14 +104,14 @@
                             <div class="block-title">{{ __('mainpage.things_to_do') }}</div>
                             <div class="block-desc">Здесь вы можете найти для себя лучшие развлечения в
                                 {{$content->name}}</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-buy', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -119,14 +119,14 @@
                         <div class="block-content">
                             <div class="block-title">{{ __('mainpage.where_to_buy') }}</div>
                             <div class="block-desc">В этом разделе находятся все рынки, ТЦ и маркеты</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-eat', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -135,14 +135,14 @@
                             <div class="block-title">{{ __('mainpage.where_to_eat') }}</div>
                             <div class="block-desc">Отсортированные по цене заведения, где можно хорошо покушать и
                                 провести время</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4" style="    padding-bottom: 10px;">
                 <a class="link-block"
-                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay'])}}">
+                    href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'where-to-stay', 'language' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img"
                             style="background: url(https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -151,7 +151,7 @@
                             <div class="block-title">{{ __('mainpage.where_to_stay') }}</div>
                             <div class="block-desc">Отсортированные по цене заведения, где можно хорошо провести время
                             </div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                         </div>
                     </div>
                 </a>
@@ -174,14 +174,14 @@
                             <div class="block-content" style="margin-top:25px;">
                                 <div class="block-title">{{$history->name}}</div>
                                 <div class="block-desc">{{str_limit($history ->desc, $limit = 120, $end = '...')}}</div>
-                                <div class="show__more show__more-block">More</div>
+                                <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 @endforeach
             </div>
-            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history']) }}"
+            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'history', 'language' => app()->getLocale()]) }}"
                 style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
     </section>
@@ -200,14 +200,14 @@
                             <div class="block-content" style="margin-top:25px;">
                                 <div class="block-title">{{$whatSee->name}}</div>
                                 <div class="block-desc">{{str_limit($whatSee ->desc, $limit = 120, $end = '...')}}</div>
-                                <div class="show__more show__more-block">More</div>
+                                <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 @endforeach
             </div>
-            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see']) }}"
+            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-see', 'language' => app()->getLocale()]) }}"
                 style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
 
         </div>
@@ -227,14 +227,14 @@
                             <div class="block-content" style="margin-top:25px;">
                                 <div class="block-title">{{$toDo->name}}</div>
                                 <div class="block-desc">{{str_limit($toDo ->desc, $limit = 120, $end = '...')}}</div>
-                                <div class="show__more show__more-block">More</div>
+                                <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 @endforeach
             </div>
-            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do']) }}"style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+            <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'things-to-do', 'language' => app()->getLocale()]) }}"style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
     </section>
     <section class="second-sec">
@@ -251,14 +251,14 @@
                     <div class="block-content" style="margin-top:25px;">
                         <div class="block-title">{{$buy->name}}</div>
                         <div class="block-desc">{{str_limit($buy ->desc, $limit = 120, $end = '...')}}</div>
-                        <div class="show__more show__more-block">More</div>
+                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                     </div>
                 </div>
             </a>
         </div>
         @endforeach
     </div>
-    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-buy']) }}"
+    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-buy', 'language' => app()->getLocale()]) }}"
         style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
     </div>
     </section>
@@ -277,14 +277,14 @@
                             <div class="block-content" style="margin-top:25px;">
                                 <div class="block-title">{{$cafe->name}}</div>
                                 <div class="block-desc">{{str_limit($cafe ->desc, $limit = 120, $end = '...')}}</div>
-                                <div class="show__more show__more-block">More</div>
+                                <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 @endforeach
             </div>
-        <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-eat']) }}"
+        <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-eat', 'language' => app()->getLocale()]) }}"
             style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
     </section>
@@ -303,14 +303,14 @@
                     <div class="block-content" style="margin-top:25px;">
                         <div class="block-title">{{$hotel->name}}</div>
                         <div class="block-desc">{{str_limit($hotel ->desc, $limit = 120, $end = '...')}}</div>
-                        <div class="show__more show__more-block">More</div>
+                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                     </div>
                 </div>
             </a>
         </div>
         @endforeach
     </div>
-    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-stay']) }}"
+    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'what-to-stay', 'language' => app()->getLocale()]) }}"
         style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
     </section>
@@ -328,14 +328,14 @@
                     <div class="block-content" style="margin-top:25px;">
                         <div class="block-title">{{$get->name}}</div>
                         <div class="block-desc">{{str_limit($get ->desc, $limit = 120, $end = '...')}}</div>
-                        <div class="show__more show__more-block">More</div>
+                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                     </div>
                 </div>
             </a>
         </div>
         @endforeach
     </div>
-    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get']) }}"
+    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'how-to-get', 'language' => app()->getLocale()]) }}"
         style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
     </div>
     </section>
@@ -354,14 +354,14 @@
                     <div class="block-content" style="margin-top:25px;">
                         <div class="block-title">{{$info->name}}</div>
                         <div class="block-desc">{{str_limit($info ->desc, $limit = 120, $end = '...')}}</div>
-                        <div class="show__more show__more-block">More</div>
+                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                     </div>
                 </div>
             </a>
         </div>
         @endforeach
     </div>
-    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information']) }}"
+    <a href="{{ route('city.category', ['city'=> Illuminate\Support\Str::lower($content->name),'category'=>'useful-information', 'language' => app()->getLocale()]) }}"
         style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
     </div>
         </div>

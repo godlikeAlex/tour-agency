@@ -41,15 +41,13 @@ class TourController extends Controller
         ));
     }
 
-    public function show($tourname) {
-        $lang = app()->getLocale();
+    public function show($lang, $tourname) {
         $cities         = City::where('lang', $lang)->get();
         $tour = Tour::where('slug', $tourname)->firstOrFail();
         return view('tour-place', compact('tour', 'cities'));
     }
 
-    public function showCategory($category) {
-        $lang = app()->getLocale();
+    public function showCategory($lang, $category) {
         $cities         = City::where('lang', $lang)->get();
         $tours = Tour::where(['lang' => $lang, 'category' => $category])->paginate(6);
         return view('tour-category', compact('tours', 'cities'));

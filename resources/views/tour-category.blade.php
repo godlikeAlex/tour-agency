@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
         <div class="row" style="margin-bottom: 50px;">
         @foreach($tours as $tour)
             <div class="col-md-4" style="    padding-bottom: 10px;">
-                    <a class="link-block" href="{{route('tour.show', ['tourname' => $tour->slug])}}">
+                    <a class="link-block" href="{{route('tour.show', ['tourname' => $tour->slug, 'language' => app()->getLocale() ])}}">
                         <div class="big-blocks big-padding">
                             <div class="block-img" style="background: url(storage/{{$tour->image}});" ></div>
                             <div class="block-content">

@@ -327,14 +327,14 @@
                         <li class="dropdown" data-menu-show="{{$city->name}}">
                             <a href="" data-menu-show="{{$city->name}}" class="sub-menu-item {{ (request()->segment(2) == Illuminate\Support\Str::lower($city->name)) ? 'sub-menu-active' : ''}}">{{$city->name}}</a>
                             <div  data-menu="{{$city->name}}" class="sub-menu-header">
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">{{ __('menu.history') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat'])}}">{{ __('mainpage.where_to_eat') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-stay'])}}">{{ __('mainpage.where_to_stay') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-see'])}}">{{ __('mainpage.where_to_see') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">{{ __('mainpage.things_to_do') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-buy'])}}">{{ __('mainpage.where_to_buy') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'how-to-get'])}}">{{ __('mainpage.how_to_get') }}</a>
-                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'useful-information'])}}">{{ __('mainpage.useful_information') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history', 'language' => app()->getLocale()])}}">{{ __('menu.history') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_eat') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-stay', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_stay') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-see', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_see') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do', 'language' => app()->getLocale()])}}">{{ __('mainpage.things_to_do') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-buy', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_buy') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'how-to-get', 'language' => app()->getLocale()])}}">{{ __('mainpage.how_to_get') }}</a>
+                                <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'useful-information', 'language' => app()->getLocale()])}}">{{ __('mainpage.useful_information') }}</a>
                             </div>   
                         </li>
                     @endforeach
@@ -383,19 +383,19 @@
         <div class="sub-menu-main"> 
             <div class="container"> 
                 <ul class="sub-menu-nav col-md-12" style="flex-wrap: wrap; justify-content:center;">
-                    <li> <a href="{{route('tour.category', ['category' => ''])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>  </li>
-                    <li><a href="{{route('tour.category', ['category' => 'history-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'short-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'group-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'individual-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'classic-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'excursion-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'economy-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'eco-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'cycling-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'buisnes-tours'])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a></li>
+                    <li> <a href="{{route('tour.category', ['category' => '', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>  </li>
+                    <li><a href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'individual-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'classic-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'excursion-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'pilgrim-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'economy-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'eco-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a></li>
+                    <li><a href="{{route('tour.category', ['category' => 'buisnes-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a></li>
                 </ul>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
         <div style="margin-top: 50px;" class="section-name">{{ $city->name }}</div>
         <div class="row container_uzb" >
                 <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history'])}}">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=800);" ></div>
                                 <div class="block-content">
@@ -45,7 +45,7 @@
                         </a>
                 </div>
                 <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do'])}}">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1563053457-d9d7ae11546d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
                                 <div class="block-content">
@@ -57,7 +57,7 @@
                         </a>
                 </div>
                 <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-do'])}}">
+                        <a class="link-block" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-do', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1559682289-d9cb5858235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);" ></div>
                                 <div class="block-content">
@@ -68,7 +68,7 @@
                             </div>
                         </a>
                 </div>
-                <a href="/city/{{Illuminate\Support\Str::lower($city->name)}}" style="margin:auto; margin-top: 50px; width:180px; margin-bottom: 50px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('city.show', ['city' => Illuminate\Support\Str::lower($city->name), 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px; margin-bottom: 50px;" class="show__more">{{ __('mainpage.more') }}</a>
         </div>
         @endforeach
     </div>

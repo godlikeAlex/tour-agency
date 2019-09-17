@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="UTF-8">
@@ -59,7 +59,7 @@
                 <div class="row content-block_main">
                     @foreach($historyTours as $history)
                         <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $history->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $history->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$history->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -72,7 +72,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'history-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.short_tours') }}</div></div>
@@ -80,7 +80,7 @@
                 <div class="row content-block_main">
                     @foreach($shortTours as $shortTour)
                         <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $shortTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $shortTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$shortTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -93,7 +93,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'short-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.group_tours') }}</div></div>
@@ -101,7 +101,7 @@
                 <div class="row content-block_main">
                     @foreach($groupTours as $groupTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $groupTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $groupTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$groupTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -114,7 +114,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'group-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.individual_tours') }}</div></div>
@@ -122,7 +122,7 @@
                 <div class="row content-block_main">
                     @foreach($individualTours as $indTour)
                         <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $indTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $indTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$indTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -135,7 +135,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'individual-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'individual-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.exclusive_tours') }}</div></div>
@@ -143,7 +143,7 @@
                 <div class="row content-block_main">
                     @foreach($exclusiveTours as $exTour)
                         <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $exTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $exTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$exTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -156,7 +156,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'exclusive-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.classic_tours') }}</div></div>
@@ -164,7 +164,7 @@
                 <div class="row content-block_main">
                     @foreach($classicTours as $classicTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $classicTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $classicTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$classicTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -177,7 +177,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'classic-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'classic-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_asia_tours') }}</div></div>
@@ -185,7 +185,7 @@
                 <div class="row content-block_main">
                     @foreach($komboAsiaTours as $kombAsiaTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $kombAsiaTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $kombAsiaTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$kombAsiaTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -198,7 +198,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'kombo-asia-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'kombo-asia-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_uz_kz_tours') }}</div></div>
@@ -206,7 +206,7 @@
                 <div class="row content-block_main">
                     @foreach($komboUzKzTours as $komboUzKzTour)
                         <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKzTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKzTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$komboUzKzTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -219,7 +219,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'kombo-uz-kz-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'kombo-uz-kz-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_uz_kg_tours') }}</div></div>
@@ -227,7 +227,7 @@
                 <div class="row content-block_main">
                     @foreach($komboUzKgTours as $komboUzKgTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKgTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKgTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$komboUzKgTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -240,7 +240,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'kombo-uz-kg-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'kombo-uz-kg-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_uz_tk_tours') }}</div></div>
@@ -248,7 +248,7 @@
                 <div class="row content-block_main">
                     @foreach($komboUzTmTours as $komboUzTmTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTmTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTmTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$komboUzTmTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -261,7 +261,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'kombo-uz-tm-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'kombo-uz-tm-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block ">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_uz_tj_tours') }}</div></div>
@@ -269,7 +269,7 @@
                 <div class="row content-block_main">
                     @foreach($komboUzTjTours as $komboUzTjTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTjTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTjTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$komboUzTjTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -282,7 +282,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'kombo-uz-tj-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'kombo-uz-tj-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.excursion') }}</div></div>
@@ -290,7 +290,7 @@
                 <div class="row content-block_main">
                     @foreach($excursionCity as $excursionCityItem)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $excursionCityItem->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $excursionCityItem->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$excursionCityItem->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -303,7 +303,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'excursion-сity'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'excursion-сity', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block ">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.palomn_tours') }}</div></div>
@@ -311,7 +311,7 @@
                 <div class="row content-block_main">
                     @foreach($pilgrimTours as $palTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $palTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $palTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$palTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -324,7 +324,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'pilgrim-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'pilgrim-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block ">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.econom_tours') }}</div></div>
@@ -332,7 +332,7 @@
                 <div class="row content-block_main">
                     @foreach($economTours as $economTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $economTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $economTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$paleconomTourTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -345,7 +345,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'conom-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>>
+                <a href="{{route('tour.category', ['category' => 'conom-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.velo_tours') }}</div></div>
@@ -353,7 +353,7 @@
                 <div class="row content-block_main">
                     @foreach($cyclingTours as $cyclingTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $cyclingTour->slug])}}">
+                            <a class="link-block" href="{{route('tour.show', ['tourname' => $cyclingTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
                                     <div class="block-mini-img" style="background: url(/storage/{{$cyclingTour->image}});" ></div>
                                     <div class="block-content" style="margin-top:25px;">
@@ -366,7 +366,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'cycling-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
+                <a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.buisnes_tours') }}</div></div>
@@ -387,7 +387,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'cycling-tours'])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>  
+                <a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>  
             </div>
         </div>
     </div>

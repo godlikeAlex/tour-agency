@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
 				<a href="/uzbekistan" class="breadcrumb-item f1-s-3 cl9">
                     {{$city}} 
 				</a>
-				<a href="{{route('city.category', ['city' => $city,'category' => $item->category])}}" class="breadcrumb-item f1-s-3 cl9">
+				<a href="{{route('city.category', ['city' => $city,'category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
                     @if($item->category === 'what-to-see')
                         {{__('menu.where-to-see')}}
                     @elseif($item->category === 'history')

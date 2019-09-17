@@ -15,8 +15,7 @@ class CityController extends Controller
         return view('cities', compact('cities'));
     }
 
-    public function showCity($city) {
-        $lang = app()->getLocale();
+    public function showCity($lang, $city) {
         $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
         $historys       = $this->getRecordsByCategory($content->id, 'history');
@@ -30,8 +29,7 @@ class CityController extends Controller
         return view('city-show', compact('content', 'historys', 'restaurants', 'hotels', 'whereToBuy', 'howToGet', 'whatToDo', 'usefulInformation', 'whatToSee', 'cities'));
     }
 
-    public function showItem($city, $category, $slug) {
-        $lang = app()->getLocale();
+    public function showItem($lang, $city, $category, $slug) {
         $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();
         $cityId = City::where('name',$city)->firstOrFail()->id;
@@ -54,7 +52,7 @@ class CityController extends Controller
         return view('city-item', compact('item', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }
 
-    public function showCategory($city, $category) {
+    public function showCategory($lang, $city, $category) {
         $lang = app()->getLocale();
         $cities         = City::where('lang', $lang)->get();
         $content        = City::where('name',$city)->firstOrFail();

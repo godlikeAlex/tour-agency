@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8">
@@ -104,7 +104,7 @@
                     <a href="/tours" class="breadcrumb-item f1-s-3 cl9">
                         Туры
                     </a>
-                    <a href="{{route('tour.category', ['category' => $tour->category])}}"
+                    <a href="{{route('tour.category', ['category' => $tour->category, 'language' => app() -> getLocale()])}}"
                         class="breadcrumb-item f1-s-3 cl9">
                         @if($tour->category === 'history_tours')
                         Бизнес туры
