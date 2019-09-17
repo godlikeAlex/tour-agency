@@ -31,26 +31,12 @@
 <body>
     @include('/components/header', ['type' => 'tours'])
     <div class="main-tours-slider">
-        <div style="background: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=562&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 1</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566434109082-772727eba32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 2</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566612088151-a477d6c17708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 3</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 4</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 5</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
+        @foreach($slider as $slide)
+            <div style="background: url(/storage/{{$slide->image}})" class="main-tous-slide">
+                <div class="tours-slider__title">{{$slide->name}}</div>
+                <div style="text-transform: uppercase" class="tours-slider__sub">{{$slide->starts}} - {{$slide->ends}}</div>
+            </div>
+        @endforeach
     </div>
     <div class="container">
         <div class="tours">
