@@ -58,7 +58,7 @@ class TourController extends Controller
 
     public function showCategory($lang, $category) {
         $cities         = City::where('lang', $lang)->get();
-        $tours = Tour::where(['lang' => $lang, 'category' => $category])->paginate(6);
-        return view('tour-category', compact('tours', 'cities'));
+        $tours = Tour::where(['lang' => $lang, 'category' => $category])->orderBy('created_at','desc')->paginate(6);
+        return view('tour-category', compact('tours', 'cities', 'category'));
     }
 }

@@ -15,9 +15,7 @@ a:hover {
     cursor: pointer;
     position: relative;
     padding-left: 60px;
-    background-size: 120% !important;
-    background-position: center !important;
-    transition: .5s;
+    overflow: hidden;
 }
 
 .main-tous-slide:after {
@@ -30,8 +28,9 @@ a:hover {
     height: 200px;
 }
 
-.main-tous-slide:hover {
-    background-size: 130% !important;
+.main-tous-slide:hover .image-tour-slide {
+
+    transform: scale(1.2);
 }
 
 .tours-slider__title

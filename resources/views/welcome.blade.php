@@ -50,26 +50,13 @@
     <!-- Header -->
     @include('/components/header')
     <div class="main-tours-slider">
-        <div style="background: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=562&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 1</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566434109082-772727eba32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 2</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566612088151-a477d6c17708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 3</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566623610601-61780308981d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 4</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
-        <div style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)" class="main-tous-slide">
-            <div class="tours-slider__title">Tour 5</div>
-            <div class="tours-slider__sub">Sub info</div>
-        </div>
+        @foreach($slider as $slide)
+            <a href="{{route('tour.show', ['tourname' => $slide->slug, 'language' => app()->getLocale()])}}" class="main-tous-slide">
+                <div class="image-tour-slide" style="background: url(/storage/{{$slide->image}})"></div>
+                <div class="tours-slider__title">{{$slide->name}}</div>
+                <div style="text-transform: uppercase" class="tours-slider__sub">{{$slide->starts}} - {{$slide->ends}}</div>
+            </a>
+        @endforeach
     </div>
     <div class="main-content">
         <section>
@@ -275,23 +262,24 @@
             </div>
         </section>
         <div class="main-tours-slider">
-        <div style="background: url(https://salik.biz/upload/000/u1/95/69/a4baeee5.jpg)" class="main-tous-slide">
-            <div class="tours-slider__title">Хивинское ханство</div>
-            <div class="tours-slider__sub">1512—1920</div>
-        </div>
-        <div style="background: url(https://pp.userapi.com/c841427/v841427908/66527/7f65sFCuMoI.jpg)" class="main-tous-slide">
+
+        <div class="main-tous-slide">
+            <div class="image-tour-slide" style="background: url(https://pp.userapi.com/c841427/v841427908/66527/7f65sFCuMoI.jpg)"></div>
             <div class="tours-slider__title">Кокандское ханство </div>
             <div class="tours-slider__sub">1709—1876</div>
         </div>
-        <div style="background: url(https://static1-repo.aif.ru/1/36/983491/c/a9828cda6482867231cdabcc580a170b.jpg)" class="main-tous-slide">
+        <div class="main-tous-slide">
+            <div class="image-tour-slide" style="background: url(https://static1-repo.aif.ru/1/36/983491/c/a9828cda6482867231cdabcc580a170b.jpg)"></div>
             <div class="tours-slider__title">Бухарский эмират</div>
             <div class="tours-slider__sub">1785—1920</div>
         </div>
-        <div style="background: url(https://avdet.org/wp-content/uploads/2016/04/25_04_2016_pauli.jpg)" class="main-tous-slide">
+        <div  class="main-tous-slide">
+        <div class="image-tour-slide" style="background: url(https://avdet.org/wp-content/uploads/2016/04/25_04_2016_pauli.jpg)"></div>
             <div class="tours-slider__title">Туркестанское генерал-губернаторство</div>
             <div class="tours-slider__sub">1867 —1918</div>
         </div>
         <div style="background: url(http://my.krskstate.ru/upload/iblock/dee/tatary.jpg)" class="main-tous-slide">
+            <div class="image-tour-slide" style="background: url(http://my.krskstate.ru/upload/iblock/dee/tatary.jpg)"></div>
             <div class="tours-slider__title">Туркестанская АССР </div>
             <div class="tours-slider__sub">1918—1924</div>
         </div>

@@ -8,6 +8,16 @@
     margin: 0;
 }
 
+.image-tour-slide {
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    transition: .5s;
+    background-size: cover !important;    background-position: center;
+}
+
 
 .lang {
     padding: 5px 10px !important;
@@ -409,7 +419,7 @@ body {
 
 .left-menu-social
 {
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid white;
 }
 
 .left-menu-social li {
@@ -420,7 +430,7 @@ body {
 }
 
 .left-menu-social a {
-    color: #999;
+    color: white;
     font-size: 20px;
     border: 1px solid;
     border-radius: 50%;
@@ -444,7 +454,7 @@ body {
     font-size: 11px;
     font-weight: 700;
     transition: .5s;
-    color: #999;
+    color: white;
 }
 
 .left-menu-network a:hover { 
@@ -471,7 +481,7 @@ body {
     padding-top: 20px;
     padding-bottom: .75em;
     line-height: 18px;
-    color: #7f7f7f;
+    color: white;
     font-size: 12px;
 }
 

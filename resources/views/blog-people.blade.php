@@ -55,7 +55,7 @@
                                     <div class="category_post_img" style="height: 325px; background: url(/storage/{{$people -> image}}); background-size: cover; background-position: center; ">
                                     </div>
                                     <div class="post_text_1 pr_30">
-                                        <p>{{ $people->created_at->format('d M Y') }}</p>
+                                        <p>{{ Date::parse($people->created_at)->format('j F Y г.') }}</p>
                                         <a href="{{route('people.show', ['category' => $people->category, 'slug' => $people->slug, 'language' => app()->getLocale()])}}">
                                             <h3>{{str_limit($people->name, $limit = 35, $end = '...')}}</h3>
                                         </a>
@@ -76,7 +76,7 @@
                             <div class="category_post_img" style="height: 175px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
                             </div>
                             <div class="post_text_1 pr_30">
-                                <p>{{ $lp->created_at->format('d M Y') }}</p>
+                                <p>{{ Date::parse($lp->created_at)->format('j F Y г.') }}</p>
                                 <a href="{{route('people.show', ['category' => $lp->category, 'slug' => $lp->slug, 'language' => app()->getLocale()])}}">
                                     <h3>{{str_limit($lp->name, $limit = 35, $end = '...')}}</h3>
                                 </a>

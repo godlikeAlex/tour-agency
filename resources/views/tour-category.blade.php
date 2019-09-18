@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tours</title>
+	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
         <!--===============================================================================================-->
         <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
     <!--===============================================================================================-->
@@ -14,13 +15,39 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+<link href="/fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 </head>
 <body>
     @include('/components/header', ['type' => 'tours'])
     <div class="container">
+    <div style="margin-top: 50px;" class="section-name">
+        @if($category == 'history-tours') 
+            {{__('menu.history_tours')}}
+        @elseif($category == 'short-tours') 
+            {{__('menu.short_tours')}}
+        @elseif($category == 'group-tours') 
+            {{__('menu.group_tours')}}
+        @elseif($category == 'individual-tours') 
+            {{__('menu.individual_tours')}}
+        @elseif($category == 'exclusive-tours') 
+            {{__('menu.exclusive_tours')}}
+        @elseif($category == 'classic-tours') 
+            {{__('menu.classic_tours')}}
+        @elseif($category == 'excursion-tours') 
+            {{__('menu.excursion_tours')}}
+        @elseif($category == 'piligram-tours') 
+            {{__('menu.piligram_tours')}}
+        @elseif($category == 'economy-tours') 
+            {{__('menu.economy_tours')}}
+        @elseif($category == 'eco-tours') 
+            {{__('menu.eco_tours')}}
+        @elseif($category == 'cycling-tours') 
+            {{__('menu.eco_tours')}}
+        @endif
+    </div>
+
         <div class="row" style="margin-bottom: 50px;">
         @foreach($tours as $tour)
             <div class="col-md-4" style="    padding-bottom: 10px;">

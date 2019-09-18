@@ -55,7 +55,7 @@
                                     <div class="category_post_img" style="height: 325px; background: url(/storage/{{$post -> image}}); background-size: cover; background-position: center;">
                                     </div>
                                     <div class="post_text_1 pr_30">
-                                        <p><span> By {{$post->author}}</span> / {{ $post->created_at->format('d M Y') }}</p>
+                                        <p><span> By {{$post->author}}</span> / {{ Date::parse($post->created_at)->format('j F Y г.') }}</p>
                                         <a href="{{route('blog.show', ['category' => $post->category, 'slug' => $post->slug, 'language' => app()->getLocale()])}}">
                                             <h3>{{str_limit($post->title, $limit = 35, $end = '...')}}</h3>
                                         </a>
@@ -76,7 +76,7 @@
                             <div class="category_post_img" style="height: 175px; background: url(/storage/{{$lp -> image}}); background-size: cover; background-position: center; ">
                             </div>
                             <div class="post_text_1 pr_30">
-                                <p><span> By {{$lp->author}}</span> / {{ $lp->created_at->format('d M Y') }}</p>
+                                <p><span> By {{$lp->author}}</span> / {{ Date::parse($lp->created_at)->format('j F Y г.') }}</p>
                                 <a href="{{route('blog.show', ['category' => $lp->category, 'slug' => $lp->slug, 'language' => app()->getLocale()])}}">
                                     <h3>{{str_limit($lp->title, $limit = 35, $end = '...')}}</h3>
                                 </a>
