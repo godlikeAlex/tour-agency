@@ -56,6 +56,19 @@ Route::group(['prefix' => '{language}'], function () {
         Route::get('/{category}', 'UzbekistanController@category')->name('uzb.category');
         Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
     });
+
+    Route::prefix('about')->group(function() {
+        Route::get('/', function() {
+            $cities = City::all();
+            return view('about', compact('cities'));
+        })->name('about');
+        Route::get('faq', function() {    $cities = City::all();
+            return view('faq', compact('cities'));
+        })->name('faq');
+        Route::get('team', function() {    $cities = City::all();
+            return view('team', compact('cities'));
+        });
+    });
 });
 
 Route::prefix('admin/uzbekistan')->group(function() {
@@ -63,18 +76,7 @@ Route::prefix('admin/uzbekistan')->group(function() {
     Route::post('/create', 'UzbekistanAdminController@store');
 });
 
-Route::prefix('about')->group(function() {
-    Route::get('/', function() {
-        $cities = City::all();
-        return view('about', compact('cities'));
-    });
-    Route::get('faq', function() {    $cities = City::all();
-        return view('faq', compact('cities'));
-    });
-    Route::get('team', function() {    $cities = City::all();
-        return view('team', compact('cities'));
-    });
-});
+
 
 Route::get('/tourism', 'ToursimController@index');
 Route::get('/tourism/{slug}', 'ToursimController@view');
