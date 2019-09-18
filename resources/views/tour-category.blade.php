@@ -53,7 +53,7 @@
             <div class="col-md-4" style="    padding-bottom: 10px;">
                     <a class="link-block" href="{{route('tour.show', ['tourname' => $tour->slug, 'language' => app()->getLocale() ])}}">
                         <div class="big-blocks big-padding">
-                            <div class="block-img" style="background: url(storage/{{$tour->image}});" ></div>
+                            <div class="block-img" style="background: url(/storage/{{$tour->image}});" ></div>
                             <div class="block-content">
                                 <div class="block-title">{{ $tour->name }}</div>
                                 <div class="block-desc">{{str_limit($tour ->desc, $limit = 120, $end = '...')}}</div>

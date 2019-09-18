@@ -49,7 +49,7 @@
                         <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $history->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$history->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$history->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$history->name}}</div>
                                         <div class="block-desc">{{str_limit($history ->desc, $limit = 120, $end = '...')}}</div>
@@ -70,7 +70,7 @@
                         <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $shortTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$shortTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$shortTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$shortTour->name}}</div>
                                         <div class="block-desc">{{str_limit($shortTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -91,7 +91,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $groupTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$groupTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$groupTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$groupTour->name}}</div>
                                         <div class="block-desc">{{str_limit($groupTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -112,7 +112,7 @@
                         <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $indTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$indTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$indTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$indTour->name}}</div>
                                         <div class="block-desc">{{str_limit($indTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -133,7 +133,7 @@
                         <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $exTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$exTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$exTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$exTour->name}}</div>
                                         <div class="block-desc">{{str_limit($exTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -154,7 +154,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $classicTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$classicTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$classicTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$classicTour->name}}</div>
                                         <div class="block-desc">{{str_limit($classicTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -175,7 +175,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $kombAsiaTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$kombAsiaTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$kombAsiaTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$kombAsiaTour->name}}</div>
                                         <div class="block-desc">{{str_limit($kombAsiaTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -196,7 +196,7 @@
                         <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKzTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$komboUzKzTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$komboUzKzTour->image}});height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzKzTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzKzTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -217,7 +217,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzKgTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$komboUzKgTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$komboUzKgTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzKgTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzKgTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -238,7 +238,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTmTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$komboUzTmTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$komboUzTmTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzTmTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzTmTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -259,7 +259,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $komboUzTjTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$komboUzTjTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$komboUzTjTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$komboUzTjTour->name}}</div>
                                         <div class="block-desc">{{str_limit($komboUzTjTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -280,7 +280,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $excursionCityItem->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$excursionCityItem->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$excursionCityItem->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$excursionCityItem->name}}</div>
                                         <div class="block-desc">{{str_limit($excursionCityItem ->desc, $limit = 120, $end = '...')}}</div>
@@ -301,7 +301,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $palTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$palTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$palTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$palTour->name}}</div>
                                         <div class="block-desc">{{str_limit($palTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -322,7 +322,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $economTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$paleconomTourTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$paleconomTourTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$palTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($economTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -343,7 +343,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $cyclingTour->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$cyclingTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$cyclingTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$cyclingTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($cyclingTour ->desc, $limit = 120, $end = '...')}}</div>
@@ -364,7 +364,7 @@
                     <div class="col-md-4" style="margin-bottom: 25px;">
                             <a class="link-block" href="{{route('tour.show', ['tourname' => $buisnesTour->slug])}}">
                                 <div class="big-blocks" style="height: 390px; display: block;">
-                                    <div class="block-mini-img" style="height:200px" style="background: url(/storage/{{$buisnesTour->image}});" ></div>
+                                    <div class="block-mini-img" style="background: url(/storage/{{$buisnesTour->image}}); height: 200px;" ></div>
                                     <div class="block-content" style="margin-top:25px;">
                                         <div class="block-title">{{$buisnesTour->economTour}}</div>
                                         <div class="block-desc">{{str_limit($buisnesTour ->desc, $limit = 120, $end = '...')}}</div>
