@@ -1,185 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--===============================================================================================-->
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/style-blog.css">
-   <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="///images/icons/favicon.png"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-<!--==============================================/=================================================-->
-	<link rel="stylesheet" type="text/css" href="/css/util.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/card.css">    
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="/css/slick/custom-theme.css">
+  <head>
+    <title>WebHost - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/faq/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/faq/animate.css">
+    
+    <link rel="stylesheet" href="/css/faq/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/faq/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/faq/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/faq/aos.css">
+
+    <link rel="stylesheet" href="/css/faq/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/faq/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/faq/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/css/faq/flaticon.css">
+    <link rel="stylesheet" href="/css/faq/icomoon.css">
+    <link rel="stylesheet" href="/css/faq/style.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
-<link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-@include('/components/header')
-<!--Accordion wrapper-->
-<div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
+    <!--Footer-->
+    
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
+  </head>
+  <body>
+    @include('components.header')
+    <section class="ftco-section bg-light">
+    	<div class="container">
+        
+    		<div class="row">
+    			<div class="col-md-12 ">
+    				<div id="accordion">
+    					<div class="row">
+    						<div class="col-md-12">
+                  <h2 style="padding-bottom: 25px;">FAQ (вопросы-ответы) по поездке в Узбекистан</h2>
+                  <h3 style="padding-bottom: 25px;">Вопросы по визе</h3>
+    							<div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menuone" aria-expanded="true" aria-controls="menuone">What is your domain name? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menuone" class="collapse show">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
 
-  <!-- Accordion card -->
-  <div class="card">
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menutwo" aria-expanded="false" aria-controls="menutwo">How long is my domain name valid? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menutwo" class="collapse">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
 
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo1">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
-        aria-expanded="false" aria-controls="collapseTwo1">
-        <h5 class="mb-0">
-          Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu3" aria-expanded="false" aria-controls="menu3">Can I sell my domain name? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menu3" class="collapse">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
+    						</div>
 
-    <!-- Card body -->
-    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
-      data-parent="#accordionEx1">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Brunch
-        3
-        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-        shoreditch
-        et.
-        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        Ad
-        vegan
-        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-        nesciunt
-        you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
+    						<div class="col-md-12">
+    							<div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu4" aria-expanded="false" aria-controls="menu4">Can I cancel a domain? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menu4" class="collapse">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
 
-  </div>
-  <!-- Accordion card -->
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu5" aria-expanded="false" aria-controls="menu5">How do I transfer a domain name? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menu5" class="collapse">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
 
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21"
-        aria-expanded="false" aria-controls="collapseTwo21">
-        <h5 class="mb-0">
-          Collapsible Group Item #2 <i class="fas fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
-      data-parent="#accordionEx1">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Brunch
-        3
-        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-        shoreditch
-        et.
-        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        Ad
-        vegan
-        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-        nesciunt
-        you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-
-  </div>
-  <!-- Accordion card -->
-
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingThree31">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseThree31"
-        aria-expanded="false" aria-controls="collapseThree31">
-        <h5 class="mb-0">
-          Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
-      data-parent="#accordionEx1">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Brunch
-        3
-        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-        shoreditch
-        et.
-        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        Ad
-        vegan
-        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-        nesciunt
-        you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-
-  </div>
-  <!-- Accordion card -->
-
-</div>
-<!-- Accordion wrapper -->
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="/js/tours/jquery.easing.1.3.js"></script>
-	<!-- Waypoints -->
-	<script src="/js/tours/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="/js/tours/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="/js/tours/owl.carousel.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="/js/tours/jquery.magnific-popup.min.js"></script>
-	<script src="/js/tours/magnific-popup-options.js"></script>
-	<!-- Date Picker -->
-	<script src="/js/tours/bootstrap-datepicker.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="/js/tours/jquery.stellar.min.js"></script>
-
-	<!-- Main -->	
-	<script src="/js/tours/main.js"></script>
-	<script src="/js/main.js"></script>
-
-</body>
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu6" aria-expanded="false" aria-controls="menu6">How do I setup URL forwarding? <span class="collapsed"><i class="fas fa-arrow-down"></i></span><span class="expanded"><i class="fas fa-arrow-up"></i></span></a>
+						        </div>
+						        <div id="menu6" class="collapse">
+						          <div class="card-body">
+												<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+						          </div>
+						        </div>
+						      </div>
+    						</div>
+    					</div>
+				    </div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    @include('components.footer')
+  <script src="/js/faq/jquery.min.js"></script>
+  <script src="/js/faq/bootstrap.min.js"></script>
+    
+  </body>
 </html>

@@ -2,7 +2,7 @@
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <div class="container">
         <div class="row">
-        <div class="col-md-5 main-links-nav-top"><a href="">About us</a> <a href="">Tours</a> <a href="">For Tourists</a> <a href="">F.A.Q</a></div>
+        <div class="col-md-5 main-links-nav-top"><a href="{{ route('about', app() -> getLocale()) }}">About us</a> <a href="">Tours</a> <a href="">For Tourists</a> <a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></div>
         <div class="social-top col-md-7" style="text-align:right;">
             <?php 
                 $routeParametes = function($lang) {
@@ -129,7 +129,7 @@
             <li><a href="">ABOUT COMPANY</a></li>
             <li><a href="">PRIVACY POLICY</a></li>
             <li><a href="">LINK POLICY</a></li>
-            <li><a href="">F.A.Q</a></li>
+            <li><a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></li>
         </ul>
         <p class="terms">
         © 2019 UZBEKISTAN NOW. All rights reserved.
