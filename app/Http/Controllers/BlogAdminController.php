@@ -28,6 +28,25 @@ class BlogAdminController extends Controller
         return back();
     }
 
+    public function blogList() {
+        $posts = Blog::all();
+        return view('admin.blog-list', compact('posts'));
+    }
+
+    public function blogUpdate($id) {
+        $post = Blog::where('id', $id)->firstOrFail();
+        return view('admin.blog-update', compact('post'));
+    }
+
+    public function blogUpdatePost($id) {
+        $post = $this->validateUpdate();
+        $updatedPost = Blog::where('id', $id)->update($post);
+        if(request()->image !== null) {
+            $this->storeImage(Blog::where('id', $id)->firstOrFail());
+        }
+        return back();
+    }
+
     private function validRequest() 
     {
         $validateData = request() -> validate([
@@ -38,6 +57,20 @@ class BlogAdminController extends Controller
             'desc' => 'required|min:25',
             'post' => 'required|min:25',
             'image' => 'required|image'
+        ]);
+
+        return $validateData;
+    }
+
+    private function validateUpdate() 
+    {
+        $validateData = request() -> validate([
+            'title' => 'required|min:6',
+            'author' => 'required',
+            'lang' => 'required',
+            'category' => 'required',
+            'desc' => 'required|min:25',
+            'post' => 'required|min:25',
         ]);
 
         return $validateData;

@@ -134,11 +134,9 @@
 					
 					<div class="col-sm-12 col-md-6">
 						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Sport</a></li>
-							<li><a href="#">Politics</a></li>
-							<li><a href="#">Travel</a></li>
+							<li><a href="{{ route('about', app() -> getLocale()) }}">About us</a> </li>
+							<li><a href="{{ route('team', app() -> getLocale()) }}">Team</a></li>
+							<li> <a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></li>							 
 						</ul>
 					</div><!-- col-sm-3 -->
 				</div><!-- row -->

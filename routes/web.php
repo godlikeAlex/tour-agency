@@ -67,12 +67,12 @@ Route::group(['prefix' => '{language}'], function () {
         })->name('faq');
         Route::get('team', function() {    $cities = City::all();
             return view('team', compact('cities'));
-        });
+        })->name('team');
     });
 });
 
-Route::prefix('admin/uzbekistan')->group(function() {
-    Route::get('/create', 'UzbekistanAdminController@create');
+Route::prefix('admin/uzbekistans')->group(function() {
+    Route::get('/create', 'UzbekistanAdminController@create')->name('uzbekistan.create');
     Route::post('/create', 'UzbekistanAdminController@store');
 });
 
@@ -90,9 +90,12 @@ Route::get('locale/{locale}', function ($locale){
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('admin/blog')->group(function() {
-    Route::get('/create', 'BlogAdminController@createRender');
-    Route::post('/create', 'BlogAdminController@create');
+Route::prefix('admin/news')->group(function() {
+    Route::get('/create', 'BlogAdminController@createRender')->name('blog.create');
+    Route::get('/list', 'BlogAdminController@blogList')->name('blog.list');
+    Route::get('/list/update/{id}', 'BlogAdminController@blogUpdate')->name('blog.update');
+    Route::post('/list/update/{id}', 'BlogAdminController@blogUpdatePost')->name('blog.update.store');
+    Route::post('/create', 'BlogAdminController@create')->name('blog.store');
 });
 
 Route::prefix('admin/galery')->group(function() {
@@ -102,28 +105,33 @@ Route::prefix('admin/galery')->group(function() {
 
 
 Route::prefix('admin/tour')->group(function () {
-    Route::get('/create', 'TourAdminController@create');
+    Route::get('/create', 'TourAdminController@create')->name('tour.index');
     Route::post('/create', 'TourAdminController@store')->name('tour.create');
+    Route::get('/list', 'TourAdminController@list')->name('tour.list');
+    Route::get('/update/{id}', 'TourAdminController@update')->name('tour.update');
 });
 
 Route::prefix('admin/tour/dates')->group(function () {
-    Route::get('/create', 'DatesAndPriceController@create');
+    Route::get('/create', 'DatesAndPriceController@create')->name('date.index');
     Route::post('/create', 'DatesAndPriceController@store')->name('date.create');
-    Route::get('/all', 'DatesAndPriceController@all');
+    Route::get('/all', 'DatesAndPriceController@all')->name('date.list');
     Route::get('/edit/{id}', 'DatesAndPriceController@edit');
     Route::post('/edit/{id}', 'DatesAndPriceController@update')->name('date.update');
 });
 
-Route::prefix('admin/city')->group(function () {
-    Route::get('/create', 'CityAdminController@index');
+Route::prefix('admin/citys')->group(function () {
+    Route::get('/create', 'CityAdminController@index')->name('city.index');
     Route::post('/create', 'CityAdminController@store');
-    Route::get('/items/create', 'CityAdminController@createItemsForCity');
+    Route::get('/items/create', 'CityAdminController@createItemsForCity')->name('city.item');
     Route::post('/items/create', 'CityAdminController@cityItemsStore');
 });
 
 
 
-Route::prefix('admin/people')->group(function() {
-    Route::get('/create', 'PeopleAdminController@createRender');
-    Route::post('/create', 'PeopleAdminController@create');
+Route::prefix('admin/peoples')->group(function() {
+    Route::get('/create', 'PeopleAdminController@createRender')->name('people.create');
+    Route::get('/list', 'PeopleAdminController@peopleList')->name('people.list');
+    Route::get('/list/update/{id}', 'PeopleAdminController@peopleUpdate')->name('people.update');
+    Route::post('/list/update/{id}', 'PeopleAdminController@peopleUpdatePost')->name('people.update.store');
+    Route::post('/create', 'PeopleAdminController@create')->name('people.store');
 });

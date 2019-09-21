@@ -29,6 +29,38 @@ class PeopleAdminController extends Controller
         return redirect('/admin/people/create');
     }
 
+    public function peopleList() {
+        $posts = People ::all();
+        return view('admin.blog-list', compact('posts'));
+    }
+
+    public function peopleUpdate($id) {
+        $people = People::where('id', $id)->firstOrFail();
+        return view('admin.people-update', compact('people'));
+    }
+
+    public function peopleUpdatePost($id) {
+        $post = $this->validateUpdate();
+        $updatedPeople = People::where('id', $id)->update($post);        
+        if(request()->image !== null) {
+            $this->storeImage(People::where('id', $id)->firstOrFail());
+        }
+        return back();
+    }
+
+    private function validateUpdate() 
+    {
+        $validateData = request() -> validate([
+            'name' => 'required|min:6',
+            'body' => 'required|min:25',
+            'lang' => 'required',
+            'desc' => 'required|min:25',
+            'category' => 'required'
+        ]);
+
+        return $validateData;
+    }
+
     private function validRequest() 
     {
         $validateData = request() -> validate([

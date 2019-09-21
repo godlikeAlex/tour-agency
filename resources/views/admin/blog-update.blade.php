@@ -5,16 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Создание статьи</div>
+                <div class="card-header">Изминение статьи статьи</div>
 
                 <div class="card-body">
-                    <form action="{{route('blog.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('blog.update.store', $post->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <input type="text" name="title" class="form-control" placeholder="Название статьи">
+                            <input value="{{$post->title}}" type="text" name="title" class="form-control" placeholder="Название статьи">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="author" class="form-control" placeholder="Автор">
+                            <input value="{{$post->author}}" type="text" name="author" class="form-control" placeholder="Автор">
                         </div>   
                         <div class="form-group">
                             <label for="exampleSelect1">Язык</label>
@@ -35,13 +35,13 @@
                         <div class="form-group">
                         
                         <div for="coverex">Фото</div>
-                        <input type="file" name="image" id="coverex">
+                        <input  type="file" name="image" id="coverex">
                     </div>
                     <div>Минимальное описание</div>
                     <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
-                        <textarea class="form-control" name="desc" rows="5"></textarea>
+                        <textarea class="form-control" name="desc" rows="5">{{$post->desc}}</textarea>
                     </div>
-                        <textarea name="post" id="summernote"></textarea>
+                        <textarea name="post" id="summernote">{!! $post->post !!}</textarea>
                         <button type="submit" class="btn btn-success">Создать</button>
                     </form>                    
                 </div>

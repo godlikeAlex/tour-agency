@@ -2,7 +2,7 @@
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <div class="container">
         <div class="row">
-        <div class="col-md-5 main-links-nav-top"><a href="{{ route('about', app() -> getLocale()) }}">About us</a> <a href="">Tours</a> <a href="">For Tourists</a> <a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></div>
+        <div class="col-md-5 main-links-nav-top"><a href="{{ route('about', app() -> getLocale()) }}">About us</a> <a href="{{ route('team', app() -> getLocale()) }}">Team</a>  <a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></div>
         <div class="social-top col-md-7" style="text-align:right;">
             <?php 
                 $routeParametes = function($lang) {
@@ -132,9 +132,7 @@
             <li><a href="{{ route('faq', app() -> getLocale()) }}">F.A.Q</a></li>
         </ul>
         <p class="terms">
-        © 2019 UZBEKISTAN NOW. All rights reserved.
-        Use of and/or registration on any portion of this site constitutes acceptance of our User Agreement (updated 5/25/19) and Privacy Policy and Cookie Statement (updated 5/25/18).  Your California Privacy Rights   The material on this site may not be reproduced, distributed, transmitted, cached, or otherwise used, except with the prior written permission of Condé Nast.
-        UZBEKISTAN NOW may earn compensation on sales through affiliate programs.
+        © 2019 UZBEKISTAN NOW. All rights reserved. 
         </p>
     </div>
     <div class="menu-border">

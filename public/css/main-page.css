@@ -18,6 +18,8 @@ a:hover {
     overflow: hidden;
 }
 
+.main-tous-slide:hover {color:  white !important;}
+
 .main-tous-slide:after {
     position: absolute;
     content: '';

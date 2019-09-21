@@ -25,6 +25,16 @@ class TourAdminController extends Controller
         return view('admin.create-tour', compact('tour'));
     }
 
+    public function list () {
+        $tours = Tour::all();
+        return view('admin.tours-list', compact('tours'));
+    }
+
+    public function update ($id) {
+        $tour = Tour::where('id', $id)->firstOrFail();
+        return view('admin.tour-update', compact('tour'));
+    }
+
     public function store (Request $request) {
         $validData = $this->validateTour();
         $validData['slug'] = Str::slug(request()->name)."-".request()->days."-days";
