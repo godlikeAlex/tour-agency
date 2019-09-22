@@ -109,6 +109,7 @@ Route::prefix('admin/tour')->group(function () {
     Route::post('/create', 'TourAdminController@store')->name('tour.create');
     Route::get('/list', 'TourAdminController@list')->name('tour.list');
     Route::get('/update/{id}', 'TourAdminController@update')->name('tour.update');
+    Route::post('/update/{id}', 'TourAdminController@updateOrCreate')->name('tour.update.store');
 });
 
 Route::prefix('admin/tour/dates')->group(function () {

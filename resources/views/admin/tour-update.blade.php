@@ -14,7 +14,7 @@
                 <div class="card-header">Создание тура</div>
 
                 <div class="card-body">
-                    <form action="{{route('tour.update', $tour->id)}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('tour.update.store', $tour->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" value="{{$tour->name}}" class="form-control" placeholder="Название тура">
@@ -61,7 +61,7 @@
                     </div>
                     <div>Превью Карточки</div>
                     <div class="form-group" style="padding-top:10px; padding-bottom:10px;">
-                        <textarea class="form-control" name="desc" rows="5"></textarea>
+                        <textarea class="form-control" name="desc" rows="5">{{$tour->desc}}</textarea>
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
                         <input type="text" value="{{$tour->pdf}}" name="pdf" class="form-control col-md-5" placeholder="pdf link">
@@ -73,23 +73,25 @@
                     <div class="form-group">
                         <h4>Особености</h4>
                         <div id="feature_container">
-                            <div class="form-group"><input class="form-control" type="text" name="feature[]" placeholder="Особеность"></div>
+                            @foreach($tour->faeturs as $feature)
+                                <div class="form-group"><input value="{{$feature->title}}" class="form-control" type="text" name="feature[]" placeholder="Особеность"></div>
+                            @endforeach
                         </div>
                         <div class="form-group"><div id="addmorefeature" class="btn btn-success">Добавить еще 1 особеность</div></div>
                     </div>
                     <div class="form-group">
                         <p>Карта</p>
-                        <input class="form-control" placeholder="ссылка на iframe" type="text" name="map" id="">
+                        <input class="form-control" value="{{$tour->map}}" placeholder="ссылка на iframe" type="text" name="map" id="">
                     </div>
                     
                     <h4>Возраст</h4>
                     <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" name="age_from" class="form-control col-md-5" placeholder="От">
-                        <input type="text" name="age_to" class="form-control col-md-5" placeholder="До">
+                        <input type="text" value="{{$tour->age_from}}" name="age_from" class="form-control col-md-5" placeholder="От">
+                        <input type="text" name="age_to" value="{{$tour->age_to}}" class="form-control col-md-5" placeholder="До">
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" name="starts" class="form-control col-md-5" placeholder="Начало тура">
-                        <input type="text" name="ends" class="form-control col-md-5" placeholder="Конец тура">
+                        <input type="text" name="starts" value="{{$tour->starts}}" class="form-control col-md-5" placeholder="Начало тура">
+                        <input type="text" name="ends"  value="{{$tour->ends}}" class="form-control col-md-5" placeholder="Конец тура">
                     </div>
                     <div class="form-group">
                         <h4>Галлерея</h4>
@@ -103,19 +105,37 @@
                         <div id="addmoreimage" class="btn btn-success">Добавить еще 1 фотографию</div>
                     </div>
                     <div class="form-group">
-                        <textarea name="about" id="summernote"></textarea>
+                        <textarea name="about" id="summernote">{!! $tour->about !!}</textarea>
                     </div>
                     <div class="form-group">
                         <h3>Описание дней в туре</h3>
-                        <div id="days-container"></div>
+                        <div id="days-container">
+                            @foreach($tour->TourDatesAbout as $day)
+                                <div class="form-group">
+                                    <input value="{{$day->day_title}}"  style="margin-bottom:20px;" type="text" name="day_title[]" class="form-control" placeholder="День ${i}">
+                                    <textarea id="day-about-{{$loop->iteration}}"  name="day_desc[]" id="day-about-${i}">{{$day->day_desc}}</textarea>
+                                </div>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', e => {
+                                        $(`#day-about-{{$loop->iteration}}`).summernote({
+                                            placeholder: `О {{$loop->iteration}} дне тура`,
+                                            tabsize: 2,
+                                            height: 100
+                                        });
+                                    })
+                                </script>
+                            @endforeach
+                        </div>
                     </div>
                     <div class="form-group">
                         <h4>Что входит</h4>
                         <div id="includes-container">
-                            <div class="form-group">
-                                <input type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл">
-                                <textarea  name="include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="Входит | описание"></textarea>
-                            </div>
+                            @foreach($tour->includes as $include)
+                                <div class="form-group">
+                                    <input value="{{$include->include_title}}" type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл">
+                                    <textarea name="include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="Входит | описание">{{$include->include_desc}}</textarea>
+                                </div>
+                            @endforeach
                         </div>
                     </div> 
                     <div class="form-group">    
@@ -124,10 +144,12 @@
                     <div class="form-group">
                         <h4>Что не входит</h4>
                         <div id="dont_includes-container">
-                            <div class="form-group">
-                                <input type="text" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл">
-                                <textarea  name="dont_include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="НЕ Входит |  описание"></textarea>
-                            </div>
+                            @foreach($tour->notIncludes as $notInclude)
+                                <div class="form-group">
+                                    <input type="text" value="{{$notInclude->dont_include_title}}" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл">
+                                    <textarea  name="dont_include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="НЕ Входит |  описание">{{$notInclude->dont_include_desc}}</textarea>
+                                </div>
+                            @endforeach
                         </div>
                     </div> 
                     <div class="form-group">    

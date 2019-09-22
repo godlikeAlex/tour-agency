@@ -35,6 +35,33 @@ class TourAdminController extends Controller
         return view('admin.tour-update', compact('tour'));
     }
 
+    public function updateOrCreate($id) {
+        $tourToUpdate = Tour::where('id',$id)->firstOrFail();
+        $tourID = $tourToUpdate->id;
+        $tourToUpdate->update($this->validateTourUpdate());
+        Includes::where('tour_id', $tourID)->delete();
+        NotIncludes::where('tour_id', $tourID)->delete();
+        TourDatesAbout::where('tour_id', $tourID)->delete();
+        if(request() -> image){
+            $this->storeTourImage($tourToUpdate);
+        }
+
+        if(request() -> galery) {
+            Image::where('tour_id', $tourID)->delete();
+            $this->storeImages($tourID);
+        }
+
+        $includes       = $this->validateInludes(true);
+        $notIncludes    = $this->validateInludes(false);
+        $aboutDays      = $this->validateDates();
+        $feature        = $this->validFeature();
+
+        $this->setTourId('includes', $includes,['include_title', 'include_desc'], $tourID);
+        $this->setTourId('notincludes', $notIncludes, ['dont_include_title', 'dont_include_desc'], $tourID);
+        $this->setTourId('tourdatesabout', $aboutDays, ['day_title', 'day_desc'], $tourID);
+        $this->setTourIdFeature($tourID);
+    }
+
     public function store (Request $request) {
         $validData = $this->validateTour();
         $validData['slug'] = Str::slug(request()->name)."-".request()->days."-days";
@@ -78,7 +105,28 @@ class TourAdminController extends Controller
             'pdf' => 'required',
         ]);
         return $validData;
-    } 
+    }
+
+    private function validateTourUpdate() {
+        $validData = request()->validate([
+            'name' => 'required',
+            'lang' => 'required',
+            'price' => 'required',
+            'category' => 'required',
+            'days' => 'required',
+            'starts' => 'required',
+            'video' => 'required',
+            'ends' => 'required',
+            'age_from' => 'required',
+            'desc' => 'required',
+            'age_to' => 'required',
+            'physical_rating' => 'required',
+            'about' => 'required',
+            'map' => 'required',
+            'pdf' => 'required',
+        ]);
+        return $validData;
+    }
 
     private function validateInludes($included) { 
         if($included) {
