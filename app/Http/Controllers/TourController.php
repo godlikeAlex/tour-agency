@@ -45,7 +45,6 @@ class TourController extends Controller
     public function show($lang, $tourname) {
         $cities         = City::where('lang', $lang)->get();
         $tour = Tour::where('slug', $tourname)->firstOrFail();
-
         $count = Tour::where('lang', $lang)->count() - 1;
         if($count >= 4) {
             $randomFromCategory = Tour::where('slug', '!=', $tourname)->where('category', '=', $tour->category)->where('lang', $lang)->get()->random(3);

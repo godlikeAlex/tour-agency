@@ -20,6 +20,7 @@ class CreateBlogsTable extends Migration
             $table->string('author');
             $table->string('category');
             $table->text('desc');
+            $table->text('keywords');
             $table->longText('post');
             $table->string('lang');
             $table->string('image')->nullable();

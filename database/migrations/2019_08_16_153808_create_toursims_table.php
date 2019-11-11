@@ -17,6 +17,7 @@ class CreateToursimsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('lang');
+            $table->text('keywords');
             $table->string('slug');
             $table->string('image')->nullable();
             $table->longText('post');

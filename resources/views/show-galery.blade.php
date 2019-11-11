@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
   <head>
-    <title>Photon &mdash; Colorlib Website Template</title>
+      @include('/components/head-settings')
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,12 +12,12 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="/css/lightgallery.min.css">    
-    
+    <link rel="stylesheet" href="/css/lightgallery.min.css">
+
     <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
 
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
-    
+
     <link rel="stylesheet" href="/css/swiper.css">
 
     <link rel="stylesheet" href="/css/aos.css">
@@ -44,13 +45,13 @@
     <link rel="stylesheet" href="/css/main-menu.css" >
     <link rel="stylesheet" href="/css/main-page.css" >
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
 <link href="/fonts/ionicons.css" rel="stylesheet">
   </head>
   <body>
-  
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -91,12 +92,12 @@
   </div></div>
 
     <div class="container-fluid">
-      
+
       <div class="row" id="lightgallery">
         @foreach($images as $img)
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="/storage/{{$img->image}}" data-sub-html="<h4>{{$img->title}}</h4><p>{{$img->desc}}</p>">
             <a href="#"><img src="/storage/{{$img->image}}" alt="IMage" class="img-fluid"></a>
-          </div> 
+          </div>
         @endforeach
         {{$images -> links()}}
       </div>
@@ -122,12 +123,12 @@
   <script src="/js/galery/jquery.mousewheel.min.js"></script>
 
   <script src="/js/galery/main.js"></script>
-  
+
   <script>
     $(document).ready(function(){
       $('#lightgallery').lightGallery();
     });
   </script>
-    
+
   </body>
 </html>

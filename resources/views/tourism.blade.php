@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tours</title>
-        <!--===============================================================================================-->
+@include('/components/head-settings')
+
+<!--===============================================================================================-->
         <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="/css/tour-all.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
 <link href="fonts/ionicons.css" rel="stylesheet">
@@ -259,7 +260,7 @@
                 </a>
             </div>
         </div>
-        <div style="width:100%;margin-top: 100px;"><div class="section-name">Мероприятия</div></div>        
+        <div style="width:100%;margin-top: 100px;"><div class="section-name">Мероприятия</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
                 <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
@@ -300,7 +301,7 @@
         </div>
 
         <div class="row container_uzb" >
-            
+
             <div class="col-md-4">
                 <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
                     <div class="big-blocks big-padding">

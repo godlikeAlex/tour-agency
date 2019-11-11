@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--===============================================================================================-->
+@include('/components/head-settings')
+
+<!--===============================================================================================-->
         <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -17,10 +19,10 @@
     <link rel="stylesheet" href="/css/tour-all.css">
     <!--===============================================================================================-->
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/card.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/card.css">
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="/fonts/ionicons.css" rel="stylesheet">

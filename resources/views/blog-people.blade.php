@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>DarEn BLOG || ARCHIVE</title>
+    @include('/components/head-settings')
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/blog/bootstrap.min.css">
@@ -42,7 +42,7 @@
     <!-- Header part end-->
 
     <!-- feature_post start-->
-    
+
     <section class="all_post archive_post">
         <div class="container">
             <div style="margin-bottom: 100px; padding: 0;" class="section-name col-md-12">{{ __('menu.peoples') }}</div>
@@ -84,7 +84,7 @@
                         </div>
                         @endforeach
                         <div class="sidebar_tittle">
-                            <h3>{{__('menu.category')}}</h3>                            
+                            <h3>{{__('menu.category')}}</h3>
                         </div>
                         <div class="single_catagory_item category">
                             <ul class="list-unstyled">

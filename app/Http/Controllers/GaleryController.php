@@ -22,7 +22,7 @@ class GaleryController extends Controller
         return view('galery', compact('cities'));
     }
 
-    public function show($century) {
+    public function show($lang, $century) {
         $lang = app()->getLocale();
         $cities = City::where('lang', $lang)->get();
         $images = Galery::where(['lang' => $lang,'category' => $century])->paginate(20);

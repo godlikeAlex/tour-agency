@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <!--===============================================================================================-->
+@include('/components/head-settings')
+
+<!--===============================================================================================-->
  <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -16,11 +18,11 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
     <!--Footer-->
-    
+
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="/fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
-        
+
     <title>Document</title>
 </head>
 <body style="background:white;">
@@ -47,7 +49,7 @@
                         {{__('menu.useful_information')}}
                 @endif
             </div>
-                    
+
                 @if($items[0]->category_price)
                     <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
                     @foreach($items as $item)
@@ -57,7 +59,7 @@
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
-                                            <div>                                
+                                            <div>
                                             @if($item->category_price === 'cheap')
                                                 Дешевый
                                             @elseif($item->category_price === 'middle')
@@ -83,7 +85,7 @@
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
-                                            <div>                                
+                                            <div>
                                             @if($item->category_price === 'cheap')
                                                 Дешевый
                                             @elseif($item->category_price === 'middle')
@@ -109,7 +111,7 @@
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
-                                            <div>                                
+                                            <div>
                                             @if($item->category_price === 'cheap')
                                                 Дешевый
                                             @elseif($item->category_price === 'middle')
@@ -146,7 +148,7 @@
             </div>
          {{$items->links()}}
         </div>
-    
+
     </div>
 
     @include('/components/footer')

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--===============================================================================================-->
+@include('/components/head-settings')
+
+<!--===============================================================================================-->
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style-blog.css">
-   <!--===============================================================================================-->	
+   <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="///images/icons/favicon.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -18,16 +20,16 @@
 	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
 <!--==============================================/=================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/util.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/card.css">    
+    <link rel="stylesheet" type="text/css" href="/css/card.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -51,11 +53,11 @@
     <div style="padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
 				<a href="/" class="breadcrumb-item f1-s-3 cl9">
-					{{__('menu.main')}} 
+					{{__('menu.main')}}
 				</a>
 
 				<a href="{{route('city.show', ['city' => $city, 'language' => app() -> getLocale()])}}" class="breadcrumb-item f1-s-3 cl9 ">
-                    
+
                     <span class="breadcrumb-item-first">{{$city}} </span>
 				</a>
 				<a href="{{route('city.category', ['city' => $city,'category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
@@ -85,7 +87,7 @@
     <div class="col-md-12">
         <div class="row">
             <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">  
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">
                 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                 <a class="a2a_button_facebook"></a>
                 <a class="a2a_button_email"></a>

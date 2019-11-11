@@ -41,8 +41,28 @@
     justify-content: space-between;
     align-items: center;
     letter-spacing: .125em;
-    font-size: 14px;
+    font-size: 16px;
 }
+
+    .main-menu-active {
+    border-bottom: 2px solid white;
+}
+
+    .main-content-text {
+        color: red;
+    }
+
+    .main-content-text:first-letter {
+        font-size: 4.5em;
+        float: left;
+        padding-left: 0px;
+        padding-right: 12px;
+    }
+
+    /*p {*/
+    /*    clear: both;*/
+    /*}*/
+
 .social-top a {
     padding-left: 10px;
 }
@@ -76,7 +96,7 @@
     letter-spacing: .125em;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 .main-menu-link-drop:after {
@@ -104,7 +124,7 @@
 
 .left-side-menu
 {
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'Roboto', sans-serif;
 }
 
 .main-menu li:hover a
@@ -257,13 +277,13 @@
     font-size: 14px;
 }
 
-.items-footer div 
+.items-footer div
 {
     transition: .5s;
     cursor: pointer;
 }
 
-.items-footer div:hover 
+.items-footer div:hover
 {
     color: #097cff;
 }
@@ -302,7 +322,7 @@
     list-style: none;
 }
 
-.social-network 
+.social-network
 {
     display: flex;
     justify-content: center;
@@ -378,7 +398,7 @@
     position: fixed;
     z-index: 9999;
     top: 0%;
-    left: 0;    
+    left: 0;
     bottom: 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -396,7 +416,7 @@ body {
     left: -25%;
 }
 
-.close-cont 
+.close-cont
 {
     display: flex;
     justify-content: space-between;
@@ -445,7 +465,7 @@ body {
 .left-menu-network
 {
     margin-top: 10px;
-    
+
     letter-spacing: .15em;
 }
 
@@ -457,12 +477,12 @@ body {
     color: white;
 }
 
-.left-menu-network a:hover { 
+.left-menu-network a:hover {
     color: #00529f;
     text-decoration: none;
 }
 
-.left-menu-social a:hover { 
+.left-menu-social a:hover {
     color: #00529f;
     text-decoration: none;
 }
@@ -529,7 +549,7 @@ pre {
     padding-left: 15px !important;
 }
 
-.dropped-menu li 
+.dropped-menu li
 {
     padding: 5px 0;
     width: 100%;
@@ -563,7 +583,7 @@ pre {
       margin-right: auto;
     }
   }
-  
+
   @media only screen and (max-width: 1199px) and (min-width: 992px){
     .wrap {
       width: 933px;
@@ -571,15 +591,15 @@ pre {
       margin-right: auto !important;
     }
   }
-  
-  
+
+
   @media only screen and (max-width: 991px) and (min-width: 768px){
     .footer_block
     {
         width: 26%;
     }
   }
-  
+
   @media only screen and (max-width: 767px){
     .footer_block
     {

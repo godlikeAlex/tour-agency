@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Workshop &mdash; Colorlib Website Template</title>
+      @include('/components/head-settings')
+
     <meta charset="utf-8"><script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -29,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
     <!--Footer-->
-    
+
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
@@ -40,9 +41,10 @@
 
     <div class="site-section">
       <div class="container">
-        
+          <div class="section-name">{{__('menu.team')}}</div>
 
-        <div class="row align-items-center speaker">
+
+          <div class="row align-items-center speaker" style="margin-top: 100px;">
           <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
             <img src="/images/team/person_1.jpg" alt="Image" class="img-fluid">
           </div>
@@ -99,7 +101,7 @@
           </div>
         </div>
 
-      
+
         <div class="row align-items-center speaker">
           <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2" data-aos="fade" data-aos-delay="100">
             <img src="/images/team/person_4.jpg" alt="Image" class="img-fluid">
@@ -121,7 +123,7 @@
 
       </div>
     </div>
-    
+
   </div>
   @include('components.footer')
 
@@ -139,6 +141,6 @@
   <script src="/js/team/aos.js"></script>
 
   <script src="/js/team/main.js"></script>
-    
+
   </body>
 </html>

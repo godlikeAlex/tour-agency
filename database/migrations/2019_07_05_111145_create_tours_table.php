@@ -17,6 +17,7 @@ class CreateToursTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug');
             $table->string('name');
+            $table->text('keywords');
             $table->string('lang');
             $table->text('desc');
             $table->string('price');

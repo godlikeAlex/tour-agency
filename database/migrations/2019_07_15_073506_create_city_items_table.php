@@ -17,6 +17,7 @@ class CreateCityItemsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug');
             $table->string('name');
+            $table->text('keywords');
             $table->string('city_id');
             $table->string('category');
             $table->string('lang');

@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    <title>Home 01</title>
+    @include('components/head-settings')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
 
@@ -17,11 +17,11 @@
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
     <!--Footer-->
-    
+
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="fonts/ionicons.css" rel="stylesheet">
     <!--===============================================================================================-->
-    
+
     <style>
 
     .slide-arrow{
@@ -36,12 +36,12 @@
     }
 
     .next-arrow {
-        right: 0;
+        right: -3%;
     }
 
     .prev-arrow {
-        left: 0%;
-        z-index: 9999;        
+        left: -3%;
+        z-index: 9999;
     }
     </style>
 </head>
@@ -179,6 +179,39 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-md-4">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
+                            <div class="tourists-blocks">
+                                <div class="toursists-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxLV9A0TxeQb6ZNpl3Mwo3mj6vXOoLd7hxQhVvHopjupxblOK" alt=""></div>
+                                <div class="block-content-tourists">
+                                    <div class="block-category-tourists">Праздники</div>
+                                    <div class="block-title-tourists">Праздники Узбекистана</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
+                            <div class="tourists-blocks">
+                                <div class="toursists-img"><img src="https://uznews.uz/upload/cache/ab/6f/ab6f9336f2856759fafbcbe29c19638a.jpg" alt=""></div>
+                                <div class="block-content-tourists">
+                                    <div class="block-category-tourists">Виза</div>
+                                    <div class="block-title-tourists">Как получить визу быстро?</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
+                            <div class="tourists-blocks">
+                                <div class="toursists-img"><img src="http://aif.md/wp-content/uploads/2017/11/%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%BA%D0%B0.jpg" alt=""></div>
+                                <div class="block-content-tourists">
+                                    <div class="block-category-tourists">Вальюта</div>
+                                    <div class="block-title-tourists">Безопасный валютный обмен</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <a style="margin:auto;width:200px;" href="/tourism" class="show__more">{{__('mainpage.more')}}</a>
             </div>
@@ -282,6 +315,11 @@
             <div class="image-tour-slide" style="background: url(http://my.krskstate.ru/upload/iblock/dee/tatary.jpg)"></div>
             <div class="tours-slider__title">Туркестанская АССР </div>
             <div class="tours-slider__sub">1918—1924</div>
+        </div>
+        <div style="background: url(http://my.krskstate.ru/upload/iblock/dee/tatary.jpg)" class="main-tous-slide">
+            <div class="image-tour-slide" style="background: url(http://meros.ziyonet.uz/uploads/wonder/554c407a5158d.jpg)"></div>
+            <div class="tours-slider__title">Самарканд</div>
+            <div class="tours-slider__sub">2000</div>
         </div>
     </div>
     </div>

@@ -36,7 +36,7 @@
         'sufism' => 'Sufism',
         'last_people' => 'Last people',
         'language' => 'Language',
-        'last_posts' => 'Last posts',        
+        'last_posts' => 'Last posts',
         'history_tours' => 'History tours',
         'short_tours' => 'Short tours',
         'group_tours' => 'Group tours',
@@ -76,4 +76,9 @@
         'moda' => 'Moda',
         'allnews' => 'All news',
         'category' => 'Category',
+        'about' => 'About us',
+        'team' => 'Team',
+        'faq' => 'F.A.Q',
+        'contacts' => 'Contacts',
+        'foragency' => 'For agency',
     ];

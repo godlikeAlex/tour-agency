@@ -4,22 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tour Template</title>
+    @include('/components/head-settings')
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
    <!--===============================================================================================-->
    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -94,7 +81,7 @@
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="/fonts/ionicons.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/card.css">    
+    <link rel="stylesheet" type="text/css" href="/css/card.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/slick/custom-theme.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -113,11 +100,11 @@
                 <div style="background: transparent; padding-bottom: 20px; padding-top: 20px;" class="col-md-12 headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			        <div class="f2-s-1 p-r-30 m-tb-6">
                             <a href="/" class="breadcrumb-item f1-s-3 cl9">
-                                {{__('menu.main')}} 
+                                {{__('menu.main')}}
                             </a>
 
                             <a href="{{route('index.uzbekistan', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
-                                {{__('menu.tours')}} 
+                                {{__('menu.tours')}}
                             </a>
                             <span class="breadcrumb-item f1-s-3 cl9">
                                 {{$tour -> name}}
@@ -486,8 +473,9 @@
                     </div>
             @endforeach
             </div>
-            
-
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v4.0"></script>
+            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
         </div>
         @include('/components/footer')
     </div>

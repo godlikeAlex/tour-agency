@@ -5,8 +5,8 @@
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>DarEn BLOG || BLOG</title>
-   <link rel="icon" href="img/favicon.png">
+    @include('/components/head-settings')
+    <link rel="icon" href="img/favicon.png">
 
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -60,11 +60,11 @@
             <div style="background: transparent; padding-bottom: 20px; padding-top: 20px; padding-left: 0;" class="col-md-12 headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			        <div class="f2-s-1 p-r-30 m-tb-6">
                             <a href="/" class="breadcrumb-item f1-s-3 cl9">
-                                {{__('menu.main')}} 
+                                {{__('menu.main')}}
                             </a>
 
                             <a href="{{route('index.blog', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
-                                {{__('menu.news')}} 
+                                {{__('menu.news')}}
                             </a>
                             <a href="{{route('blog.category', ['language' => app()->getLocale(), 'category' => $post->category])}}" class="breadcrumb-item f1-s-3 cl9">
                                 @if($post->category === 'uzbekistan')
@@ -121,7 +121,7 @@
                         </div>
                         @endforeach
                         <div class="sidebar_tittle">
-                            <h3>{{__('menu.category')}}</h3>                            
+                            <h3>{{__('menu.category')}}</h3>
                         </div>
                         <div class="single_catagory_item category">
                             <ul class="list-unstyled">

@@ -36,7 +36,7 @@ theme.
 }
 body{
 	background: #fff;
-	color:#60606e;
+	color:black;
 	font-family: "Open sans", sans-serif;
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
@@ -72,7 +72,7 @@ blockquote.bq{
 
 /*links*/
 a{
-	color:#60606e;
+	color:black;
 	-webkit-transition:all .2s ease-in-out;
 			transition:all .2s ease-in-out;
 }
@@ -91,7 +91,7 @@ a.link:after{
 			transition:all .2s ease-in-out;
 }
 a:hover, a:focus{
-	color:#60606e;
+	color:black;
 	text-decoration: none;
 }
 a:hover:after{
@@ -127,14 +127,14 @@ ul.social-icons li a:hover{
 	font-weight: 700;
 	font-size: 30px;
 	text-transform: uppercase;
-	color:#60606e;
+	color:black;
 	position: relative;
 	display: inline-block;
 	margin-bottom: 20px;
 }
 .section-title p{
 	line-height: 24px;
-	color:#60606e;
+	color:black;
 }
 @media (max-width: 991px) {
 	.section-title{
@@ -208,7 +208,7 @@ ul.tags li a{
 }
 ul.tags li a:hover{
 	background-color: #f2f2f2;
-	color:#60606e;
+	color:black;
 }
 
 /*social icons*/
@@ -294,7 +294,7 @@ ul.social-icons li a{
 			transition:all .2s ease-in-out;
 	position: relative;
 }
-.tab nav a.current{color:#60606e;}
+.tab nav a.current{color:black;}
 .tab .tab_single{display: none;}
 .tab .tab_single.shown{display: block;}
 
@@ -340,7 +340,7 @@ nav.desktop-nav ul.first-level > li > a:after{
 	left: 0;
 	width: 50%;
 	height: 1px;
-	background-color: #60606e;
+	background-color: black;
 	opacity: 0;
 	-webkit-transition:all .2s ease-in-out;
 			transition:all .2s ease-in-out;
@@ -364,7 +364,7 @@ nav.desktop-nav ul.first-level > li > ul.second-level{
 	top: 70px;
 	left: 0;
 	min-width: 200px;
-	background-color: #60606e;
+	background-color: black;
 }
 nav.desktop-nav ul.first-level > li:last-child > ul.second-level{
 	left: auto;
@@ -392,7 +392,7 @@ nav.desktop-nav ul.first-level > li > ul.second-level > li > a:hover{
 nav.mobile-nav{
 	display: inline-block;
 	min-width: 300px;
-	background-color: #60606e;
+	background-color: black;
 	position: absolute;
 	right: 0;
 	top:100px;
@@ -432,7 +432,7 @@ header.main-header .menu-icon{
 header.main-header .menu-icon .line{
 	height: 1px;
 	width: 30px;
-	background-color: #60606e;
+	background-color: black;
 	-webkit-transition:all .2s ease-in-out;
 			transition:all .2s ease-in-out;
 }
@@ -509,23 +509,23 @@ footer.main-footer nav.footer-nav ul li a{
 	        transform:translate(-50%, -50%);
 }
 .site-hero .small-title{
-	color:#60606e;
+	color:black;
 	padding: 7px 12px;
 	background-color: #7beec7;
 	display: inline-block;
 }
 .site-hero .big-title{
 	font-size: 48px;
-	color:#60606e;
+	color:black;
 	padding: 10px 40px;
-	border:solid 10px #60606e;
+	border:solid 10px black;
 	display: inline-block;
 	margin-bottom: 30px;
 }
 .site-hero p{
 	width: 50%;
 	margin: 0 auto;
-	color:#60606e;
+	color:black;
 }
 
 /*site hero 2 */
@@ -559,7 +559,7 @@ footer.main-footer nav.footer-nav ul li a{
 	max-height: 400px;
 }
 .agency p{
-	color:#60606e;
+	color:black;
 }
 .agency .section-title{
 	text-align:left;
@@ -612,7 +612,7 @@ footer.main-footer nav.footer-nav ul li a{
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color:#60606e;
+	color:black;
 	margin-left: 20px;
 }
 .portfolio .categories-grid .categories ul li a.active{
@@ -664,7 +664,7 @@ footer.main-footer nav.footer-nav ul li a{
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color:#60606e;
+	color:black;
 	font-size: 18px;
 	-webkit-transform:translateY(20px);
 	    -ms-transform:translateY(20px);
@@ -888,7 +888,7 @@ footer.main-footer nav.footer-nav ul li a{
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
-	color:#60606e;
+	color:black;
 }
 
 
@@ -967,7 +967,7 @@ footer.main-footer nav.footer-nav ul li a{
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	font-size: 12px;
-	color:#60606e;	
+	color:black;	
 	text-transform: uppercase;
 	-webkit-transition:all .2s ease-in-out .2s;
 	transition:all .2s ease-in-out .2s;

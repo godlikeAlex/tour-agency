@@ -57,17 +57,24 @@ Route::group(['prefix' => '{language}'], function () {
         Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
     });
 
-    Route::prefix('about')->group(function() {
-        Route::get('/', function() {
-            $cities = City::all();
+    Route::prefix('about')->group(function($lang) {
+        Route::get('/', function($lang) {
+            $cities = City::where('lang', $lang)->get();
             return view('about', compact('cities'));
         })->name('about');
-        Route::get('faq', function() {    $cities = City::all();
+        Route::get('faq', function($lang) {    
+            $cities = City::where('lang', $lang)->get();
             return view('faq', compact('cities'));
         })->name('faq');
-        Route::get('team', function() {    $cities = City::all();
+        Route::get('team', function($lang) {    
+            $cities = City::where('lang', $lang)->get();
             return view('team', compact('cities'));
         })->name('team');
+
+        Route::get('contact', function($lang) {    
+            $cities = City::where('lang', $lang)->get();
+            return view('contact', compact('cities'));
+        })->name('contacts');
     });
 });
 
@@ -98,7 +105,7 @@ Route::prefix('admin/news')->group(function() {
     Route::post('/create', 'BlogAdminController@create')->name('blog.store');
 });
 
-Route::prefix('admin/galery')->group(function() {
+Route::prefix('admin/gallery')->group(function() {
     Route::get('/create', 'GaleryController@create');
     Route::post('/create', 'GaleryController@store')->name('galery.store');
 });

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About us - AKAD - Creative Digital Agency HTML Template</title>
-	<!-- META TAGS -->
+    @include('/components/head-settings')
+    <!-- META TAGS -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-	<meta name="author" content="Amine Akhouad">
-	<meta name="description" content="AKAD is a creative and modern template for digital agencies">
 
 	<!-- STYLES -->
 	<link rel="stylesheet" href="/css/about/bootstrap.min.css">
@@ -15,7 +12,7 @@
 	<link rel="stylesheet" href="/css/about/animsition.min.css">
 	<link rel="stylesheet" href="/css/about/animate.css">
     <link rel="stylesheet" href="/css/about/style.css">
-    
+
         <!--===============================================================================================-->
         <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 
@@ -27,14 +24,15 @@
 <!--Footer-->
 
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
-<link href="fonts/ionicons.css" rel="stylesheet">
+<link href="/fonts/ionicons.css" rel="stylesheet">
 </head>
-<body class="animsition">
+<body class="animsition" style="background: white;">
         @include('components.header')
-	<section>
+	<section style="padding: 0; margin: 0;">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
+            <div class="section-name">{{__('menu.about')}}</div>
+            <div class="row" style="padding-top: 100px;">
+                <div class="col-md-6">
 					<div class="section-title" style="text-align:left;float:left;width:100%;margin-bottom:0">
 						<span>about us</span>
 						<p class="montserrat-text uppercase">we are awesome</p>

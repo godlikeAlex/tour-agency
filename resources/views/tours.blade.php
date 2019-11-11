@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tours</title>
-    <!--===============================================================================================-->
+    @include('/components/head-settings')
+<!--===============================================================================================-->
     <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
@@ -64,7 +64,7 @@
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.short_tours') }}</div></div>
-                  
+
                 <div class="row content-block_main">
                     @foreach($shortTours as $shortTour)
                         <div class="col-md-4" style="margin-bottom: 25px;">
@@ -169,7 +169,7 @@
             </div>
             <div class="main-content-block">
                 <div class="container"><div style="margin-top: 50px;" class="section-name">{{ __('menu.kombo_asia_tours') }}</div></div>
-                
+
                 <div class="row content-block_main">
                     @foreach($komboAsiaTours as $kombAsiaTour)
                     <div class="col-md-4" style="margin-bottom: 25px;">
@@ -375,7 +375,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>  
+                <a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" style="margin:auto; margin-top: 50px; width:180px;" class="show__more">{{ __('mainpage.more') }}</a>
             </div>
         </div>
     </div>
