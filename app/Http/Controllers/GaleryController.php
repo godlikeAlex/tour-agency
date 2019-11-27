@@ -9,52 +9,21 @@ use App\Galery;
 use App\Header;
 
 use App\City;
+use App\SEO;
+
+use App\GaleryCategory;
 
 class GaleryController extends Controller
 {
-    public function create() {
-        return view('admin.create-galery');
-    }
-
-    public function home() {
-        $lang = app()->getLocale();
-        $cities         = City::where('lang', $lang)->get();
-        return view('galery', compact('cities'));
+    public function home($lang) {
+        $categories = GaleryCategory::where('lang', $lang)->get();
+        return view('galery', compact('categories'));
     }
 
     public function show($lang, $century) {
-        $lang = app()->getLocale();
-        $cities = City::where('lang', $lang)->get();
         $images = Galery::where(['lang' => $lang,'category' => $century])->paginate(20);
-        return view('show-galery', compact('century', 'images', 'cities'));
-    }
-
-    public function store() {
-        $validData = $this->validRquest();
-        $validData['slug'] = request()->title;
-        $img = Galery::create($validData);
-        $this->storeImage($img);
-        dd(request() -> all());
-    }
-
-    private function validRquest() {
-        $validateData = request() -> validate([
-            'title' => 'required|min:4',
-            'category' => 'required',
-            'lang' => 'required',
-            'desc' => 'required|min:10',
-            'image' => 'required|image'
-        ]);
-
-        return $validateData;
-    }
-
-    private function storeImage($img) {
-        if(request()->has('image'))
-        {    
-            $img->update([
-                'image' => request()->image->store('galery', 'public'),
-            ]);
-        }
+        $century = GaleryCategory::where('slug', $century)->firstOrFail();
+        SEO::defaultSeoParams($century->name, $century->keywords, $century->seo_desc);
+        return view('show-galery', compact('century', 'images'));
     }
 }

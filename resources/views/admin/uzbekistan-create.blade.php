@@ -13,15 +13,22 @@
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Название">
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова">
+                        </div>  
+                        <div class="form-group">
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO Desc">
+                        </div>
+                        <div class="form-group">
                                 <label for="exampleSelect1">Категория</label>
                                 <select name="category" class="form-control" id="exampleSelect1">
-                                    <option value="uzb">Узбекистан </option>
-                                    <option value="tourism">Туризм</option>
-                                    <option value="arts">Искусства</option>
-                                    <option value="culture">Культура</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->slug}}">{{$category->name}} </option>
+                                    @endforeach
                                 </select>
-                        </div> -->
+                        </div>
                         <div class="form-group">
                                 <label for="exampleSelect1">Под категория</label>
                                 <select name="category" class="form-control" id="exampleSelect1">

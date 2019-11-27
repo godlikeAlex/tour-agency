@@ -8,10 +8,11 @@
 
                 <div class="card-body">
                         @foreach($tours as $tour)
-                            <div class="col-md-3" >
+                            <div class="col-md-4" >
                                 <div style="background: url(/storage/{{$tour->image}}); background-size: cover; background-position: center; height: 200px;"></div>
                                 <p>{{$tour->name}}</p>
                                 <a href="{{route('tour.update', $tour->id)}}" class="btn btn-success">Изменить</a>
+                                <a href="{{route('tour.delete', $tour->id)}}" class="btn btn-danger">Удалить</a>
                             </div>
                         @endforeach
                 </div>

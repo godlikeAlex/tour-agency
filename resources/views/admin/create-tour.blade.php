@@ -23,6 +23,14 @@
                             <input type="text" name="price" class="form-control" placeholder="Цена">
                         </div>  
                         <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова">
+                        </div>  
+                        <div class="form-group">
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO DESC">
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="video" class="form-control" placeholder="ID Видео на ютубе">
                         </div> 
                         <div class="form-group">
@@ -35,23 +43,9 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Тип блога</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="history-tours">Исторические туры </option>
-                                <option value="short-tours">Короткие туры </option>
-                                <option value="group-tours">Групповые туры </option>
-                                <option value="individual-tours">Индивидуальные туры</option>
-                                <option value="exclusive-tours">Эксклюзивные туры </option>
-                                <option value="classic-tours">Классические туры</option>
-                                <option value="eco-tours">Эко туры</option>
-                                <option value="kombo-asia-tours">Комбинированные туры по Центральной Азии </option>
-                                <option value="kombo-uz-kz-tours">Комбинированные туры по Узбекистану и Казахстану  </option>
-                                <option value="kombo-uz-kg-tours">Комбинированные туры по Узбекистану и Кыргызстану</option>
-                                <option value="kombo-uz-tm-tours">Комбинированные туры по Узбекистану и Туркменистану</option>
-                                <option value="kombo-uz-tj-tours">Комбинированные туры по Узбекистану и Таджикистану </option>
-                                <option value="excursion-сity">Экскурсии по городам </option>
-                                <option value="pilgrim-tours">Паломнические туры</option>
-                                <option value="economy-tours">Эконом туры </option>
-                                <option value="cycling-tours">Велотуры</option>
-                                <option value="buisnes-tours">Бизнес туры </option>
+                                @foreach($categories as $category)
+                                    <option value="{{$category->slug}}">{{$category->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
@@ -64,28 +58,14 @@
                         <textarea class="form-control" name="desc" rows="5"></textarea>
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" name="pdf" class="form-control col-md-5" placeholder="pdf link">
-                        <input type="text" name="physical_rating" class="form-control col-md-5" placeholder="Нагрузка">
+                        <input type="text" name="pdf" class="form-control col-md-12" placeholder="pdf link">
                     </div>
                     <div class="form-group">
                         <input type="text" name="days" class="form-control" id="days" placeholder="Кол-во дней тура">
                     </div>
                     <div class="form-group">
-                        <h4>Особености</h4>
-                        <div id="feature_container">
-                            <div class="form-group"><input class="form-control" type="text" name="feature[]" placeholder="Особеность"></div>
-                        </div>
-                        <div class="form-group"><div id="addmorefeature" class="btn btn-success">Добавить еще 1 особеность</div></div>
-                    </div>
-                    <div class="form-group">
                         <p>Карта</p>
                         <input class="form-control" placeholder="ссылка на iframe" type="text" name="map" id="">
-                    </div>
-                    
-                    <h4>Возраст</h4>
-                    <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" name="age_from" class="form-control col-md-5" placeholder="От">
-                        <input type="text" name="age_to" class="form-control col-md-5" placeholder="До">
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
                         <input type="text" name="starts" class="form-control col-md-5" placeholder="Начало тура">
@@ -114,7 +94,6 @@
                         <div id="includes-container">
                             <div class="form-group">
                                 <input type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл">
-                                <textarea  name="include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="Входит | описание"></textarea>
                             </div>
                         </div>
                     </div> 
@@ -126,7 +105,6 @@
                         <div id="dont_includes-container">
                             <div class="form-group">
                                 <input type="text" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл">
-                                <textarea  name="dont_include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="НЕ Входит |  описание"></textarea>
                             </div>
                         </div>
                     </div> 
@@ -183,8 +161,8 @@
 
     const addMoreIncludes   = document.querySelector('#addMoreIncludes');
     const containerIncludes = document.querySelector('#includes-container');
-    const templateIncludes  =  `<div class="form-group"> <input type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл"> <textarea  name="include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="Входит | описание"></textarea></div>`;
-    const templateDontIncludes = '<div class="form-group"> <input type="text" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл"><textarea  name="dont_include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="НЕ Входит |  описание"></textarea></div>'
+    const templateIncludes  =  `<div class="form-group"> <input type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл"></div>`;
+    const templateDontIncludes = '<div class="form-group"> <input type="text" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл"></div>'
     const addMoreDontIncludes   = document.querySelector('#addMoreDontIncludes');
     const containerDontIncludes = document.querySelector('#dont_includes-container');
     const render = (template, container) => {

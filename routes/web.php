@@ -54,8 +54,14 @@ Route::group(['prefix' => '{language}'], function () {
     Route::prefix('uzbekistan')->group(function() {
         Route::get('/', 'UzbekistanController@index')->name('index.uzbekistan');
         Route::get('/{category}', 'UzbekistanController@category')->name('uzb.category');
-        Route::get('/{category}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
+        Route::get('/{category}/{subcategory}', 'UzbekistanController@sub')->name('uzb.sub');
+        Route::get('/{category}/{subcategory}/{uzb}', 'UzbekistanController@show')->name('uzb.show');
     });
+
+    
+Route::post('/contact', 'EmailController@sendEmail')->name('send.mail');
+Route::post('/toursend', 'EmailController@sendTourRequest')->name('book.tour');
+Route::get('/tourism', 'ToursimController@index')->name('index.tourism');
 
     Route::prefix('about')->group(function($lang) {
         Route::get('/', function($lang) {
@@ -78,14 +84,26 @@ Route::group(['prefix' => '{language}'], function () {
     });
 });
 
+
+
 Route::prefix('admin/uzbekistans')->group(function() {
     Route::get('/create', 'UzbekistanAdminController@create')->name('uzbekistan.create');
     Route::post('/create', 'UzbekistanAdminController@store');
+    Route::get('/list', 'UzbekistanAdminController@list')->name('uzbekistan.list');
+    Route::get('/delete/{id}', 'UzbekistanAdminController@delete')->name('uzbekistan.delete');
+    Route::get('/updae/{id}', 'UzbekistanAdminController@update')->name('uzbekistan.update');
+    Route::post('/updae/{id}', 'UzbekistanAdminController@updateStore')->name('uzbekistan.updateStore');
+
+    Route::get('/category/create', 'UzbekistanCategoryController@create')->name('create.uzb.category');
+    Route::post('/category/create', 'UzbekistanCategoryController@store');
+    Route::get('/category/list', 'UzbekistanCategoryController@list')->name('list.uzb.category');
+    Route::get('/category/update/{id}', 'UzbekistanCategoryController@update')->name('uzb.category.update');
+    Route::post('/category/update/{id}', 'UzbekistanCategoryController@updateStore');
+    Route::get('/category/delete/{id}', 'UzbekistanCategoryController@delete')->name('uzb.category.delete');    
 });
 
 
 
-Route::get('/tourism', 'ToursimController@index');
 Route::get('/tourism/{slug}', 'ToursimController@view');
 Route::get('/admin/tourism/create', 'ToursimController@create');
 Route::post('/admin/tourism/create', 'ToursimController@store');
@@ -102,12 +120,15 @@ Route::prefix('admin/news')->group(function() {
     Route::get('/list', 'BlogAdminController@blogList')->name('blog.list');
     Route::get('/list/update/{id}', 'BlogAdminController@blogUpdate')->name('blog.update');
     Route::post('/list/update/{id}', 'BlogAdminController@blogUpdatePost')->name('blog.update.store');
+    Route::get('/list/delete/{id}', 'BlogAdminController@blogDelete')->name('blog.delete');
     Route::post('/create', 'BlogAdminController@create')->name('blog.store');
 });
 
 Route::prefix('admin/gallery')->group(function() {
-    Route::get('/create', 'GaleryController@create');
-    Route::post('/create', 'GaleryController@store')->name('galery.store');
+    Route::get('/create', 'GaleryAdminController@create')->name('galery.create');
+    Route::get('/category/create', 'GaleryAdminController@categoryCreate')->name('galery.category.create');
+    Route::post('/category/create', 'GaleryAdminController@categoryStore')->name('galery.category.store');
+    Route::post('/create', 'GaleryAdminController@store')->name('galery.store');
 });
 
 
@@ -117,6 +138,15 @@ Route::prefix('admin/tour')->group(function () {
     Route::get('/list', 'TourAdminController@list')->name('tour.list');
     Route::get('/update/{id}', 'TourAdminController@update')->name('tour.update');
     Route::post('/update/{id}', 'TourAdminController@updateOrCreate')->name('tour.update.store');
+    Route::get('/delete/{id}', 'TourAdminController@deleteTour')->name('tour.delete');
+
+
+    Route::get('/category/create', 'TourAdminController@crateCategory')->name('tour.create.category');
+    Route::post('/category/create', 'TourAdminController@storeCategory')->name('tour.stores.category');
+    Route::get('/category/all', 'TourAdminController@listCategory')->name('tour.list.category');
+    Route::get('/category/delete/{id}', 'TourAdminController@deleteCategory')->name('delete.tour.category');
+    Route::get('/category/upddate/{id}', 'TourAdminController@updateCategory')->name('update.tour.category');
+    Route::post('/category/upddate/{id}', 'TourAdminController@storeUpdateCategory')->name('update.store.tour.category');
 });
 
 Route::prefix('admin/tour/dates')->group(function () {
@@ -130,8 +160,16 @@ Route::prefix('admin/tour/dates')->group(function () {
 Route::prefix('admin/citys')->group(function () {
     Route::get('/create', 'CityAdminController@index')->name('city.index');
     Route::post('/create', 'CityAdminController@store');
-    Route::get('/items/create', 'CityAdminController@createItemsForCity')->name('city.item');
+    Route::get('/list', 'CityAdminController@list')->name('city.list');
+    Route::get('/list/delete/{id}', 'CityAdminController@delete')->name('city.delete');
+    Route::get('/list/update/{id}', 'CityAdminController@update')->name('city.update');
+    Route::post('/list/update/{id}', 'CityAdminController@updateStore')->name('city.update.store');
+    Route::get('/items/create', 'CityAdminController@createItemsForCity')->name('city.item.admin');
     Route::post('/items/create', 'CityAdminController@cityItemsStore');
+    Route::get('/items/list', 'CityAdminController@cityItemsList')->name('items.list');
+    Route::get('/items/delete/{id}', 'CityAdminController@deleteItem')->name('city.item.delete');
+    Route::get('/items/update/{id}', 'CityAdminController@updateItemView')->name('city.item.update');
+    Route::post('/items/update/{id}', 'CityAdminController@updateItem')->name('city.item.update.store');
 });
 
 
@@ -141,5 +179,6 @@ Route::prefix('admin/peoples')->group(function() {
     Route::get('/list', 'PeopleAdminController@peopleList')->name('people.list');
     Route::get('/list/update/{id}', 'PeopleAdminController@peopleUpdate')->name('people.update');
     Route::post('/list/update/{id}', 'PeopleAdminController@peopleUpdatePost')->name('people.update.store');
+    Route::get('/list/delete/{id}', 'PeopleAdminController@deletePeople')->name('people.delete');
     Route::post('/create', 'PeopleAdminController@create')->name('people.store');
 });

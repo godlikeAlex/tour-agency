@@ -1,10 +1,9 @@
 /**************** extend css start ****************/
 /**************** extend css start ****************/
 /**************** common css start ****************/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Source+Serif+Pro:400,600,700");
 /* line 3, E:/168 Daren Blog/168_Daren_Blog_html/sass/_common.scss */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -139,15 +138,10 @@ a {
   transition: 0.5s;
 }
 
-/* line 74, E:/168 Daren Blog/168_Daren_Blog_html/sass/_common.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Serif Pro", serif;
-}
 
 /* line 78, E:/168 Daren Blog/168_Daren_Blog_html/sass/_common.scss */
 p {
   color: #666666;
-  font-family: "Open Sans", sans-serif;
   line-height: 1.929;
   font-size: 15px;
   margin-bottom: 0px;
@@ -2100,7 +2094,6 @@ ul {
 .main_menu .main-menu-item ul li a {
   color: #2a2a2a;
   font-size: 13px;
-  font-family: "Source Serif Pro", serif;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -2538,7 +2531,6 @@ ul {
 .banner_post .h2 {
   color: #2a2a2a;
   line-height: 1.333;
-  font-family: "Source Serif Pro", serif;
   font-weight: 600;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -2809,7 +2801,6 @@ ul {
 .post_1 .post_text_1 h3, .post_2 .post_text_1 h3, .post_3 .post_text_1 h3 {
   color: #2a2a2a;
   line-height: 1.333;
-  font-family: "Source Serif Pro", serif;
   font-weight: 600;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3571,7 +3562,6 @@ ul {
 /* line 90, E:/168 Daren Blog/168_Daren_Blog_html/sass/_all_post.scss */
 .all_post .category ul li a {
   color: #888888;
-  font-family: "Source Serif Pro", serif;
 }
 
 /* line 98, E:/168 Daren Blog/168_Daren_Blog_html/sass/_all_post.scss */
@@ -3589,7 +3579,6 @@ ul {
   transition: all 0.3s ease 0s;
   color: #888888;
   font-size: 13px;
-  font-family: "Source Serif Pro", serif;
   font-weight: 600;
   text-transform: uppercase;
   color: #2a2a2a;

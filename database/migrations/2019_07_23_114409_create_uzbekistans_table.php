@@ -16,13 +16,14 @@ class CreateUzbekistansTable extends Migration
         Schema::create('uzbekistans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name') ;
-            $table->text('keywords');
             $table->string('category');
             $table->string('slug');
             $table->string('image')->nullable();
             $table->text('desc');
             $table->string('lang');
             $table->longText('about');
+            $table->string('keywords');
+            $table->text('seo_desc');
             $table->timestamps();
         });
     }

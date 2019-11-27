@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase:400,700&display=swap');
+
 .main-menu
 {
     display: flex;
@@ -49,14 +52,21 @@
 }
 
     .main-content-text {
-        color: red;
+        font-family: 'Merriweather', serif !important;
+        font-size: 18px;
     }
 
     .main-content-text:first-letter {
-        font-size: 4.5em;
+        font-size: 75px;
+        font-weight: 700;
+        color: black;
         float: left;
-        padding-left: 0px;
-        padding-right: 12px;
+        margin: 2px 10px -5px 0;
+        padding: 8px 2px 0px 8px;
+        /* border-top: 2px solid #050658;
+        border-left: 2px solid #e90606; */
+        font-family: 'Cormorant Unicase', serif;
+        line-height: 35px;
     }
 
     /*p {*/
@@ -199,7 +209,7 @@
 }
 
 .sub-menu-nav li:hover a {
-    color: #00529f;
+    color: #adadad;
 }
 
 .sub-menu-nav li:first-child {
@@ -207,13 +217,16 @@
 }
 
 .sub-menu-nav a {
-    color: #333;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .125em;
     font-family: 'Roboto', sans-serif;
 }
 
 .sub-menu-main
 {
-    background: #f9f9f9;
+    border-top: 1px solid white;
+    background: #050658;
 }
 
 .sub-menu-item:after {
@@ -403,6 +416,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 20px;
+    visibility: visible;
 }
 
 body {
@@ -413,7 +427,8 @@ body {
 
 
 .left-menu-hide {
-    left: -25%;
+    left: -35%;
+    visibility: hidden;
 }
 
 .close-cont
@@ -435,6 +450,10 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid #ededed;
     align-items: center;
+}
+
+.left-menu-main li:last-child div {
+    border-bottom: none;
 }
 
 .left-menu-social
@@ -507,7 +526,7 @@ body {
 
 
 .left-menu-main-link i {font-size: 28px;}
-.left-menu-main-link a:hover {text-decoration: none; color:#00529f}
+.left-menu-main-link a:hover {text-decoration: none; color:#adadad}
 
 .close-slide-menu {
     text-align: right;
@@ -572,7 +591,7 @@ pre {
 {
     width: 130px;
 }
-.dropped-menu a:hover {text-decoration: none; color:#00529f}
+.dropped-menu a:hover {text-decoration: none; color:#adadad}
 
 /* Media  */
 

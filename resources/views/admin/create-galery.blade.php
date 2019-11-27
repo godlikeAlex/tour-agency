@@ -8,7 +8,7 @@
                 <div class="card-header">Добавить в галерея</div>
 
                 <div class="card-body">
-                    <form action="{{route('galery.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="title" class="form-control" placeholder="Название фотографии">
@@ -23,17 +23,9 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Категория</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="khiva-khanate">Хивинское ханство </option>
-                                <option value="kokand-khanate">Кокандское  ханство</option>
-                                <option value="bukhara-emirate">Бухарский эмират</option>
-                                <option value="turkestan-assr">Туркестанское АССР</option>
-                                <option value="jadidism">Джадидизм </option>
-                                <option value="stalin-period">Сталинский период</option>
-                                <option value="khrushchevsky-period">Хрущевский период</option>
-                                <option value="brezhnevsky-period">Брежневский период</option>
-                                <option value="restructuring">Перестройка</option>
-                                <option value="republic-of-uzbekistan">Республика Узбекистан </option>
-                                <option value="present">Настоящее</option>
+                                @foreach($categories as $category)
+                                    <option value="{{$category->slug}}">{{$category->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

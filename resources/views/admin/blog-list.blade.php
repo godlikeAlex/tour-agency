@@ -13,6 +13,7 @@
                                 <div style="background: url(/storage/{{$post->image}}); background-size: cover; background-position: center; height: 200px;"></div>
                                 <p>{{$post->title}}</p>
                                 <a href="{{route('blog.update', $post->id)}}" class="btn btn-success">Изменить</a>
+                                <a href="{{route('blog.delete', $post->id)}}" class="btn btn-danger">Удалить</a>
                             </div>
                         @endforeach
                     @elseif(request()->segment(2) === 'peoples')
@@ -21,6 +22,7 @@
                                 <div style="background: url(/storage/{{$post->image}}); background-size: cover; background-position: center; height: 200px;"></div>
                                 <p>{{$post->name}}</p>
                                 <a href="{{route('people.update', $post->id)}}" class="btn btn-success">Изменить</a>
+                                <a href="{{route('people.delete', $post->id)}}" class="btn btn-danger">Удалить</a>
                             </div>
                         @endforeach
                     @endif

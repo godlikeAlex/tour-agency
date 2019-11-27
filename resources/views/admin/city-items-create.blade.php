@@ -14,6 +14,10 @@
                             <input type="text" name="name" class="form-control" placeholder="Название объекта">
                         </div>
                         <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова">
+                        </div>  
+                        <div class="form-group">
                                 <label for="exampleSelect1">Город в котором находиться объект.</label>
                                 <select name="city_id" class="form-control" id="exampleSelect1">
                                     @foreach($citys as $city)

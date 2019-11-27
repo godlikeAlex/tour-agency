@@ -43,6 +43,31 @@
         left: -3%;
         z-index: 9999;
     }
+
+    .next-arrow-big {
+        right: 1%;
+        background: none;
+    font-size: 30px;
+    }
+
+    .prev-arrow-big {
+        left: 1%;
+        z-index: 9999;
+        background: none;
+    font-size: 30px;
+
+    }
+
+    .main-tours-slider:hover .prev-arrow-big {
+        color: #050658;
+    }
+    .main-tours-slider:hover .next-arrow-big {
+        color: #050658;
+    }
+
+    .slick-list {
+        overflow-y: -webkit-paged-x;
+    }
     </style>
 </head>
 
@@ -61,7 +86,7 @@
     <div class="main-content">
         <section>
             <div class="container">
-                <div class="section-name">{{__('menu.uzbekistan')}}</div>
+                <div class="section-name"><a href="{{route('index.uzbekistan', app()->getLocale())}}">{{__('menu.uzbekistan')}}</a></div>
                 <div class="row" >
                     <div class="col-md-4">
                         <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
@@ -81,7 +106,7 @@
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1562023829-42be3bc1cc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
                                 <div class="block-content">
                                     <div class="block-title">{{__('menu.history')}}</div>
-                                    <div class="block-desc">Исто?рия — область знаний, а также гуманитарная наука, занимающаяся изучением человека (его деятельности, состояния, мировоззрения, социальных связей, организаций и так далее) в прошлом</div>
+                                    <div class="block-desc">История — область знаний, а также гуманитарная наука, занимающаяся изучением человека (его деятельности, состояния, мировоззрения, социальных связей, организаций и так далее) в прошлом</div>
                                     <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
@@ -93,7 +118,7 @@
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566578068205-12544813d53c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80);" ></div>
                                 <div class="block-content">
                                     <div class="block-title">{{__('menu.peoples')}}</div>
-                                    <div class="block-desc">Наро?д — историческая общность людей. Употребляется в научной литературе в двух основных значениях — в политическом</div>
+                                    <div class="block-desc">Народ — историческая общность людей. Употребляется в научной литературе в двух основных значениях — в политическом</div>
                                     <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
@@ -105,7 +130,7 @@
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566550190057-347ce06a9006?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
                                 <div class="block-content">
                                     <div class="block-title">{{__('menu.culture')}}</div>
-                                    <div class="block-desc">Культу?ра — понятие, имеющее огромное количество значений в различных областях человеческой жизнедеятельности. Культура является предметом изучения философии,</div>
+                                    <div class="block-desc">Культура — понятие, имеющее огромное количество значений в различных областях человеческой жизнедеятельности. Культура является предметом изучения философии,</div>
                                     <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
@@ -131,7 +156,7 @@
                                     </div>
                                     <div class="block-content">
                                         <div class="block-title">{{ __('menu.kitchen') }}</div>
-                                        <div class="block-desc">Узбе?кская ку?хня — национальная кухня Узбекистана. Богатая кухня, имеет глубокую историю, тесно связана с узбекской </div>
+                                        <div class="block-desc">Узбекская кухня — национальная кухня Узбекистана. Богатая кухня, имеет глубокую историю, тесно связана с узбекской </div>
                                         <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
@@ -144,7 +169,7 @@
 
         <section class="second-sec">
         <div class="container">
-                <div class="section-name">{{__('menu.tourists')}}</div>
+                <div class="section-name"><a href="{{route('index.tourism', app()->getLocale())}}">{{__('menu.tourists')}}</a></div>
                 <div class="row" >
                     <div class="col-md-4">
                         <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
@@ -218,7 +243,7 @@
         </section>
         <section>
             <div class="container">
-                <div class="section-name">{{__('menu.cities')}}</div>
+                <div class="section-name"><a href="{{route('index.city', app()->getLocale())}}">{{__('menu.cities')}}</a></div>
                 <div class="row cities-slider" >
                     @foreach($cities as $city)
                     <div class="col-md-12" style="margin-bottom: 25px;">
@@ -240,7 +265,7 @@
         </section>
         <section class="second-sec">
             <div class="container">
-                <div class="section-name">{{__('menu.peoples')}}</div>
+                <div class="section-name"><a href="{{route('index.people', app()->getLocale())}}">{{__('menu.peoples')}}</a></div>
                 <div class="row" >
                     <div class="col-md-3" style="margin-bottom: 25px;">
                         <a href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}">
@@ -323,7 +348,7 @@
         </div>
     </div>
     </div>
-    <section>
+        <!-- <section>
             <div class="container">
                 <div class="section-name">{{__('menu.shop')}}</div>
                 <div class="row bazar" >
@@ -333,7 +358,7 @@
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566572179133-512205811f1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);" ></div>
                                 <div class="block-content">
                                     <div class="block-title">Книги</div>
-                                    <div class="block-desc">Кни?га — один из видов печатной продукции: непериодическое издание, состоящее из сброшюрованных или отдельных бумажных листов</div>
+                                    <div class="block-desc">Книга — один из видов печатной продукции: непериодическое издание, состоящее из сброшюрованных или отдельных бумажных листов</div>
                                     <div class="show__more show__more-block" href="http://google.com">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
@@ -352,7 +377,7 @@
                         </a>
                     </div>
                     <div class="col-md-4" style="    padding-bottom: 10px;">
-                        <a class="link-block" href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
+                        <a class="link-block"  href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}">
                             <div class="big-blocks big-padding">
                                 <div class="block-img" style="background: url(https://images.unsplash.com/photo-1562023829-42be3bc1cc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" ></div>
                                 <div class="block-content">
@@ -402,10 +427,10 @@
                 </div>
                 <a style="margin:auto; margin-top: 100px; width:200px;" class="show__more">{{__('mainpage.more')}}</a>
             </div>
-        </section>
-        <section class="second-sec">
+        </section> -->
+        <section>
             <div class="container">
-                <div class="section-name">{{__('menu.news')}}</div>
+                <div class="section-name"><a href="{{route('index.blog', app()->getLocale())}}">{{__('menu.news')}}</a></div>
                 <div class="row" >
                     @foreach($articles as $post)
                     <div class="col-md-3" style="margin-bottom: 25px;">
@@ -424,7 +449,7 @@
                 </div>
                 <a href="{{route('index.blog', app()->getLocale())}}" style="margin:auto; margin-top: 100px; width:200px;" class="show__more">{{__('mainpage.more')}}</a>
             </div>
-        </section>
+    </section>
     <!-- Footer -->
     @include('/components/footer')
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -436,10 +461,36 @@
                 infinite: true,
                 speed: 300,
                 dots: false,
-                prevArrow: false,
-                nextArrow: false,
+                prevArrow: '<button class="slide-arrow prev-arrow prev-arrow-big"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow next-arrow-big"><i class="fas fa-chevron-right"></i></button>',
                 slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1, 
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
 
             $('.cities-slider').slick({
@@ -448,6 +499,32 @@
                 slidesToScroll: 4,
                 prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1, 
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
 
             $('.bazar').slick({

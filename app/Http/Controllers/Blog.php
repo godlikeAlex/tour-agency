@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\People;
 
-use App\Header;
+use App\SEO;
 
 use App\City;
 
@@ -18,31 +18,43 @@ class Blog extends Controller
         return view('home');    
     }
 
-    public function indexBlog() {
-        $lang = app()->getLocale();
+    public function indexBlog($lang) {
+        $uzbnews = Posts::where(['lang' => $lang, 'category' => 'uzbekistan'])->orderBy('created_at','desc')->limit(5)->get();
+        $arch = Posts::where(['lang' => $lang, 'category' => 'archeology'])->orderBy('created_at','desc')->limit(5)->get();
+        $tourism = Posts::where(['lang' => $lang, 'category' => 'tourism'])->orderBy('created_at','desc')->limit(5)->get();
+        $notes = Posts::where(['lang' => $lang, 'category' => 'notes'])->orderBy('created_at','desc')->limit(5)->get();
+   
         $cities         = City::where('lang', $lang)->get();
         $posts = Posts::where('lang', $lang)->orderBy('created_at','desc')->paginate(6);
         $lastPosts = $this->lastPosts();
         $category = "all";
-        return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
+        return view('blog', compact('posts', 'lastPosts', 'category', 'cities', 'uzbnews', 'arch', 'tourism', 'notes'));
     }
 
-    public function indexBlogCategory($category) {
-        $lang = app()->getLocale();
+    public function indexBlogCategory($lang, $category) {
+        $uzbnews = Posts::where(['lang' => $lang, 'category' => 'uzbekistan'])->orderBy('created_at','desc')->limit(5)->get();
+        $arch = Posts::where(['lang' => $lang, 'category' => 'archeology'])->orderBy('created_at','desc')->limit(5)->get();
+        $tourism = Posts::where(['lang' => $lang, 'category' => 'tourism'])->orderBy('created_at','desc')->limit(5)->get();
+        $notes = Posts::where(['lang' => $lang, 'category' => 'notes'])->orderBy('created_at','desc')->limit(5)->get();
+
         $cities         = City::where('lang', $lang)->get();
         $posts = Posts::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(6);
         $lastPosts = $this->lastPosts();
-        return view('blog', compact('posts', 'lastPosts', 'category', 'cities'));
+        return view('blog', compact('posts', 'lastPosts', 'category', 'cities', 'uzbnews', 'arch', 'tourism', 'notes'));
     }
 
     public function showPost($lang, $category, $slug) {
-        $lang = app()->getLocale();
+        $uzbnews = Posts::where(['lang' => $lang, 'category' => 'uzbekistan'])->orderBy('created_at','desc')->limit(5)->get();
+        $arch = Posts::where(['lang' => $lang, 'category' => 'archeology'])->orderBy('created_at','desc')->limit(5)->get();
+        $tourism = Posts::where(['lang' => $lang, 'category' => 'tourism'])->orderBy('created_at','desc')->limit(5)->get();
+        $notes = Posts::where(['lang' => $lang, 'category' => 'notes'])->orderBy('created_at','desc')->limit(5)->get();
+
         $cities         = City::where('lang', $lang)->get();
         $post = Posts::where('slug', $slug)->firstOrFail();
-        $header = Header::dataHeader();
+        SEO::defaultSeoParams($post->title, $post->keywords, $post->seo_desc);
         $lastPosts = $this->lastPosts();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        return view('blog-show', compact('post', 'lastPosts', 'recPosts', 'cities'));
+        return view('blog-show', compact('post', 'lastPosts', 'recPosts', 'cities', 'uzbnews', 'arch', 'tourism', 'notes'));
     }
 
     public function store() {
@@ -51,34 +63,47 @@ class Blog extends Controller
 
     // Peoples blog
 
-    public function indexPeople() {
+    public function indexPeople($lang) {
         $lang = app()->getLocale();
+        $drmir = People::where(['lang' => $lang, 'category' => 'drevniy-mir'])->orderBy('created_at','desc')->limit(5)->get();
+        $sredveka = People::where(['lang' => $lang, 'category' => 'srednie-veka'])->orderBy('created_at','desc')->limit(5)->get();
+        $novoevremya = People::where(['lang' => $lang, 'category' => 'novoe-vremya'])->orderBy('created_at','desc')->limit(5)->get();
+        $sovremenost = People::where(['lang' => $lang, 'category' => 'sovremenost'])->orderBy('created_at','desc')->limit(5)->get();
+   
         $cities         = City::where('lang', $lang)->get();
-        $peoples = People::where('lang', $lang)->orderBy('created_at','desc')->paginate(5);
+        $peoples = People::where('lang', $lang)->orderBy('created_at','desc')->paginate(6);
         $lastPeople = $this->lastPeople();
-        $header = Header::dataHeader();
         $category = "all";
 
-        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category'));
+        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category', 'drmir', 'sredveka', 'novoevremya', 'sovremenost'));
     }
 
-    public function indexPeopleCategory($category) {
-        $lang = app()->getLocale();
+    public function indexPeopleCategory($lang, $category) {
+        $drmir = People::where(['lang' => $lang, 'category' => 'drevniy-mir'])->orderBy('created_at','desc')->limit(5)->get();
+        $sredveka = People::where(['lang' => $lang, 'category' => 'srednie-veka'])->orderBy('created_at','desc')->limit(5)->get();
+        $novoevremya = People::where(['lang' => $lang, 'category' => 'novoe-vremya'])->orderBy('created_at','desc')->limit(5)->get();
+        $sovremenost = People::where(['lang' => $lang, 'category' => 'sovremenost'])->orderBy('created_at','desc')->limit(5)->get();
+   
         $cities         = City::where('lang', $lang)->get();
-        $peoples = People::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(5);
+        $peoples = People::where(['category' => $category, 'lang' => $lang])->orderBy('created_at','desc')->paginate(6);
         $lastPeople = $this->lastPeople();
 
-        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category'));
+        return view('blog-people', compact('peoples', 'lastPeople', 'cities', 'category', 'drmir', 'sredveka', 'novoevremya', 'sovremenost'));
     }
 
 
     public function showPeople($lang, $category, $slug) {
         $people = People::where('slug', $slug)->firstOrFail();
-        $lang = app()->getLocale();
+        $drmir = People::where(['lang' => $lang, 'category' => 'drevniy-mir'])->orderBy('created_at','desc')->limit(5)->get();
+        $sredveka = People::where(['lang' => $lang, 'category' => 'srednie-veka'])->orderBy('created_at','desc')->limit(5)->get();
+        $novoevremya = People::where(['lang' => $lang, 'category' => 'novoe-vremya'])->orderBy('created_at','desc')->limit(5)->get();
+        $sovremenost = People::where(['lang' => $lang, 'category' => 'sovremenost'])->orderBy('created_at','desc')->limit(5)->get();
+   
         $cities         = City::where('lang', $lang)->get();
         $lastPeople = $this->lastPeople();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        return view('blog-post-people', compact('people', 'cities', 'lastPeople', 'recPosts'));
+        SEO::defaultSeoParams($people->name, $people->keywords, $people->seo_desc);
+        return view('blog-post-people', compact('people', 'cities', 'lastPeople', 'recPosts', 'drmir', 'sredveka', 'novoevremya', 'sovremenost'));
     }
 
     private function lastPeople() 

@@ -12,21 +12,34 @@
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" value="{{$people->name}}" class="form-control" placeholder="Имя человека">
+                        </div>  
+                        <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова" value="{{$people->keywords}}">
                         </div>    
                         <div class="form-group">
-                            <label for="exampleSelect1">Язык контента</label>
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO DESC" value="{{$people->seo_desc}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Язык </label>
                             <select name="lang" class="form-control" id="exampleSelect1">
-                                <option>en</option>
-                                <option>ru</option>
+                                @if($people->lang == 'en')
+                                    <option value="en">en</option>
+                                    <option value="ru">ru</option>
+                                @else
+                                    <option value="ru">ru</option>
+                                    <option value="en">en</option>
+                                @endif
                             </select>
-                        </div> 
+                        </div>   
                         <div class="form-group">
                             <label for="exampleSelect1">Класс человека</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="drevniy-mir">Древний мир</option>
-                                <option value="srednie-veka">Средние века</option>
-                                <option value="novoe-vremya">Новое время</option>
-                                <option value="sovremenost">Современость</option>
+                                <option value="drevniy-mir" {{$people->category == 'drevniy-mir' ? 'selected' : ''}}>Древний мир</option>
+                                <option value="srednie-veka" {{$people->category == 'srednie-veka' ? 'selected' : ''}}>Средние века</option>
+                                <option value="novoe-vremya" {{$people->category == 'novoe-vremya' ? 'selected' : ''}}>Новое время</option>
+                                <option value="sovremenost" {{$people->category == 'sovremenost' ? 'selected' : ''}}>Современость</option>
                             </select>
                         </div>
                         <div class="form-group">

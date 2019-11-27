@@ -29,6 +29,9 @@
 <body>
     @include('/components/header', ['type' => 'uzbekistan'])
     <div class="container" style="margin-bottom: 50px;">
+    @if(isset($categorySub))
+    <div style="margin-top: 50px;" class="section-name">{{$categorySub->name}}</div>
+    @else
     <div style="margin-top: 50px;" class="section-name">
                     @if($category === 'geo')
                         {{__('menu.geo')}}
@@ -49,11 +52,16 @@
                     @elseif($category === 'tradition')
                         {{__('menu.tradition')}}
                     @endif
-    </div>
+        </div>
+        @endif
         <div class="row container_of_tours" >
                 @foreach($items as $item)
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                                <a class="link-block" href="{{route('uzb.show', ['category'=>$category ,'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
+                                @if(isset($categorySub))
+                                    <a class="link-block" href="{{route('uzb.show', ['category'=>$category , 'subcategory' => $categorySub->slug, 'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
+                                @else
+                                    <a class="link-block" href="{{route('uzb.sub', ['category'=>$category ,'uzb' => $item->slug, 'language' => app()->getLocale()])}}">
+                                @endif
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">

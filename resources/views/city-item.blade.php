@@ -97,7 +97,7 @@
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END --></div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-            <div class="col-md-12" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
+            <div class="col-md-12 main-content-text" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
             <img src="/images/banner01.jpg" alt="">
             <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
             @foreach($randomFromCategory as $rec)

@@ -68,6 +68,17 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar_widget">
+                    <div class="sidebar_tittle">
+                            <h3>{{__('menu.category')}}</h3>
+                        </div>
+                        <div class="single_catagory_item category">
+                            <ul class="list-unstyled">
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}">{{__('menu.drevniy_mir')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'srednie-veka', 'language' => app()->getLocale()])}}">{{__('menu.srednie_veka')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'novoe-vremya', 'language' => app()->getLocale()])}}">{{__('menu.novoe_vremya')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'sovremenost', 'language' => app()->getLocale()])}}">{{__('menu.sovremenost')}}</a></li>
+                            </ul>
+                        </div>
                         <div class="sidebar_tittle">
                             <h3>{{__('menu.last_people')}}</h3>
                         </div>
@@ -83,22 +94,11 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="sidebar_tittle">
-                            <h3>{{__('menu.category')}}</h3>
-                        </div>
-                        <div class="single_catagory_item category">
-                            <ul class="list-unstyled">
-                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}">{{__('menu.drevniy_mir')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'srednie-veka', 'language' => app()->getLocale()])}}">{{__('menu.srednie_veka')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'novoe-vremya', 'language' => app()->getLocale()])}}">{{__('menu.novoe_vremya')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('people.category', ['category' => 'sovremenost', 'language' => app()->getLocale()])}}">{{__('menu.sovremenost')}}</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
             <p>
-                        <img src="/images/ads.png" alt="">
+                        <img style="margin-top: 65px;" src="/images/ads.png" alt="">
     </p>
         </div>
     </section>

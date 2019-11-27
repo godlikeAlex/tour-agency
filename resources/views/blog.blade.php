@@ -69,6 +69,17 @@
                 <div class="col-lg-4">
                     <div class="sidebar_widget">
                         <div class="sidebar_tittle">
+                            <h3>{{__('menu.category')}}</h3>
+                        </div>
+                        <div class="single_catagory_item category">
+                            <ul class="list-unstyled">
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}">{{__('menu.uzbekistan')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}">{{__('menu.archeology')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}">{{__('menu.tourism')}}</a></li>
+                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}">{{__('menu.notes')}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar_tittle">
                             <h3>{{__('menu.last_posts')}}</h3>
                         </div>
                         @foreach($lastPosts as $lp)
@@ -83,17 +94,6 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="sidebar_tittle">
-                            <h3>{{__('menu.category')}}</h3>
-                        </div>
-                        <div class="single_catagory_item category">
-                            <ul class="list-unstyled">
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}">{{__('menu.uzbekistan')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}">{{__('menu.archeology')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}">{{__('menu.tourism')}}</a></li>
-                                <li style="width:100%;"><a href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}">{{__('menu.notes')}}</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>

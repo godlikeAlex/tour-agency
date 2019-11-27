@@ -12,6 +12,7 @@ use App\Includes;
 use App\NotIncludes;
 use App\Image;
 use App\Feature;
+use App\TourCategory;
 
 class TourAdminController extends Controller
 {
@@ -20,9 +21,54 @@ class TourAdminController extends Controller
         $this->middleware('auth');
     }
 
+    // Category controllers
+    public function crateCategory() {
+        return view('admin.create-category');
+    }
+
+    public function storeCategory() {
+        $validData = request()->validate([
+            'name' => 'required',
+            'lang' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
+        ]);
+        $validData['slug'] = Str::slug(request()->name);
+        TourCategory::create($validData);
+        return back();
+    }
+    
+    public function listCategory() {
+        $categories = TourCategory::all();
+        return view('admin.tours-list-category', compact('categories'));    
+    }
+
+    public function deleteCategory($id) {
+        TourCategory::where('id', $id)->first()->delete();
+        return back();
+    }
+
+    public function updateCategory ($id) {
+        $category = TourCategory::where('id', $id)->first();
+        return view('admin.update-category', compact('category'));
+    }
+
+    public function storeUpdateCategory($id) {
+        $validData = request()->validate([
+            'name' => 'required',
+            'lang' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
+        ]);
+        $validData['slug'] = Str::slug(request()->name);
+        TourCategory::where('id', $id)->firstOrFail()->update($validData);
+        return back();
+    }
+
+    // Tours controller
     public function create () {
-        $tour = Tour::with('includes')->where('id', 45)->get();
-        return view('admin.create-tour', compact('tour'));
+        $categories = TourCategory::all();
+        return view('admin.create-tour', compact('categories'));
     }
 
     public function list () {
@@ -32,7 +78,8 @@ class TourAdminController extends Controller
 
     public function update ($id) {
         $tour = Tour::where('id', $id)->firstOrFail();
-        return view('admin.tour-update', compact('tour'));
+        $categories = TourCategory::all();
+        return view('admin.tour-update', compact('tour', 'categories'));
     }
 
     public function updateOrCreate($id) {
@@ -56,10 +103,10 @@ class TourAdminController extends Controller
         $aboutDays      = $this->validateDates();
         $feature        = $this->validFeature();
 
-        $this->setTourId('includes', $includes,['include_title', 'include_desc'], $tourID);
-        $this->setTourId('notincludes', $notIncludes, ['dont_include_title', 'dont_include_desc'], $tourID);
+        $this->setTourId('includes', $includes,['include_title'], $tourID);
+        $this->setTourId('notincludes', $notIncludes, ['dont_include_title'], $tourID);
         $this->setTourId('tourdatesabout', $aboutDays, ['day_title', 'day_desc'], $tourID);
-        $this->setTourIdFeature($tourID);
+        return back();
     }
 
     public function store (Request $request) {
@@ -77,12 +124,16 @@ class TourAdminController extends Controller
         $feature        = $this->validFeature();
         
         // Set tour_id all
-        $this->setTourId('includes', $includes,['include_title', 'include_desc'], $tourId);
-        $this->setTourId('notincludes', $notIncludes, ['dont_include_title', 'dont_include_desc'], $tourId);
+        $this->setTourId('includes', $includes,['include_title'], $tourId);
+        $this->setTourId('notincludes', $notIncludes, ['dont_include_title'], $tourId);
         $this->setTourId('tourdatesabout', $aboutDays, ['day_title', 'day_desc'], $tourId);
-        $this->setTourIdFeature($tourId);
         return back();
 
+    }
+
+    public function deleteTour($id) {
+        Tour::where('id', $id)->first()->delete();
+        return back();
     }
 
     private function validateTour() {
@@ -95,12 +146,11 @@ class TourAdminController extends Controller
             'starts' => 'required',
             'video' => 'required',
             'ends' => 'required',
-            'age_from' => 'required',
             'desc' => 'required',
-            'age_to' => 'required',
-            'physical_rating' => 'required',
             'about' => 'required',
             'image' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'map' => 'required',
             'pdf' => 'required',
         ]);
@@ -117,11 +167,10 @@ class TourAdminController extends Controller
             'starts' => 'required',
             'video' => 'required',
             'ends' => 'required',
-            'age_from' => 'required',
             'desc' => 'required',
-            'age_to' => 'required',
-            'physical_rating' => 'required',
             'about' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'map' => 'required',
             'pdf' => 'required',
         ]);
@@ -131,13 +180,11 @@ class TourAdminController extends Controller
     private function validateInludes($included) { 
         if($included) {
             $validData = request()->validate([
-                "include_title.*" => 'required',
-                "include_desc.*" => 'required'
+                "include_title.*" => 'required'
             ]);
         } else {
             $validData = request()->validate([
-                "dont_include_title.*" => 'required',
-                "dont_include_desc.*" => 'required'
+                "dont_include_title.*" => 'required'
             ]);
         }
         return $validData;
@@ -192,16 +239,28 @@ class TourAdminController extends Controller
     }
 
     private function setTourId($class, $element, $fields, $tourId) {
-        $firstEl = $element[$fields[0]];
-        $secondEl = $element[$fields[1]];
-        for($i = 0; $i < count($firstEl); $i++) {
-            $data = array(
-                'tour_id' => $tourId,
-                $fields[0] => $firstEl[$i],
-                $fields[1] => $secondEl[$i],
-            );
-            $insert_data[] = $data;
+        if(count($fields) == 1) {
+            $firstEl = $element[$fields[0]];
+            for($i = 0; $i < count($firstEl); $i++) {
+                $data = array(
+                    'tour_id' => $tourId,
+                    $fields[0] => $firstEl[$i],
+                );
+                $insert_data[] = $data;
+            }
+        } else {
+            $firstEl = $element[$fields[0]];
+            $secondEl = $element[$fields[1]];
+            for($i = 0; $i < count($firstEl); $i++) {
+                $data = array(
+                    'tour_id' => $tourId,
+                    $fields[0] => $firstEl[$i],
+                    $fields[1] => $secondEl[$i],
+                );
+                $insert_data[] = $data;
+            }
         }
+        
         switch($class) {
             case 'includes':
                 Includes::insert($insert_data);

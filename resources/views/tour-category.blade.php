@@ -24,34 +24,12 @@
     @include('/components/header', ['type' => 'tours'])
     <div class="container">
     <div style="margin-top: 50px;" class="section-name">
-        @if($category == 'history-tours')
-            {{__('menu.history_tours')}}
-        @elseif($category == 'short-tours')
-            {{__('menu.short_tours')}}
-        @elseif($category == 'group-tours')
-            {{__('menu.group_tours')}}
-        @elseif($category == 'individual-tours')
-            {{__('menu.individual_tours')}}
-        @elseif($category == 'exclusive-tours')
-            {{__('menu.exclusive_tours')}}
-        @elseif($category == 'classic-tours')
-            {{__('menu.classic_tours')}}
-        @elseif($category == 'excursion-tours')
-            {{__('menu.excursion_tours')}}
-        @elseif($category == 'piligram-tours')
-            {{__('menu.piligram_tours')}}
-        @elseif($category == 'economy-tours')
-            {{__('menu.economy_tours')}}
-        @elseif($category == 'eco-tours')
-            {{__('menu.eco_tours')}}
-        @elseif($category == 'cycling-tours')
-            {{__('menu.eco_tours')}}
-        @endif
+        {{$category->name}}
     </div>
 
         <div class="row" style="margin-bottom: 50px;">
         @foreach($tours as $tour)
-            <div class="col-md-4" style="    padding-bottom: 10px;">
+            <div class="col-md-6 col-lg-4 col-sm-12" style="padding-bottom: 10px;">
                     <a class="link-block" href="{{route('tour.show', ['tourname' => $tour->slug, 'language' => app()->getLocale() ])}}">
                         <div class="big-blocks big-padding">
                             <div class="block-img" style="background: url(/storage/{{$tour->image}});" ></div>

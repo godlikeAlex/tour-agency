@@ -2,7 +2,7 @@
 <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <div class="container">
         <div class="row">
-        <div class="col-md-5 main-links-nav-top"><a class="{{request()->segment(2) == 'about' && is_null(request()->segment(3)) ? 'main-menu-active' : ''}}" href="{{ route('about', app() -> getLocale()) }}">{{__('menu.about')}}</a> <a class="{{request()->segment(3) == 'team' ? 'main-menu-active' : ''}}" href="{{ route('team', app() -> getLocale()) }}">{{__('menu.team')}}</a>  <a class="{{request()->segment(3) == 'faq' ? 'main-menu-active' : ''}}"  href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a> <a class="{{request()->segment(3) == 'contact' ? 'main-menu-active' : ''}}" href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.contacts')}}</a></div>
+        <div class="col-md-5 main-links-nav-top main-links-top"><a class="{{request()->segment(2) == 'about' && is_null(request()->segment(3)) ? 'main-menu-active' : ''}}" href="{{ route('about', app() -> getLocale()) }}">{{__('menu.about')}}</a> <a class="{{request()->segment(3) == 'team' ? 'main-menu-active' : ''}}" href="{{ route('team', app() -> getLocale()) }}">{{__('menu.team')}}</a>  <a class="{{request()->segment(3) == 'faq' ? 'main-menu-active' : ''}}"  href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a> <a class="{{request()->segment(3) == 'contact' ? 'main-menu-active' : ''}}" href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.contacts')}}</a></div>
         <div class="social-top col-md-7" style="text-align:right;">
             <?php
                 $routeParametes = function($lang) {
@@ -18,13 +18,11 @@
             <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >DEU</a>
             <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >اللغة العربية</a>
             <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >漢語</a>
-            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >한국어</a>
-            <a class="lang" data-menu-show="show-lang" href="{{ url('locale/en') }}" >日本語</a>
         </div>
         </div>
     </div>
 </div>
-<div class="ad-banner-header" style="{{ (request()->is('/')) ? 'display:flex' : 'display:none' }}; height: 200px; background: white; align-items: center; justify-content: center;"><img src="/images/head.svg" alt="" srcset=""></div>
+<div class="ad-banner-header" style="{{request()->is('ru') || request()->is('en') ? 'display:flex' : 'display: none;'}} height: 200px; background: white; align-items: center; justify-content: center;"><img style="width:100%; height: 100%" src="/images/head.svg" alt="" srcset=""></div>
 
 <nav class="main-menu-sticky">
     <div class="left-side-menu left-menu-hide">
@@ -68,41 +66,21 @@
             <li>
                 <div  class="left-menu-main-link" ><a href="{{route('index.galery', app()->getLocale())}}">{{ __('menu.photo') }}</a>  <img src="/images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
-                    <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.khiva-khanate') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.kokand-khanate') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate', 'language' => app()->getLocale()])}}">{{ __('menu.bukhara-emirate') }}</a><</li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr', 'language' => app()->getLocale()])}}">{{ __('menu.turkestan-assr') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'jadidism', 'language' => app()->getLocale()])}}">{{ __('menu.jadidism') }}</a></li>
-                    <li>><a href="{{route('show.galery', ['centuary' => 'stalin-period', 'language' => app()->getLocale()])}}">{{ __('menu.stalin-period') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'restructuring', 'language' => app()->getLocale()])}}">{{ __('menu.restructuring') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan', 'language' => app()->getLocale()])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
-                    <li><a href="{{route('show.galery', ['centuary' => 'present', 'language' => app()->getLocale()])}}">{{ __('menu.present') }}</a></li>
-
+                    @foreach($gallery_categories as $galery_category)
+                        <li><a href="{{route('show.galery', ['centuary' => $galery_category->slug, 'language' => app()->getLocale()])}}">{{$galery_category->name}}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
                 <div  class="left-menu-main-link" ><a href="{{route('index.tour', app()->getLocale())}}">{{ __('menu.tours') }}</a>  <img src="/images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'history_tours', 'language' => app()->getLocale()])}}">Исторические туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'short_tours', 'language' => app()->getLocale()])}}">Короткие туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'group_tours', 'language' => app()->getLocale()])}}">Групповые туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'individual_tours', 'language' => app()->getLocale()])}}">Индивидуальные туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'exclusive_tours', 'language' => app()->getLocale()])}}">Эксклюзивные туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'classic_tours', 'language' => app()->getLocale()])}}">Классические туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'eco_tours', 'language' => app()->getLocale()])}}">Эко туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'kombo_asia_tours', 'language' => app()->getLocale()])}}">Туры по Центральной Азии</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'excursion_сity', 'language' => app()->getLocale()])}}">Экскурсии по городам</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'pilgrim_tours', 'language' => app()->getLocale()])}}">Паломнические туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'economy_tours', 'language' => app()->getLocale()])}}">Эконом туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'cycling_tours', 'language' => app()->getLocale()])}}">Велотуры туры</a></li>
-                    <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => 'buisnes_tours', 'language' => app()->getLocale()])}}">Бизнес туры</a></li>
-
+                    @foreach($tour_categories as $tourCategory)
+                        <li style="padding: 10px 0px;"><a href="{{route('tour.category', ['category' => $tourCategory->slug, 'language' => app()->getLocale()])}}">{{$tourCategory->name}}</a></li>  
+                    @endforeach
                 </ul>
             </li>
             <li><div  class="left-menu-main-link" ><a href="/fortourists">{{ __('menu.fortoursit') }}</a></div></li>
-            <div  class="left-menu-main-link" ><a href="/city">Базар</a></div>
+            <!-- <div  class="left-menu-main-link" ><a href="/city">Базар</a></div> -->
             <li>
                 <div  class="left-menu-main-link" ><a href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>  <img src="/images/down.png" class="drop-menu" alt=""></div>
                 <ul class="dropped-menu">
@@ -124,7 +102,7 @@
                 <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> </a>
             </li>
         </ul>
-        <ul class="left-menu-network">
+        <ul class="left-menu-network" style="display: flex; justify-content: space-between;">
         <a href="{{ route('about', app() -> getLocale()) }}">{{__('menu.about')}}</a> <a href="{{ route('team', app() -> getLocale()) }}">{{__('menu.team')}}</a>  <a href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a> <a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.contacts')}}</a>
         </ul>
         <p class="terms">
@@ -173,43 +151,21 @@
                 <li class="{{ (request()->is('galery*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="show-galery" href="{{route('index.galery', app()->getLocale())}}">{{ __('menu.photo') }}</a>
                     <div data-menu="show-galery" class="sub-menu-header">
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.khiva-khanate') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'khanate-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.kokand-khanate') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'bukhara-emirate', 'language' => app()->getLocale()])}}">{{ __('menu.bukhara-emirate') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'turkestan-assr', 'language' => app()->getLocale()])}}">{{ __('menu.turkestan-assr') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'jadidism', 'language' => app()->getLocale()])}}">{{ __('menu.jadidism') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'stalin-period', 'language' => app()->getLocale()])}}">{{ __('menu.stalin-period') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'khrushchevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.khrushchevsky-period') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'brezhnevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.brezhnevsky-period') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'restructuring', 'language' => app()->getLocale()])}}">{{ __('menu.restructuring') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan', 'language' => app()->getLocale()])}}">{{ __('menu.republic-of-uzbekistan') }}</a>
-                        <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => 'present', 'language' => app()->getLocale()])}}">{{ __('menu.present') }}</a>
-                        <a class="droped-menu-item" href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}" class="sub-menu-item">{{ __('menu.allphoto') }}</a>
-                    </div>
+                        @foreach($gallery_categories as $galery_category)
+                            <a class="droped-menu-item" href="{{route('show.galery', ['centuary' => $galery_category->slug, 'language' => app()->getLocale()])}}">{{ $galery_category->name }}</a>
+                        @endforeach
+                     </div>
                 </li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="show-tours-gal" href="{{route('index.tour', app()->getLocale())}}">{{ __('menu.tours') }}</a>
                     <div data-menu="show-tours-gal" class="sub-menu-header">
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'individual-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'classic-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'classic-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'excursion-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'pilgrim-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'economy-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'eco-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a>
-                        <a class="droped-menu-item" href="{{route('tour.category', ['category' => 'buisnes-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a>
-                        <a class="droped-menu-item" href="/tours" class="sub-menu-item">{{ __('menu.alltours') }}</a>
-
-
+                        @foreach($tour_categories as $tour_category)
+                            <a class="droped-menu-item" href="{{route('tour.category', ['category' => $tour_category->slug, 'language' => app()->getLocale()])}}" class="sub-menu-item">{{ $tour_category->name }}</a>
+                        @endforeach
                     </div>
                 </li>
                 <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tourism">{{ __('menu.fortoursit') }}</a></li>
-                <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li>
+                <!-- <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li> -->
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="show-blog-gal" href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>
                     <div data-menu="show-blog-gal" class="sub-menu-header">
@@ -236,7 +192,7 @@
                         <a href="{{route('uzb.category', ['category' => 'geo', 'language' => app()->getLocale()])}}" data-menu-show="geo" class="sub-menu-item {{ (request()->segment(2) == 'geo') ? 'sub-menu-active' : ''}}">{{ __('menu.geo') }}</a>
                         <div data-menu="geo" class="sub-menu-header">
                             @foreach($geo as $g)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'geo', 'uzb' => $g->slug, 'language' => app()->getLocale()])}}">{{$g->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'geo', 'subcategory' => $g->slug, 'language' => app()->getLocale()])}}">{{$g->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -244,7 +200,7 @@
                         <a href="{{route('uzb.category', ['category' => 'history', 'language' => app()->getLocale()])}}" data-menu-show="history" class="sub-menu-item {{ (request()->segment(2) == 'history') ? 'sub-menu-active' : ''}}">{{ __('menu.history') }}</a>
                         <div data-menu="history" class="sub-menu-header">
                             @foreach($history as $h)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'history', 'uzb' => $h->slug, 'language' => app()->getLocale()])}}">{{$h->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'history', 'subcategory' => $h->slug, 'language' => app()->getLocale()])}}">{{$h->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -252,7 +208,7 @@
                         <a href="{{route('uzb.category', ['category' => 'peoples', 'language' => app()->getLocale()])}}" data-menu-show="people" class="sub-menu-item">{{ __('menu.peoples') }}</a>
                         <div data-menu="people" class="sub-menu-header">
                             @foreach($peoplesm as $p)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'peoples', 'uzb' => $p->slug, 'language' => app()->getLocale()])}}">{{$p->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'peoples', 'subcategory' => $p->slug, 'language' => app()->getLocale()])}}">{{$p->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -261,7 +217,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.art') }}</a>
                         <div data-menu="iskus" class="sub-menu-header">
                             @foreach($art as $a)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'art', 'uzb' => $a->slug, 'language' => app()->getLocale()])}}">{{$a->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'art', 'subcategory' => $a->slug, 'language' => app()->getLocale()])}}">{{$a->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -270,7 +226,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.moda') }}</a>
                         <div data-menu="moda" class="sub-menu-header">
                             @foreach($fashion as $f)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'fashion', 'uzb' => $f->slug, 'language' => app()->getLocale()])}}">{{$f->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'fashion', 'subcategory' => $f->slug, 'language' => app()->getLocale()])}}">{{$f->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -279,7 +235,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.painting') }}</a>
                         <div data-menu="kartini" class="sub-menu-header">
                             @foreach($painting as $pg)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'painting', 'uzb' => $pg->slug, 'language' => app()->getLocale()])}}">{{$pg->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'painting', 'subcategory' => $pg->slug, 'language' => app()->getLocale()])}}">{{$pg->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -288,7 +244,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'kitchen' || request()->segment(2) == 'clothing' || request()->segment(2) == 'religion' || request()->segment(2) == 'holidays' || request()->segment(2) == 'sufism' || request()->segment(2) == 'lang') ? 'sub-menu-active' : ''}}">{{ __('menu.culture') }}</a>
                         <div data-menu="cult" class="sub-menu-header">
                             @foreach($culture as $cult)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'culture', 'uzb' => $cult->slug, 'language' => app()->getLocale()])}}">{{$cult->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'culture', 'subcategory' => $cult->slug, 'language' => app()->getLocale()])}}">{{$cult->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -297,7 +253,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.kitchen') }}</a>
                         <div data-menu="kitchen" class="sub-menu-header">
                             @foreach($kitchen as $kit)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'kitchen', 'uzb' => $kit->slug, 'language' => app()->getLocale() ])}}">{{$kit->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'kitchen', 'subcategory' => $kit->slug, 'language' => app()->getLocale() ])}}">{{$kit->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -306,7 +262,7 @@
                         class="sub-menu-item {{ (request()->segment(2) == 'literature' || request()->segment(2) == 'architecture' || request()->segment(2) == 'music' || request()->segment(2) == 'teatr' || request()->segment(2) == 'painting' || request()->segment(2) == 'poetry') ? 'sub-menu-active' : '' }}">{{ __('menu.tradicii') }}</a>
                         <div data-menu="tradition" class="sub-menu-header">
                             @foreach($tradition as $trad)
-                                <a class="droped-menu-item" href="{{route('uzb.show', ['category' => 'tradition', 'uzb' => $trad->slug, 'language' => app()->getLocale()])}}">{{$trad->name}}</a>
+                                <a class="droped-menu-item" href="{{route('uzb.sub', ['category' => 'tradition', 'subcategory' => $trad->slug, 'language' => app()->getLocale()])}}">{{$trad->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -319,7 +275,7 @@
                 <ul class="sub-menu-nav col-md-12">
                     @foreach($cities as $city)
                         <li class="dropdown" data-menu-show="{{$city->name}}">
-                            <a href="" data-menu-show="{{$city->name}}" class="sub-menu-item {{ (request()->segment(2) == Illuminate\Support\Str::lower($city->name)) ? 'sub-menu-active' : ''}}">{{$city->name}}</a>
+                            <a href="{{route('city.show', ['lang' => app()->getLocale(), 'city' => Illuminate\Support\Str::lower($city->name)])}}" data-menu-show="{{$city->name}}" class="sub-menu-item {{ (request()->segment(2) == Illuminate\Support\Str::lower($city->name)) ? 'sub-menu-active' : ''}}">{{$city->name}}</a>
                             <div  data-menu="{{$city->name}}" class="sub-menu-header">
                                 <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history', 'language' => app()->getLocale()])}}">{{ __('menu.history') }}</a>
                                 <a class="droped-menu-item" href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_eat') }}</a>
@@ -339,17 +295,37 @@
         <div class="sub-menu-main">
             <div class="container">
                 <ul class="sub-menu-nav col-md-12">
-                    <li>
-                        <a href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'drevniy-mir') ? 'sub-menu-active' : ''}}">{{ __('menu.drevniy_mir') }}</a>
+                    <li data-menu-show="drevniy-mir" >
+                        <a data-menu-show="drevniy-mir" href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'drevniy-mir') ? 'sub-menu-active' : ''}}">{{ __('menu.drevniy_mir') }}</a>
+                        <div  data-menu="drevniy-mir" class="sub-menu-header">
+                            @foreach($drmir as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'drevniy-mir', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('people.category', ['category' => 'srednie-veka', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'srednie-veka') ? 'sub-menu-active' : ''}}">{{ __('menu.srednie_veka') }}</a>
+                    <li data-menu-show="srednie-veka">
+                        <a data-menu-show="srednie-veka" href="{{route('people.category', ['category' => 'srednie-veka', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'srednie-veka') ? 'sub-menu-active' : ''}}">{{ __('menu.srednie_veka') }}</a>
+                        <div  data-menu="srednie-veka" class="sub-menu-header">
+                            @foreach($sredveka as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'srednie-veka', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('people.category', ['category' => 'novoe-vremya', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'novoe-vremya') ? 'sub-menu-active' : ''}}">{{ __('menu.novoe_vremya') }}</a>
+                    <li data-menu-show="novoe-vremya">
+                        <a data-menu-show="novoe-vremya" href="{{route('people.category', ['category' => 'novoe-vremya', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'novoe-vremya') ? 'sub-menu-active' : ''}}">{{ __('menu.novoe_vremya') }}</a>
+                        <div  data-menu="novoe-vremya" class="sub-menu-header">
+                            @foreach($novoevremya as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'novoe-vremya', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('people.category', ['category' => 'sovremenost', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'sovremenost') ? 'sub-menu-active' : ''}}">{{ __('menu.sovremenost') }}</a>
+                    <li data-menu-show="sovremenost" >
+                        <a data-menu-show="sovremenost" href="{{route('people.category', ['category' => 'sovremenost', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'sovremenost') ? 'sub-menu-active' : ''}}">{{ __('menu.sovremenost') }}</a>
+                        <div  data-menu="sovremenost" class="sub-menu-header">
+                            @foreach($sovremenost as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'sovremenost', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
                 </ul>
             </div>
@@ -358,17 +334,37 @@
         <div class="sub-menu-main">
             <div class="container">
                 <ul class="sub-menu-nav col-md-12">
-                    <li>
-                        <a href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">{{ __('menu.uzbekistan') }}</a>
+                    <li  data-menu-show="uzbnews">
+                        <a data-menu-show="uzbnews" href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'uzbekistan') ? 'sub-menu-active' : ''}}">{{ __('menu.uzbekistan') }}</a>
+                        <div  data-menu="uzbnews" class="sub-menu-header">
+                            @foreach($uzbnews as $item_news)
+                                <a class="droped-menu-item" href="{{route('blog.show', ['category'=> 'uzbekistan', 'slug'=> $item_news->slug, 'language' => app()->getLocale()])}}">{{ $item_news->title }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'archeology') ? 'sub-menu-active' : ''}}">{{ __('menu.archeology') }}</a>
+                    <li data-menu-show="arch">
+                        <a data-menu-show="arch" href="{{route('blog.category', ['category' => 'archeology', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'archeology') ? 'sub-menu-active' : ''}}">{{ __('menu.archeology') }}</a>
+                        <div data-menu="arch" class="sub-menu-header">
+                            @foreach($arch as $item_news)
+                                <a class="droped-menu-item" href="{{route('blog.show', ['category'=> 'archeology', 'slug'=> $item_news->slug, 'language' => app()->getLocale()])}}">{{ $item_news->title }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
+                    <li data-menu-show="tourism-arch">
+                        <a data-menu-show="tourism-arch" href="{{route('blog.category', ['category' => 'tourism', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a>
+                        <div data-menu="tourism-arch" class="sub-menu-header">
+                            @foreach($tourism as $item_news)
+                                <a class="droped-menu-item" href="{{route('blog.show', ['category'=> 'tourism', 'slug'=> $item_news->slug, 'language' => app()->getLocale()])}}">{{ $item_news->title }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
-                    <li>
-                        <a href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'notes') ? 'sub-menu-active' : ''}}">{{ __('menu.notes') }}</a>
+                    <li data-menu-show="notes">
+                        <a data-menu-show="notes" href="{{route('blog.category', ['category' => 'notes', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'notes') ? 'sub-menu-active' : ''}}">{{ __('menu.notes') }}</a>
+                        <div data-menu="notes" class="sub-menu-header">
+                            @foreach($notes as $item_news)
+                                <a class="droped-menu-item" href="{{route('blog.show', ['category'=> 'notes', 'slug'=> $item_news->slug, 'language' => app()->getLocale()])}}">{{ $item_news->title }}</a>
+                            @endforeach                         
+                         </div>
                     </li>
                 </ul>
             </div>
@@ -377,19 +373,9 @@
         <div class="sub-menu-main">
             <div class="container">
                 <ul class="sub-menu-nav col-md-12" style="flex-wrap: wrap; justify-content:center;">
-                    <li> <a href="{{route('tour.category', ['category' => '', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.history_tours') }}</a>  </li>
-                    <li><a href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.short_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.group_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.individual_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'individual-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.exclusive_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.classic_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'classic-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.tourism') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'excursion-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.excursion') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'pilgrim-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.palomn_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'economy-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.econom_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'eco-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.eco_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.velo_tours') }}</a></li>
-                    <li><a href="{{route('tour.category', ['category' => 'buisnes-tours', 'language' => app()->getLocale()])}}" class="sub-menu-item {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{ __('menu.buisnes_tours') }}</a></li>
+                    @foreach($tour_categories as $tourCategory)
+                        <li> <a href="{{route('tour.category', ['category' => $tourCategory->slug, 'language' => app()->getLocale()])}}" class=" {{ (request()->segment(2) == 'toursim') ? 'sub-menu-active' : ''}}">{{$tourCategory->name}}</a>  </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

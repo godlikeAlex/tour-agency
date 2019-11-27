@@ -17,19 +17,32 @@
                             <input value="{{$post->author}}" type="text" name="author" class="form-control" placeholder="Автор">
                         </div>   
                         <div class="form-group">
-                            <label for="exampleSelect1">Язык</label>
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова" value="{{$post->keywords}}">
+                        </div>  
+                        <div class="form-group">
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO DESC" value="{{$post->seo_desc}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Язык </label>
                             <select name="lang" class="form-control" id="exampleSelect1">
-                                <option value="en">en</option>
-                                <option value="ru">ru</option>
+                                @if($post->lang == 'en')
+                                    <option value="en">en</option>
+                                    <option value="ru">ru</option>
+                                @else
+                                    <option value="ru">ru</option>
+                                    <option value="en">en</option>
+                                @endif
                             </select>
                         </div>   
                         <div class="form-group">
                             <label for="exampleSelect1">Тип блога</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="uzbekistan">Узбекистан</option>
-                                <option value="archeology">Археология</option>
-                                <option value="tourism">Туризм</option>
-                                <option value="notes">Заметки</option>
+                                <option value="uzbekistan" {{$post->category == 'uzbekistan' ? 'selected' : ''}}>Узбекистан</option>
+                                <option value="archeology"  {{$post->category == 'archeology' ? 'selected' : ''}}>Археология</option>
+                                <option value="tourism" {{$post->category == 'tourism' ? 'selected' : ''}}>Туризм</option>
+                                <option value="notes" {{$post->category == 'notes' ? 'selected' : ''}}>Заметки</option>
                             </select>
                         </div>
                         <div class="form-group">

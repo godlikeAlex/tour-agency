@@ -30,7 +30,7 @@
         <div style="width:100%;margin-top: 100px;"><div class="section-name">Общая информация</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -69,7 +69,7 @@
         <div style="width:100%; margin-top: 100px;"><div class="section-name">Виза</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -81,7 +81,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -93,7 +93,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -108,7 +108,7 @@
         <div style="width:100%;margin-top: 100px;"><div class="section-name">Как добраться</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -120,7 +120,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -132,7 +132,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -145,7 +145,7 @@
             </div>
 
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -158,7 +158,7 @@
             </div>
 
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -170,7 +170,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -185,7 +185,7 @@
         <div style="width:100%;margin-top: 100px;"><div class="section-name">Деньги</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -197,7 +197,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -209,7 +209,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -224,7 +224,7 @@
         <div style="width:100%;margin-top: 100px;"><div class="section-name">Связь</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -236,7 +236,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -248,7 +248,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -263,7 +263,7 @@
         <div style="width:100%;margin-top: 100px;"><div class="section-name">Мероприятия</div></div>
         <div class="row container_uzb" >
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -275,7 +275,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -287,7 +287,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -303,7 +303,7 @@
         <div class="row container_uzb" >
 
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -315,7 +315,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">
@@ -327,7 +327,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy'])}}">
+                <a class="link-block" href="{{route('uzb.category', ['category' => 'geogrfy', 'lang' => app()->getLocale()])}}">
                     <div class="big-blocks big-padding">
                         <div class="block-img" style="background: url(https://images.unsplash.com/photo-1566608344098-60ca17bf3d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80);" ></div>
                         <div class="block-content">

@@ -26,7 +26,7 @@ class PeopleAdminController extends Controller
         $validData['slug'] = Str::slug(request() -> name);
         $people = People::create($validData);
         $this->storeImage($people);
-        return redirect('/admin/people/create');
+        return back();
     }
 
     public function peopleList() {
@@ -48,12 +48,19 @@ class PeopleAdminController extends Controller
         return back();
     }
 
+    public function deletePeople($id) {
+        People::where('id', $id)->firstOrFail()->delete();
+        return back();
+    }
+
     private function validateUpdate() 
     {
         $validateData = request() -> validate([
             'name' => 'required|min:6',
             'body' => 'required|min:25',
             'lang' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'desc' => 'required|min:25',
             'category' => 'required'
         ]);
@@ -67,6 +74,8 @@ class PeopleAdminController extends Controller
             'name' => 'required|min:6',
             'body' => 'required|min:25',
             'lang' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'desc' => 'required|min:25',
             'category' => 'required',
             'image' => 'required|image'

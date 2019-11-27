@@ -15,7 +15,15 @@
                         </div>
                         <div class="form-group">
                             <input type="text" name="author" class="form-control" placeholder="Автор">
-                        </div>   
+                        </div> 
+                        <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова">
+                        </div>    
+                        <div class="form-group">
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO DESC">
+                        </div>
                         <div class="form-group">
                             <label for="exampleSelect1">Язык</label>
                             <select name="lang" class="form-control" id="exampleSelect1">

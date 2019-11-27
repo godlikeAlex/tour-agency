@@ -32,32 +32,19 @@
 				<div class="col-lg-2 col-md-4 col-sm-4">
 					<h5 class="f-title"><b>ФОТО</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.khiva-khanate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'khanate-khanate', 'language' => app()->getLocale()])}}">{{ __('menu.kokand-khanate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'bukhara-emirate', 'language' => app()->getLocale()])}}">{{ __('menu.bukhara-emirate') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'turkestan-assr', 'language' => app()->getLocale()])}}">{{ __('menu.turkestan-assr') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'jadidism', 'language' => app()->getLocale()])}}">Jadism</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'stalin-period', 'language' => app()->getLocale()])}}">{{ __('menu.stalin-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.khrushchevsky-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period', 'language' => app()->getLocale()])}}">{{ __('menu.brezhnevsky-period') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'restructuring', 'language' => app()->getLocale()])}}">{{ __('menu.restructuring') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan', 'language' => app()->getLocale()])}}">{{ __('menu.republic-of-uzbekistan') }}</a></li>
-                        <li><a href="{{route('show.galery', ['centuary' => 'present', 'language' => app()->getLocale()])}}">{{ __('menu.present') }}</a></li>
+						@foreach($gallery_categories as $galery_category)
+                        	<li><a href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">{{$galery_category->name}}</a></li>
+						@endforeach
 					</ul>
                 </div><!-- col-sm-2 -->
 
                 <div class="col-lg-2 col-md-4 col-sm-4">
 					<h5 class="f-title"><b>ТУРЫ</b></h5>
 					<ul class="mb-30 list-hover list-block list-a-ptb-5">
-                        <li><a href="{{route('tour.category', ['category' => 'history-tours', 'language' => app()->getLocale()])}}">{{__('menu.history_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'short-tours', 'language' => app()->getLocale()])}}">{{__('menu.short_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'group-tours', 'language' => app()->getLocale()])}}">{{__('menu.group_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'inliidual-tours', 'language' => app()->getLocale()])}}">{{__('menu.individual_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'exclusive-tours', 'language' => app()->getLocale()])}}">{{__('menu.exclusive_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'eco-tours', 'language' => app()->getLocale()])}}">{{__('menu.eco_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'cycling-tours', 'language' => app()->getLocale()])}}">{{__('menu.velo_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'buissens-tours', 'language' => app()->getLocale()])}}">{{__('menu.buisnes_tours')}}</a></li>
-                        <li><a href="{{route('tour.category', ['category' => 'kombo-asia-tours', 'language' => app()->getLocale()])}}">Центральная Азия</a></li>
+						@foreach($tour_categories as $tourCategory)
+							<li> <a href="{{route('tour.category', ['category' => $tourCategory->slug, 'language' => app()->getLocale()])}}">{{$tourCategory->name}}</a>  </li>
+						@endforeach
+
 					</ul>
                 </div><!-- col-sm-2 -->
 

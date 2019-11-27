@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Header;
+use App\SEO;
 use App\City;
 use App\CityItem;
 
@@ -17,7 +17,7 @@ class CityController extends Controller
 
     public function showCity($lang, $city) {
         $cities         = City::where('lang', $lang)->get();
-        $content        = City::where('name',$city)->firstOrFail();
+        $content        = City::where('lang', $lang)->where('name',$city)->firstOrFail();
         $historys       = $this->getRecordsByCategory($content->id, 'history');
         $whatToSee       = $this->getRecordsByCategory($content->id, 'what-to-see');
         $whatToDo       = $this->getRecordsByCategory($content->id, 'things-to-do');
@@ -26,6 +26,7 @@ class CityController extends Controller
         $hotels         = $this->getRecordsByCategory($content->id, 'where-to-stay');
         $howToGet         = $this->getRecordsByCategory($content->id, 'how-to-get');
         $usefulInformation         = $this->getRecordsByCategory($content->id, 'useful-information');
+        SEO::defaultSeoParams($content->name, $content->keywords, $content->seo_desc);
         return view('city-show', compact('content', 'historys', 'restaurants', 'hotels', 'whereToBuy', 'howToGet', 'whatToDo', 'usefulInformation', 'whatToSee', 'cities'));
     }
 
@@ -54,6 +55,7 @@ class CityController extends Controller
             'city_id' => $cityId,
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
+        SEO::defaultSeoParams($item->name, $item->keywords, $item->seo_desc);
 
         return view('city-item', compact('item', 'randomFromCategory', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }

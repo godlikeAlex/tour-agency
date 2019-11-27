@@ -38,6 +38,11 @@ class BlogAdminController extends Controller
         return view('admin.blog-update', compact('post'));
     }
 
+    public function blogDelete($id) {
+        Blog::where('id', $id)->firstOrFail()->delete();
+        return back();
+    }
+
     public function blogUpdatePost($id) {
         $post = $this->validateUpdate();
         $updatedPost = Blog::where('id', $id)->update($post);
@@ -55,6 +60,8 @@ class BlogAdminController extends Controller
             'lang' => 'required',
             'category' => 'required',
             'desc' => 'required|min:25',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'post' => 'required|min:25',
             'image' => 'required|image'
         ]);
@@ -68,6 +75,8 @@ class BlogAdminController extends Controller
             'title' => 'required|min:6',
             'author' => 'required',
             'lang' => 'required',
+            'keywords' => 'required',
+            'seo_desc' => 'required',
             'category' => 'required',
             'desc' => 'required|min:25',
             'post' => 'required|min:25',

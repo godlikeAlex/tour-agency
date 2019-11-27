@@ -45,7 +45,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{route('blog.create')}}">Создать</a>
-          <a class="dropdown-item" href="{{route('blog.list')}}">Изменить</a>
+          <a class="dropdown-item" href="{{route('blog.list')}}">Изменить/Удалить</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -54,7 +54,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{route('people.create')}}">Создать</a>
-          <a class="dropdown-item" href="{{route('people.list')}}">Изменить</a>
+          <a class="dropdown-item" href="{{route('people.list')}}">Изменить/Удалить</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -66,6 +66,8 @@
           <a class="dropdown-item" href="{{route('tour.list')}}">Изменить Тур</a>
           <a class="dropdown-item" href="{{route('date.index')}}">Добавить даты</a>
           <a class="dropdown-item" href="{{route('date.list')}}">Изменить даты</a>
+          <a class="dropdown-item" href="{{route('tour.create.category')}}">Cоздать категорию для туров</a>
+          <a class="dropdown-item" href="{{route('tour.list.category')}}">Изменить/Удалить категорию</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -74,7 +76,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{route('city.index')}}">Создать</a>
-          <a class="dropdown-item" href="{{route('city.item')}}">Добавить объект для города</a>
+          <a class="dropdown-item" href="{{route('city.list')}}">Изменить/Удалить Город</a>
+          <a class="dropdown-item" href="{{route('city.item.admin')}}">Добавить объект для города</a>
+          <a class="dropdown-item" href="{{route('items.list')}}">Изменить/Удалить Объект Города</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -83,6 +87,19 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{route('uzbekistan.create')}}">Создать</a>
+          <a class="dropdown-item" href="{{route('uzbekistan.list')}}">Изменить/Удалить</a>
+          <a class="dropdown-item" href="{{route('create.uzb.category')}}">Создать Категорию</a>
+          <a class="dropdown-item" href="{{route('list.uzb.category')}}">Изменить/Удалить</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Галерея
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{route('galery.create')}}">Создать</a>
+          <a class="dropdown-item" href="{{route('galery.category.create')}}">Добавить категорию</a>
+          <a class="dropdown-item" href="{{route('uzbekistan.list')}}">Удалить</a>
         </div>
       </li>
     </ul>

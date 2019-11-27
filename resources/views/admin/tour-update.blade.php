@@ -20,6 +20,14 @@
                             <input type="text" name="name" value="{{$tour->name}}" class="form-control" placeholder="Название тура">
                         </div>
                         <div class="form-group">
+                            <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова" value="{{$tour->keywords}}">
+                        </div>  
+                        <div class="form-group">
+                            <p>SEO DESCRIPTION</p>
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO Desc" value="{{$tour->seo_desc}}">
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="price" value="{{$tour->price}}" class="form-control" placeholder="Цена">
                         </div>  
                         <div class="form-group">
@@ -28,30 +36,25 @@
                         <div class="form-group">
                             <label for="exampleSelect1">Язык</label>
                             <select name="lang" class="form-control" id="exampleSelect1">
-                                <option value="ru">ru</option>
-                                <option value="en">en</option>
+                                @if($tour->lang == 'ru')
+                                    <option value="ru">ru</option>
+                                    <option value="en">en</option>
+                                @else
+                                    <option value="en">en</option>
+                                    <option value="ru">ru</option>
+                                @endif
                             </select>
                         </div>    
                         <div class="form-group">
-                            <label for="exampleSelect1">Тип блога</label>
+                            <label for="exampleSelect1">Категория</label>
                             <select name="category" class="form-control" id="exampleSelect1">
-                                <option value="history-tours">Исторические туры </option>
-                                <option value="short-tours">Короткие туры </option>
-                                <option value="group-tours">Групповые туры </option>
-                                <option value="individual-tours">Индивидуальные туры</option>
-                                <option value="exclusive-tours">Эксклюзивные туры </option>
-                                <option value="classic-tours">Классические туры</option>
-                                <option value="eco-tours">Эко туры</option>
-                                <option value="kombo-asia-tours">Комбинированные туры по Центральной Азии </option>
-                                <option value="kombo-uz-kz-tours">Комбинированные туры по Узбекистану и Казахстану  </option>
-                                <option value="kombo-uz-kg-tours">Комбинированные туры по Узбекистану и Кыргызстану</option>
-                                <option value="kombo-uz-tm-tours">Комбинированные туры по Узбекистану и Туркменистану</option>
-                                <option value="kombo-uz-tj-tours">Комбинированные туры по Узбекистану и Таджикистану </option>
-                                <option value="excursion-сity">Экскурсии по городам </option>
-                                <option value="pilgrim-tours">Паломнические туры</option>
-                                <option value="economy-tours">Эконом туры </option>
-                                <option value="cycling-tours">Велотуры</option>
-                                <option value="buisnes-tours">Бизнес туры </option>
+                                @foreach($categories as $category)
+                                    @if($category->slug == $tour->category)
+                                        <option selected value="{{$category->slug}}">{{$category->name}}</option>
+                                    @else
+                                        <option value="{{$category->slug}}">{{$category->name}}</option>
+                                    @endif
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
@@ -64,30 +67,14 @@
                         <textarea class="form-control" name="desc" rows="5">{{$tour->desc}}</textarea>
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" value="{{$tour->pdf}}" name="pdf" class="form-control col-md-5" placeholder="pdf link">
-                        <input type="text" name="physical_rating" value="{{$tour->physical_rating}}" class="form-control col-md-5" placeholder="Нагрузка">
+                        <input type="text" value="{{$tour->pdf}}" name="pdf" class="form-control col-md-12" placeholder="pdf link">
                     </div>
                     <div class="form-group">
                         <input type="text" name="days" value="{{$tour->days}}" class="form-control" id="days" placeholder="Кол-во дней тура">
                     </div>
                     <div class="form-group">
-                        <h4>Особености</h4>
-                        <div id="feature_container">
-                            @foreach($tour->faeturs as $feature)
-                                <div class="form-group"><input value="{{$feature->title}}" class="form-control" type="text" name="feature[]" placeholder="Особеность"></div>
-                            @endforeach
-                        </div>
-                        <div class="form-group"><div id="addmorefeature" class="btn btn-success">Добавить еще 1 особеность</div></div>
-                    </div>
-                    <div class="form-group">
                         <p>Карта</p>
                         <input class="form-control" value="{{$tour->map}}" placeholder="ссылка на iframe" type="text" name="map" id="">
-                    </div>
-                    
-                    <h4>Возраст</h4>
-                    <div class="form-group" style="display:flex; justify-content: space-between">
-                        <input type="text" value="{{$tour->age_from}}" name="age_from" class="form-control col-md-5" placeholder="От">
-                        <input type="text" name="age_to" value="{{$tour->age_to}}" class="form-control col-md-5" placeholder="До">
                     </div>
                     <div class="form-group" style="display:flex; justify-content: space-between">
                         <input type="text" name="starts" value="{{$tour->starts}}" class="form-control col-md-5" placeholder="Начало тура">
@@ -133,7 +120,7 @@
                             @foreach($tour->includes as $include)
                                 <div class="form-group">
                                     <input value="{{$include->include_title}}" type="text" name="include_title[]" class="form-control" placeholder="Входит | Тайтл">
-                                    <textarea name="include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="Входит | описание">{{$include->include_desc}}</textarea>
+                                    <a class="btn btn-danger delete-parent">Удалить</a>
                                 </div>
                             @endforeach
                         </div>
@@ -147,7 +134,7 @@
                             @foreach($tour->notIncludes as $notInclude)
                                 <div class="form-group">
                                     <input type="text" value="{{$notInclude->dont_include_title}}" name="dont_include_title[]" class="form-control" placeholder="НЕ Входит | Тайтл">
-                                    <textarea  name="dont_include_desc[]" class="form-control" style="margin-top:25px;" rows="5" placeholder="НЕ Входит |  описание">{{$notInclude->dont_include_desc}}</textarea>
+                                    <a class="btn btn-danger delete-parent">Удалить</a>
                                 </div>
                             @endforeach
                         </div>
@@ -173,6 +160,14 @@
         tabsize: 2,
         height: 100
       });
+</script>
+
+<script>
+    document.querySelectorAll('.delete-parent').forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.target.parentNode.remove()
+        });
+    });
 </script>
 
 <script>

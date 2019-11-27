@@ -1,3 +1,1 @@
-{!! SEOMeta::generate() !!}
-{!! OpenGraph::generate() !!}
-{!! Twitter::generate() !!}
+{!! SEO::generate() !!}

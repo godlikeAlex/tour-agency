@@ -18,6 +18,7 @@ class CreateToursTable extends Migration
             $table->string('slug');
             $table->string('name');
             $table->text('keywords');
+            $table->text('seo_desc');
             $table->string('lang');
             $table->text('desc');
             $table->string('price');

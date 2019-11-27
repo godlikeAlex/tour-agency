@@ -56,25 +56,28 @@
                     {{__('menu.uzbekistan')}}
 				</a>
 				<a href="{{route('uzb.category', ['category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
-                    @if($item->category === 'geo')
+                    @if(Request::segment(3) === 'geo')
                         {{__('menu.geo')}}
-                    @elseif($item->category === 'history')
+                    @elseif(Request::segment(3) === 'history')
                         {{__('menu.history')}}
-                    @elseif($item->category === 'peoples')
+                    @elseif(Request::segment(3) === 'peoples')
                         {{__('menu.peoples')}}
-                    @elseif($item->category === 'art')
+                    @elseif(Request::segment(3) === 'art')
                         {{__('menu.art')}}
-                    @elseif($item->category === 'fashion')
+                    @elseif(Request::segment(3) === 'fashion')
                         {{__('menu.moda')}}
-                    @elseif($item->category === 'painting')
+                    @elseif(Request::segment(3) === 'painting')
                         {{__('menu.painting')}}
-                    @elseif($item->category === 'culture')
+                    @elseif(Request::segment(3) === 'culture')
                         {{__('menu.culture')}}
-                    @elseif($item->category === 'kitchen')
+                    @elseif(Request::segment(3) === 'kitchen')
                         {{__('menu.kitchen')}}
-                    @elseif($item->category === 'tradition')
+                    @elseif(Request::segment(3) === 'tradition')
                         {{__('menu.tradition')}}
                     @endif
+				</a>
+                <a href="{{route('uzb.sub', ['category'=>Request::segment(3) ,'subcategory' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
+                    {{$subcategory->name}}
 				</a>
 				<span class="breadcrumb-item f1-s-3 cl9">
 					 {{$item -> name}}
@@ -83,7 +86,7 @@
     </div>
     <div class="col-md-12">
         <div class="row">
-            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
+            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">
                 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                 <a class="a2a_button_facebook"></a>
@@ -92,13 +95,13 @@
                 <a class="a2a_button_whatsapp"></a>
                 </div>
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END --></div>
+            </div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
             <div class="col-md-12 main-content-text" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
             <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
             @foreach($randomFromCategory as $rec)
                     <div class="col-md-4" style="    padding-bottom: 50px;">
-                            <a class="link-block" href="{{route('uzb.show', ['category'=>$category ,'uzb' => $rec->slug, 'language' => app()->getLocale()])}}">
+                            <a class="link-block" href="{{route('uzb.show', ['category'=>$category, 'subcategory' => $subcategory->slug, 'uzb' => $rec->slug, 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks big-padding">
                                     <div class="block-img" style="background: url(/storage/{{$rec->image}});" ></div>
                                     <div class="block-content">
@@ -110,7 +113,7 @@
                             </a>
                     </div>
             @endforeach
-            <p style="text-align:center; width: 100%;">
+            <p style="text-align:center; width: 100%; margin-bottom: 50px;">
                         <img src="/images/ads.png" alt="">
         </div>
     </div>

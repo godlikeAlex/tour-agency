@@ -64,88 +64,20 @@
     </div>
     @include('/components/header')
   <div class="site-section"  data-aos="fade">
-    <div class="container-fluid">
+    <div class="container">
       <div style="width:100%"><div class="section-name">{{ __('mainpage.gallery') }}</div></div>
       <div class="row justify-content-center">
       </div>
       <div class="row">
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-            <a href="{{route('show.galery', ['centuary' => 'khiva-khanate', 'language' => app()->getLocale()])}}">
-              <div style="background: url(https://static.kulturologia.ru/files/u19829/198295970.jpg); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;">{{ __('menu.khiva-khanate') }}</div>
+          @foreach($categories as $category)
+            <div class="col-sm-6 col-md-4 item gallery-item-prev">
+              <a href="{{route('show.galery', ['centuary' => $category->slug, 'language' => app()->getLocale()])}}">
+                <div style="background: url(/storage/{{ $category->image }}); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
+                <div style="text-align:center; font-size: 40px; margin-top: 10px; color:white; font-weight:700; z-index:99;">{{ $category->name }}</div>
+              </div>
+              </a>
             </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-            <a href="{{route('show.galery', ['centuary' => 'kokand-khanate', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRDWmpb8EkV3-NiMk0bTe_4w); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;">{{ __('menu.kokand-khanate') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-            <a href="{{route('show.galery', ['centuary' => 'bukhara-emirate', 'language' => app()->getLocale()])}}">
-            <div style="background: url(http://alsamarkand.com/wp-content/uploads/20/06/132544534_6124548_ludiDrevnegoSamarkanda.jpg); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;">{{ __('menu.bukhara-emirate') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'turkestan-assr', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.turkestan-assr') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'jadidism', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.turkestan-assr') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'stalin-period', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.stalin-period') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'khrushchevsky-period', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.khrushchevsky-period') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'brezhnevsky-period', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.brezhnevsky-period') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'restructuring', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.restructuring') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'republic-of-uzbekistan', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.republic-of-uzbekistan') }}</div>
-            </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 item gallery-item-prev">
-           <a href="{{route('show.galery', ['centuary' => 'present', 'language' => app()->getLocale()])}}">
-            <div style="background: url(https://nuz.uz/uploads/posts/2018-07/1531981952_renesansn2.png); height: 100%; background-size: cover; background-position: center;" alt="IMage" class="img-fluid">
-              <div style="text-align:center; font-size: 20px; margin-top: 10px; color:white; font-weight:700; z-index:99;"> {{ __('menu.present') }}</div>
-            </div>
-            </a>
-          </div>
+          @endforeach
       </div>
     </div>
   </div>

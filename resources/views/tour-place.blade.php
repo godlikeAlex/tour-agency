@@ -1,120 +1,79 @@
-<!DOCTYPE HTML>
-<html lang="{{ app()->getLocale() }}">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    @include('/components/head-settings')
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    @include('components/head-settings')
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/plugins/css/plugins.css">
+
+    <!-- Custom style -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/responsiveness.css" rel="stylesheet">
+    <link id="jssDefault" rel="stylesheet" href="/assets/css/skins/default.css">
+
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/util.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <!--===============================================================================================-->
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="/css/tours/animate.css">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="/css/tours/icomoon.css">
-
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="/css/tours/magnific-popup.css">
-
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="/css/tours/flexslider.css">
-
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="/css/tours/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/tours/owl.theme.default.min.css">
-
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="/css/tours/bootstrap-datepicker.css">
-    <!-- Flaticons  -->
-    <link rel="stylesheet" href="/font/tours/flaticon/font/flaticon.css">
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="fonts/ionicons.css" rel="stylesheet">
-    <!-- Modernizr JS -->
-    <script src="/js/tours/modernizr-2.6.2.min.js"></script>
-    <link rel="stylesheet" href="/css/tours/bootstrap-extend.min.css">
-    <link rel="stylesheet" href="/css/tours/site.min.css">
-    <link rel="stylesheet" href="/css/main-page.css">
-    <link rel="stylesheet" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="/css/tours/style.css">
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-    <link rel="stylesheet" type="text/css" href="/css/card.css">
-    <link rel="stylesheet" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="/fonts/ionicons.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/card.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="/css/slick/custom-theme.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+
+    <!--Footer-->
+
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
 </head>
 
-<body style="padding:0;">
+<body>
 
-    <div class="colorlib-loader"></div>
+    <!-- ======================= Start Navigation ===================== -->
+    @include('components.header')
+    <!-- ======================= End Navigation ===================== -->
 
-    @include('/components/header', ['type' => 'tours'])
-    <div class="colorlib-wrap" style="background:#f1f1f1; padding-top:0; padding: 0;">
+    <!-- ======================= Start Banner ===================== -->
+    <section class="page-title-banner" style="height: 300px; background-image:url(/storage/{{$tour->image}});">
+
+    </section>
+    <!-- ======================= End Banner ===================== -->
+
+
+
+    <!-- ============== Tour Detail ====================== -->
+
+    <section class="tr-single-detail gray-bg" style="padding-top: 30px !important;">
         <div class="container">
+
             <div class="row">
-                <div style="background: transparent; padding-bottom: 20px; padding-top: 20px;" class="col-md-12 headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
-			        <div class="f2-s-1 p-r-30 m-tb-6">
+                <div class="col-md-12" style="padding: 0">
+                    <div style="background: transparent" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+                        <div class="f2-s-1 p-r-30 m-tb-6">
                             <a href="/" class="breadcrumb-item f1-s-3 cl9">
                                 {{__('menu.main')}}
                             </a>
 
-                            <a href="{{route('index.uzbekistan', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
+                            <a href="{{route('index.uzbekistan', app()->getLocale())}}"
+                                class="breadcrumb-item f1-s-3 cl9">
                                 {{__('menu.tours')}}
                             </a>
                             <span class="breadcrumb-item f1-s-3 cl9">
                                 {{$tour -> name}}
                             </span>
                         </div>
+                    </div>
                 </div>
-                <div class="col-md-12"
-                    style="margin-top:0;font-size:30px; font-weight:700; display:flex; justify-content: space-between;">
-                    {{$tour->name}}
-                    <!-- AddToAny BEGIN -->
+
+                <div style="padding-left: 0px; margin-top: 0px; display: flex; align-items: center; justify-content: space-between; padding-top: 30px; padding-bottom: 30px; font-size: 32px; font-weight: 700;"
+                    class="col-md-12 title-item">{{$tour->name}}
                     <div class="a2a_kit a2a_kit_size_32 a2a_default_style"
                         style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">
                         <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
@@ -124,388 +83,667 @@
                         <a class="a2a_button_whatsapp"></a>
                     </div>
                     <script async src="https://static.addtoany.com/menu/page.js"></script>
-                    <!-- AddToAny END -->
                 </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
+                <div class="col-md-8 col-sm-12" id="content">
+                    <div class="tab-content tabs">
 
+                        <div role="tabpanel" class="tab-pane fade in active" id="Overview">
 
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        @foreach($tour->images as $img)
-                                        @if($loop->iteration == 1)
-                                        <div class="item active" style="background: url(/storage/{{$img->path}}); height:420px;     height: 420px;background-size: cover;">
-
+                            <!-- Overview -->
+                            <div class="row">
+                                <div class="tr-single-box" style="width: 100%;">
+                                    <div class="tr-single-header">
+                                        <h4><i class="fa fa-fw fa-info"></i>Overview</h4>
+                                    </div>
+                                    <div class="tr-single-body" style="width: 100%;">
+                                        <div class="row">
+                                            <div class="col-md-3"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                                <i class="fa fa-fw fa-map-signs"
+                                                    style="font-size: 30px;color: #050658;"></i>
+                                                <div>{{$tour->starts}} - {{$tour->ends}}</div>
+                                            </div>
+                                            <div class="col-md-3"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                                <i class="fa fa-fw fa-clock-o"
+                                                    style="font-size: 30px;color: #050658;"></i>
+                                                <div>{{$tour->days}} {{__('menu.days')}}</div>
+                                            </div>
+                                            <div class="col-md-3"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                                <i class="fa fa-fw fa-money"
+                                                    style="font-size: 30px;color: #050658;"></i>
+                                                <div>{{__('menu.from')}} {{$tour->price}}$</div>
+                                            </div>
+                                            <div class="col-md-3"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                                <i class="fa fa-fw fa-smile-o"
+                                                    style="font-size: 30px;color: #050658;"></i>
+                                                <div>{{__('menu.best_service')}}</div>
+                                            </div>
                                         </div>
-                                        @else
-                                        <div class="item"
-                                            style="background: url(/storage/{{$img->path}}); height:420px;height: 420px; background-size: cover;">
-                                        </div>
-                                        @endif
-                                        @endforeach
-                                    </div>
-                                    <!-- Left and right controls -->
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                                <div class="col-md-12 col-md-offset-0 heading2 "
-                                    style="padding-top:20px; padding-bottom:20px; background:white;display: flex;justify-content: space-around;">
-                                    <div class="starts-container">
-                                        <div class="starts_block">Starts</div>
-                                        <div class="starts_city">{{$tour->starts}}</div>
-                                    </div>
-                                    <div class="ends-container">
-                                        <div class="ends_block">Ends</div>
-                                        <div class="ends_city">{{$tour->ends}}</div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="col-md-12 col-md-offset-0 heading2 "
-                                style="margin-top:25px; height: 80px; background:white">
-                                <ul class="nav-menu-tour">
-                                    <li><a href="#highlights">Особености</a></li>
-                                    <li><a href="#Itinerary">Маршрут</a></li>
-                                    <li><a href="#includes">Входит</a></li>
-                                    <li><a href="#notincludes">Невходит</a></li>
-                                    <li><a href="#booknow">Забанировать</a></li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="col-md-12">
-                            <div class="col-md-12 col-md-offset-0 block-item " id="highlights"
-                                style="padding:20px;margin-top:25px;padding-top:25px; padding-bottom:25px; background:white">
-                                <div style="display:flex;     justify-content: space-between;">
-                                    <div>
-                                        <h2>Особености</h2>
-                                        <ul style="margin-top:25px;  list-style-type: none;">
-                                            @foreach($tour->feature as $feature)
-                                            <li style="line-height:30px; font-weight:700"><i
-                                                    style="padding-right: 10px; color:green;" class="fas fa-check"></i>
-                                                {{$feature->title}}</li>
-                                            @endforeach
-                                        </ul>
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="tr-single-box">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-files"></i>{{__('menu.desc')}}</h4>
                                     </div>
-                                    <div style="width:286px; height:190px; background:#7e2dff;">
-                                        <img src="/storage/{{$tour->map}}" alt="">
+                                    <div class="tr-single-body">
+                                        {!!$tour->about!!}
                                     </div>
-                                </div>
-
-                                <div class="info-tour">
-                                    <div class="dd_block">
-                                        <span class="info-people">Age range</span>
-                                        <span style="width:17%;">{{$tour->age_from}} {{$tour->age_to}}</span>
-                                    </div>
-                                    <div class="dd_block">
-                                        <span class="info-people">Physical rating</span>
-                                        <span style="width:17%;">{{$tour->physical_rating}}</span>
-                                    </div>
-                                </div>
-                                <div style="margin-top:20px; line-height:20px;">
-                                    {!! $tour->about !!}
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12"><iframe width="100%" height="450"
-                                src="https://www.youtube.com/embed/{{$tour->video}}" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe></div>
-                        <div class="col-md-12">
-                            <div class="block-item">
-                                <div id="Itinerary"
-                                    style="display:flex; justify-content: space-between; align-items:center">
-                                    <h2>Маршрут </h2>
-                                    <a href="{{$tour->pdf}}" class="btn btn-primary">Download PDF Brochure</a>
-                                </div>
-                                <!-- Example Continuous Accordion -->
-                                <div class="examle-wrap">
-                                    <div class="example">
-                                        <div class="panel-group panel-group-continuous" id="marshrut"
-                                            aria-multiselectable="true" role="tablist">
-                                            @foreach($tour->tourDatesAbout as $adate)
-                                            <div class="panel" style="margin-top:0px">
-                                                <div class="panel-heading" id="exampleHeadingContinuousOne" role="tab">
-                                                    <a class="panel-title" data-parent="#marshrut"
-                                                        data-toggle="collapse" href="#marshrut{{$loop->iteration}}"
-                                                        aria-controls="exampleCollapseContinuousOne"
-                                                        aria-expanded="false">
-                                                        <i class="fas fa-map-marker-alt"
-                                                            style="padding-right:15px; font-size:25px;"></i>{{$adate->day_title}}
 
-                                                    </a>
-                                                </div>
-                                                <div class="panel-collapse collapse" id="marshrut{{$loop->iteration}}"
-                                                    aria-labelledby="exampleHeadingContinuousOne" role="tabpanel">
-                                                    <div class="panel-body">
-                                                        {!!$adate->day_desc!!}
+                            <div class="row">
+                                <div class="tr-single-box col-md-12">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-files"></i>{{__('menu.program_tour')}}</h4>
+                                    </div>
+
+                                    <div class="tr-single-body">
+                                        <div class="row" style="padding-top: 15px">
+                                            <a href="{{$tour->pdf}}" target="_blank"
+                                                class="btn theme-btn full-width">{{__('menu.pdf_download')}}</a>
+
+                                            <div style="margin-top: 30px; width: 100%;">
+                                                <div role="tabpanel" class="tab-pane fade in active">
+                                                    <div class="simple-accordion">
+                                                        <div class="panel-group" id="accordion" role="tablist"
+                                                            aria-multiselectable="true">
+                                                            @foreach($tour->tourDatesAbout as $adate)
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading" role="tab"
+                                                                    id="title{{$loop->iteration}}">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" role="button"
+                                                                            data-toggle="collapse"
+                                                                            data-parent="#accordion"
+                                                                            href="#col{{$loop->iteration}}"
+                                                                            aria-expanded="false"
+                                                                            aria-controls="col{{$loop->iteration}}">
+                                                                            {{$adate->day_title}}
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="col{{$loop->iteration}}"
+                                                                    class="panel-collapse collapse" role="tabpanel"
+                                                                    aria-labelledby="title{{$loop->iteration}}">
+                                                                    <div class="panel-body">
+                                                                        {!!$adate->day_desc!!}</div>
+                                                                </div>
+                                                            </div>
+                                                            @endforeach
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            @endforeach
                                         </div>
                                     </div>
-                                    <!-- End Example Continuous Accordion -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12">
-                            <iframe src="{{$tour->map}}" width="100%" height="480"></iframe>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="block-item">
-                                <div id="includes"
-                                    style="display:flex; justify-content: space-between; align-items:center">
-                                    <h2>Что входит</h2>
-                                </div>
-                                <!-- Example Continuous Accordion -->
-                                <div class="examle-wrap">
-                                    <div class="example">
 
-                                        <div class="panel-group panel-group-continuous" id="include"
-                                            aria-multiselectable="true" role="tablist">
-                                            @foreach($tour->includes as $inc)
-                                            <div class="panel" style="margin-top:0px">
-                                                <div class="panel-heading" id="exampleHeadingContinuousOne" role="tab">
-                                                    <a class="panel-title" data-parent="#include" data-toggle="collapse"
-                                                        href="#includes{{$loop->iteration}}" aria-controls="includes1"
-                                                        aria-expanded="false">
-                                                        <i class="far fa-check-circle"
-                                                            style="color:green; font-size:25px; padding-right:15px;"></i>
-                                                        {{$inc->include_title}}
-                                                    </a>
-                                                </div>
-                                                <div class="panel-collapse collapse " id="includes{{$loop->iteration}}"
-                                                    aria-labelledby="exampleHeadingContinuousOne" role="tabpanel">
-                                                    <div class="panel-body">{!!$inc->include_desc!!}</div>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                        </div>
+                            <div class="row">
+                                <div class="tr-single-box col-md-12">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-comment"></i>{{__('menu.video_reviews')}}</h4>
                                     </div>
-                                    <!-- End Example Continuous Accordion -->
-                                </div>
-                                <strong id="notincludes">
-                                    <h2>Не входит</h2>
-                                </strong>
-                                <!-- Example Continuous Accordion -->
-                                <div class="examle-wrap">
-                                    <div class="example">
-                                        <div class="panel-group panel-group-continuous" id="notinclude"
-                                            aria-multiselectable="true" role="tablist">
-                                            @foreach($tour->notIncludes as $nInc)
-                                            <div class="panel" style="margin-top:0px">
-                                                <div class="panel-heading" id="exampleHeadingContinuousOne" role="tab">
-                                                    <a class="panel-title" data-parent="#notinclude"
-                                                        data-toggle="collapse" href="#notinclude{{$loop->iteration}}"
-                                                        aria-controls="notinclude1" aria-expanded="false">
-                                                        <i class="far fa-times-circle"
-                                                            style="padding-right:15px; font-size:25px; color:red;"></i>
-                                                        {{$nInc->dont_include_title}}
-                                                    </a>
-                                                </div>
-                                                <div class="panel-collapse collapse "
-                                                    id="notinclude{{$loop->iteration}}"
-                                                    aria-labelledby="exampleHeadingContinuousOne" role="tabpanel">
-                                                    <div class="panel-body">{{$nInc->dont_include_desc}}</div>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                        </div>
+                                    <div class="tr-single-body">
+                                        <div class="col-md-12"><iframe width="100%" height="450"
+                                                src="https://www.youtube.com/embed/{{$tour->video}}" frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe></div>
                                     </div>
                                 </div>
-                                <!-- End Example Continuous Accordion -->
+                            </div>
+
+
+
+                            <!-- Amenities -->
+                            <div class="row">
+                                <div class="tr-single-box col-md-12">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-crown"></i>{{__('menu.details')}}</h4>
+                                    </div>
+                                    <div class="tr-single-body" style="width: 100%;">
+                                        <div role="tabpanel" class="tab-pane fade in active">
+                                            <div class="simple-accordion">
+                                                <div class="panel-group" id="accordion" role="tablist"
+                                                    aria-multiselectable="true">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading" role="tab" id="includetitle">
+                                                            <h4 class="panel-title">
+                                                                <a role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion" href="#include"
+                                                                    aria-expanded="false" aria-controls="include">
+                                                                    {{__('menu.include')}}
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="include" class="panel-collapse collapse"
+                                                            role="tabpanel" aria-labelledby="includetitle">
+                                                            <div class="panel-body">
+                                                                @foreach($tour->includes as $inc)
+                                                                <div><span style="color: green" class="ti-check"></span>
+                                                                    {{$inc->include_title}}</div>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading" role="tab" id="notincludetitle">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" role="button"
+                                                                    data-toggle="collapse" data-parent="#accordion"
+                                                                    href="#notinclude" aria-expanded="false"
+                                                                    aria-controls="notinclude">
+                                                                    {{__('menu.notinclude')}}
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="notinclude" class="panel-collapse collapse"
+                                                            role="tabpanel" aria-labelledby="notincludetitle">
+                                                            <div class="panel-body">
+                                                                @foreach($tour->notIncludes as $inc)
+                                                                <div><span style="color: red" class="ti-close"></span>
+                                                                    {{$inc->dont_include_title}}</div>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Location -->
+                            <div class="row">
+                                <div class="tr-single-box" style="width: 100%;">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-map-alt"></i>Location</h4>
+                                    </div>
+                                    <div class="tr-single-body">
+                                        <iframe src="{{$tour->map}}" width="100%" height="480"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gallery -->
+                            <!-- ============ Photos =================== -->
+                            <div class="row">
+                                <div class="tr-single-box" style="width: 100%;">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-gallery"></i>{{__('menu.galery')}}</h4>
+                                    </div>
+                                    <div class="tr-single-body">
+                                        <ul class="gallery-list">
+                                            @foreach($tour->images as $img)
+                                            <li class="col-md-4">
+                                                <a style="width: 100%;" data-fancybox="gallery"
+                                                    href="/storage/{{$img->path}}">
+                                                    <div
+                                                        style="width: 100%; height: 200px; background: url(/storage/{{$img->path}}); background-position: center; background-size: cover;">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
+                        <!-- ============ Features =================== -->
+                        <div role="tabpanel" class="tab-pane fade in" id="Features">
+
+                            <!-- About Features -->
+                            <div class="row">
+                                <div class="tr-single-box">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-files"></i>About Features</h4>
+                                    </div>
+                                    <div class="tr-single-body">
+                                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+                                            cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+                                            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                                            repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae
+                                            non recusandae.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Extra features -->
+                            <div class="row">
+                                <div class="tr-single-box">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-thumb-up"></i>Extra Features</h4>
+                                    </div>
+                                    <div class="tr-single-body">
+
+                                        <ul class="simple-features-list">
+                                            <li>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                                nesciunt.</li>
+                                            <li>Minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                                                laboriosam.</li>
+                                            <li>But I must explain to you how all this mistaken idea of denouncing
+                                                pleasure and praising pain.</li>
+                                            <li>Pain can procure him some great pleasure. To take a trivial example,
+                                                which of us ever undertakes.</li>
+                                            <li>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                                nesciunt.</li>
+                                            <li>Minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                                                laboriosam.</li>
+                                            <li>But I must explain to you how all this mistaken idea of denouncing
+                                                pleasure and praising pain.</li>
+                                            <li>Pain can procure him some great pleasure. To take a trivial example,
+                                                which of us ever undertakes.</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ============ Review =================== -->
+                        <div role="tabpanel" class="tab-pane fade in" id="Review">
+
+                            <!-- Review -->
+                            <div class="row">
+                                <div class="tr-single-box">
+                                    <div class="tr-single-header">
+                                        <h4><i class="ti-write"></i>All Review</h4>
+                                    </div>
+                                    <div class="tr-single-body">
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-1.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Daniel Dicoss</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>87</a>
+                                                    <a href="#"><i class="ti-comment"></i>52</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-2.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>4.4/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Archita Singh</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>65</a>
+                                                    <a href="#"><i class="ti-comment"></i>78</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-3.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>5.0/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Devesh Patri</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>110</a>
+                                                    <a href="#"><i class="ti-comment"></i>47</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-4.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>4.9/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Ruchi Sethi</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>120</a>
+                                                    <a href="#"><i class="ti-comment"></i>36</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-5.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>4.8/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Duke Divalkis</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>80</a>
+                                                    <a href="#"><i class="ti-comment"></i>70</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Single Review -->
+                                        <div class="review-box">
+                                            <div class="review-thumb">
+                                                <img src="/assets/img/user-6.jpg" class="img-responsive img-circle"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="review-box-content">
+                                                <div class="reviewer-rate">
+                                                    <p><i class="fa fa-star cl-warning"></i>4.7/<span>5</span></p>
+                                                </div>
+                                                <div class="review-user-info">
+                                                    <h4>Shilka Rai</h4>
+                                                    <p>Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio. Nam
+                                                        Libero Tempore, Cum Soluta Nobis Est Eligendi Optio Cumque Nihil
+                                                        Impedit Quo Minus Id Quod Maxime Placeat Facere Possimus</p>
+                                                </div>
+                                                <div class="review-lc text-right">
+                                                    <a href="#"><i class="ti-heart"></i>120</a>
+                                                    <a href="#"><i class="ti-comment"></i>140</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
 
                     </div>
                 </div>
 
-                <!-- SIDEBAR-->
-                <div class="col-md-4">
-                    <div class="fixed-side">
-                        <div class="sidebar-wrap">
-                            <div class="side search-wrap ">
-                                <h3 class="sidebar-heading">Find your hotel</h3>
-                                <form method="post" class="colorlib-form">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="date">Check-in:</label>
-                                                <div class="form-field">
-                                                    <i class="icon icon-calendar2"></i>
-                                                    <input type="text" id="date" class="form-control date"
-                                                        placeholder="Check-in date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="date">Check-out:</label>
-                                                <div class="form-field">
-                                                    <i class="icon icon-calendar2"></i>
-                                                    <input type="text" id="date" class="form-control date"
-                                                        placeholder="Check-out date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="guests">Guest</label>
-                                                <div class="form-field">
-                                                    <i class="icon icon-arrow-down3"></i>
-                                                    <select name="people" id="people" class="form-control">
-                                                        <option value="#">1</option>
-                                                        <option value="#">2</option>
-                                                        <option value="#">3</option>
-                                                        <option value="#">4</option>
-                                                        <option value="#">5+</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <input type="submit" name="submit" id="submit" value="Find Hotel"
-                                                class="btn btn-primary btn-block">
-                                        </div>
+                <!-- Sidebar Start -->
+                <div class="col-md-4 col-sm-12">
+                    <!-- overview & booking Form -->
+                    <div class="tr-single-box sticky-top" style="top: 9%;">
+                        <div class="tr-single-header"
+                            style="    border-radius: 5px 5px 0px 0px; background: #050658; color: white; text-align: center; font-weight: 700; font-size: 20px;">
+                            <div class="entry-meta">
+                                $ {{$tour->price}}/{{__('menu.perperson')}}
+
+                                <div class="meta-item meta-author">
+                                    <div class="hotel-review entry-location">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                        <div class="info-tour-side">
-                            <div class="side_price_dates">
-                                <dl>
-                                    <dt>Days</dt>
-                                    <dd>8</dd>
-                                </dl>
-                                <dl>
-                                    <dt>Price</dt>
-                                    <dd style="    text-align: right;">3500$</dd>
-                                </dl>
-                            </div>
-                            <ul class="about_tour_info_list">
-                                <li><i class="fas fa-check" style="    color: green;"></i> NO BOOKING OR CREDIT CARD
-                                    FEES</li>
-                                <li><i class="fas fa-check" style="    color: green;"></i> BEST PRICE GUARANTEE</li>
-                                <li><i class="fas fa-check" style="    color: green;"></i> SAVE $26 ON YOUR NEXT BOOKING
-                                </li>
-                                <li><i class="fas fa-check" style="    color: green;"></i> JUST PAY $99 DEPOSIT TODAY
-                                </li>
-                            </ul>
-                            <div style="display:flex; justify-content:center;">
-                                <a class="btn btn-info"
-                                    style="    width: 38%;font-weight: 700;font-size: 18px;color: white;">Заказать</a>
-                            </div>
+                        <div class="tr-single-body">
+                            <form class="book-form" id="form">
+								@csrf
+								<input type="hidden" name="tour_name" class="form-control" value="{{$tour->name}}">
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control"
+                                        placeholder="{{__('menu.your_name')}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="surname" class="form-control"
+                                        placeholder="{{__('menu.your_surname')}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control"
+                                        placeholder="{{__('menu.your_email')}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="phone" class="form-control" name="phone" placeholder="{{__('menu.your_phone')}}"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="peoples" class="form-control"
+                                        placeholder="{{__('menu.number_of_people')}}" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 mrg-top-15">
+										<input type="submit" value="{{__('menu.booking_now')}}" class="btn btn-arrow theme-btn full-width">
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- /col-md-4 -->
             </div>
+
             <div class="row">
-                <div class="col-md-12" id="prices_dates">
-                    <div id="booknow" class="block-item">
-                        <div style="display:flex; align-items: center;justify-content: space-between;">
-                            <h2 style="margin:0">Заказать</h2>
-                            <div style="font-size:35px;">
-                                <i class="fab fa-cc-mastercard"></i>
-                                <i class="fab fa-cc-jcb"></i>
-                                <i class="fab fa-cc-amex"></i>
-                                <i class="fab fa-cc-paypal"></i>
-                                <i class="fab fa-cc-visa"></i>
-                            </div>
-                        </div>
-                        <h5>{{$tour->name}}</h5>
-                        <table class="table table-striped" style="margin-top:20px;">
-                            <thead>
-                                <tr>
-                                    <th>Начало</th>
-                                    <th>Конец</th>
-                                    <th>Места</th>
-                                    <th>Статус</th>
-                                    <th>Цена</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($tour->tourDates as $tourDates)
-                                <tr>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;">
-                                        {{$tourDates->starts}}</td>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;">
-                                        {{$tourDates->ends}}</td>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;">
-                                        {{$tourDates->places}}</td>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;">
-                                        {{$tourDates->status}}</td>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;">
-                                        {{$tourDates->price}}</td>
-                                    <td style="font-size:16px; font-weight:700; vertical-align: unset;"><button
-                                            type="button" class="btn btn-info">Заказать</button></td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="tr-single-box" style="width: 100%;">
 
-                </div>
-                <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
-            @foreach($randomFromCategory as $rec)
-                    <div class="col-md-4" style="    padding-bottom: 50px;">
-                            <a class="link-block" href="{{route('tour.show', ['tourname' => $rec->slug, 'language' => app()->getLocale()])}}">
-                                <div class="big-blocks big-padding">
-                                    <div class="block-img" style="background: url(/storage/{{$rec->image}});" ></div>
-                                    <div class="block-content">
-                                        <div class="block-title">{{str_limit($rec ->name, $limit = 30, $end = '...')}}</div>
-                                        <div class="block-desc">{{str_limit($rec ->desc, $limit = 130, $end = '...')}}</div>
-                                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
+                    <div class="tr-single-body">
+                        <div class="col-md-12" id="prices_dates">
+                            <div id="booknow" class="block-item">
+                                <div style="display:flex; align-items: center;justify-content: space-between;">
+                                    <h2 style="margin:0">{{__('menu.availability')}}</h2>
+                                    <div style="font-size:35px;">
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-jcb"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                        <i class="fab fa-cc-paypal"></i>
+                                        <i class="fab fa-cc-visa"></i>
                                     </div>
                                 </div>
-                            </a>
+                                <table class="table table-striped" style="margin-top:20px;">
+                                    <thead>
+                                        <tr>
+                                            <th>{{__('menu.starts')}}</th>
+                                            <th>{{__('menu.ends')}}</th>
+                                            <th>{{__('menu.places')}}</th>
+                                            <th>{{__('menu.availability')}}</th>
+                                            <th>{{__('menu.perperson')}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($tour->tourDates as $tourDates)
+                                        <tr>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                                {{$tourDates->starts}}</td>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                                {{$tourDates->ends}}</td>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                                {{$tourDates->places}}</td>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: unset; color:{{$tourDates->status == 'closed' ? 'red' : 'green'}}">
+												@if($tourDates->status == 'closed')
+													{{__('menu.not_available')}}
+												@else
+													{{__('menu.available')}}
+												@endif											
+											</td>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                                {{$tourDates->price}} $</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-            @endforeach
+                </div>
             </div>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v4.0"></script>
-            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
-        </div>
-        @include('/components/footer')
-    </div>
-    </div>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="/js/tours/jquery.easing.1.3.js"></script>
-    <!-- Waypoints -->
-    <script src="/js/tours/jquery.waypoints.min.js"></script>
-    <!-- Flexslider -->
-    <script src="/js/tours/jquery.flexslider-min.js"></script>
-    <!-- Owl carousel -->
-    <script src="/js/tours/owl.carousel.min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="/js/tours/jquery.magnific-popup.min.js"></script>
-    <script src="/js/tours/magnific-popup-options.js"></script>
-    <!-- Date Picker -->
-    <script src="/js/tours/bootstrap-datepicker.js"></script>
-    <!-- Stellar Parallax -->
-    <script src="/js/tours/jquery.stellar.min.js"></script>
 
-    <!-- Main -->
-    <script src="/js/tours/main.js"></script>
-    <script src="/js/main.js"></script>
+      </section>
+    <!-- ============== Tour Detail ====================== -->
+
+    @include('components.footer')
+
+    <!-- ================= footer start ========================= -->
 
 
 
+    <!-- =================== START JAVASCRIPT ================== -->
+    <script src="/assets/plugins/js/jquery.min.js"></script>
+    <script src="/assets/plugins/js/bootstrap.min.js"></script>
+    <script src="/assets/plugins/js/viewportchecker.js"></script>
+    <script src="/assets/plugins/js/bootsnav.js"></script>
+    <script src="/assets/plugins/js/slick.min.js"></script>
+    <script src="/assets/plugins/js/jquery.nice-select.min.js"></script>
+    <script src="/assets/plugins/js/jquery.fancybox.min.js"></script>
+    <script src="/assets/plugins/js/jquery.downCount.js"></script>
+    <script src="/assets/plugins/js/freshslider.1.0.0.js"></script>
+    <script src="/assets/plugins/js/moment.min.js"></script>
+    <script src="/assets/plugins/js/daterangepicker.js"></script>
+    <script src="/assets/plugins/js/wysihtml5-0.3.0.js"></script>
+    <script src="/assets/plugins/js/bootstrap-wysihtml5.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key="></script>
+    <script src="/assets/plugins/js/markerclusterer.js"></script>
+    <script src="/assets/js/map.js"></script>
 
+    <!-- Dashboard Js -->
+    <script src="/assets/plugins/js/jquery.slimscroll.min.js"></script>
+    <script src="/assets/plugins/js/jquery.metisMenu.js"></script>
+    <script src="/assets/plugins/js/jquery.easing.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="/assets/js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+	<script>
+		const form = document.querySelector('#form');
+		const token = document.querySelector('input[name="_token"]').value;
+		form.addEventListener('submit', async e => {
+			e.preventDefault();
+
+			const formData = {};
+			const inputs = document.querySelectorAll('.form-control');
+			inputs.forEach(inp => {
+				formData[inp.name] = inp.value;
+			});
+			console.log(formData);
+			const res = await fetch('{{route("book.tour", app()->getLocale())}}', {method: 'POST', body: JSON.stringify(formData), headers: { 'X-CSRF-Token': token }});
+			if(res.status == 200) {
+				const data = await res.text();
+				console.log(data);
+				Swal.fire({
+					type: 'success',
+					title: data ,
+					showConfirmButton: false,
+					timer: 1500
+				});
+			} else {
+				Swal.fire({
+					type: 'error',
+					text: data
+				})
+			}
+		})
+	</script>
+    <script>
+        $('#checkin').daterangepicker({
+            "singleDatePicker": true,
+            "timePicker": true,
+            "startDate": "12/12/2018",
+            "endDate": "12/14/2018"
+        }, function (start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format(
+                'YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+    </script>
+
+    <script>
+        $('#checkout').daterangepicker({
+            "singleDatePicker": true,
+            "timePicker": true,
+            "startDate": "12/18/2018",
+            "endDate": "12/18/2018"
+        }, function (start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format(
+                'YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+    </script>
+
+    <script src="/assets/js/jQuery.style.switcher.js"></script>
+    <script>
+        function openRightMenu() {
+            document.getElementById("rightMenu").style.display = "block";
+        }
+
+        function closeRightMenu() {
+            document.getElementById("rightMenu").style.display = "none";
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#styleOptions').styleSwitcher();
+        });
+
+    </script>
 </body>
 
 </html>
