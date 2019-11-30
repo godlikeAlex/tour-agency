@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/main-page.css">
     <link rel="stylesheet" href="/css/main-menu.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
@@ -98,7 +99,33 @@
                 prevArrow: false,
                 nextArrow: false,
                 slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1, 
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
         });
 

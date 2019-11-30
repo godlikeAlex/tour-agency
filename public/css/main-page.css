@@ -738,6 +738,26 @@ section {
         display: none;
     }
 
+    table tr td {
+        font-size: 14px !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    .title-item {
+        font-size: 25px !important; 
+        flex-wrap: wrap;
+
+    }
+
+    .title-item div {
+        width: unset !important;
+    }
+
+    .avalible {
+        width: 100%;
+    }
+
     .block-mini-img {
         height: 185px;
     }
@@ -782,7 +802,12 @@ section {
     }
 
     .left-side-menu {
+        z-index: 99999;
         width: 100vw;
+    }
+
+    .sub-menu-main {
+        display: none;
     }
 
     .content-block__img

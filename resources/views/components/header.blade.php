@@ -79,7 +79,7 @@
                     @endforeach
                 </ul>
             </li>
-            <li><div  class="left-menu-main-link" ><a href="/fortourists">{{ __('menu.fortoursit') }}</a></div></li>
+            <li><div  class="left-menu-main-link" ><a href="{{route('index.tourism', app()->getLocale())}}">{{ __('menu.fortoursit') }}</a></div></li>
             <!-- <div  class="left-menu-main-link" ><a href="/city">Базар</a></div> -->
             <li>
                 <div  class="left-menu-main-link" ><a href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>  <img src="/images/down.png" class="drop-menu" alt=""></div>
@@ -102,7 +102,7 @@
                 <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> </a>
             </li>
         </ul>
-        <ul class="left-menu-network" style="display: flex; justify-content: space-between;">
+        <ul class="left-menu-network" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
         <a href="{{ route('about', app() -> getLocale()) }}">{{__('menu.about')}}</a> <a href="{{ route('team', app() -> getLocale()) }}">{{__('menu.team')}}</a>  <a href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a> <a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.contacts')}}</a>
         </ul>
         <p class="terms">
@@ -164,7 +164,7 @@
                         @endforeach
                     </div>
                 </li>
-                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="/tourism">{{ __('menu.fortoursit') }}</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="{{route('index.tourism', app()->getLocale())}}">{{ __('menu.fortoursit') }}</a></li>
                 <!-- <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li> -->
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item">
                     <a class="main-menu-link-drop" data-menu-show="show-blog-gal" href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>

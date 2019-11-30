@@ -105,4 +105,10 @@
         'starts' => 'Starts',
         'ends' => 'Ends',
         'places' => 'Places',
+        'more' => 'More',
+        'obwiy-info' => 'general information',
+        'how_to_get' => 'How to get',
+        'money' => 'money',
+        'communication' => 'communication',
+        'events' => 'events',
     ];

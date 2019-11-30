@@ -23,7 +23,7 @@
     <!--Footer-->
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link href="fonts/ionicons.css" rel="stylesheet">
+    <link href="/fonts/ionicons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                         <div class="block-content">
                             <div class="block-title">{{ __('menu.geo') }}</div>
                             <div class="block-desc">Здесь можно прочитать о географии Узбекистана</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                         </div>
                     </div>
                 </a>
@@ -56,7 +56,7 @@
                             <div class="block-title">{{ __('menu.history') }}</div>
                             <div class="block-desc">Здесь вы сможете найти интереснные фрагменты истории из жизни
                                 Узбекистана</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                         </div>
                     </div>
                 </a>
@@ -70,7 +70,7 @@
                         <div class="block-content">
                             <div class="block-title">{{ __('menu.peoples') }}</div>
                             <div class="block-desc">Здесь вы сможете найти интереснных людей со всего Узбекистана</div>
-                            <div class="show__more show__more-block">More</div>
+                            <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                         </div>
                     </div>
                 </a>
@@ -114,7 +114,7 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('menu.art') }}</div>
                                     <div class="block-desc"> процесс или итог выражения внутреннего мира в (художественном) образе</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
@@ -128,7 +128,7 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('menu.moda') }}</div>
                                     <div class="block-desc">Мо́да — совокупность привычек, ценностей и вкусов, принятых в определённой среде в определённое время.</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
@@ -142,7 +142,7 @@
                                 <div class="block-content">
                                     <div class="block-title">{{ __('menu.painting') }}</div>
                                     <div class="block-desc">Картина в живописи — произведение искусства, обладающее законченным характером и самостоятельным художественным значением</div>
-                                    <div class="show__more show__more-block">More</div>
+                                    <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                 </div>
                             </div>
                         </a>
@@ -163,7 +163,7 @@
                                     <div class="block-content">
                                         <div class="block-title">{{ __('menu.culture') }}</div>
                                         <div class="block-desc">Культу́ра — понятие, имеющее огромное количество значений в различных областях человеческой жизнедеятельности. Культура является предметом изучения философии </div>
-                                        <div class="show__more show__more-block">More</div>
+                                        <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -177,7 +177,7 @@
                                     <div class="block-content">
                                         <div class="block-title">{{ __('menu.kitchen') }}</div>
                                         <div class="block-desc">Узбе́кская ку́хня — национальная кухня Узбекистана. Богатая кухня, имеет глубокую историю, тесно связана с узбекской </div>
-                                        <div class="show__more show__more-block">More</div>
+                                        <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>
@@ -191,7 +191,7 @@
                                     <div class="block-content">
                                         <div class="block-title">{{ __('menu.tradicii') }}</div>
                                         <div class="block-desc">Рели́гия (лат. religare — связывать, соединять) — определённая система взглядов</div>
-                                        <div class="show__more show__more-block">More</div>
+                                        <div class="show__more show__more-block">{{__('mainpage.moreblock')}}</div>
                                     </div>
                                 </div>
                             </a>

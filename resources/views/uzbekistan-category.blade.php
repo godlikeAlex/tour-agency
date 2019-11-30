@@ -65,7 +65,7 @@
                                     <div class="big-blocks big-padding">
                                         <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                         <div class="block-content">
-                                            <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                            <div class="block-title">{{str_limit($item ->name, $limit = 25, $end = '...')}}</div>
                                             <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
                                             <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                         </div>

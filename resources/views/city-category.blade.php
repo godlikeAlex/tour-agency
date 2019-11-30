@@ -51,7 +51,7 @@
 
                 @if(isset($items[0]))
                     @if($items[0]->category_price)
-                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дешевый</div>
+                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:25px;">Дешевый</div>
                         @foreach($items as $item)
                             @if($item->category_price === 'cheap')
                             <div class="col-md-4" style="    padding-bottom: 10px;">
@@ -68,7 +68,7 @@
                                                     Элитный
                                                 @endif
                                                 </div>
-                                                <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                                <div class="block-title">{{str_limit($item ->name, $limit = 35, $end = '...')}}</div>
                                                 <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
                                                 <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                             </div>
@@ -77,7 +77,7 @@
                             </div>
                             @endif
                         @endforeach
-                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Средний</div>
+                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:25px;">Средний</div>
                         @foreach($items as $item)
                             @if($item->category_price === 'middle')
                             <div class="col-md-4" style="    padding-bottom: 10px;">
@@ -94,7 +94,7 @@
                                                     Элитный
                                                 @endif
                                                 </div>
-                                                <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                                <div class="block-title">{{str_limit($item ->name, $limit = 35, $end = '...')}}</div>
                                                 <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
                                                 <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                             </div>
@@ -103,7 +103,7 @@
                             </div>
                             @endif
                         @endforeach
-                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:20px;">Дорогой</div>
+                        <div class="col-md-12 sub-category" style="font-size:25px; margin-top:50px; margin-bottom:25px;">Дорогой</div>
                         @foreach($items as $item)
                             @if($item->category_price === 'expensive')
                             <div class="col-md-4" style="    padding-bottom: 10px;">
@@ -120,7 +120,7 @@
                                                     Элитный
                                                 @endif
                                                 </div>
-                                                <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                                <div class="block-title">{{str_limit($item ->name, $limit = 35, $end = '...')}}</div>
                                                 <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
                                                 <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                             </div>
@@ -136,7 +136,7 @@
                                         <div class="big-blocks big-padding">
                                             <div class="block-img" style="background: url(/storage/{{$item->image}});" ></div>
                                             <div class="block-content">
-                                                <div class="block-title">{{str_limit($item ->name, $limit = 15, $end = '...')}}</div>
+                                                <div class="block-title">{{str_limit($item ->name, $limit = 35, $end = '...')}}</div>
                                                 <div class="block-desc">{{str_limit($item ->desc, $limit = 130, $end = '...')}}</div>
                                                 <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
                                             </div>

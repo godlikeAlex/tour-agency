@@ -50,6 +50,11 @@ Route::group(['prefix' => '{language}'], function () {
         Route::get('/{city}/{category}/{slug}', 'CityController@showItem')->name('city.item');
         Route::get('/{city}/{category}', 'CityController@showCategory')->name('city.category');
     });
+
+    Route::prefix('tourism')->group(function () {
+        Route::get('/', 'ToursimController@index')->name('index.tourism');
+        Route::get('/{slug}/show', 'ToursimController@show')->name('tourism.show');
+    });
     
     Route::prefix('uzbekistan')->group(function() {
         Route::get('/', 'UzbekistanController@index')->name('index.uzbekistan');
@@ -61,7 +66,6 @@ Route::group(['prefix' => '{language}'], function () {
     
 Route::post('/contact', 'EmailController@sendEmail')->name('send.mail');
 Route::post('/toursend', 'EmailController@sendTourRequest')->name('book.tour');
-Route::get('/tourism', 'ToursimController@index')->name('index.tourism');
 
     Route::prefix('about')->group(function($lang) {
         Route::get('/', function($lang) {
@@ -129,6 +133,14 @@ Route::prefix('admin/gallery')->group(function() {
     Route::get('/category/create', 'GaleryAdminController@categoryCreate')->name('galery.category.create');
     Route::post('/category/create', 'GaleryAdminController@categoryStore')->name('galery.category.store');
     Route::post('/create', 'GaleryAdminController@store')->name('galery.store');
+});
+
+Route::prefix('admin/tourism')->group(function () {
+    Route::get('create', 'ToursimController@create')->name('tourism-create');
+    Route::get('list', 'ToursimController@list')->name('tourism-list');
+    Route::get('update/{id}', 'ToursimController@update')->name('tourism.update');
+    Route::post('update/{id}', 'ToursimController@updateStore');
+    Route::get('delete/{id}', 'ToursimController@delete')->name('tourism.delete');
 });
 
 

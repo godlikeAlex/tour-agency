@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div style="padding-left: 0px; margin-top: 0px; display: flex; align-items: center; justify-content: space-between; padding-top: 30px; padding-bottom: 30px; font-size: 32px; font-weight: 700;"
+                <div style="padding-left: 0px; margin-top: 0px; display: flex; align-items: center; justify-content: space-between;  flex-wrap: wrap; padding-top: 30px; padding-bottom: 30px; font-size: 32px; font-weight: 700;"
                     class="col-md-12 title-item">{{$tour->name}}
                     <div class="a2a_kit a2a_kit_size_32 a2a_default_style"
                         style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">
@@ -587,8 +587,8 @@
                     <div class="tr-single-body">
                         <div class="col-md-12" id="prices_dates">
                             <div id="booknow" class="block-item">
-                                <div style="display:flex; align-items: center;justify-content: space-between;">
-                                    <h2 style="margin:0">{{__('menu.availability')}}</h2>
+                                <div style="display:flex; align-items: center;justify-content: space-between;     flex-wrap: wrap;">
+                                    <h2 style="margin:0" class="avalible">{{__('menu.availability')}}</h2>
                                     <div style="font-size:35px;">
                                         <i class="fab fa-cc-mastercard"></i>
                                         <i class="fab fa-cc-jcb"></i>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+    @include('/components/head-settings')
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-@include('/components/head-settings')
-
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style-blog.css">
    <!--===============================================================================================-->
@@ -37,17 +37,14 @@
     <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
 <!--Footer-->
-    <style>
 
-    .breadcrumb-item-first::first-letter {
-    text-transform: uppercase;}
-    </style>
 <link rel="stylesheet" type="text/css" href="/css/footer.css">
 <link href="/fonts/ionicons.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
+    <title>Document</title>
 </head>
 <body style="background: white;">
-@include('/components/header', ['type' => 'city'])
+@include('/components/header')
     <div class="container">
     <div style="padding-bottom: 20px; padding-top: 20px;padding-left: 0;" class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
@@ -55,37 +52,17 @@
 					{{__('menu.main')}}
 				</a>
 
-				<a href="{{route('city.show', ['city' => $city, 'language' => app() -> getLocale()])}}" class="breadcrumb-item f1-s-3 cl9 ">
-
-                    <span class="breadcrumb-item-first">{{$city}} </span>
-				</a>
-				<a href="{{route('city.category', ['city' => $city,'category' => $item->category, 'language' => app()->getLocale()])}}" class="breadcrumb-item f1-s-3 cl9">
-                    @if($item->category === 'what-to-see')
-                        {{__('menu.where-to-see')}}
-                    @elseif($item->category === 'history')
-                        {{__('menu.history')}}
-                    @elseif($item->category === 'things-to-do')
-                        {{__('menu.things_to_do')}}
-                    @elseif($item->category === 'where-to-buy')
-                        {{__('menu.where_to_buy')}}
-                    @elseif($item->category === 'where-to-eat')
-                        {{__('menu.where_to_eat')}}
-                    @elseif($item->category === 'where-to-stay')
-                        {{__('menu.where_to_stay')}}
-                    @elseif($item->category === 'how-to-get')
-                        {{__('menu.how_to_get')}}
-                    @elseif($item->category === 'useful-information')
-                        {{__('menu.useful_information')}}
-                    @endif
+				<a href="{{route('index.tourism', app()->getLocale())}}" class="breadcrumb-item f1-s-3 cl9">
+                    {{__('menu.tourism')}}
 				</a>
 				<span class="breadcrumb-item f1-s-3 cl9">
-					 {{$item -> name}}
+					 {{$item -> title}}
 				</span>
 			</div>
     </div>
     <div class="col-md-12">
         <div class="row">
-            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->name}}<!-- AddToAny BEGIN -->
+            <div style="padding-left:0px; margin-top:0px;" class="col-md-12 title-item">{{$item->title}}
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="display:flex;align-items:center; justify-content: flex-end;width: 27%;">
                 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                 <a class="a2a_button_facebook"></a>
@@ -94,28 +71,12 @@
                 <a class="a2a_button_whatsapp"></a>
                 </div>
                 <script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END --></div>
+            </div>
             <div class="col-md-12" style="margin-top: 35px; padding-left:0;"><img src="/storage/{{$item->image}}" alt="" srcset=""></div>
-            <div class="col-md-12 main-content-text" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->about !!}</div>
-            <img src="/images/banner01.jpg" alt="">
-            <div style="margin-top: 50px;" class="section-name col-md-12">{{__('menu.blogmore')}}</div>
-            @foreach($randomFromCategory as $rec)
-                    <div class="col-md-4" style="    padding-bottom: 50px;">
-                            <a class="link-block" href="{{route('city.item', ['city'=> $city, 'category' => $category, 'slug' => $rec->slug, 'language' => app()->getLocale()] )}}"">
-                                <div class="big-blocks big-padding">
-                                    <div class="block-img" style="background: url(/storage/{{$rec->image}});" ></div>
-                                    <div class="block-content">
-                                        <div class="block-title">{{str_limit($rec ->name, $limit = 25, $end = '...')}}</div>
-                                        <div class="block-desc">{{str_limit($rec ->desc, $limit = 130, $end = '...')}}</div>
-                                        <div class="show__more show__more-block">{{ __('mainpage.moreblock') }}</div>
-                                    </div>
-                                </div>
-                            </a>
-                    </div>
-            @endforeach
-            <p style="text-align:center; width: 100%;">
+            <div class="col-md-12 main-content-text" style="margin-top:25px; margin-bottom:50px; padding-left:0">{!! $item->post !!}</div>
+
+            <p style="text-align:center; width: 100%; margin-bottom: 50px;">
                         <img src="/images/ads.png" alt="">
-    </p>
         </div>
     </div>
 

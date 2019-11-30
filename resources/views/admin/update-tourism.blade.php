@@ -11,21 +11,26 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <input type="text" name="title" class="form-control" placeholder="Название статьи">
+                            <input type="text" name="title" class="form-control" placeholder="Название статьи" value="{{$item->title}}">
                         </div>
                         <div class="form-group">
                             <p>Указывать через запятую (keyword1, keyword2, keyword3)</p>
-                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова">
+                            <input type="text" name="keywords" class="form-control" placeholder="Ключевые слова"  value="{{$item->keywords}}">
                         </div>  
                         <div class="form-group">
                             <p>SEO DESCRIPTION</p>
-                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO Desc">
+                            <input type="text" name="seo_desc" class="form-control" placeholder="SEO Desc"  value="{{$item->seo_desc}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleSelect1">Язык</label>
                             <select name="lang" class="form-control" id="exampleSelect1">
-                                <option value="en">en</option>
-                                <option value="ru">ru</option>
+                                @if($item->lang == 'en')
+                                    <option value="en">en</option>
+                                    <option value="ru">ru</option>
+                                @else
+                                    <option value="ru">ru</option>
+                                    <option value="en">en</option>
+                                @endif
                             </select>
                         </div>  
                         <div class="form-group">
@@ -46,9 +51,9 @@
                     </div>
                         Описание карточки мини
                         <div class="form-group">
-                        <textarea name="desc" class="form-control" rows="8"></textarea>
+                        <textarea name="desc" class="form-control" rows="8">{!! $item->desc !!}</textarea>
                         </div>
-                        <textarea name="post" id="summernote"></textarea>
+                        <textarea name="post" id="summernote">{!! $item->post !!}</textarea>
                         <button type="submit" class="btn btn-success">Создать</button>
                     </form>                    
                 </div>
