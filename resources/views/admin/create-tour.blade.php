@@ -76,6 +76,7 @@
                         <div id="galery-images">
                             <div class="form-group">
                                 1) <input type="file" name="galery[]">
+                                <input type="text" class="form-control" name="galery_title[]" style="margin-top: 25px;" placeholder="Название фото">
                             </div>
                         </div>
                     </div>  
@@ -121,14 +122,25 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 <script>
-      $('#summernote').summernote({
-        placeholder: 'О туре',
-        tabsize: 2,
-        height: 100
-      });
+$(document).ready(function() {
+    $('#summernote').summernote({
+        height: 300,
+        placeholder: 'Редактор',
+        lang: 'en-US',
+        imageTitle: {
+          specificAltField: true,
+        },
+        popover: {
+            image: [
+                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']],
+                ['custom', ['imageTitle']],
+            ],
+        }
+    });
+});
 </script>
 
 <script>
@@ -136,7 +148,7 @@
     const containerImages = document.querySelector('#galery-images');
     let counterImg = 2;
     addImg.addEventListener('click', () => {
-        const inputTemplate = `<div class="form-group">${counterImg}) <input type="file" name="galery[]"></div>`;
+        const inputTemplate = `<div class="form-group">${counterImg}) <input type="file" name="galery[]"> <input type="text" class="form-control" name="galery_title[]" style="margin-top: 25px;" placeholder="Название фото"></div>`;
         containerImages.innerHTML += inputTemplate;
         counterImg++;
     });
@@ -154,7 +166,19 @@
             $(`#day-about-${i}`).summernote({
                 placeholder: `О ${i} дне тура`,
                 tabsize: 2,
-                height: 100
+                height: 100,
+                lang: 'en-US',
+        imageTitle: {
+          specificAltField: true,
+        },
+        popover: {
+            image: [
+                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']],
+                ['custom', ['imageTitle']],
+            ],
+        }
             });
         }
     });
@@ -171,13 +195,6 @@
 
     addMoreIncludes.addEventListener('click', () => { render(templateIncludes, containerIncludes) });
     addMoreDontIncludes.addEventListener('click', () => { render(templateDontIncludes, containerDontIncludes) });
-
-    const addMoreFeature = document.querySelector('#addmorefeature')
-    const featureContainer = document.querySelector('#feature_container');
-    const featureTemplate = '<div class="form-group"><input class="form-control" type="text" name="feature[]" placeholder="Особеность"></div>'
-    addMoreFeature.addEventListener('click', () => {
-        featureContainer.innerHTML += featureTemplate;
-    });
 </script>
     
 @endsection

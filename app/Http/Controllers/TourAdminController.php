@@ -217,10 +217,11 @@ class TourAdminController extends Controller
     }
 
     private function storeImages($tourId) {
-        foreach(request() -> galery as $img) {
+        foreach(request() -> galery as $key=>$img) {
             $data = array(
                 'tour_id' => $tourId,
                 'path' => $img->store('tour-galery', 'public'),
+                'galery_title' => request()->galery_title[$key],
             );
             $allImages[] = $data;
         }

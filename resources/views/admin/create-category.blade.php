@@ -36,15 +36,25 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
-
 <script>
-      $('#summernote').summernote({
-        placeholder: 'О городе',
-        tabsize: 2,
-        height: 700
-      });
+$(document).ready(function() {
+    $('#summernote').summernote({
+        height: 300,
+        placeholder: 'Редактор',
+        lang: 'en-US',
+        imageTitle: {
+          specificAltField: true,
+        },
+        popover: {
+            image: [
+                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']],
+                ['custom', ['imageTitle']],
+            ],
+        },
+    });
+});
 </script>
 
 @endsection

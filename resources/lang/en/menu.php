@@ -111,4 +111,6 @@
         'money' => 'money',
         'communication' => 'communication',
         'events' => 'events',
+        'boocking_now' => 'Book now',
+
     ];

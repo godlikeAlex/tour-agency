@@ -38,13 +38,12 @@
 
 .main-links-nav-top
 {
-    text-transform: uppercase;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;
     letter-spacing: .125em;
-    font-size: 16px;
+    font-size: 14px;
 }
 
     .main-menu-active {
@@ -119,12 +118,13 @@
 
 .droped-menu-item {
     border-top: 1px solid rgba(0,0,0,.1);
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: unset !important;
     padding: 6px 20px;
     color: #333 !important;
     width: 100%;
     transition: .2s;
+    text-transform: unset !important;
 }
 
 .droped-menu-item:hover {

@@ -63,6 +63,8 @@
 <script>
 $(document).ready(function() {
     $('#summernote').summernote({
+        height: 300,
+        placeholder: 'Редактор',
         lang: 'en-US',
         imageTitle: {
           specificAltField: true,

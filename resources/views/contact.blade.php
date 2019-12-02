@@ -66,7 +66,7 @@
 								    <ul class="list3">
 										<li>
 											<div class="extra-wrap">
-											 <p>Lorem ipsum  consectetu,<br>dolor sit amet,.</p>
+											 <p>{{$data_for_client['address']}}</p>
 											</div>
 										</li>
 									</ul>
@@ -76,7 +76,7 @@
 									<ul class="list3">
 										<li>
 											<div class="extra-wrap">
-												<p><span>Telephone:</span>+1 800 258 2598</p>
+												<p><span>Telephone:</span>{{$data_for_client['phone']}}</p>
 											</div>
 										</li>
 									</ul>
@@ -86,7 +86,7 @@
 								    <ul class="list3">
 										<li>
 											<div class="extra-wrap">
-											  <p><span class="mail"><a href="mailto:yoursite.com">info(at)spikeshoe.com</a></span></p>
+											  <p><span class="mail"><a href="mailto:yoursite.com">{{$data_for_client['email']}}</a></span></p>
 											</div>
 										</li>
 									</ul>

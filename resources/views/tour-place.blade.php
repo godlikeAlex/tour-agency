@@ -41,7 +41,8 @@
     <!-- ======================= End Navigation ===================== -->
 
     <!-- ======================= Start Banner ===================== -->
-    <section class="page-title-banner" style="height: 300px; background-image:url(/storage/{{$tour->image}});">
+    <section class="page-title-banner"
+        style="height: 65vh; background-image:url(/storage/{{$tour->image}}); background-position: center; background-size: cover;">
 
     </section>
     <!-- ======================= End Banner ===================== -->
@@ -294,6 +295,7 @@
                                                         style="width: 100%; height: 200px; background: url(/storage/{{$img->path}}); background-position: center; background-size: cover;">
                                                     </div>
                                                 </a>
+                                                <div style="text-align: center;">{{$img['galery_title']}}</div>
                                             </li>
                                             @endforeach
                                         </ul>
@@ -546,8 +548,8 @@
                         </div>
                         <div class="tr-single-body">
                             <form class="book-form" id="form">
-								@csrf
-								<input type="hidden" name="tour_name" class="form-control" value="{{$tour->name}}">
+                                @csrf
+                                <input type="hidden" name="tour_name" class="form-control" value="{{$tour->name}}">
                                 <div class="form-group">
                                     <input name="name" type="text" class="form-control"
                                         placeholder="{{__('menu.your_name')}}" required>
@@ -561,8 +563,8 @@
                                         placeholder="{{__('menu.your_email')}}" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="phone" class="form-control" name="phone" placeholder="{{__('menu.your_phone')}}"
-                                        required>
+                                    <input type="phone" class="form-control" name="phone"
+                                        placeholder="{{__('menu.your_phone')}}" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="peoples" class="form-control"
@@ -570,7 +572,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-12 mrg-top-15">
-										<input type="submit" value="{{__('menu.booking_now')}}" class="btn btn-arrow theme-btn full-width">
+                                        <input type="submit" value="{{__('menu.boocking_now')}}"
+                                            class="btn btn-arrow theme-btn full-width">
                                     </div>
                                 </div>
 
@@ -587,7 +590,8 @@
                     <div class="tr-single-body">
                         <div class="col-md-12" id="prices_dates">
                             <div id="booknow" class="block-item">
-                                <div style="display:flex; align-items: center;justify-content: space-between;     flex-wrap: wrap;">
+                                <div
+                                    style="display:flex; align-items: center;justify-content: space-between;     flex-wrap: wrap;">
                                     <h2 style="margin:0" class="avalible">{{__('menu.availability')}}</h2>
                                     <div style="font-size:35px;">
                                         <i class="fab fa-cc-mastercard"></i>
@@ -610,21 +614,30 @@
                                     <tbody>
                                         @foreach($tour->tourDates as $tourDates)
                                         <tr>
-                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                            <td style="font-size:16px; font-weight:700; vertical-align: center;">
                                                 {{$tourDates->starts}}</td>
-                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                            <td style="font-size:16px; font-weight:700; vertical-align: center;">
                                                 {{$tourDates->ends}}</td>
-                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                            <td style="font-size:16px; font-weight:700; vertical-align: center;">
                                                 {{$tourDates->places}}</td>
-                                            <td style="font-size:16px; font-weight:700; vertical-align: unset; color:{{$tourDates->status == 'closed' ? 'red' : 'green'}}">
-												@if($tourDates->status == 'closed')
-													{{__('menu.not_available')}}
-												@else
-													{{__('menu.available')}}
-												@endif											
-											</td>
-                                            <td style="font-size:16px; font-weight:700; vertical-align: unset;">
+                                            <td
+                                                style="font-size:16px; font-weight:700; vertical-align: center; color:{{$tourDates->status == 'closed' ? 'red' : 'green'}}">
+                                                @if($tourDates->status == 'closed')
+                                                {{__('menu.not_available')}}
+                                                @else
+                                                {{__('menu.available')}}
+                                                @endif
+                                            </td>
+                                            <td style="font-size:16px; font-weight:700; vertical-align: center;">
                                                 {{$tourDates->price}} $</td>
+                                            <td width="5%">
+                                                @if($tourDates->status !== 'closed')
+                                                <div style="font-size: 14px;display: flex; justify-content: center; align-items: center;  padding: 0 10px;  margin: 0;"
+                                                    class="btn btn-primary book-now-aval"
+                                                    data-starts="{{$tourDates->starts}}"
+                                                    data-ends="{{$tourDates->ends}}">{{__('menu.boocking_now')}}</div>
+                                                @endif
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -634,8 +647,57 @@
                     </div>
                 </div>
             </div>
+            <div class="modal-form">
+                <i class="fas fa-times close-modal" style="font-size: 2rem;color: white;  cursor: pointer;  float: right;    padding-top: 25px;    padding-right: 25px;"></i>
+                <div style="display: flex;
+    justify-content: center; align-items: center; height: 100vh;">
+                    <div class="tr-single-box">
+                        <div class="tr-single-header"
+                            style="    border-radius: 5px 5px 0px 0px; background: #050658; color: white; text-align: center; font-weight: 700; font-size: 20px;">
+                            <div class="entry-meta">
+                                $ 620/Per Person
 
-      </section>
+                                <div class="meta-item meta-author">
+                                    <div class="hotel-review entry-location">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tr-single-body">
+                            <form class="book-form" id="form">
+                                <input type="hidden" name="_token" value="FVUzaX1DDS9fNNT4By3ZWRWNZXa2QndBCF0inaic"> <input
+                                    type="hidden" name="tour_name" class="form-control" value="New Year 2020 in Uzbekistan">
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control" placeholder="Your Name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="surname" class="form-control" placeholder="Your Surname"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="phone" class="form-control" name="phone" placeholder="Your Phone"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="peoples" class="form-control" placeholder="Number of people"
+                                        required="">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 mrg-top-15">
+                                        <input type="submit" value="Book now" class="btn btn-arrow theme-btn full-width">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
     <!-- ============== Tour Detail ====================== -->
 
     @include('components.footer')
@@ -669,37 +731,65 @@
 
     <!-- Custom Js -->
     <script src="/assets/js/custom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
-	<script>
-		const form = document.querySelector('#form');
-		const token = document.querySelector('input[name="_token"]').value;
-		form.addEventListener('submit', async e => {
-			e.preventDefault();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+    <script>
+        const form = document.querySelector('#form');
+        const token = document.querySelector('input[name="_token"]').value;
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
 
-			const formData = {};
-			const inputs = document.querySelectorAll('.form-control');
-			inputs.forEach(inp => {
-				formData[inp.name] = inp.value;
-			});
-			console.log(formData);
-			const res = await fetch('{{route("book.tour", app()->getLocale())}}', {method: 'POST', body: JSON.stringify(formData), headers: { 'X-CSRF-Token': token }});
-			if(res.status == 200) {
-				const data = await res.text();
-				console.log(data);
-				Swal.fire({
-					type: 'success',
-					title: data ,
-					showConfirmButton: false,
-					timer: 1500
-				});
-			} else {
-				Swal.fire({
-					type: 'error',
-					text: data
-				})
-			}
-		})
-	</script>
+            const formData = {};
+            const inputs = document.querySelectorAll('.form-control');
+            inputs.forEach(inp => {
+                formData[inp.name] = inp.value;
+            });
+            console.log(formData);
+            const res = await fetch('{{route("book.tour", app()->getLocale())}}', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'X-CSRF-Token': token
+                }
+            });
+            if (res.status == 200) {
+                const data = await res.text();
+                console.log(data);
+                Swal.fire({
+                    type: 'success',
+                    title: data,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire({
+                    type: 'error',
+                    text: data
+                })
+            }
+        })
+
+    </script>
+    <script>
+        const bookNow = document.querySelectorAll('.book-now-aval');
+        const modal = document.querySelector('.modal-form');
+        const closeModal = document.querySelector('.close-modal');
+        const handlerCloseModal = () => modal.classList.remove('modal-form-open');
+
+        closeModal.addEventListener('click', () => handlerCloseModal());
+
+        const handlerButton = e => {
+            const starts = e.target.getAttribute('data-starts');
+            const ends = e.target.getAttribute('data-ends');
+            document.addEventListener('keydown', event => {
+                if (event.key === "Escape") {
+                    handlerCloseModal();
+                }
+            })
+            modal.classList.toggle('modal-form-open');
+        };
+        bookNow.forEach(element => element.addEventListener('click', handlerButton));
+
+    </script>
     <script>
         $('#checkin').daterangepicker({
             "singleDatePicker": true,

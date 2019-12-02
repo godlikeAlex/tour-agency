@@ -521,7 +521,7 @@ input[type=checkbox].css-checkbox15:checked + label i.css-label15 {
 	font-size: 0.8em;
 }
 .learn-more{
-	color:#E45D5D;
+	color:#050658;
 	padding: 0.1em 0;
 	display: block;
 	font-size: 0.8em;
@@ -593,7 +593,7 @@ input[type=checkbox].css-checkbox15:checked + label i.css-label15 {
 	-o-transition:0.5s all;
 }
 .footer-right p a:hover{
-	color:#E45D5D;
+	color:#050658;
 }
 /*** move top **/
 #toTop {
@@ -647,7 +647,7 @@ input[type=checkbox].css-checkbox15:checked + label i.css-label15 {
 	text-transform: uppercase;
 }
 .modal-content-right-price p span{
-	color: #E45D5D;
+	color: #050658;
 	margin-left: 0.5em;
 }
 .modal-content-right-price{
@@ -897,12 +897,12 @@ h2.resp-accordion:first-child {
 	margin-top: 0.13em;
 }
 .b_btn{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.875em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -953,7 +953,7 @@ h2.resp-accordion:first-child {
 	line-height: 1.8em;
 }
 .login-left h3,.login-right h3{
-	color: #E45D5D;
+	color: #050658;
 	font-weight: 700;
 	font-size: 1em;
 	padding-bottom: 0.5em;
@@ -969,12 +969,12 @@ h2.resp-accordion:first-child {
 	margin:0;
 }
 .acount-btn{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -998,7 +998,7 @@ h2.resp-accordion:first-child {
 	text-transform: uppercase;
 }
 .login-right span label{
-	color: #E45D5D;
+	color: #050658;
 	height: 10px;
 	width: 10px;
 	display: inline-block;
@@ -1007,7 +1007,7 @@ h2.resp-accordion:first-child {
 }
 .login-right input[type="text"]{
 	border: 1px solid #EEE;
-	outline-color: #E45D5D;
+	outline-color: #050658;
 	width: 96%;
 	font-size: 1em;
 	padding: 0.5em;
@@ -1025,18 +1025,18 @@ h2.resp-accordion:first-child {
 	-o-transition:0.5s all;
 }
 .forgot:hover{
-	color:#E45D5D;
+	color:#050658;
 }
 .login-right form div{
 	padding: 0 0 0.5em 0;
 }
 .login-right input[type="submit"]{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1058,7 +1058,7 @@ h2.resp-accordion:first-child {
 /*---register----*/
 /*---//register----*/
 .register-top-grid h3,.register-bottom-grid h3{
-	color: #E45D5D;
+	color: #050658;
 	font-weight: 700;
 	font-size: 1em;
 	padding-bottom: 0.5em;
@@ -1072,7 +1072,7 @@ h2.resp-accordion:first-child {
 	text-transform: uppercase;
 }
 .register-top-grid span label,.register-bottom-grid span label{
-	color: #E45D5D;
+	color: #050658;
 	height: 10px;
 	width: 10px;
 	display: inline-block;
@@ -1081,7 +1081,7 @@ h2.resp-accordion:first-child {
 }
 .register-top-grid input[type="text"],.register-bottom-grid input[type="text"]{
 	border: 1px solid #EEE;
-	outline-color: #E45D5D;
+	outline-color: #050658;
 	width: 96%;
 	font-size: 1em;
 	padding: 0.5em;
@@ -1101,7 +1101,7 @@ h2.resp-accordion:first-child {
 	clear: both;
 }
 .news-letter:hover{
-	color:#E45D5D;
+	color:#050658;
 }
 .register-top-grid div,.register-bottom-grid div{
 	width: 48%;
@@ -1164,12 +1164,12 @@ h2.resp-accordion:first-child {
 	margin-bottom: 4px;
 }
 .register-grids form input[type="submit"]{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1226,7 +1226,7 @@ h2.resp-accordion:first-child {
 	-o-transition:0.5s all;
 }
 .product-head li.active-page a{
-	color:#E45D5D;
+	color:#050658;
 }
 #carousel-wrapper {
 	position: relative;
@@ -1335,7 +1335,7 @@ h2.resp-accordion:first-child {
 	-o-transition:0.5s all;
 }
 .pro-rate li a:hover{
-	color:#E45D5D;
+	color:#050658;
 }
 .product-detail-info{
 	color: #08080B;
@@ -1426,12 +1426,12 @@ h2.resp-accordion:first-child {
 	padding:0.5em 0;
 }
 .product-more-details input[type="button"]{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1503,12 +1503,12 @@ h2.resp-accordion:first-child {
 	text-align: center;
 }
 .details-right a{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1542,23 +1542,23 @@ h2.resp-accordion:first-child {
 .vertical-tabs h4{
 	font-size: 0.8em;
 	padding: 0.8em 0 0.8em;
-	color: #E45D5D;
+	color: #050658;
 }
 .vertical-tabs form input[type="text"]{
 	border: 1px solid #EEE;
-	outline-color: #E45D5D;
+	outline-color: #050658;
 	width: 35%;
 	font-size: 1em;
 	padding: 0.5em;
 	font-family: 'Open Sans', sans-serif;
 }
 .vertical-tabs form input[type="submit"] {
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1591,7 +1591,7 @@ h2.resp-accordion:first-child {
 .similar-products-left{
 	width: 15.7%;
 	float: left;
-	background: #E45D5D;
+	background: #050658;
 	padding: 1em 1.5em;
 	min-height: 250px;
 }
@@ -1639,7 +1639,7 @@ h2.resp-accordion:first-child {
 	text-transform: uppercase;
 }
 .product-box-head-right ul li a{
-	color:#E45D5D;
+	color:#050658;
 	font-weight: 700;
 	font-size: 0.875em;
 	padding: 0.5em 0;
@@ -1669,7 +1669,7 @@ h2.resp-accordion:first-child {
 	text-transform: uppercase;
 }
 .product-box-head-left h3 span{
-	color:#E45D5D;
+	color:#050658;
 }
 .product-box-head{
 	padding: 0.8em 1em 0.8em 0;
@@ -1679,12 +1679,12 @@ h2.resp-accordion:first-child {
 }
 /*----*/
 .loadmore-products a{
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	font-size: 0.875em;
 	padding: 0.9em 1.2em;
 	border-radius: 5px;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -1728,7 +1728,7 @@ h2.resp-accordion:first-child {
 	-o-transition: 0.5s all;
 }
 .content-left-top-brands ul li a:hover{
-	color:#E45D5D;
+	color:#050658;
 }
 .content-left-top-brands{
 	padding: 0.5em 1em 0 0;
@@ -1774,7 +1774,7 @@ h2.resp-accordion:first-child {
 	font-family: 'Open Sans', sans-serif;
 }
 span.mail a {
-	color:#E45D5D;
+	color:#050658;
 }
 span.mail a:hover{
 	color:#626262;
@@ -1836,10 +1836,10 @@ span.mail a:hover{
 	height:180px;
 }
 .text2 input[type="text"]:hover,.text2 textarea:hover,.contact-to input[type="text"]:hover{
-	border: 1px solid rgba(228, 93, 93, 0.33);
+	border: 1px solid #050658;
 }
 .contact-form input[type="submit"] {
-	background: #E45D5D;
+	background: #050658;
 	color: #FFF;
 	padding: .9em 3em;
 	display: inline-block;
@@ -1856,7 +1856,7 @@ span.mail a:hover{
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom: 4px solid #B93838;
+	border-bottom: 4px solid #050658;
 	outline: none;
 	cursor: pointer;
 	font-family: 'Open Sans', sans-serif;
@@ -2234,7 +2234,7 @@ span.mail a:hover{
 	.similar-products-left {
 		width: 94%;
 		float: none;
-		background: #E45D5D;
+		background: #050658;
 		padding: 0.5em 1em;
 		min-height: 95px;
 	}
@@ -2400,7 +2400,7 @@ span.mail a:hover{
 	.similar-products-left {
 		width: 94%;
 		float: none;
-		background: #E45D5D;
+		background: #050658;
 		padding: 0.5em 1em;
 		min-height: 95px;
 	}
@@ -2632,7 +2632,7 @@ span.mail a:hover{
 	.similar-products-left {
 		width: 88%;
 		float: none;
-		background: #E45D5D;
+		background: #050658;
 		padding: 0.5em 1em;
 		min-height: 95px;
 	}

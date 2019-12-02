@@ -57,17 +57,25 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
-
 <script>
-      $('#summernote').summernote({
-        placeholder: 'Статья',
-        tabsize: 2,
-        height: 100,  codemirror: { // codemirror options
-    theme: 'monokai'
-  }
-      });
+$(document).ready(function() {
+    $('#summernote').summernote({
+        height: 300,
+        placeholder: 'Редактор',
+        lang: 'en-US',
+        imageTitle: {
+          specificAltField: true,
+        },
+        popover: {
+            image: [
+                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']],
+                ['custom', ['imageTitle']],
+            ],
+        },
+    });
+});
 </script>
 
 @endsection
