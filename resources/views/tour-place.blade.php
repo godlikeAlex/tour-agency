@@ -99,26 +99,26 @@
                                     </div>
                                     <div class="tr-single-body" style="width: 100%;">
                                         <div class="row">
-                                            <div class="col-md-3"
-                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                            <div class="col-md-3 col-sm-6"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;     padding-top: 25px;">
                                                 <i class="fa fa-fw fa-map-signs"
                                                     style="font-size: 30px;color: #050658;"></i>
                                                 <div>{{$tour->starts}} - {{$tour->ends}}</div>
                                             </div>
-                                            <div class="col-md-3"
-                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                            <div class="col-md-3 col-sm-6"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;     padding-top: 25px;">
                                                 <i class="fa fa-fw fa-clock-o"
                                                     style="font-size: 30px;color: #050658;"></i>
                                                 <div>{{$tour->days}} {{__('menu.days')}}</div>
                                             </div>
-                                            <div class="col-md-3"
-                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                            <div class="col-md-3 col-sm-6"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;     padding-top: 25px;">
                                                 <i class="fa fa-fw fa-money"
                                                     style="font-size: 30px;color: #050658;"></i>
                                                 <div>{{__('menu.from')}} {{$tour->price}}$</div>
                                             </div>
-                                            <div class="col-md-3"
-                                                style="text-align: center; font-size: 14px; font-weight: 700;">
+                                            <div class="col-md-3 col-sm-6"
+                                                style="text-align: center; font-size: 14px; font-weight: 700;     padding-top: 25px;">
                                                 <i class="fa fa-fw fa-smile-o"
                                                     style="font-size: 30px;color: #050658;"></i>
                                                 <div>{{__('menu.best_service')}}</div>
@@ -286,9 +286,9 @@
                                         <h4><i class="ti-gallery"></i>{{__('menu.galery')}}</h4>
                                     </div>
                                     <div class="tr-single-body">
-                                        <ul class="gallery-list">
+                                        <ul class="gallery-list container">
                                             @foreach($tour->images as $img)
-                                            <li class="col-md-4">
+                                            <li class="col-md-4 col-sm-12">
                                                 <a style="width: 100%;" data-fancybox="gallery"
                                                     href="/storage/{{$img->path}}">
                                                     <div
@@ -633,7 +633,7 @@
                                             <td width="5%">
                                                 @if($tourDates->status !== 'closed')
                                                 <div style="font-size: 14px;display: flex; justify-content: center; align-items: center;  padding: 0 10px;  margin: 0;"
-                                                    class="btn btn-primary book-now-aval"
+                                                    class="btn btn-primary book-now-aval book-now-phone-off"
                                                     data-starts="{{$tourDates->starts}}"
                                                     data-ends="{{$tourDates->ends}}">{{__('menu.boocking_now')}}</div>
                                                 @endif
@@ -773,16 +773,21 @@
         const bookNow = document.querySelectorAll('.book-now-aval');
         const modal = document.querySelector('.modal-form');
         const closeModal = document.querySelector('.close-modal');
-        const handlerCloseModal = () => modal.classList.remove('modal-form-open');
+        const handlerCloseModal = () => {
+            document.body.style.overflow = 'unset';
+            modal.classList.remove('modal-form-open');
+        }
 
         closeModal.addEventListener('click', () => handlerCloseModal());
 
         const handlerButton = e => {
             const starts = e.target.getAttribute('data-starts');
             const ends = e.target.getAttribute('data-ends');
+            document.body.style.overflow = 'hidden';
+
             document.addEventListener('keydown', event => {
                 if (event.key === "Escape") {
-                    handlerCloseModal();
+                    handlerCloseModal();                    
                 }
             })
             modal.classList.toggle('modal-form-open');

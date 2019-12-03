@@ -92,7 +92,7 @@ section {
 {
     overflow: hidden;
     color: black;
-    font-size: 38px;
+    font-size:  calc(1.5em + 1.5vw);
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -737,6 +737,11 @@ section {
     {
         display: none;
     }
+
+    .book-now-phone-off {
+        display: none !important;
+    }
+
 
     table tr td {
         font-size: 14px !important;
