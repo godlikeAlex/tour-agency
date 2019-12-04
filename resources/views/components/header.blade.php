@@ -32,6 +32,8 @@
         </div>
     </div>
 </div>
+<div class="right-side-menu right-menu-hide">dsa</div>
+
 <div class="ad-banner-header"
     style="{{request()->is('ru') || request()->is('en') ? 'display:flex' : 'display: none;'}} height: 200px; background: white; align-items: center; justify-content: center;">
     <img style="width:100%; height: 100%" src="/images/head.svg" alt="" srcset=""></div>
@@ -247,12 +249,10 @@
                         @endforeach
                     </div>
                 </li>
-                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a
-                        href="{{route('index.tourism', app()->getLocale())}}">{{ __('menu.fortoursit') }}</a></li>
+                <li class="{{ (request()->is('tours*')) ? 'active' : '' }} dektop-item"><a href="{{route('index.tourism', app()->getLocale())}}">{{ __('menu.fortoursit') }}</a></li>
                 <!-- <li class="{{ (request()->is('bazar')) ? 'active' : '' }} dektop-item"><a href="">{{ __('menu.shop') }}</a></li> -->
                 <li class="{{ (request()->is('blog*')) ? 'active' : '' }} dektop-item">
-                    <a class="main-menu-link-drop" data-menu-show="show-blog-gal"
-                        href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>
+                    <a class="main-menu-link-drop" data-menu-show="show-blog-gal" href="{{route('index.blog', app()->getLocale())}}">{{ __('menu.news') }}</a>
                     <div data-menu="show-blog-gal" class="sub-menu-header">
                         <a class="droped-menu-item"
                             href="{{route('blog.category', ['category' => 'uzbekistan', 'language' => app()->getLocale()])}}"
@@ -269,7 +269,7 @@
                         <a class="droped-menu-item" href="/blog" class="sub-menu-item">{{ __('menu.allnews') }}</a>
                     </div>
                 </li>
-
+                <li><a href="#change-lang" id="change_lang" style="display: flex; justify-content: space-around; align-items: center;"><i style="margin-right: 5px;" class="fas fa-globe"></i> {{app()->getLocale()}}</a></li>
 
                 <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:28px" class="fas fa-globe-europe"></i> ES</li> -->
             </ul>
@@ -621,5 +621,14 @@
             }
         })
 
+    </script>
+
+    <script>
+        const langBtn = document.querySelector('#change_lang');
+        langBtn.addEventListener('click', e => {
+            e.preventDefault();
+            const rightMenu = document.querySelector('.right-side-menu');
+            rightMenu.classList.remove('right-menu-hide');
+        });
     </script>
 </nav>
