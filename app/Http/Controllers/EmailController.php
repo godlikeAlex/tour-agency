@@ -14,9 +14,9 @@ class EmailController extends Controller
         $mailData['body'] = $data['body'];
         Mail::send('emails.contact', $mailData, function($message) {
 
-            $message->to('info@uzbek-now.mcdir.ru', 'Письмо с сайта Central Asia')
+            $message->to('info@uzbek-now.mcdir.ru', 'Письмо с сайта Amodi')
                     ->subject('Письмо с сайта Asia Voyage');
-            $message->from('info@uzbek-now.mcdir.ru', 'Письмо с сайта Central Asia ');
+            $message->from('info@uzbek-now.mcdir.ru', 'Письмо с сайта Amodi ');
 
         });
 
@@ -45,11 +45,15 @@ class EmailController extends Controller
       $mailData['peoples'] = $data['peoples'];
       $mailData['tour'] = $data['tour_name'];
 
+      $mailData['starts'] = isset($data['starts']) ? $data['starts'] : '0';
+      $mailData['ends'] = isset($data['ends']) ? $data['ends'] : '0';
+      $mailData['price'] = isset($data['price']) ? $data['price'] : '0';
+
       Mail::send('emails.tour', $mailData, function($message) {
 
-          $message->to('info@uzbek-now.mcdir.ru', 'Central asaia travel - Заявка')
-                  ->subject('Central Asia Voyage - Заявка');
-                  $message->from('info@uzbek-now.mcdir.ru	', 'Central Asia Travel - Заявка');
+          $message->to('info@uzbek-now.mcdir.ru', 'Amodi- Заявка')
+                  ->subject('Amodi - Заявка');
+                  $message->from('info@uzbek-now.mcdir.ru	', 'Amodi - Заявка');
       });
 
       if (Mail::failures()) {

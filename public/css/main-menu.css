@@ -187,6 +187,14 @@
     flex-wrap: wrap;
 }
 
+.lang-mobile {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
 .sub-menu-nav li {
     padding: 10px;
     transition: .5s;

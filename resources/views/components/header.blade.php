@@ -2,7 +2,7 @@
     <script src="https://kit.fontawesome.com/cdcf5aa2f7.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 main-links-nav-top main-links-top"> <a href="http://" target="_blank"
+            <div class="col-md-6 main-links-nav-top"> <a href="http://" target="_blank"
                     rel="noopener noreferrer"><i class="fab fa-vk" aria-hidden="true"></i> </a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"
                         aria-hidden="true"></i> </a>
@@ -11,7 +11,7 @@
                 <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"
                         aria-hidden="true"></i> </a><a href="#">{{$data_for_client['email']}}</a><a
                     href="#">{{$data_for_client['phone']}}</a></div>
-            <div class="social-top col-md-6" style="text-align:right;">
+            <div class="social-top col-md-6 dektop-item" style="text-align:right;">
                 <?php
                 $routeParametes = function($lang) {
                     $params = Route::current()->parameters;
@@ -32,9 +32,21 @@
         </div>
     </div>
 </div>
-<div class="right-side-menu right-menu-hide">dsa</div>
+<div class="right-side-menu right-menu-hide">
+        <div class="close-cont-right" style="display:flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 22px; letter-spacing: 2px; text-transform: uppercase;">{{__('menu.change_lang')}}</div>
+            <img src="/images/close.png" class="close-slide-menu" alt="">
+        </div>
+                <a class="lang-mobile" href="{{ route(Route::currentRouteName(), $routeParametes('en') ) }}">English</a>
+                <a class="lang-mobile" href="{{ route(Route::currentRouteName(), $routeParametes('ru') ) }}">Русский</a>
+                <a class="lang-mobile" data-menu-show="show-lang" href="{{ url('locale/en') }}">Español</a>
+                <a class="lang-mobile" data-menu-show="show-lang" href="{{ url('locale/en') }}">French</a>
+                <a class="lang-mobile" data-menu-show="show-lang" href="{{ url('locale/en') }}">Deutsch</a>
+                <a class="lang-mobile" data-menu-show="show-lang" href="{{ url('locale/en') }}">اللغة العربية</a>
+                <a class="lang-mobile" data-menu-show="show-lang" href="{{ url('locale/en') }}">漢語</a>
+</div>
 
-<div class="ad-banner-header"
+<div class="ad-banner-header  dektop-item"
     style="{{request()->is('ru') || request()->is('en') ? 'display:flex' : 'display: none;'}} height: 200px; background: white; align-items: center; justify-content: center;">
     <img style="width:100%; height: 100%" src="/images/head.svg" alt="" srcset=""></div>
 
@@ -269,7 +281,7 @@
                         <a class="droped-menu-item" href="/blog" class="sub-menu-item">{{ __('menu.allnews') }}</a>
                     </div>
                 </li>
-                <li><a href="#change-lang" id="change_lang" style="display: flex; justify-content: space-around; align-items: center;"><i style="margin-right: 5px;" class="fas fa-globe"></i> {{app()->getLocale()}}</a></li>
+                <li class="mobile-item"><a href="#change-lang" id="change_lang" style="display: flex; justify-content: space-around; align-items: center;"><i style="margin-right: 5px; font-size: 15px;" class="fas fa-globe"></i> {{app()->getLocale()}}</a></li>
 
                 <!-- <li style="font-size:13px;"><i style="padding-right: 5px; font-size:28px" class="fas fa-globe-europe"></i> ES</li> -->
             </ul>
@@ -625,6 +637,12 @@
 
     <script>
         const langBtn = document.querySelector('#change_lang');
+        const rightMenu = document.querySelector('.right-side-menu');
+
+        const closeRightBtn = document.querySelector('.close-cont-right');
+        closeRightBtn.addEventListener('click', () => {
+            rightMenu.classList.add('right-menu-hide');
+        });
         langBtn.addEventListener('click', e => {
             e.preventDefault();
             const rightMenu = document.querySelector('.right-side-menu');

@@ -112,5 +112,5 @@
         'communication' => 'communication',
         'events' => 'events',
         'boocking_now' => 'Book now',
-
+        'change_lang' => 'Change Language',
     ];

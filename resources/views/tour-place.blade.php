@@ -632,10 +632,11 @@
                                                 {{$tourDates->price}} $</td>
                                             <td width="5%">
                                                 @if($tourDates->status !== 'closed')
-                                                <div style="font-size: 14px;display: flex; justify-content: center; align-items: center;  padding: 0 10px;  margin: 0;"
+                                                <div style="background: #050658; font-size: 14px;display: flex; justify-content: center; align-items: center;  padding: 0 10px;  margin: 0;"
                                                     class="btn btn-primary book-now-aval book-now-phone-off"
                                                     data-starts="{{$tourDates->starts}}"
-                                                    data-ends="{{$tourDates->ends}}">{{__('menu.boocking_now')}}</div>
+                                                    data-ends="{{$tourDates->ends}}"
+                                                    data-price="{{$tourDates->price}}">{{__('menu.boocking_now')}}</div>
                                                 @endif
                                             </td>
                                         </tr>
@@ -651,11 +652,13 @@
                 <i class="fas fa-times close-modal" style="font-size: 2rem;color: white;  cursor: pointer;  float: right;    padding-top: 25px;    padding-right: 25px;"></i>
                 <div style="display: flex;
     justify-content: center; align-items: center; height: 100vh;">
-                    <div class="tr-single-box">
+                    <div class="tr-single-box" style="width:25%;">
                         <div class="tr-single-header"
                             style="    border-radius: 5px 5px 0px 0px; background: #050658; color: white; text-align: center; font-weight: 700; font-size: 20px;">
                             <div class="entry-meta">
-                                $ 620/Per Person
+                                $ <span id="price-modal"></span>/Per Person
+                                <br>
+                                <span id="date-modal"></span>
 
                                 <div class="meta-item meta-author">
                                     <div class="hotel-review entry-location">
@@ -664,8 +667,9 @@
                             </div>
                         </div>
                         <div class="tr-single-body">
-                            <form class="book-form" id="form">
-                                <input type="hidden" name="_token" value="FVUzaX1DDS9fNNT4By3ZWRWNZXa2QndBCF0inaic"> <input
+                            <form class="book-form" id="form-date">
+                                @csrf
+                                <input
                                     type="hidden" name="tour_name" class="form-control" value="New Year 2020 in Uzbekistan">
                                 <div class="form-group">
                                     <input name="name" type="text" class="form-control" placeholder="Your Name" required="">
@@ -743,7 +747,6 @@
             inputs.forEach(inp => {
                 formData[inp.name] = inp.value;
             });
-            console.log(formData);
             const res = await fetch('{{route("book.tour", app()->getLocale())}}', {
                 method: 'POST',
                 body: JSON.stringify(formData),
@@ -781,16 +784,57 @@
         closeModal.addEventListener('click', () => handlerCloseModal());
 
         const handlerButton = e => {
-            const starts = e.target.getAttribute('data-starts');
-            const ends = e.target.getAttribute('data-ends');
-            document.body.style.overflow = 'hidden';
+                const starts = e.target.getAttribute('data-starts');
+                const ends = e.target.getAttribute('data-ends');
+                const price = e.target.getAttribute('data-price');
 
-            document.addEventListener('keydown', event => {
-                if (event.key === "Escape") {
-                    handlerCloseModal();                    
+                document.body.style.overflow = 'hidden';
+                document.querySelector('#date-modal').innerHTML = `${starts} - ${ends}`
+                document.querySelector('#price-modal').innerHTML = price;
+                document.addEventListener('keydown', event => {
+                    if (event.key === "Escape") {
+                        handlerCloseModal();                    
+                    }
+                });
+            modal.classList.toggle('modal-form-open');
+
+
+            const formModal = document.querySelector('#form-date');
+        const modalToken = document.querySelector('#form-date input[name="_token"]').value;
+        formModal.addEventListener('submit', async e => {
+            e.preventDefault();
+
+                const formData = {};
+                const inputs = document.querySelectorAll('#form-date .form-control');
+                inputs.forEach(inp => {
+                    formData[inp.name] = inp.value;
+                });
+                formData['starts'] = starts;
+                formData['ends'] = ends;
+                formData['price'] = price;
+                const res = await fetch('{{route("book.tour", app()->getLocale())}}', {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'X-CSRF-Token': modalToken
+                    }
+                });
+                if (res.status == 200) {
+                    const data = await res.text();
+                    console.log(data);
+                    Swal.fire({
+                        type: 'success',
+                        title: data,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } else {
+                    Swal.fire({
+                        type: 'error',
+                        text: data
+                    })
                 }
             })
-            modal.classList.toggle('modal-form-open');
         };
         bookNow.forEach(element => element.addEventListener('click', handlerButton));
 

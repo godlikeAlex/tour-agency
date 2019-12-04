@@ -25,7 +25,7 @@ class TourController extends Controller
 
     public function show($lang, $tourname) {
         $tour = Tour::where('slug', $tourname)->firstOrFail();
-        SEO::defaultSeoParams($tour->name, $tour->keywords, $tour->seo_desc);
+        SEO::defaultSeoParams($tour->name, $tour->keywords, $tour->seo_desc, $tour->image);
 
 
         return view('tour-place', compact('tour'));
