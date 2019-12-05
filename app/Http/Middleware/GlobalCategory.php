@@ -35,7 +35,8 @@ class GlobalCategory
                 'address' => 'Street Nemcov, Moscow'
             ]
         ];
-        view()->share('data_for_client',$data[$country]);  
+        $key = array_key_exists($country, $data) ? $country : 'UZ';
+        view()->share('data_for_client',$data[$key]); 
         view()->share('tour_categories', TourCategory::where('lang', $lang)->get());  
         view()->share('cities', City::where('lang', $lang)->get());        
         view()->share('gallery_categories', GaleryCategory::where('lang', $lang)->get());        

@@ -5,9 +5,8 @@
     use Artesaos\SEOTools\Facades\OpenGraph;
     
     class SEO {
-        static function defaultSeoParams($title, $keywords, $desc, $image) {
+        static function defaultSeoParams($title, $keywords, $desc, $image = '') {
             $kw = explode(',' , $keywords);
-            $image = isset($image) ? $image : '';
             
             SEOMeta::setTitle($title);
             SEOMeta::addKeyword($kw);
