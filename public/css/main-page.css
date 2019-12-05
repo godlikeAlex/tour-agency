@@ -847,6 +847,10 @@ section {
         display: none;
     }
 
+    body {
+        left: 0% !important;
+    }
+
     .content-block__img
     {
         height: 260px;

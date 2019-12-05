@@ -6,8 +6,7 @@ use Closure;
 use App\TourCategory;
 use App\City;
 use App\GaleryCategory;
-
-
+use ipinfo\ipinfo\IPinfo;
 class GlobalCategory
 {
     /**
@@ -20,7 +19,10 @@ class GlobalCategory
     public function handle($request, Closure $next)
     {
         $lang = $request->segment(1);
-        $country = request()->ipinfo->country;
+        $client = new IPinfo();
+       $ip_address = $request->ip();
+        $details = $client->getDetails($ip_address);
+        $country = $details->country;
         $data = [
             'UZ' => [
                 'phone' => '+998 91 526 14 38',

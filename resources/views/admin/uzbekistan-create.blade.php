@@ -30,24 +30,6 @@
                                 </select>
                         </div>
                         <div class="form-group">
-                                <label for="exampleSelect1">Под категория</label>
-                                <select name="category" class="form-control" id="exampleSelect1">
-                                    <option value="" disabled>-Узбекистан </option>
-                                    <option value="geo">География</option>
-                                    <option value="history">История</option>
-                                    <option value="people">Народ</option>
-                                    <option value="" disabled>-Искусства</option>
-                                    <option value="art">Исскуство</option>
-                                    <option value="fashion">Мода</option>
-                                    <option value="painting">Живопись</option>
-                                    <option value="" disabled>-Культура</option>
-                                    <option value="culture">Культура</option>
-                                    <option value="kitchen">Кухня </option>
-                                    <option value="traditions">Традиции </option>
-
-                                </select>
-                        </div>
-                        <div class="form-group">
                                 <label for="exampleSelect1">Язык контент.</label>
                                 <select name="lang" class="form-control" id="exampleSelect1">
                                         <option value="ru">Русский язык</option>
