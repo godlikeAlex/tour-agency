@@ -20,9 +20,13 @@ class GlobalCategory
     {
         $lang = $request->segment(1);
         $client = new IPinfo();
-       $ip_address = $request->ip();
+        $ip_address = $request->ip();
         $details = $client->getDetails($ip_address);
-        $country = $details->country;
+        if($ip_address === '127.0.0.1') {
+            $country = 'RU';
+        } else {
+            $country = $details->country;
+        }
         $data = [
             'UZ' => [
                 'phone' => '+998 91 526 14 38',

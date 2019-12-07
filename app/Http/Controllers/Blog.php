@@ -51,7 +51,7 @@ class Blog extends Controller
 
         $cities         = City::where('lang', $lang)->get();
         $post = Posts::where('slug', $slug)->firstOrFail();
-        SEO::defaultSeoParams($post->title, $post->keywords, $post->seo_desc);
+        SEO::defaultSeoParams($post->title, $post->keywords, $post->seo_desc, $post->image);
         $lastPosts = $this->lastPosts();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
         return view('blog-show', compact('post', 'lastPosts', 'recPosts', 'cities', 'uzbnews', 'arch', 'tourism', 'notes'));
@@ -102,7 +102,7 @@ class Blog extends Controller
         $cities         = City::where('lang', $lang)->get();
         $lastPeople = $this->lastPeople();
         $recPosts = Posts::orderBy('created_at','desc')->take(3)->get();
-        SEO::defaultSeoParams($people->name, $people->keywords, $people->seo_desc);
+        SEO::defaultSeoParams($people->name, $people->keywords, $people->seo_desc,  $people->image);
         return view('blog-post-people', compact('people', 'cities', 'lastPeople', 'recPosts', 'drmir', 'sredveka', 'novoevremya', 'sovremenost'));
     }
 

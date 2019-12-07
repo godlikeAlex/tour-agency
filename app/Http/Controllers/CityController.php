@@ -55,7 +55,7 @@ class CityController extends Controller
             'city_id' => $cityId,
             'category' => $category
         ])->where('id', '>', $item->id)->min('id');
-        SEO::defaultSeoParams($item->name, $item->keywords, $item->seo_desc);
+        SEO::defaultSeoParams($item->name, $item->keywords, $item->seo_desc, $item->image);
 
         return view('city-item', compact('item', 'randomFromCategory', 'cities', 'previous', 'next', 'city', 'category', 'content', 'city'));
     }

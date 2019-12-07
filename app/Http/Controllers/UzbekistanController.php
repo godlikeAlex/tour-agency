@@ -154,7 +154,7 @@ class UzbekistanController extends Controller
         $subcategory = UzbekistanCategory::where('slug', $subcategory)->firstOrFail();
         $item  = Uzbekistan::where('slug', $uzb)->firstOrFail();
         $count = Uzbekistan::where('lang', $lang)->get()->count() - 1;
-        SEO::defaultSeoParams($item->name, $item->keywords, $item->seo_desc);
+        SEO::defaultSeoParams($item->name, $item->keywords, $item->seo_desc, $item->image);
         if($count >= 4) {
             $randomFromCategory = Uzbekistan::where('slug', '!=', $uzb)->where('lang', $lang)->get()->random(3);
         } else {
