@@ -12,6 +12,7 @@
 */
 
 use App\City;
+use App\UzbekistanCategory;
 
 
 Auth::routes();
@@ -80,6 +81,19 @@ Route::post('/toursend', 'EmailController@sendTourRequest')->name('book.tour');
             $cities = City::where('lang', $lang)->get();
             return view('team', compact('cities'));
         })->name('team');
+
+        Route::get('offer', function() {
+            return view('offers');
+        })->name('offers');
+
+        Route::get('sitemap', function($lang) {
+            $geoCategories = UzbekistanCategory::where([
+                'category' => 'geo',
+                'lang' => $lang
+            ])->get();
+
+            return view('sitemap', compact('geoCategories'));
+        })->name('sitemap');
 
         Route::get('contact', function($lang) {    
             $cities = City::where('lang', $lang)->get();

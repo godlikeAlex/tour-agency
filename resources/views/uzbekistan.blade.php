@@ -183,7 +183,7 @@
                             </a>
                         </div>
                         <div class="col-md-4" style="    padding-bottom: 10px;">
-                            <a class="link-block" href="{{route('uzb.category', ['category' => 'tradicii', 'language' => app()->getLocale()])}}">
+                            <a class="link-block" href="{{route('uzb.category', ['category' => 'tradition', 'language' => app()->getLocale()])}}">
                                 <div class="big-blocks big-padding">
                                     <div class="block-img"
                                         style="background: url(https://images.unsplash.com/photo-1453412324657-958beaf0ef12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">

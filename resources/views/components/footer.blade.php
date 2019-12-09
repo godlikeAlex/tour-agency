@@ -122,9 +122,11 @@
 						<ul class="mtb-5 font-11 text-md-center text-right list-a-p-5">
 							<li><a href="{{ route('about', app() -> getLocale()) }}">{{__('menu.about')}}</a> </li>
 							<li><a href="{{ route('team', app() -> getLocale()) }}">{{__('menu.team')}}</a></li>
-							<li> <a href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a></li>                            <li><a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.foragency')}}</a></li>
-                            <li><a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.foragency')}}</a></li>
+							<li> <a href="{{ route('faq', app() -> getLocale()) }}">{{__('menu.faq')}}</a></li>                            
+							<li><a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.foragency')}}</a></li>
+                            <li><a href="{{ route('offers', app() -> getLocale()) }}">{{__('menu.offers')}}</a></li>
                             <li><a href="{{ route('contacts', app() -> getLocale()) }}">{{__('menu.contacts')}}</a></li>
+                            <li><a href="{{ route('sitemap', app() -> getLocale()) }}">{{__('menu.sitemap')}}</a></li>
 						</ul>
 					</div><!-- col-sm-3 -->
 				</div><!-- row -->

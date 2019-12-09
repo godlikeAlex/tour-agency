@@ -97,6 +97,7 @@ class UzbekistanController extends Controller
             'category' => 'art',
             'lang' => $lang
         ])->take(5)->get();
+
         return view('uzbekistan-category', compact('cities', 'category', 'items', 'geo', 'history', 'peoplesm', 'art', 'fashion', 'painting', 'culture', 'kitchen', 'tradition'));
     }
 

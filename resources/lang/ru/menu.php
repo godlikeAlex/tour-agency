@@ -112,4 +112,5 @@
         'communication' => 'Связь',
         'events' => 'МЕРОПРИЯТИЯ',
         'change_lang' => 'Выбор языка',
+        'offers' => 'Оффера',
     ];
