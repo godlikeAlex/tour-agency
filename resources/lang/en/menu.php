@@ -114,5 +114,5 @@
         'boocking_now' => 'Book now',
         'change_lang' => 'Change Language',
         'offers' => 'Offers',
-
+        'sitemap' => 'Site map',
     ];

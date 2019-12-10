@@ -12,7 +12,13 @@
 */
 
 use App\City;
+use App\CityItem;
 use App\UzbekistanCategory;
+use App\People;
+use App\GaleryCategory;
+use App\TourCategory;
+use App\toursim;
+use App\Blog;
 
 
 Auth::routes();
@@ -92,7 +98,98 @@ Route::post('/toursend', 'EmailController@sendTourRequest')->name('book.tour');
                 'lang' => $lang
             ])->get();
 
-            return view('sitemap', compact('geoCategories'));
+            $historyCategories = UzbekistanCategory::where([
+                'category' => 'history',
+                'lang' => $lang
+            ])->get();
+
+            $peoplesCategories = UzbekistanCategory::where([
+                'category' => 'peoples',
+                'lang' => $lang
+            ])->get();
+
+            $artCategories = UzbekistanCategory::where([
+                'category' => 'art',
+                'lang' => $lang
+            ])->get();
+            
+            $fashionCategories = UzbekistanCategory::where([
+                'category' => 'fashion',
+                'lang' => $lang
+            ])->get();
+
+            $paintingCategories = UzbekistanCategory::where([
+                'category' => 'painting',
+                'lang' => $lang
+            ])->get();
+
+            $cultureCategories = UzbekistanCategory::where([
+                'category' => 'culture',
+                'lang' => $lang
+            ])->get();
+
+            $kitchenCategories = UzbekistanCategory::where([
+                'category' => 'kitchen',
+                'lang' => $lang
+            ])->get();
+
+            $traditionCategories = UzbekistanCategory::where([
+                'category' => 'tradition',
+                'lang' => $lang
+            ])->get();
+
+            $drevniy = People::where([
+                'lang'=> $lang,
+                'category' => 'drevniy-mir'
+            ])->get();
+
+            $sredniy = People::where([
+                'lang'=> $lang,
+                'category' => 'srednie-veka'
+            ])->get();
+
+            $novie = People::where([
+                'lang'=> $lang,
+                'category' => 'novoe-vremya'
+            ])->get();
+
+            $sovremenost = People::where([
+                'lang'=> $lang,
+                'category' => 'sovremenost'
+            ])->get();
+
+            $uzbBlog = Blog::where([
+                'lang' => $lang,
+                'category' => 'uzbekistan'
+            ])->get();
+
+            $archBlog = Blog::where([
+                'lang' => $lang,
+                'category' => 'archeology'
+            ])->get();
+
+            $tourBlog = Blog::where([
+                'lang' => $lang,
+                'category' => 'tourism'
+            ])->get();
+
+            $notesBlog = Blog::where([
+                'lang' => $lang,
+                'category' => 'notes'
+            ])->get();
+
+            
+            $cities = City::where('lang', $lang)->get();
+
+            $city_items = CityItem::where('lang', $lang)->get();
+
+            $galleryCategories = GaleryCategory::where('lang', $lang)->get();
+            
+            $tourCategories = TourCategory::where('lang', $lang)->get();
+
+            $tourism = toursim::where(['lang' => $lang])->get();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+            return view('sitemap', compact('notesBlog', 'tourBlog', 'archBlog', 'uzbBlog', 'tourism', 'tourCategories', 'galleryCategories', 'sovremenost', 'novie' ,'sredniy', 'drevniy', 'geoCategories', 'historyCategories', 'peoplesCategories', 'artCategories', 'fashionCategories', 'paintingCategories', 'cultureCategories', 'kitchenCategories', 'traditionCategories', 'cities', 'city_items'));
         })->name('sitemap');
 
         Route::get('contact', function($lang) {    
