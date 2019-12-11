@@ -72,7 +72,7 @@
             overflow-y: -webkit-paged-x;
         }
 
-        ul {
+        .sitemap {
             display: block;
             list-style-type: disc;
             margin-block-start: 1em;

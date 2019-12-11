@@ -115,4 +115,8 @@
         'change_lang' => 'Change Language',
         'offers' => 'Offers',
         'sitemap' => 'Site map',
+        'show_all_uzbekistan' => 'See all Uzbekistan',
+        'show_all_city' => 'See all city',
+        'show_all_peoples' => 'See all people',
+        'show_all_tours' => 'See all tours',
     ];

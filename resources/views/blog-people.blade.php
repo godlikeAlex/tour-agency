@@ -6,34 +6,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @include('/components/head-settings')
-    <link rel="icon" href="img/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/blog/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="/css/blog/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="/css/blog/owl.carousel.min.css">
-    <!-- themify CSS -->
-    <link rel="stylesheet" href="/css/blog/themify-icons.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="/css/blog/liner_icon.css">
-    <link rel="stylesheet" href="/css/blog/search.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="/css/blog/slick.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="/css/blog/style.css">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/main-menu.css">
-    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
 
-    <!--Footer-->
+
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="/images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="/css/tour-all.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/main-page.css">
+
+    <!--Footer-->
 
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link href="/fonts/ionicons.css" rel="stylesheet">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/css/blog/style.css">
+
 </head>
 
 <body>
@@ -108,13 +104,13 @@
 
     <!-- jquery plugins here-->
     <!-- jquery -->
-    <script src="js/blog/jquery-1.12.1.min.js"></script>
+    <script src="/js/blog/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
-    <script src="js/blog/popper.min.js"></script>
+    <script src="/js/blog/popper.min.js"></script>
     <!-- bootstrap js -->
-    <script src="js/blog/bootstrap.min.js"></script>
+    <script src="/js/blog/bootstrap.min.js"></script>
     <!-- custom js -->
-    <script src="js/blog/custom.js"></script>
+    <script src="/js/blog/custom.js"></script>
 </body>
 
 </html>

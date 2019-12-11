@@ -2336,7 +2336,6 @@ ul {
     top: 71px;
     width: 100%;
     background-color: #fff;
-    text-align: center !important;
   }
   /* line 228, E:/168 Daren Blog/168_Daren_Blog_html/sass/_menu.scss */
   .main_menu .main-menu-item {
@@ -2483,15 +2482,7 @@ ul {
   background-color: #fafafa;
 }
 
-/* line 381, E:/168 Daren Blog/168_Daren_Blog_html/sass/_menu.scss */
-.dropdown .dropdown-menu {
-  transition: all 0.5s;
-  overflow: hidden;
-  transform-origin: top center;
-  transform: scale(1, 0);
-  display: block;
-  margin-top: 18px;
-}
+
 
 /* line 388, E:/168 Daren Blog/168_Daren_Blog_html/sass/_menu.scss */
 .dropdown .dropdown-menu .dropdown-item {

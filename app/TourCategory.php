@@ -9,6 +9,6 @@ class TourCategory extends Model
     protected $guarded = [];    
 
     public function tours(){
-        return $this->hasMany('App\Tour', 'category', 'slug')->get();
+        return $this->hasMany('App\Tour', 'category', 'slug');
     }
 }

@@ -394,6 +394,124 @@
             </ul>
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mobile-item">
+        <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{__('menu.show_all_uzbekistan')}} <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.geo') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($geo as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'geo', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.history') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($history as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'history', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.peoples') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($peoplesm as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'peoples', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.art') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($art as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'art', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.moda') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($fashion as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'fashion', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.painting') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($painting as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'painting', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.culture') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($culture as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'culture', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.kitchen') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($kitchen as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'kitchen', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ __('menu.tradicii') }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($tradition as $item)
+                        <a class="dropdown-item"
+                            href="{{route('uzb.sub', ['category' => 'tradition', 'subcategory' => $item->slug, 'language' => app()->getLocale()])}}">{{$item->name}}</a>
+                            <div class="dropdown-divider"></div>
+                    @endforeach
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
     @elseif($type === 'city')
     <div class="sub-menu-main">
         <div class="container">
@@ -426,6 +544,41 @@
             </ul>
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mobile-item">
+        <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{__('menu.show_all_city')}} <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                @foreach($cities as $city)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('city.show', ['lang' => app()->getLocale(), 'city' => Illuminate\Support\Str::lower($city->name)])}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{$city->name}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'history', 'language' => app()->getLocale()])}}">{{ __('menu.history') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-eat', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_eat') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-stay', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_stay') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-see', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_see') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'what-to-do', 'language' => app()->getLocale()])}}">{{ __('mainpage.things_to_do') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'where-to-buy', 'language' => app()->getLocale()])}}">{{ __('mainpage.where_to_buy') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'how-to-get', 'language' => app()->getLocale()])}}">{{ __('mainpage.how_to_get') }}</a>
+                            <a class="droped-menu-item"
+                                href="{{route('city.category', ['city'=> Illuminate\Support\Str::lower($city->name),'category'=>'useful-information', 'language' => app()->getLocale()])}}">{{ __('mainpage.useful_information') }}</a>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </nav>
     @elseif($type === 'people')
     <div class="sub-menu-main">
         <div class="container">
@@ -477,6 +630,56 @@
             </ul>
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mobile-item">
+        <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{__('menu.show_all_peoples')}} <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('menu.drevniy_mir') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach($drmir as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'drevniy-mir', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('menu.srednie_veka') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach($sredveka as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'srednie-veka', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('menu.novoe_vremya') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach($novoevremya as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'novoe-vremya', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('people.category', ['category' => 'drevniy-mir', 'language' => app()->getLocale()])}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ __('menu.sovremenost') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach($sovremenost as $item_people)
+                                <a class="droped-menu-item" href="{{route('people.show', ['category'=> 'sovremenost', 'slug'=> $item_people->slug, 'language' => app()->getLocale()])}}">{{ $item_people->name }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </nav>
     @elseif($type === 'news')
     <div class="sub-menu-main">
         <div class="container">
@@ -540,6 +743,23 @@
             </ul>
         </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mobile-item">
+        <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{__('menu.show_all_tours')}} <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                @foreach($tour_categories as $tourCategory)
+                    <li class="nav-item dropdown">
+                        <a href="{{route('tour.category', ['category' => $tourCategory->slug, 'language' => app()->getLocale()])}}" id="navbarDropdown">
+                            {{ $tourCategory->name }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </nav>
     @endif
     @endif
     <script>

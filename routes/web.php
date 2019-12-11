@@ -196,6 +196,10 @@ Route::post('/toursend', 'EmailController@sendTourRequest')->name('book.tour');
             $cities = City::where('lang', $lang)->get();
             return view('contact', compact('cities'));
         })->name('contacts');
+
+        Route::get('for-agency', function($lang) {    
+            return view('foragency');
+        })->name('foragency');
     });
 });
 
